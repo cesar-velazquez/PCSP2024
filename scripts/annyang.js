@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext2 = function () {
-        location.href = './tema1.html';
+        location.href = './modulo-1.html';
     }
 
     var abrirMenuPrincipal = function () {
@@ -222,42 +222,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // prueba faq fin
 
-    let abrirfaqBasic = function () {
-        let abrirfaq = document.getElementById("basicas-1");
-        abrirfaq.classList.remove('collapsed');
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        // abrirfaq.nextElementSibling.classList.add('show');
-    }
+    // let abrirfaqBasic = function () {
+    //     let abrirfaq = document.getElementById("basicas-1");
+    //     abrirfaq.classList.remove('collapsed');
+    //     abrirfaq.setAttribute('aria-expanded', 'true');
+    //     // abrirfaq.nextElementSibling.classList.add('show');
+    // }
 
-    let abrirfaqBasic2 = function () {
-        let abrirfaq = document.getElementById("basicas-2");
-        abrirfaq.classList.remove('collapsed');
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.nextElementSibling.classList.add('show');
-    }
+    // let abrirfaqBasic2 = function () {
+    //     let abrirfaq = document.getElementById("basicas-2");
+    //     abrirfaq.classList.remove('collapsed');
+    //     abrirfaq.setAttribute('aria-expanded', 'true');
+    //     abrirfaq.nextElementSibling.classList.add('show');
+    // }
 
-    let cerrarfaqBasic = function () {
-        let cerrarfaq = document.getElementById("basicas-1");
-        cerrarfaq.classList.add('collapsed');
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show')
-    }
+    // let cerrarfaqBasic = function () {
+    //     let cerrarfaq = document.getElementById("basicas-1");
+    //     cerrarfaq.classList.add('collapsed');
+    //     cerrarfaq.setAttribute('aria-expanded', 'false');
+    //     cerrarfaq.nextElementSibling.classList.remove('show')
+    // }
 
-    let cerrarfaqBasic2 = function () {
-        let cerrarfaq = document.getElementById("basicas-2");
-        cerrarfaq.classList.add('collapsed');
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show')
-    }
-
-
+    // let cerrarfaqBasic2 = function () {
+    //     let cerrarfaq = document.getElementById("basicas-2");
+    //     cerrarfaq.classList.add('collapsed');
+    //     cerrarfaq.setAttribute('aria-expanded', 'false');
+    //     cerrarfaq.nextElementSibling.classList.remove('show')
+    // }
 
 
-    let descargarlecturafacil = function () {
-        location.href = '#btnLectura';
-        let descargar = document.getElementById("btnLectura");
-        descargar.click();
-    }
+
+
+    // let descargarlecturafacil = function () {
+    //     location.href = '#btnLectura';
+    //     let descargar = document.getElementById("btnLectura");
+    //     descargar.click();
+    // }
 
     let PositionTop = function (element) {
         if (element) {
@@ -291,30 +291,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    let section6 = function () {
-        let element = document.getElementById('ident1_6');
-        PositionTop(element);
-    }
+    // let section6 = function () {
+    //     let element = document.getElementById('ident1_6');
+    //     PositionTop(element);
+    // }
 
 
-    let section7 = function () {
-        let element = document.getElementById('ident1_7');
-        PositionTop(element);
-    }
+    // let section7 = function () {
+    //     let element = document.getElementById('ident1_7');
+    //     PositionTop(element);
+    // }
 
-    let section8 = function () {
-        let element = document.getElementById('ident1_8');
+    // let section8 = function () {
+    //     let element = document.getElementById('ident1_8');
+    //     PositionTop100(element);
+    // }
+
+    // let section9 = function () {
+    //     let element = document.getElementById('ident1_9');
+    //     PositionTop(element);
+    // }
+
+    let section11 = function () {
+        let element = document.getElementById('section11');
         PositionTop100(element);
     }
 
-    let section9 = function () {
-        let element = document.getElementById('ident1_9');
-        PositionTop(element);
+    let section16 = function () {
+        let element = document.getElementById("section16");
+        PositionTop100(element);
     }
 
-    let section16 = function () {
-        let element = document.getElementById("ident1_16");
-        PositionTop(element);
+    let section17 = function () {
+        let element = document.getElementById("section17");
+        PositionTop100(element);
     }
 
     var cerrarMenuPrincipal = function () {
@@ -426,7 +436,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
     }
 
-    let btn19 = document.getElementById("ident19");
+    let btn19 = document.getElementById("ident42");
     let downloadbtnLectura = function () {
         btn19.click();
     }
@@ -434,11 +444,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var commands = {
         'Desplazar hacia abajo': scrollBottom,
         'Desplazar hacia arriba': scrollTo,
-        'Descargar lectura fácil': descargarlecturafacil,
+        // 'Descargar lectura fácil': descargarlecturafacil,
         'Inicio': inicioPagina,
 
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
+        'uuuno': abrirMenuPrincipal,
 
         'dos': cerrarMenuPrincipal,
         '2': cerrarMenuPrincipal,
@@ -452,23 +463,26 @@ document.addEventListener("DOMContentLoaded", function () {
         '5': getPageNext2,
         'cinco': getPageNext2,
 
-        '6': section6,
-        'seis': section6,
+        // '6': section6,
+        // 'seis': section6,
 
-        '7': section7,
-        'siete': section7,
+        // '7': section7,
+        // 'siete': section7,
 
-        '8': section8,
-        'ocho': section8,
+        // '8': section8,
+        // 'ocho': section8,
 
-        '9': section9,
-        'nueve': section9,
+        // '9': section9,
+        // 'nueve': section9,
 
         '10': abrirModal11,
         'Diez': abrirModal11,
 
-        '11': cerrarmodal1,
-        'Once': cerrarmodal1,
+        // '11': cerrarmodal1,
+        // 'Once': cerrarmodal1,
+
+        '11': section11,
+        'Once': section11,
 
         '12': playVideo1,
         'Doce': playVideo1,
@@ -486,17 +500,19 @@ document.addEventListener("DOMContentLoaded", function () {
         '16': section16,
         'Dieciséis': section16,
 
-        '17': abrirCerrarfaq,
-        'Diecisiete': abrirCerrarfaq,
+        '17': section17,
+        'Diecisiete': section17,
+
+        abrirCerrarfaq,
 
         '18': abrirCerrarfaq2,
         'Dieciocho': abrirCerrarfaq2,
 
-        '19': downloadbtnLectura,
-        'Diecinueve': downloadbtnLectura,
+        '42': downloadbtnLectura,
+        'cuarenta y dos': downloadbtnLectura,
 
-        '20': volverA,
-        'veinte': volverA,
+        '43': volverA,
+        'cuarenta y tres': volverA,
 
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
@@ -559,28 +575,40 @@ let num8 = document.getElementById("ident8");
 let num9 = document.getElementById("ident9");
 let num10 = document.getElementById("ident10");
 let num11 = document.getElementById("ident11");
-
+let num12 = document.getElementById("ident12");
+let num13 = document.getElementById("ident13");
+let num14 = document.getElementById("ident14");
+let num15 = document.getElementById("ident15");
+let num16 = document.getElementById("ident16");
+let num17 = document.getElementById("ident17");
+let num18 = document.getElementById("ident18");
+let num20 = document.getElementById("ident20");
+let num22 = document.getElementById("ident22");
+let num24 = document.getElementById("ident24");
+let num25 = document.getElementById("ident25");
+let num26 = document.getElementById("ident26");
+let num27 = document.getElementById("ident27");
+let num28 = document.getElementById("ident28");
+let num30 = document.getElementById("ident30");
+let num32 = document.getElementById("ident32");
+let num34 = document.getElementById("ident34");
+let num36 = document.getElementById("ident36");
+let num38 = document.getElementById("ident38");
+let num40 = document.getElementById("ident40");
+let num42 = document.getElementById("ident42");
+let num43 = document.getElementById("ident43");
 // botones cerrar modal 0
 let num11_1 = document.getElementById("ident1_1");
 // botones cerrar modal 10
 let num1_h = document.getElementById("ident1_h");
 let cerrar = document.getElementById("identcerrar");
-
-let num12 = document.getElementById("ident12");
 // botones cerrar modal 12
 let num13_1 = document.getElementById("ident1_2");
-let num13 = document.getElementById("ident13");
-
-let num14 = document.getElementById("ident14");
+// let num14 = document.getElementById("ident14");
 // botones cerrar modal 14
-let num15 = document.getElementById("ident15");
+
 let num15_3 = document.getElementById("ident15_3");
 // 
-let num16 = document.getElementById("ident16");
-let num17 = document.getElementById("ident17");
-let num18 = document.getElementById("ident18_f");
-let num19 = document.getElementById("ident19");
-let num20 = document.getElementById("ident20");
 
 enlaceaLecturaF.addEventListener('click', function () {
     btnLectura.classList.add('animate__animated', 'animate__shakeX', 'animate__slow', 'animate__delay-1s');
@@ -686,12 +714,27 @@ btn_access.addEventListener('click', function () {
 
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // num20.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num22.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num25.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num26.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num27.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num30.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num32.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num34.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num42.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+
         // btones cerrar modales :
         // modal etiqueta 0
         // cerrar.style.display = "inline-flex";
@@ -733,14 +776,27 @@ btn_access.addEventListener('click', function () {
         num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // num19.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // num20.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
+        num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num18.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num20.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num22.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num24.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num25.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num26.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num27.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num28.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num30.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num32.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num34.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num36.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num38.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num40.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num42.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // btones cerrar modales:
         // modal etiqueta 0
         // cerrar.style.display = "none";
