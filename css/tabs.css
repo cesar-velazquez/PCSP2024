@@ -1,0 +1,121 @@
+/* Estilos - Formas de la discriminación */
+.tam-tab {
+    width: 32%;
+}
+
+/*
+.margin-b-tabs {
+    margin-bottom: -5rem;
+}
+*/
+
+.tab-pane {
+    padding: 2rem;
+    
+}
+
+.tam-content {
+    min-height: 22rem;
+    /*height: ;*/
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+
+    .tam-tab {
+        width: 32% !important;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .tam-content {
+        height: 900px;
+    }
+}
+
+.ajuste-altura {
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ajuste-altura span {
+    align-self: center;
+}
+
+.bg-tab-content {
+    background: #E5F5FD;
+    border-bottom: 2px solid #3C3D8B;
+    border-top: 2px solid #3C3D8B;
+    margin-bottom: 3rem;
+}
+
+.centerPestaña {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.tamano-li {
+    background-color: aqua;
+    width: 259px;
+}
+
+.tamano-btn {
+    width: 250px;
+    padding: 1rem;
+}
+
+li.nav-item.tab-1-item.waves-effect.waves-light a.active {
+    color: #3C3D8B !important;
+    background: #fff !important;
+    
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -2px;
+}
+
+li.nav-item.tab-1-item.waves-effect.waves-light a {
+    color: #fff !important;
+    background: #3C3D8B !important;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #3C3D8B !important;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+@media screen and (max-width: 991px) {
+
+    .tam-tab {
+        width: 33.33%;
+    }
+
+    .tam-tab-2 {
+        width: 50%;
+    }
+}
+
+.bg-verde-formas {
+    background-color: #F3F9F8;
+}
+
+.bg-verde-formas-2 {
+    background-color: #fff;
+}
+
+/*  */
+
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}

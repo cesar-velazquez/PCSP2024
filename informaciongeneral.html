@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operación de Unidades de Accesibilidad Tecnológica: Información General</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet" />
+
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/unit1.css" />
+    <link rel="stylesheet" href="css/tabs.css">
+
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only">
+            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona las teclas  Alt + X, en MacOS Esc
+        </p>
+    </div>
+
+    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="I">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </button>
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+        </div>
+
+        <menu-component></menu-component>
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+        <div class="">
+            <div class="js-pleca pleca">
+                <a class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
+                        <span class="font-weight-bold">MENÚ&nbsp;&nbsp;</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen">
+                            <b>Información general</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <img class="ocultar" src="./images/SDI-_banner-pagint-e.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+
+            <img class="mostrar" src="./images/SDI-_banner-pagint-r.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+        </div>
+
+        <div class="container titulo-principal-unit">
+            <h1 class="container__titulo top_h1 ">
+                Información general
+            </h1>
+        </div>
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+        <!-- introduction -->
+        <section class="">
+            
+            <div class="container  ">
+                <div class="mb-4 mb-md-5 presentacion">
+                    <h2 class="text-azul pl-0 subtitulos">Presentación</h2>
+                    <p class="parrafo mb-0">
+                        -Pendiente-
+                    </p>
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                <!-- Inicia Pestañas -->
+                <h2 class="parrafop text-azul subtitulos">Dinámica del curso</h2>
+
+                <div class="escritorio">
+
+                    <p class="instruccion-color-verde parrafo"> <b>Instrucción:</b> Presiona cada botón para conocer la información.</p>
+
+                    <ul class="centerPestaña nav nav-tabs tabs-1-nav mt-4">
+
+                        <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
+                            <a data-toggle="tab" href="#ppaso-1"
+                                class="tamano-btn nav-link tab-1-link active text-center ajuste-altura">
+                                <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Comunicación e interacción</span>
+                            </a>
+                        </li>
+
+                        <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
+                            <a data-toggle="tab" href="#ppaso-2"
+                                class="tamano-btn nav-link tab-1-link text-center ajuste-altura">
+                                <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Nomenclatura para los archivos</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content bg-tab-content">
+
+                        <div id="ppaso-1" class="tab-pane container active">
+
+                            <div class="tam-content">
+                                <div>
+                                    <p class="sr-only">
+                                        Estás en la pestaña de Comunicación e interacción, continúa bajando para leer la información.
+                                    </p>
+
+                                    <p class="parrafo">Durante el curso, la comunicación será a través de la plataforma educativa Eminus 4, en ese sentido, existen actividades de interacción y colaboración sobre diferentes temáticas en el “Foro de discusión” usando la herramienta Foro.</p>
+
+                                    <p class="parrafo">El curso se integra de actividades de aprendizaje. En cada actividad, encontrará detalladamente cómo y qué hacer para ir elaborando cada una de las evidencias y lograr el porcentaje correspondiente de cada actividad que conformará su calificación final del curso.</p>
+
+                                    <p class="parrafo mb-0">Cada una de las actividades solicitadas a lo largo del curso, deberán ser entregadas bajo los lineamientos y criterios establecidos.</p>
+
+                                    <p class="sr-only">
+                                        Terminaste el contenido de la pestaña Comunicación e interacción, deberás subir y elegir la pestaña siguiente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ppaso-2" class="tab-pane container">
+                            <div class="tam-content">
+                                <div>
+                                    <p class="sr-only">
+                                        Estás en la pestaña de Nomenclatura para los archivos, continúa bajando para leer la información.
+                                    </p>
+
+                                    <p class="parrafo">Para llevar un sistema organizado de las actividades, se ha diseñado una nomenclatura, que deberá incluir como nombre de archivo en cada actividad por enviar. Esta clave está formada por varios elementos, entre ellos el número de la actividad, así como tu nombre y apellido: <b>ACT##_Primer<wbr>Nombre<wbr>y<wbr>Primer<wbr>Apellido.ext</b></p>
+
+                                    <p class="parrafo">Ejemplo:
+                                        ACT01_<wbr>Luis<wbr>Torres.docx
+                                    </p>
+
+                                    <p class="parrafo mb-0">Donde ACT corresponde a la abreviatura de la actividad. ## Número de actividad del curso. Primer nombre y primer apellido. Suponiendo que el nombre del alumno sea Luis Torres Martínez y .docx corresponde a la extensión del archivo, si es un documento realizado en <i lang="en">WORD</i>, para el caso de una imagen, podría ser .jpg, entre otros.</p>
+
+                                    <p class="sr-only">
+                                        Terminaste el contenido de la pestaña Nomenclatura para los archivos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                           
+
+                <div class="contenedor_pestañas movil">
+                    <div class="">
+                        <p class="parrafo text-azul ">Comunicación e interacción</p>
+                        <p class="parrafo">Durante el curso, la comunicación será a través de la plataforma educativa Eminus 4, en ese sentido, existen actividades de interacción y colaboración sobre diferentes temáticas en el “Foro de discusión” usando la herramienta Foro.</p>
+
+                        <p class="parrafo">El curso se integra de actividades de aprendizaje. En cada actividad, encontrará detalladamente cómo y qué hacer para ir elaborando cada una de las evidencias y lograr el porcentaje correspondiente de cada actividad que conformará su calificación final del curso.</p>
+
+                        <p class="parrafo mb-0">Cada una de las actividades solicitadas a lo largo del curso, deberán ser entregadas bajo los lineamientos y criterios establecidos.</p>
+                        
+                        <hr class="separador-mov" aria-hidden="true">
+                        
+                        <p class="parrafo text-azul ">Nomenclatura para los archivos</p>
+                        <p class="parrafo">Para llevar un sistema organizado de las actividades, se ha diseñado una nomenclatura, que deberá incluir como nombre de archivo en cada actividad por enviar. Esta clave está formada por varios elementos, entre ellos el número de la actividad, así como tu nombre y apellido: <b>ACT##_Primer<wbr>Nombre<wbr>y<wbr>Primer<wbr>Apellido.ext</b></p>
+
+                        <p class="parrafo">Ejemplo:
+                            ACT01_<wbr>Luis<wbr>Torres.docx
+                        </p>
+
+                        <p class="parrafo mb-0">Donde ACT corresponde a la abreviatura de la actividad. ## Número de actividad del curso. Primer nombre y primer apellido. Suponiendo que el nombre del alumno sea Luis Torres Martínez y .docx corresponde a la extensión del archivo, si es un documento realizado en <i lang="en">WORD</i>, para el caso de una imagen, podría ser .jpg, entre otros.</p>
+                    </div>
+                </div>
+
+                <hr class="separador" aria-hidden="true" >
+
+                
+                    <h2 class="parrafop text-azul subtitulos">
+                        Lineamientos para la participación en foro
+                    </h2>
+                    <div class="dos-pad mb-5">
+                    <p class="parrafo mb-0">1. Al participar en el foro debes:</p>
+
+                    <ol class="parrafo incisos">
+                        <li>Expresar títulos e ideas concretas del tema y la importancia del tema.</li>
+                        <li>Publicar texto o evidencias con argumento que den sentido.</li>
+                        <li>Promover el diálogo y el enriquecimiento de la publicación.</li>
+                        <li>Citar con estilo APA para citas textuales o parafraseo.</li>
+                        <li>Emplear licencias públicas de derechos de autor.</li>
+                        <li>Participar en el foro el o los primeros días de su apertura para promover la colaboración.</li>
+                    </ol>
+
+                    <p class="parrafo mb-0">2. Es necesario que evites:</p>
+
+                    <ol class="parrafo incisos">
+                        <li>Emplear respuestas cortas o monosílabos: "Sí", "Ok", "Estoy de acuerdo", "Muy bien", "Claro", otras.</li>
+                        <li>Utilizar oraciones o frases sin sentido.</li>
+                        <li>Publicar texto o evidencias (archivos) sin argumento.</li>
+                        <li>Publicar sin títulos o palabras claves.</li>
+                        <li>Escribir con faltas de ortografía.</li>
+                        <li>Usar mayúsculas en parte o totalidad del texto.</li>
+                        <li>Utilizar diferentes tipografías (tipos de letras).</li>
+                        <li>Copiar y pegar información.</li>
+                        <li>Participar en el foro el último día (previo al cierre del mismo), ello limita la retroalimentación.</li>
+                        <li>Plagiar información.</li>
+                    </ol>
+                </div>
+
+               
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer" >
+        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </span>
+
+        <div class="">
+            <div class="tamaño_Img_Footer">
+                <img class="tamaño__img ocultar" src="./images/SDI-_firmauv-e.png" loading="lazy" width="100%"
+                    height="auto" alt="Logo de la Universidad Veracruzana" />
+            </div>
+            <div>
+                <img class="mostrar" src="./images/SDI-_firmauv-r.png" alt="Banner Principal" aria-hidden="true"
+                    width="100%" height="auto" />
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close" accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+                        
+                        <div class="text-center mb-3">
+    
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+    
+                        </div>
+                        
+                        <p class="parrafo">
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                        </p>
+
+                        <p class="parrafo mb-0"><b>Windows</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Alt + M</li>
+                            <li>Cerrar menú principal Alt + C</li>
+                        </ul>
+
+                        <p class="parrafo mb-0"><b>MacOS</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Option + M</li>
+                            <li>Cerrar menú principal Option + C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <!-- ../scripts/home.js -->
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <!-- ../scripts/scroll-timeline.js -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: "block",
+            scrollOffsets: [
+                new CSSUnitValue(0, "percent"),
+                new CSSUnitValue(100, "percent"),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector("#progress"),
+                {
+                    transform: ["scaleX(0)", "scaleX(1)"],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+        $(document).ready(function () {
+            $(".ir-arriba").click(function () {
+                $("body, html").animate(
+                    {
+                        scrollTop: "0px",
+                    },
+                    300
+                );
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(".ir-arriba").slideDown(300);
+                } else {
+                    $(".ir-arriba").slideUp(300);
+                }
+            });
+        });
+    </script>
+</body>
+<script src="scripts/Pestañas.js"></script>
+
+</html>

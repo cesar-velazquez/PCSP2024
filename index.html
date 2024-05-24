@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pensamiento Crítico para la Solución de Problemas</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Menu accesible .css -->
+    <link rel="stylesheet" href="css/menuacces.css">
+    <!-- Libreria para animar  los recursos animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Libreria de Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
+
+    <div id="container_notes" class="contenedor_notas">
+    </div>
+
+    <div class="microfono">
+        <i id='micro' class="bx bxs-microphone-off bx-flip-horizontal" style='color:#ffffff'></i>
+    </div>
+
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only">
+            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las
+            teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona
+            las teclas Alt + X, en MacOS Esc
+        </p>
+    </div>
+
+    <!-- Implementacion del boton menu accesible: -->
+    <div class="ocultar">
+        <button onclick="handleMenu()" class="btnAccessUniversal">
+            <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
+        </button>
+
+        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+        waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
+            <i class='bx bxs-help-circle'></i>
+        </button>
+        <span id="ident0" class="identificador2">0</span>
+    </div>
+
+    <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span id="closed" aria-hidden="true">×</span>
+                        <span id="ident1_h" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Ayuda
+                            </p>
+                        </div>
+                        <p class="instruccion"><b>Instrucciones: </b></p>
+                        <p class="parrafo">
+                            Para recargar la página solo dí 'F5'.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="identcerrar" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- fin modal ayuda -->
+
+    <!-- menuaccesShow -->
+
+    <div class="menuacces ">
+        <div class="menuComponentAcces">
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="font_size">
+                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                        Tamaño de fuente
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="link_resaltar">
+                        <img id="icon_Link" src="./images/accesibilidad/MA-_m-hiper-a.png"
+                            alt="Icon auxiliar hipervinculos">
+                        <img id="icon_Link_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
+                        Hipervínculos
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="cursorBig" class="btn_accesible">
+                        <img id="icon_Cursor" src="./images/accesibilidad/MA-_m-cursor-a.png"
+                            alt="Icon auxiliar cursor">
+                        <img id="icon_Cursor_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
+                        Cursor
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
+                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
+                        aria-hidden="true">
+                        <img id="icon_lector_inmersivo" src="./images/accesibilidad/MA-_m-lector-a.png"
+                            alt="Icon auxiliar Lector">
+                        <img id="icon_lector_inmersivo_active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
+                        Lector Inmersivo
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces section_voice">
+                <div>
+                    <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img id="icon_comando_voz" src="./images/accesibilidad/MA-_m-comandos-a.png"
+                            alt="Icon auxiliar comandos de voz">
+                        <img id="icon_comandovoz_activo" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
+                        Comandos de voz
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id="enlaceaLecturaF"
+                        class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img src="./images/accesibilidad/MA-_m-lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        Lectura fácil
+                    </a>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button onclick="showLine()" id="lineaLectura" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img id="icon_Linea_Lectura" src="./images/accesibilidad/MA-_m-regla-a.png"
+                            alt="Icon auxiliar línea de lectura">
+                        <img id="icon_Linea_Lectura_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
+                        Línea de lectura
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- fin menú accesible -->
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar id="menu-item" class="sidebar">
+        <div class="sidebar__encabezado">
+            <button role="navigation" aria-details="Close side menu" class="btn btn-link sidebar__dismiss"
+                aria-label="Cerrar menú desplegado" accesskey="C">
+                <span class="sr-only">Cerrar menú desplegado</span>
+                <span>X</span>
+            </button>
+            <p id="ident2" class="identificador2 ">2</p>
+        </div>
+
+        <menu-component></menu-component>
+
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+
+        <div class="js-pleca pleca">
+
+            <a class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
+
+            <div class="dropdown">
+                <!-- btn  -->
+                <p id="ident1" class="identificador">1</p>
+                <button class="btn btn-menu js-sidebar__collapse duration" type="button" id="dropdownMenuButton"
+                    accesskey="M" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="">MENÚ</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="pleca__ee container ml-0">
+                <span class="text-left">
+                    <p class="tam-font font-weight-bold mb-3 texto-tema-margen">
+                        Pensamiento Crítico para la Solución de Problemas
+                    </p>
+                </span>
+            </div>
+
+        </div>
+
+        <img class="img__principal mb-4 escritorio" src="./images/banner-e.png" alt="Banner principal"
+            aria-hidden="true" width="100%" height="auto" />
+        <img class="movil" src="./images/banner-r.png" alt="Banner Principal movil" aria-hidden="true" width="100%"
+            height="auto" />
+
+        <div class="pleca_principal">
+            <h1 class="titulo-principal">Pensamiento Crítico para la Solución de Problemas</h1>
+            <hr class="img-banner" aria-hidden="true">
+            <span>Área de Formación Básica General</span>
+        </div>
+
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+
+        <div class="container">
+
+            <!-- <h2 class="parrafo text-azul subtitulos">
+                <img src="./img/150pp/INGLESINT_icono02.png" alt="Icono de bienvenida - Imagen de apoyo"
+                    aria-hidden="true" width="45px" height="auto">
+                &nbsp; Bienvenida
+            </h2> -->
+
+            <p class="parrafo instruccion-color-verde">
+                <b>Instrucción:</b> Presiona el botón de video para iniciar la reproducción.
+                <span id="ident11" class="identificador2">11</span>
+            </p>
+
+            <div class="mb-2rem">
+                <!-- mt-4 mt-md-5 mb-md-5 mb-4  -->
+                <div class="vid3 embed-responsive embed-responsive-16by9">
+                    <p id="ident12" class="play_video identificador2 ">12</p>
+                    <p id="ident13" class="fullScreen identificador2 ">13</p>
+                    <video id="video1" src="./videos/unit1/video1.mp4" type="video/mp4" controls></video>
+                    <!-- <iframe
+                        src="https://lumen.uv.mx/resources/files/videos/2022/5/18/6696/a34f4f0f-404e-4a7d-8f39-a2bd09dd6b02.mp4"
+                        width="80%" height="500" allowfullscreen="" scrolling="no"></iframe> -->
+                </div>
+            </div>
+
+            <div class="script-video escritorio" style="margin-bottom: 1.5rem;">
+                <details class="collapsables-gi">
+                    <summary class="btn waves-effect waves-light btn_guion"><strong>Guion de video</strong>
+                        <p id="ident12" class="play_video identificador2 ">12</p>
+                    </summary>
+                    <div class="collapsables-gi__content">
+                        <p class="parrafo"><b>Pensamiento Crítico para la Solución de Problemas</b></p>
+                        <p class="parrafo">
+                            Bienvenido a nuestro curso Pensamiento Crítico para la Solución de Problemas. El curso forma
+                            parte del Área de Formación Básica General (AFBG) dentro de nuestra universidad. Está
+                            conformado por tres módulos y tiene un valor de cuatro créditos.
+                        </p>
+                        <p class="parrafo">
+                            El curso te ayudará a estimular y desarrollar tu pensamiento crítico, identificar
+                            situaciones problemáticas, plantearte problemas y tomar decisiones para la mejor solución de
+                            los mismos. Como estudiante universitario y futuro profesionista, serás un generador de
+                            soluciones a problemáticas. Por ello, te invitamos a que te comprometas a la realización de
+                            cada una de las actividades. El beneficio será personal y profesional.
+                        </p>
+                        <p class="parrafo">
+                            Durante estas 15 semanas, estudiarás temas como: Pensamiento crítico y sus aplicaciones
+                            básicas, modelos de problema y de solución, que te permitirán formular problemas y construir
+                            alternativas para la solución.
+                        </p>
+                        <p class="parrafo">
+                            Para profundizar en los temas, realizarás tareas denominadas <b>Actividades de
+                                aprendizaje</b> que
+                            te ayudarán al manejo y comprensión de la información.
+                        </p>
+                        <p class="parrafo">
+                            Al revisar la plataforma educativa Eminus, hazlo con mayor detenimiento en
+                            los apartados de: contenido, actividades, evaluaciones y calendario, el cual deberás tener a
+                            la vista para cumplir en tiempo y forma con las entregas.
+                        </p>
+                        <p class="parrafo">
+                            Ante cualquier duda, podrás recurrir a tu facilitador a través de mensaje y/o correo
+                            electrónico, que se encuentra ubicado dentro de la misma plataforma.
+                        </p>
+                        <p class="parrafo">
+                            Para acreditar el curso, deberás cumplir con las actividades encomendadas, participar en
+                            foros y acreditar el examen final.
+                        </p>
+                        <p class="parrafo">
+                            Nuevamente bienvenido.
+                        </p>
+                        <p class="parrafo">
+                            Recuerda que: “El conocimiento te da libertar, y el pensar por ti mismo te hace llegar más
+                            allá de tu imaginación”.
+                        </p>
+                        <p class="mb-0">
+                            <b>¡Atrévete!</b>
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <p class="parrafo instruccion-color-verde movil">
+                <b>Instrucción:</b> Presiona el botón para descargar el guion.
+            </p>
+            <div class="text-center movil">
+                <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light btn-14"
+                    href="../downloads/unit-1/GALT-guion de video-Conversation.pdf">
+                    Guion de video
+                    <span class="sr-only">archivo PDF</span>
+                </a>
+            </div>
+
+            <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
+                <img src="./images/AFBG_separador-contenido.png" alt="Separador - Imagen de apoyo" aria-hidden="true"
+                    width="80%" height="auto" class="escritorio">
+                <img src="./images/AFBG_separador-contenido-r.png" alt="Separador movil - Imagen de apoyo"
+                    aria-hidden="true" width="80%" height="auto" class="movil">
+            </div>
+        </div>
+
+        <section class="introduction">
+
+            <div class="container">
+
+                <div class="cuadro-azul-degradado espacio mt-4 ">
+
+                    <h2 class="text-azul parrafo subtitulos_spadding">
+                        <img class="ocultar img_subtitulo" src="./images/PCSP24-_icono03.png" alt="Icon Support">
+                        Competencia
+                    </h2>
+
+                    <!-- (<span aria-hidden="true">UAT</span> <span class="sr-only">U A T</span>) -->
+                    <p class="parrafo mb-0">
+                        El estudiante formula problemas (situaciones como necesidades, obstáculos, carencias/excesos,
+                        contradicción en funciones), de contextos disciplinares y transdisciplinares, y plantea, de
+                        manera explicativa y/o argumentada, propuestas de solución, apoyado en el pensamiento crítico y
+                        la transferencia de conocimientos de otras Experiencias Educativas
+                        (<span aria-hidden="true">EE</span> <span class="sr-only">E E</span>). Además, denota en su
+                        hacer valores y actitudes estrechamente vinculados al pensamiento crítico y a la solución de
+                        problemas.
+                    </p>
+
+                </div>
+
+                <div class="seccion-content">
+
+                    <!-- text-azul subtitulost -->
+                    <h2 class="text-azul parrafo subtitulos_spadding">
+                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                        Descripción general
+                    </h2>
+
+                    <p class="parrafo">
+                        La Experiencia Educativa Pensamiento Crítico para la Solución de Problemas, pertenece al Área de
+                        Formación Básica General del Modelo Educativo Institucional de la Universidad Veracruzana. En
+                        este curso-taller, el estudiante desarrolla las competencias para la formulación de problemas y
+                        la construcción de solución a los mismos, apoyado en el pensamiento crítico y la transferencia
+                        de conocimientos de otras experiencias educativas del plan de estudios que cursa. La evaluación
+                        se realiza continuamente, cuantitativa y cualitativamente durante el curso-taller, atendiendo a
+                        criterios de comprensión analítica y crítico-creativa como son: atinencia, relevancia,
+                        coherencia, necesidad y suficiencia.
+                    </p>
+                    <p class="parrafo ">
+                        Se abordan temáticas sobre la sustentabilidad, interculturalidad, género, inclusión social,
+                        promoción de la salud, arte y creatividad, derechos humanos y justicia, a través de la relación
+                        que se establece entre los saberes propios del curso y dichas temáticas, promoviendo en el
+                        estudiante reflexiones críticas que le permitan actuar de manera responsable y comprometida como
+                        ciudadano global.
+                    </p>
+                    <p class="parrafo ">El curso-taller está conformado por los siguientes módulos.</p>
+
+
+                    <div class="ocultar">
+                        <p class="parrafo instruccion">
+                            <b>Instrucción:</b> Presiona cada botón para conocer la información.
+                        </p>
+                        <div class="modals_moduls">
+                            <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#modul-1">
+                                Módulo 1
+                            </button>
+
+                            <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#modul-2">
+                                Módulo 2
+                            </button>
+
+                            <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#modul-3">
+                                Módulo 3
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mostrar">
+                    <div class="containers_module parrafo">
+                        <p><b>Módulo 1. Pensamiento crítico para la solución de problemas.</b> En este módulo
+                            identificas
+                            qué es pensamiento crítico, sus principios y su utilidad para formular y solucionar
+                            problemas.</p>
+                        <p><b>Módulo 2. Pensamiento crítico para formular problemas. </b> En este módulo se presentan
+                            diferentes
+                            definiciones de los conceptos de "problema" y "solución" tales como
+                            carencia/exceso-equilibrio, necesidad-satisfacción de necesidad, obstáculo-remoción del
+                            obstáculo y contradicción de funciones-función ideal; así como algunos modelos, mediante los
+                            cuales se desarrollan las competencias para la identificación y formulación de problemas,
+                            apoyados en el pensamiento crítico; identificando los componentes y variables de situaciones
+                            problemáticas mediante el reconocimiento del contexto, trasfondo y entorno, identificando y
+                            transformando problemáticas cotidianas y/o disciplinares.</p>
+                        <p class="mb-0"><b>Módulo 3. Pensamiento crítico para solucionar problemas.</b> En este módulo
+                            se presentan y
+                            analizan como propuestas para construir alternativas de solución, tres modelos teóricos:
+                            TRIZ, ARDESOS-DIAPROVE y ACRISPO; cada uno de ellos precisan estrategias, instrumentos y
+                            recursos propios para solucionar problemas.</p>
+                    </div>
+                </div>
+
+                <div class="container_antologias parrafo ">
+                    <p>Para cursar esta Experiencia Educativa, utiliza las siguientes antologías:</p>
+                    <ul class="padding_left mb-0">
+                        <li><a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/"
+                                target="_blank">Antologías 2017</a></li>
+                        <li><a href="https://www.uv.mx/apps/afbgcursos/HPCYC/" target="_blank">Antología del
+                                estudiante THPCyC (2013).</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
+                    <img src="./images/AFBG_separador-contenido.png" alt="Separador - Imagen de apoyo"
+                        aria-hidden="true" width="80%" height="auto" class="escritorio">
+                    <img src="./images/AFBG_separador-contenido-r.png" alt="Separador movil - Imagen de apoyo"
+                        aria-hidden="true" width="80%" height="auto" class="movil">
+                </div>
+
+
+        </section>
+
+        <section class="">
+            <div class="container">
+
+                <div class="seccion-content">
+
+                    <h2 class="text-azul parrafo subtitulos_spadding">
+                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                        Contenido
+                    </h2>
+
+                    <div class="ocultar">
+                        <div class="section_topics">
+                            <div class="section_tema ">
+                                <p class=" parrafo mb-0 ">
+                                    <b>Información general</b>
+                                </p>
+                            </div>
+
+
+                            <div class="section_tema">
+                                <p class="parrafo mb-0 ">
+                                    <b>Módulo 1.</b> Pensamiento crítico para la solución de problemas
+                                </p>
+                            </div>
+
+                            <div class="section_tema">
+                                <p class="parrafo mb-0 ">
+                                    <b>Módulo 2.</b> Pensamiento crítico para formular problemas.
+                                </p>
+                            </div>
+
+                            <div class="section_tema">
+                                <p class="parrafo mb-0 ">
+                                    <b>Módulo 3</b> Pensamiento crítico para solucionar problemas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mostrar">
+                        <div>
+                            <p class="parrafo"><b>Información general</b></p>
+                            <p class="parrafo"><b>Módulo 1.</b> Pensamiento crítico para la solución de problemas</p>
+                            <p class="parrafo"><b>Módulo 2.</b> Pensamiento crítico para formular problemas</p>
+                            <p class="parrafo"><b>Módulo 3.</b> Pensamiento crítico para soluciónr problemas</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <!-- container -->
+        <section class="espacio_v2 section-experts">
+            <!-- espacio -->
+            <div class="container_experts">
+
+                <div class="">
+                    <h2 class="text-azul parrafo subtitulos parrafo font_Expert">
+                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                        Expertos en contenido
+                    </h2>
+
+                </div>
+
+                <div class="ocultar">
+
+                    <div class="contenedor-expertos">
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Gloria Leticia Chama Beristáin
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#gloria">
+                                + Info
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Claudia Margarita Mis Linares
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#claudia">
+                                + Info
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2 text-center">
+                                <br aria-hidden="true">
+                                Ezzio Othoniel Acosta Canseco
+                            </p>
+
+                            <p class="parrafo text-center mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#ezzio">
+                                + Info
+                            </button>
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Fátima Romero Gutiérrez
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#fatima">
+                                + Info
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Hilda Gloria Muñoz Vázquez
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#hilda">
+                                + Info
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Laura Patricia Medrano Herrera
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#laura">
+                                + Info
+                            </button>
+
+                        </div>
+
+                        <div class="tarjeta-designers">
+
+                            <div>
+                                <img class="img_expert" src="./images/PCSP24-_cuadrosblancos.png" alt="Icon Support">
+                            </div>
+
+                            <p class="parrafo text-azul mb-2">
+                                <br aria-hidden="true">
+                                Lourdes María Cordero Pulido
+                            </p>
+
+                            <p class="parrafo mb-3">
+                                Universidad Veracruzana
+                            </p>
+
+                            <!-- btn btn-azul-modals waves-effect waves-light -->
+                            <button class="btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                                data-target="#lourdes">
+                                + Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mostrar">
+                    <p class="parrafo instruccion-color-verde">
+                        <b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                    </p>
+                </div>
+
+                <div class="text-center movil">
+                    <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light btn-14"
+                        href="../downloads/unit-1/GALT-guion de video-Conversation.pdf">
+                        Expertos
+                        <span class="sr-only">archivo PDF</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
+            <img src="./images/AFBG_separador-contenido.png" alt="Separador - Imagen de apoyo" aria-hidden="true"
+                width="80%" height="auto" class="escritorio">
+            <img src="./images/AFBG_separador-contenido-r.png" alt="Separador movil - Imagen de apoyo"
+                aria-hidden="true" width="80%" height="auto" class="movil">
+        </div>
+
+        <!-- <section class="section-bibliography">
+
+
+            <div class="container">
+
+                <div class="espacio">
+
+                    <h2 class="parrafo text-azul subtitulost ">
+                        Fuentes de información
+                    </h2>                    
+
+                    <div class="escritorio">
+                        <div class="colapsador ">
+
+                            <button data-toggle="collapse" data-target="#basicas-1"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                                aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Generales</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <div id="basicas-1" class="collapse">
+
+                                <div class="colapsar-contenido">
+
+                                    <div class="texto-referencias ">
+
+
+                                        <p class="parrafo">Comisión de Política Gubernamental en Materia de Derechos
+                                            Humanos. (s.f.). Glosario de Términos sobre Discapacidad. Consultado el 10
+                                            de noviembre de 2023 en
+                                            <a href="https://www.gob.mx/cms/uploads/attachment/file/9638/glosario_terminos_sobre_discapacidad.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.gob.mx/<wbr>cms/uploads/<wbr>attachment/<wbr><wbr>file/9638/<wbr>glosario_<wbr>terminos_<wbr>sobre_discapacidad<wbr>.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Congreso General de los Estados Unidos Mexicanos. (2023). Ley
+                                            General para la Inclusión de las Personas con Discapacidad. Diario Oficial
+                                            de la Federación. Última reforma publicada 06-01-2023. Consultado el 11 de
+                                            septiembre de 2023 en
+                                            <a href="https://www.diputados.gob.mx/LeyesBiblio/pdf/LGIPD.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.diputados<wbr>.gob.mx/<wbr>LeyesBiblio/<wbr>pdf/<wbr>LGIPD.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Instituto Nacional de Estadística y Geografía. (2014). <i>La
+                                                discapacidad en México, datos al 2014</i>. INEGI. p. 358.</p>
+
+                                        <p class="parrafo">Instituto Nacional de Estadística y Geografía. (2021).
+                                            Estadística a propósito del día internacional de las personas con
+                                            discapacidad (Datos nacionales). Comunicado de prensa Núm. 713/21. 3 de
+                                            diciembre de 2021. INEGI. p. 5.</p>
+
+                                        <p class="parrafo">Instituto Politécnico Nacional. (s.f.). Glosario de Términos.
+                                            Dirección de Educación Virtual. IPN. Consultado el 10 de noviembre de 2023
+                                            en
+                                            <a href="https://www.ipn.mx/assets/files/dev/docs/DII/Glosario-RDD.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.ipn.mx/<wbr>assets/<wbr>files/dev/<wbr>docs/DII/<wbr>Glosario-RDD.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lobato Zapata, Gerardo y Cortés Santamaría, Adarely (2021).
+                                            Propuesta Espacios para Unidad de Accesibilidad Tecnológica. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. p. 46.
+                                        </p>
+
+                                        <p class="parrafo">Organización Mundial de Salud. (2001). Clasificación
+                                            Internacional del Funcionamiento, de la Discapacidad y de la Salud. OMS.
+                                            Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://iris.who.int/bitstream/handle/10665/43360/9241545445_spa.pdf"
+                                                target="_blank">
+                                                https://<wbr>iris.who.int<wbr>/bitstream/<wbr>handle/10665<wbr>/43360/<wbr>9241545445_spa.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Revista Suprema. (s.f.). La importancia de la accesibilidad
+                                            en la Era Digital. Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://revistasuprema.com/la-importancia-de-la-accesibilidad-en-la-era-digital"
+                                                target="_blank">
+                                                https://<wbr>revistasuprema.<wbr>com/la-<wbr>importancia-de<wbr>-la-accesibilidad<wbr>-en-la-era<wbr>-digital
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Nacional Autónoma de México. (s.f.) Glosario de
+                                            Términos de TIC. Dirección General de Cómputo y de Tecnologías de
+                                            Información y Comunicación. Consultado el 10 de noviembre de 2023 en
+                                            <a href="https://www.red-tic.unam.mx/glosario" target="_blank">
+                                                https://<wbr>www.red-tic.<wbr>unam.mx/<wbr>glosario
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Veracruzana. (2018). Universidad Inclusiva.
+                                            Lineamientos para la inclusión de estudiantes con discapacidad. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. Recuperado de
+                                            <a href="https://libros.uv.mx/index.php/UV/catalog/book/UC012"
+                                                target="_blank">
+                                                https://<wbr>libros.uv.mx<wbr>/index.php<wbr>/UV/catalog/<wbr>book/UC012
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Universidad Veracruzana. (2021). Reglamento para la inclusión
+                                            de personas con discapacidad. <span aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. recuperado de
+                                            <a href="https://www.uv.mx/legislacion/files/2021/06/Reglamento-Inclusion-Personas-Discapacidad.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>legislacion/<wbr>files/2021/<wbr>06/Reglamento<wbr>-Inclusion-<wbr>Personas<wbr>-Discapacidad.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo mb-0">Universidad Veracruzana. (2022). Plan de apoyos a
+                                            población estudiantil en condiciones de vulnerabilidad. <span
+                                                aria-hidden="true">UV</span>
+                                            <span class="sr-only">U V</span>. Recuperado de
+                                            <a href="https://www.uv.mx/sdi/files/2022/09/Plan-de-apoyos.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>sdi/files/<wbr>2022/09/<wbr>Plan-de-apoyos.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="colapsador ">
+                            <button data-toggle="collapse" data-target="#basicas-2"
+                                class="btn btn-colapsar referencias-index waves-effect waves-light collapsed"
+                                aria-expanded="false">
+                                <div class="btn-colapsar-layout">
+                                    <span class="linea linea--naranja"></span>
+                                    <span class="btn-colapsar-texto">Tema 1</span>
+                                    <span class="btn-colapsar-icono"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </button>
+
+                            <div id="basicas-2" class="collapse">
+                                <div class="colapsar-contenido">
+                                    <div class="texto-referencias ">
+
+
+                                        <p class="parrafo">Cáceres Rodríguez, C. (2020). Sobre el concepto de
+                                            discapacidad. Una revisión de las propuestas de la OMS. <i lang="en">SPANISH
+                                                JOURNAL OF AUDIOLOGY</i>, 1577-3108.</p>
+
+                                        <p class="parrafo">España, D. O. (3 de noviembre de 2015). <i lang="en">ZOOM
+                                                TEXT</i>; <i>UN PROGRAMA PARA DISCAPACIDAD VISUAL</i>. Obtenido de
+                                            <a href="https://asociaciondoce.com/2015/11/03/zoom-text-un-programa-para-la-discapacidad-visual/"
+                                                target="_blank">
+                                                https://<wbr>asociaciondoce<wbr>.com/2015/<wbr>11/03/<wbr>zoom-text-<wbr>un-programa-para<wbr>-la-discapacidad-visual/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Gobierno de España. (2013). <i>Real Decreto Legislativo
+                                                1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de
+                                                la Ley General de derechos de las personas con discapacidad y de su
+                                                inclusión social</i>.</p>
+
+                                        <p class="parrafo">ISO/IEC 40500. (2012). <i>ISO/IEC 40500:2012—</i><i
+                                                lang="en">Information technology—W3C Web Content Accessibility
+                                                Guidelines</i><i> (WCAG) 2.0. ISO.</i>
+                                            <a href="https://n9.cl/5yviv8/" target="_blank">
+                                                https://<wbr>n9.cl/5yviv8/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lujan, M. (2024). <i>Universidad de Alicante</i>. Obtenido de
+                                            ¿Qué es WCAG?:
+                                            <a href="https://accesibilidadweb.dlsi.ua.es/?menu=que-es-wcag"
+                                                target="_blank">
+                                                https://<wbr>accesibilidadweb<wbr>.dlsi.ua.es/<wbr>?menu=que-es-wcag
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Lujan, M. (s.f.). Introducción a la accesibilidad web. 77.
+                                        </p>
+
+                                        <p class="parrafo">Plataforma Educativa Virtual Accesible. (2023). <i>Diseño y
+                                                gestión de una <span aria-hidden="true">UAT</span> <span
+                                                    class="sr-only">U A T</span> en Instituciones de Educación Superior.
+                                            </i>
+                                            <a href="https://pevae.edutech-project.org/pevae/curso1.html"
+                                                target="_blank">
+                                                https://<wbr>pevae.edutech<wbr>-project.org/<wbr>pevae/curso1<wbr>.html
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo"><span lang="en">SafetyCulture</span>. (2 de enero de 2024).
+                                            <i>¿Qué son los cursos y las clases?</i> Obtenido de <span
+                                                lang="en">SafetyCulture</span>:
+                                            <a href="https://help.safetyculture.com/es/003504/" target="_blank">
+                                                https://<wbr>help.safetyculture<wbr>.com/es/003504/
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="parrafo">Tafur Peral, A. D. (s.f.). Pautas básicas para hacer
+                                            documentos accesibles.</p>
+
+                                        <p class="parrafo mb-0">w3c_wai. (2016, mayo 6). <i lang="en">Accessibility,
+                                                Usability, and Inclusion. Web Accessibility Initiative.</i> </p>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>                    
+                    <div class="movil mt-4 mb-5 mostrar">
+
+                        <p class="parrafo instruccion-color-verde">
+                            <span class="font-weight-bold">Instrucciones: </span> Haz clic en el botón para descargar la
+                            información.
+                        </p>
+
+                        <div class="text-right mt-4">
+                            <a href="#" download="" class="btn btn-descarga border rounded waves-effect waves-light"
+                                download="">
+                                Referencias
+                                <span class="parrafo sr-only">PDF file</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section> -->
+
+        <div class="container">
+            <div class="section_lectura_facil">
+                <p class="parrafo color_fuenteLf"><b>Instrucciones: </b> Presiona el botón para descargar el archivo.
+                </p>
+                <a id="btnLectura" class="btn_lecturaF parrafo" href="" target="_blank" download="">
+                    <img src="./images/accesibilidad/MA-_m-lecturaf-a.png" alt="icono lectura fácil">
+                    Lectura fácil</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer" style="position: relative;">
+
+        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </span>
+
+        <div class="">
+            <div class="tamaño_Img_Footer">
+                <img class="tamaño__img ocultar" src="./images/PCSP24-_firmauv-r.png" loading="lazy" width="100%"
+                    height="auto" alt="Logo de la Universidad Veracruzana">
+            </div>
+            <div>
+                <img class="mostrar" src="./images/PCSP24-_firmauv-e.png" alt="Banner Principal" aria-hidden="true"
+                    width="100%" height="auto">
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <div class="overlay"></div>
+
+    <!-- role="dialog" MODALES: Modulos  -->
+    <div class="modal fade" id="modul-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Módulo 1
+                            </p>
+                        </div>
+
+                        <p class="parrafo">
+                            <b>Pensamiento crítico para la solución de problemas.</b> En este módulo identificas
+                            qué es pensamiento crítico, sus principios y su utilidad para formular y solucionar
+                            problemas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modul-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Módulo 2
+                            </p>
+                        </div>
+
+                        <p class="parrafo">
+                            <b>Pensamiento crítico para formular problemas.</b> En este módulo se presentan diferentes
+                            definiciones de los conceptos de "problema" y "solución" tales como
+                            carencia/exceso-equilibrio, necesidad-satisfacción de necesidad, obstáculo-remoción del
+                            obstáculo y contradicción de funciones-función ideal; así como algunos modelos, mediante los
+                            cuales se desarrollan las competencias para la identificación y formulación de problemas,
+                            apoyados en el pensamiento crítico; identificando los componentes y variables de situaciones
+                            problemáticas mediante el reconocimiento del contexto, trasfondo y entorno, identificando y
+                            transformando problemáticas cotidianas y/o disciplinares.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modul-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Módulo 3
+                            </p>
+                        </div>
+
+                        <p class="parrafo">
+                            <b>Pensamiento crítico para solucionar problemas.</b> En este módulo
+                            se presentan y analizan como propuestas para construir alternativas de solución, tres
+                            modelos teóricos:
+                            TRIZ, ARDESOS-DIAPROVE y ACRISPO; cada uno de ellos precisan estrategias, instrumentos y
+                            recursos propios para solucionar problemas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALES: EXPERTOS -->
+    <div class="modal fade" id="gloria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Gloria Leticia Chama Beristáin
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+
+                        <ul class="parrafo padding_left">
+                            <li>Licenciada en Pedagogía.</li>
+                            <li>Especialidad en Investigación Educativa.</li>
+                            <li>Maestría en Psicoterapia Gestalt.</li>
+                        </ul>
+
+                        <p class="parrafo">Doctorante en educación. Posee estudios de doctorado en Pensamiento Complejo.
+                            Miembro de la Cátedra Itinerante de la UNESCO “Edgar Morin”.</p>
+
+                        <p class="parrafo">Ha impartido clases en las licenciaturas de Pedagogía, Educación Artística,
+                            Administración de
+                            Negocios Internacionales, Publicidad y Relaciones Públicas, Relaciones Industriales y
+                            Geografía.</p>
+
+                        <p class="parrafo">Desde hace 25 años imparte las materias de Creatividad, Ética y política, y
+                            Metodología de la
+                            investigación en la Facultad de Ciencias Administrativas y Sociales de la Universidad
+                            Veracruzana. Desde el año 2004 imparte clases en posgrados de educación y docencia, en
+                            materias de Planeación didáctica, Estrategias docentes, Ética y educación, Filosofía y
+                            Educación, Seminarios de tesis, Psicología del aprendizaje, Dinámica de grupos.</p>
+
+                        <p class="parrafo">Ha fungido como asesora en diseño curricular de diversos planes y programas
+                            de estudio, a
+                            nivel licenciatura y posgrado. Fue presidenta del Colegio de Pedagogos del Estado de
+                            Veracruz, A.C. Ha publicado artículos sobre el quehacer docente, habilidades del pensamiento
+                            y pensamiento complejo.</p>
+
+                        <p class="parrafo mb-0">En la actualidad, se desempeña en el Área de Formación Básica de la
+                            Universidad Veracruzana
+                            como asesora pedagógica.</p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="claudia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Claudia Margarita Mis Linares
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+                        <ul class="padding_left parrafo">
+                            <li>Licenciada en Economía.</li>
+                            <li>Maestra en Ciencias de la Educación.</li>
+                        </ul>
+                        <p class="parrafo">Coordinadora del Área de Formación Básica General, Región Coatzacoalcos –
+                            Minatitlán, 2015, vigente en funciones. Asesora técnico-pedagógica, departamento de
+                            Desarrollo curricular, septiembre 2015-2016. Personal Administrativo de la Dirección General
+                            de Desarrollo Académico e Innovación educativa, abril-agosto, 2015. Personal de confianza.
+                        </p>
+                        <p class="parrafo">
+                            Asesora técnico-pedagógica del departamento de Desarrollo curricular, DGDAIE, 2009-2015.
+                            Coordinadora de grupos de Aprendizaje del ProFA, 2010-2016. Docente por asignatura,
+                            1999-2020, en diversos Programas Educativos de las regiones de Xalapa y Coatzacoalcos.
+                        </p>
+                        <p class="parrafo">
+                            Coordinadora regional del primer diplomado en Gestión Municipal, 2001. Docente por
+                            asignatura de nivel Maestría en la Universidad de Sotavento, 2018-2020 y en el Centro de
+                            estudios de posgrado "Leona Vicario”, 2016-2020.
+                        </p>
+                        <p class="parrafo mb-0">
+                            Instructora de curso PROFORDEMS 2014-2015, dirigido a docentes de Educación Media Superior.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ezzio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Ezzio Othoniel Acosta Canseco
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+                        <ul class="padding_left parrafo">
+                            <li>Licenciado en Pedagogía por la Universidad Veracruzana.</li>
+                            <li>Maestría en Educación Superior por la Benemérita Universidad Autónoma de Puebla.</li>
+                        </ul>
+                        <p class="parrafo">
+                            Profesor del Área de Formación Básica General de la Experiencia Educativa Habilidades de
+                            Pensamiento Crítico y Creativo/Pensamiento Crítico para la Solución de Problemas. Modalidad:
+                            escolarizado/enseñanza abierta/en línea.
+                        </p>
+
+                        <p class="parrafo">
+                            Coordinador de grupos de aprendizaje en el Programa de Formación de Académicos de la
+                            Universidad Veracruzana, presenciales/en línea. Diseñador de programas de estudio para el
+                            Programa de Formación de Académicos de la Universidad Veracruzana.
+                        </p>
+
+                        <p class="parrafo">
+                            Formación y actualización docente en diversos diplomados y cursos relacionados con Diseño
+                            curricular, Servicio social universitario, Responsabilidad social universitaria, Habilidades
+                            de pensamiento/Pensamiento crítico, Tecnología educativa, Pedagógicos, entre otros.
+                            Participación en investigaciones relacionadas con la Formación profesional del pedagogo y el
+                            campo laboral, Diseño curricular, Servicio social universitario y titulación, entre otros.
+                        </p>
+
+                        <p class="parrafo mb-0">
+                            Asistente y ponente en eventos académicos a nivel nacional e internacional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="fatima" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Fátima Romero Gutiérrez
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+                        <ul class="padding_left parrafo">
+                            <li>Licenciada en Informática.</li>
+                            <li>Maestría en Educación.</li>
+                            <li>Maestría en Ingeniería Administrativa.</li>
+                        </ul>
+
+                        <p class="parrafo">
+                            Ha impartido clases en la Facultad de Negocios y Tecnologías, Campus Ixtaczoquitlán de la
+                            Universidad Veracruzana y en la Universidad del Golfo de México, Campus Querétaro.
+                        </p>
+
+                        <p class="parrafo">
+                            Desde el año 2015 colabora en la Vicerrectoría de la UV en la Región Orizaba – Córdoba de
+                            manera directa con la Secretaría Académica regional, desempeñándose como Coordinadora
+                            regional del AFBG, Coordinadora de Educación Continua, Responsable regional del examen de
+                            ingreso a licenciatura y posgrado, examen de egreso de la licenciatura, difusión y
+                            seguimiento de becas para estudiantes. Durante 15 años colaboró en una IES particular en
+                            Orizaba y Querétaro, ocupando cargos directivos.
+                        </p>
+
+                        <p class="parrafo">
+                            En la actualidad, se desempeña como Coordinadora regional en el Área de Formación Básica de
+                            la Universidad Veracruzana, Región Orizaba - Córdoba.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hilda" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Hilda Gloria Muñoz Vázquez
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+
+                        <ul class="padding_left parrafo">
+                            <li>Licenciada en Derecho.</li>
+                            <li>Maestría en Educación.</li>
+                            <li>Maestría en Derecho de Amparo.</li>
+                        </ul>
+
+                        <p class="parrafo">
+                            Ha impartido clases en las licenciaturas de Contaduría, Administración, Ingeniería
+                            Biotecnológica, Medicina, Mecatrónica, Gestión y Dirección de Negocios, de la Universidad
+                            Veracruzana.
+                        </p>
+
+                        <p class="parrafo">
+                            Desde el año 2016 imparte clases en la Licenciatura en Derecho y a nivel Maestría (Economía
+                            Educativa, Enfoques Actuales de Excelencia Académica en la Educación Superior, Legislación
+                            Educativa, Modelos de Evaluación institucional, Paradigmas de aprendizaje en el aula,
+                            Problemas de aprendizaje y Teoría de la organización en la administración escolar) de la
+                            Universidad Azteca Virtual.
+                        </p>
+
+                        <p class="parrafo">
+                            Desde el año 2017 imparte las Experiencias Educativas Pensamiento Crítico para la Solución
+                            de Problemas/Habilidades de Pensamiento Crítico y Creativo, dentro del Área de Formación
+                            Básica General y dentro del área disciplinar Fundamentos de derecho y Marco legal de las
+                            relaciones comerciales, en la Universidad Veracruzana. Ha fungido como asesora en diseño
+                            curricular de diversos planes y programas de estudio, a nivel licenciatura y posgrado en la
+                            Universidad Azteca Virtual.
+                        </p>
+
+                        <p class="parrafo mb-0">
+                            En la actualidad, se desempeña en el Área de Formación Básica General de la Universidad
+                            Veracruzana como docente, así como en el área disciplinar en la Facultad de Negocios y
+                            Tecnologías.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="laura" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Laura Patricia Medrano Herrera
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+                        <ul class="padding_left parrafo">
+                            <li>Licenciada en Psicología.</li>
+                            <li>Maestría en investigación en psicología aplicada a la educación (pasante).</li>
+                        </ul>
+
+                        <p class="parrafo">
+                            Técnico académico de tiempo completo, Instituto de Psicología y Educación de la Universidad
+                            Veracruzana de 1995 a la fecha. Profesor de asignatura del AFBG de 2012 a la fecha, en los
+                            Programas Educativos (escolarizado) Sistemas Computacionales y Administración de Empresas y
+                            Programas Educativos (SEA) de Contaduría y Derecho.
+                        </p>
+
+                        <p class="parrafo">
+                            Coordinadora regional de la academia de Habilidades de Pensamiento Crítico y Creativo, en la
+                            Región Orizaba -Córdoba de 2013 a la fecha. Miembro activo de la academia de Habilidades de
+                            Pensamiento Crítico y Creativo/Pensamiento Crítico para la Solución de Problemas, de 2010 a
+                            la fecha.
+                        </p>
+
+                        <p class="parrafo mb-0">
+                            Participación como miembro del jurado calificador para concurso de oposición de la
+                            Experiencia Educativa Habilidades de Pensamiento Crítico y Creativo, convocada en el periodo
+                            febrero-julio 2017 en la Universidad Veracruzana. Participación en la elaboración del examen
+                            estandarizado de la Experiencia Educativa Habilidades de Pensamiento Crítico y Creativo en
+                            el periodo agosto 2017-enero 2018.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="lourdes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <!-- -->
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Lourdes María Cordero Pulido
+                            </p>
+                        </div>
+                        <p class="parrafo">
+                            <b>Formación profesional</b>
+                        </p>
+
+                        <ul class="padding_left parrafo">
+                            <li>Licenciada en Pedagogía.</li>
+                            <li>Maestría en Docencia Universitaria.</li>
+                            <li>Doctorado en Ciencias Jurídicas, Administrativas y de la Educación.</li>
+                        </ul>
+
+                        <p class="parrafo">
+                            Fue coordinadora regional de la academia de Habilidades de Pensamiento Crítico y Creativo
+                            (2011).
+                        </p>
+
+                        <p class="parrafo">
+                            Desde el año 2002 ha impartido clase como profesor de asignatura en nivel Licenciatura en
+                            diversas facultades: Pedagogía, Educación Física, Nutrición, Ingeniería, Administración,
+                            Contaduría y en Administración SEA de la Universidad Veracruzana. Ha impartido desde el
+                            2005, la Experiencia Educativa Habilidades de Pensamiento Crítico y Creativo, actualmente
+                            llamada Pensamiento Crítico para la Solución de Problemas.
+                        </p>
+
+                        <p class="parrafo">
+                            En la actualidad, se desempeña como Coordinador regional de AFBG desde mayo 2017.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close"
+                        accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center mb-3">
+
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+
+                        </div>
+
+                        <p class="parrafo">
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+                            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                        </p>
+
+                        <p class="parrafo mb-0"><b>Windows</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Alt + M</li>
+                            <li>Cerrar menú principal Alt + C</li>
+                        </ul>
+
+                        <p class="parrafo mb-0"><b>MacOS</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Option + M</li>
+                            <li>Cerrar menú principal Option + C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id="cerrarLectorIn" type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <!-- Funcionalidad general -->
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <script src="scripts/menuacces.js"></script>
+    <script src="scripts/annyang.js"></script>
+    <script src="scripts/change-fonts.js"></script>
+    <script src="scripts/links.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: 'block',
+            scrollOffsets: [
+                new CSSUnitValue(0, 'percent'),
+                new CSSUnitValue(100, 'percent'),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector('#progress'),
+                {
+                    transform: ['scaleX(0)', 'scaleX(1)'],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+
+        $(document).ready(function () {
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('.ir-arriba').slideDown(300);
+                } else {
+                    $('.ir-arriba').slideUp(300);
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
