@@ -28,16 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         elemento.classList.add("active");
     }
 
-    let abrirModal1 = function () {
-        let modal = document.getElementById("methods-uno");
-        let backdrop = document.getElementById("modal-backdrop");
-        modal.style.display = "block";
-        modal.style.paddingRight = "14px"
-        modal.classList.add("show");
-        document.body.classList.add("modal-open");
-        backdrop.style.display = "block";
-    }
-
     let abrirAyuda = function () {
         let modal = document.getElementById("methods-help");
         let backdrop = document.getElementById("modal-backdrop");
@@ -56,9 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "none";
     }
 
+    let abrirModal1 = function () {
+        let modal = document.getElementById("modul-1");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
 
     let cerrarmodal1 = function () {
-        let modal = document.getElementById("methods-uno");
+        let modal = document.getElementById("modul-1");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirmodal2 = function () {
-        let modal = document.getElementById("methods-2");
+        let modal = document.getElementById("modul-2");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px";
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let cerrarModal2 = function () {
-        let modal = document.getElementById("methods-2");
+        let modal = document.getElementById("modul-2");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirmodal3 = function () {
-        let modal = document.getElementById("methods-3");
+        let modal = document.getElementById("modul-3");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px";
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "block";
     }
     let cerrarmodal3 = function () {
-        let modal = document.getElementById("methods-3");
+        let modal = document.getElementById("modul-3");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         abrirModal1();
         modalAbierto1 = true;
-        document.body.classList.add("modal-open");
+        // document.body.classList.add("modal-open");
     }
 
     function abrirModal22() {
@@ -157,21 +157,25 @@ document.addEventListener("DOMContentLoaded", function () {
         abrirAyuda();
         modalAbierto4 = true;
     }
-    // prueba faq    
+    // prueba faq        
 
     let abrirfaqBasicaP = function () {
         let abrirfaq = document.getElementById("basic1");
-        abrirfaq.classList.remove('collapsed');
+        // abrirfaq.classList.remove('collapsed');
         abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.nextElementSibling.classList.add('show');
-
+        abrirfaq.setAttribute('open', '');
+        // abrirfaq.clas
+        // abrirfaq.nextElementSibling.classList.add('show');
     }
 
     let cerrarfaqBasicP = function () {
         let cerrarfaq = document.getElementById("basic1");
-        cerrarfaq.classList.add('collapsed');
+        // cerrarfaq.classList.add('collapsed');
         cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show')
+        cerrarfaq.removeAttribute('open', '');
+        cerrarfaq.setAttribute('close', '');
+        // cerrarfaq.nextElementSibling.classList.remove('show')
+        // faqAbierto = false;
     }
 
     let faqAbierto = false;
@@ -322,8 +326,23 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(element);
     }
 
+    let section15 = function () {
+        let element = document.getElementById("section15");
+        PositionTop100(element);
+    }
+
     let section17 = function () {
         let element = document.getElementById("section17");
+        PositionTop100(element);
+    }
+
+    let section26 = function () {
+        let element = document.getElementById("section26");
+        PositionTop100(element);
+    }
+
+    let section27 = function () {
+        let element = document.getElementById("section27");
         PositionTop100(element);
     }
 
@@ -430,16 +449,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let fullScreenVideo1 = function () {
-        fullScreenVideo();
-        // if (fullScreenVideo()) {
-        //     fullScreenVideoExit();
-        // }
+        videoOn = true;
+        if (videoOn == true) {
+            fullScreenVideo();
+        } else {
+            videoOn = false;
+            fullScreenVideoExit();
+        }
     }
 
     let btn19 = document.getElementById("ident42");
     let downloadbtnLectura = function () {
         btn19.click();
     }
+
+    let ident24 = document.getElementById("ident24");
+    let abrirEnlace = function () {
+        ident24.click();
+    }
+
+    let ident25 = document.getElementById("ident25");
+    let abrirEnlace2 = function () {
+        ident25.click();
+    }
+
 
     var commands = {
         'Desplazar hacia abajo': scrollBottom,
@@ -475,9 +508,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // '9': section9,
         // 'nueve': section9,
 
-        '10': abrirModal11,
-        'Diez': abrirModal11,
-
         // '11': cerrarmodal1,
         // 'Once': cerrarmodal1,
 
@@ -491,11 +521,14 @@ document.addEventListener("DOMContentLoaded", function () {
         '13': fullScreenVideo1,
         'Trece': fullScreenVideo1,
 
-        '14': abrirModal33,
-        'catorce': abrirModal33,
+        '14': abrirCerrarfaq,
+        'catorce': abrirCerrarfaq,
 
-        '15': cerrarmodal3,
-        'Quince': cerrarmodal3,
+        '15': section15,
+        'Quince': section15,
+
+        // '15': cerrarmodal3,
+        // 'Quince': cerrarmodal3,
 
         '16': section16,
         'Dieciséis': section16,
@@ -503,21 +536,51 @@ document.addEventListener("DOMContentLoaded", function () {
         '17': section17,
         'Diecisiete': section17,
 
-        abrirCerrarfaq,
+        '0': abrirModalAyuda,
+        'cero': abrirModalAyuda,
 
-        '18': abrirCerrarfaq2,
-        'Dieciocho': abrirCerrarfaq2,
+        'cerrar': cerrarAyuda,
+
+        '18': abrirModal11,
+        'Dieciocho': abrirModal11,
+
+        '19': cerrarmodal1,
+        'Diecinueve': cerrarmodal1,
+
+        '20': abrirModal22,
+        'Veinte': abrirModal22,
+
+        '21': cerrarModal2,
+        'Veintiuno': cerrarModal2,
+
+        '22': abrirModal33,
+        'Veintidós': abrirModal33,
+
+        '23': cerrarmodal3,
+        'Veintitrés': cerrarmodal3,
+
+        '24': abrirEnlace,
+        'veinticuatro': abrirEnlace,
+
+        '25': abrirEnlace2,
+        'veinticinco': abrirEnlace2,
+
+        '26': section26,
+        'Veintiséis': section26,
+
+        '27': section27,
+        'Veintisiete': section27,
+        
+        // abrirCerrarfaq,
+
+        // '18': abrirCerrarfaq2,
+        // 'Dieciocho': abrirCerrarfaq2,
 
         '42': downloadbtnLectura,
         'cuarenta y dos': downloadbtnLectura,
 
         '43': volverA,
         'cuarenta y tres': volverA,
-
-        '0': abrirModalAyuda,
-        'cero': abrirModalAyuda,
-
-        'cerrar': cerrarAyuda,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
@@ -597,6 +660,34 @@ let num38 = document.getElementById("ident38");
 let num40 = document.getElementById("ident40");
 let num42 = document.getElementById("ident42");
 let num43 = document.getElementById("ident43");
+
+// MODALES:
+let num19 = document.getElementById("ident19");
+let num19_1 = document.getElementById("ident19_1");
+let num21 = document.getElementById("ident21");
+let num21_1 = document.getElementById("ident21_1");
+let num23 = document.getElementById("ident23");
+let num23_1 = document.getElementById("ident23_1");
+let num29 = document.getElementById("ident29");
+let num29_1 = document.getElementById("ident29_1");
+let num31 = document.getElementById("ident31");
+let num31_1 = document.getElementById("ident31_1");
+let num33 = document.getElementById("ident33");
+let num33_1 = document.getElementById("ident33_1");
+let num35 = document.getElementById("ident35");
+let num35_1 = document.getElementById("ident35_1");
+let num37 = document.getElementById("ident37");
+let num37_1 = document.getElementById("ident37_1");
+let num39 = document.getElementById("ident39");
+let num39_1 = document.getElementById("ident39_1");
+let num41 = document.getElementById("ident41");
+let num41_1 = document.getElementById("ident41_1");
+
+let cerrar_help = document.getElementById("cerrar");
+let cerrar_1 = document.getElementById("identcerrar");
+
+
+
 // botones cerrar modal 0
 let num11_1 = document.getElementById("ident1_1");
 // botones cerrar modal 10
@@ -735,6 +826,40 @@ btn_access.addEventListener('click', function () {
         num42.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
+        // modales:
+        cerrar.style.display = "inline-flex";
+        cerrar_help.style.display = "inline-flex";
+
+        num19.style.display = "inline-flex";
+        num19_1.style.display = "inline-flex";
+
+        num21.style.display = "inline-flex";
+        num21_1.style.display = "inline-flex";
+
+        num23.style.display = "inline-flex";
+        num23_1.style.display = "inline-flex";
+
+        num29.style.display = "inline-flex";
+        num29_1.style.display = "inline-flex";
+
+        num31.style.display = "inline-flex";
+        num31_1.style.display = "inline-flex";
+
+        num33.style.display = "inline-flex";
+        num33_1.style.display = "inline-flex";
+
+        num35.style.display = "inline-flex";
+        num35_1.style.display = "inline-flex";
+
+        num37.style.display = "inline-flex";
+        num37_1.style.display = "inline-flex";
+
+        num39.style.display = "inline-flex";
+        num39_1.style.display = "inline-flex";
+
+        num41.style.display = "inline-flex";
+        num41_1.style.display = "inline-flex";
+
         // btones cerrar modales :
         // modal etiqueta 0
         // cerrar.style.display = "inline-flex";
@@ -798,6 +923,38 @@ btn_access.addEventListener('click', function () {
         num42.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // btones cerrar modales:
+        cerrar.style.display = "none";
+        cerrar_help.style.display = "none";
+
+        num19.style.display = "none";
+        num19_1.style.display = "none";
+
+        num21.style.display = "none";
+        num21_1.style.display = "none";
+
+        num23.style.display = "none";
+        num23_1.style.display = "none";
+
+        num29.style.display = "none";
+        num29_1.style.display = "none";
+
+        num31.style.display = "none";
+        num31_1.style.display = "none";
+
+        num33.style.display = "none";
+        num33_1.style.display = "none";
+
+        num35.style.display = "none";
+        num35_1.style.display = "none";
+
+        num37.style.display = "none";
+        num37_1.style.display = "none";
+
+        num39.style.display = "none";
+        num39_1.style.display = "none";
+
+        num41.style.display = "none";
+        num41_1.style.display = "none";
         // modal etiqueta 0
         // cerrar.style.display = "none";
         // num1_h.style.display = "none";
