@@ -1,0 +1,102 @@
+p, button{
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.subtitulo{ font-size:1.3rem; margin-bottom:1rem }
+
+@media screen and (min-width: 768px) {
+
+    p, button {
+        font-size: 1.3rem;
+        margin-bottom: 2em;
+    }
+    .subtitulo{ font-size:1.5rem; margin-bottom:1rem }
+}
+
+.titulo-principal-unit{
+    color: #3C3D8B;
+    font-weight: bold;
+    position: absolute;
+    top: 7rem;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.caja{ padding:2rem }
+
+.titulo-principal-unit span{ display:block; font-weight:normal; }
+
+.separador {
+    background: url(../images/PCSP24-_separador-contenido.png) no-repeat center / 100%;
+    height: 3rem;
+    border-top: 3rem;
+    width: 80%;
+    max-width: 55rem;
+    margin: 2rem auto;
+}
+
+.fondo-degradado {
+    background: rgb(237, 237, 252);
+    background: linear-gradient(90deg, rgba(237, 237, 252, 1) 50%, rgba(250, 235, 221, 1) 100%);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem }
+.fondo-blanco{ 
+	border-bottom: .15rem solid;
+	padding: 1rem 1rem 1rem 2rem;
+    margin-bottom: 1rem;
+}
+.color-3{ color: #FF811A;
+    margin-right: .5rem; }
+.percent {
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background: #81649E;
+    color: #fff;
+    justify-content: center;
+    font-weight: bold;
+    border-left: .3rem solid #fff;
+}
+.temario{ 
+	color: #1E4566;
+    max-width: 52rem;
+    margin: 3rem auto;
+}
+.temario p{ margin-bottom:0; }
+
+.titulos-encab{ 
+    background: url(../images/modulo1/modulo-A.png) no-repeat 0 center / auto 100%, url(../images/modulo1/modulo-b.png) no-repeat right center / auto 100% #FFBA6A;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 17rem;
+    padding: .5rem 0;
+    border-radius: 3rem 0 0 3rem; }
+
+.btn_lecturaf{ background:#17529C; color:#fff; border:1px solid; }
+
+@media screen and (max-width: 767px){
+    .titulo-principal-unit{        
+    
+    }
+
+    .separador {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .subtitulo{ font-size:1.3rem; margin-bottom:1rem }
+
+    .fondo-degradado{ padding:1rem }
+
+}
+
+/*termina principal*/
