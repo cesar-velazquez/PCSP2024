@@ -788,6 +788,7 @@ a.sidebar__enlace {
 
 .btn {
     font-size: 1.125rem !important;
+    text-transform: none;
 }
 
 .btn:hover {
@@ -976,7 +977,8 @@ a.sidebar__enlace {
 }
 
 .collapsables-gi,
-.collapsables-gi_2, summary::after {
+.collapsables-gi_2,
+summary::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -987,7 +989,8 @@ a.sidebar__enlace {
 }
 
 .collapsables-gi[open],
-.collapsables-gi_2[open], summary::after {
+.collapsables-gi_2[open],
+summary::after {
     position: absolute;
     top: 48%;
     transform: translateY(-52%);
