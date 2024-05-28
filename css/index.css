@@ -59,22 +59,21 @@ body {
 }
 
 .btn_lecturaF {
-    width: 200px;
-    background-color: #18529D;
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 14rem;
+    background: url(../images/accesibilidad/lecturaf-w.png) no-repeat 2rem center #17529C;
+    text-align: left;
     margin: auto;
     color: white;
     font-weight: bold;
     transition-duration: .8s;
+    padding: 1rem 1rem 1rem 4.5rem;
+    border: .2rem solid #17529C;
+    border-radius: .5rem;
 }
 
-.btn_lecturaF:hover {
-    color: #18529D;
-    background-color: white;
+.btn.btn_lecturaF:hover {
+    color: #17529C;
+    background: url(../images/accesibilidad/lecturaf-a.png) no-repeat 2rem center #fff;
     transition-duration: .8s;
 }
 
