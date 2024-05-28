@@ -77,6 +77,16 @@ body {
     transition-duration: .8s;
 }
 
+.left_text {
+    text-align: left !important;
+    padding: .5rem 1.5rem !important;
+}
+
+.content_width {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+}
+
 @media screen and (max-width: 767px) {
 
     /* .mb-2rem{
@@ -1162,7 +1172,7 @@ a:hover {
 }
 
 .btn_center {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     width: 305px;
@@ -1548,8 +1558,9 @@ a:hover {
     margin-top: 2rem;
 }
 
-.collapsable_width{
+.collapsable_width {
     width: 100% !important;
+    margin-bottom: 1rem !important;
 }
 
 @media screen and (max-width: 767px) {
