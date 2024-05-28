@@ -914,25 +914,7 @@ a.sidebar__enlace {
     border-radius: 0;
 }
 
-.collapsables-gi_2 summary {
-    background: #ffffff;
-    color: #003470;
-    text-align: center;
-    position: relative;
-    display: block;
-    height: 55px;
-    border-radius: 0;
-}
-
 .collapsables-gi summary {
-    background: #003470;
-    color: #ffffff;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-
-.collapsables-gi_2 summary {
     background: #003470;
     color: #ffffff;
     text-align: center;
@@ -950,15 +932,6 @@ a.sidebar__enlace {
     width: 800px;
 }
 
-.collapsables-gi_2 .btn {
-    border: none;
-    width: 100%;
-    /* background: linear-gradient(90deg, #0051a0 0%, #0b1b74 70%); */
-    background: rgb(129, 100, 158);
-    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
-    padding: 0.7rem 0 1rem 0;
-    width: 100%;
-}
 
 /*
 .btn:first-child:hover,
@@ -967,18 +940,16 @@ a.sidebar__enlace {
 :not(.btn-check) + .btn:hover {
   box-shadow: var(--mdb-btn-hover-box-shadow);
 }*/
-.collapsables-gi .collapsables-gi_2 .btn:hover {
+.collapsables-gi .btn:hover {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
 }
 
-.collapsables-gi[open] .collapsables-gi_2[open] summary {
+.collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
     color: #0051a0;
 }
 
-.collapsables-gi,
-.collapsables-gi_2,
-summary::after {
+.collapsables-gi summary::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -988,9 +959,7 @@ summary::after {
     font-weight: bold;
 }
 
-.collapsables-gi[open],
-.collapsables-gi_2[open],
-summary::after {
+.collapsables-gi[open] summary::after {
     position: absolute;
     top: 48%;
     transform: translateY(-52%);
@@ -1578,6 +1547,10 @@ a:hover {
     background-color: #EDEDFC;
     padding: 2rem;
     margin-top: 2rem;
+}
+
+.collapsable_width{
+    width: 100% !important;
 }
 
 @media screen and (max-width: 767px) {
