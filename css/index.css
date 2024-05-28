@@ -1552,6 +1552,13 @@ a:hover {
     width: 100% !important;
 }
 
+.fondo-degradado {
+    background: rgb(237, 237, 252);
+    background: linear-gradient(90deg, rgba(237, 237, 252, 1) 50%, rgba(250, 235, 221, 1) 100%);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
 @media screen and (max-width: 767px) {
     .padding_top {
         padding-top: 0;
@@ -1587,4 +1594,5 @@ a:hover {
     .instruccion-color-verde {
         padding-left: 1rem;
     }
+    .fondo-degradado{ padding:1rem }
 }
