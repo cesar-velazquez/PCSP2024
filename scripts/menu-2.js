@@ -13,7 +13,7 @@ class Menu extends HTMLElement {
         </li>
         
         <li class="sidebar__elemento sangria-menu">
-            <a class="sidebar__enlace" href="./topic1/topic-1.html"><b></b>Tema 1. Introducción a la seguridad de la información</a>
+            <a class="sidebar__enlace" href="./modulo-1.html"><b></b>Tema 1. Introducción a la seguridad de la información</a>
         </li>
 
         <li class="sidebar__elemento sangria-menu">

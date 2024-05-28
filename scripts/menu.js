@@ -14,7 +14,7 @@ class Menu extends HTMLElement {
             </li>
             
             <li class="sidebar__elemento sangria-menu">
-                <a class="sidebar__enlace" href="tema1.html"><b></b>Módulo 1. <span id="ident5" class="identificador2"> 5 </span></a>
+                <a class="sidebar__enlace" href="modulo-1.html"><b></b>Módulo 1. <span id="ident5" class="identificador2"> 5 </span></a>
             </li>
 
             <li class="sidebar__elemento sangria-menu">
