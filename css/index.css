@@ -19,6 +19,15 @@ body {
     color: white;
 }
 
+.subt {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.instruccion-color-verde {
+    color: #056e31;
+}
+
 .banner-1 {
     width: 100%;
     height: auto;
@@ -89,9 +98,11 @@ body {
 
 @media screen and (max-width: 767px) {
 
-    /* .mb-2rem{
+    .subt {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
 
-    } */
     .escritorio {
         display: none;
     }
@@ -349,10 +360,10 @@ body {
     }
 
     .contenedor_pestañas {
-        background-color: #E5F5FD;
+        background-color: #FAEBDD;
         margin: 0 1rem;
-        border-top: 2px solid #01A2FF;
-        border-bottom: 2px solid #01A2FF;
+        border-top: 2px solid #1E4566;
+        border-bottom: 2px solid #1E4566;
         padding: 1rem;
     }
 
@@ -1116,7 +1127,7 @@ a:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    height: 250px;
+    height: auto;
 }
 
 .bold {
@@ -1198,21 +1209,26 @@ a:hover {
     color: #056e31;
     margin: 2em 0;
 } */
+.instruccion {
+    color: #056e31;
+}
+
 
 @media (max-width: 767px) {
 
     .btn-descarga {
         font-size: 1.125rem !important;
     }
-}
 
-.instruccion-color-verde {
-    color: #056e31;
-    padding-left: 2rem;
-}
+    .mt-2em {
+        margin-top: 1em;
+    }
 
-.instruccion {
-    color: #056e31;
+    .instruccion {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        line-height: 1.8;
+    }
 }
 
 .footer {
@@ -1334,7 +1350,7 @@ a:hover {
         max-width: 8rem;
         width: 100%;
         margin: 1rem auto;
-        background: #01A2FF;
+        background: #1E4566;
         height: .1rem;
     }
 
@@ -1602,8 +1618,11 @@ a:hover {
         margin-bottom: 1em;
     }
 
-    .instruccion-color-verde {
+    /* .instruccion-color-verde {
         padding-left: 1rem;
+    } */
+
+    .fondo-degradado {
+        padding: 1rem
     }
-    .fondo-degradado{ padding:1rem }
 }
