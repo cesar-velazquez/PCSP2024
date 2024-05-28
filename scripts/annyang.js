@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "block";
     }
 
-
     let cerrarmodal1 = function () {
         let modal = document.getElementById("modul-1");
         let backdrop = document.getElementById("modal-backdrop");
@@ -100,19 +99,165 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "none";
     }
 
+    let modalGloria = function () {
+        let modal = document.getElementById("gloria");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalGloria = function () {
+        let modal = document.getElementById("gloria");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalclaudia = function () {
+        let modal = document.getElementById("claudia");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalclaudia = function () {
+        let modal = document.getElementById("claudia");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalEzzio = function () {
+        let modal = document.getElementById("ezzio");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalEzzio = function () {
+        let modal = document.getElementById("ezzio");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalFati = function () {
+        let modal = document.getElementById("fatima");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalFati = function () {
+        let modal = document.getElementById("fatima");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalHilda = function () {
+        let modal = document.getElementById("hilda");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalHilda = function () {
+        let modal = document.getElementById("hilda");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalLaura = function () {
+        let modal = document.getElementById("laura");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalLaura = function () {
+        let modal = document.getElementById("laura");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalLourdes = function () {
+        let modal = document.getElementById("lourdes");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+    let cerrarModalLourdes = function () {
+        let modal = document.getElementById("lourdes");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    // abrirModalEzzio
+
     let modalAbierto1 = false;
     let modalAbierto2 = false;
     let modalAbierto3 = false;
     let modalAbierto4 = false;
+    let modGloria = false;
+    let modClaudia = false;
+    let modEzzio = false;
+    let modFati = false;
+    let modHilda = false;
+    let modLaura = false;
+    let modLourdes = false;
+
 
     function abrirModal11() {
-        if (modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true) {
+        if (modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true || modGloria == true
+            || modGloria == true || modClaudia == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
             cerrarModal2();
             modalAbierto2 = false;
             cerrarmodal3();
             modalAbierto3 = false;
             cerrarAyuda();
             modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
         }
         abrirModal1();
         modalAbierto1 = true;
@@ -120,43 +265,305 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function abrirModal22() {
-        if (modalAbierto1 == true || modalAbierto3 == true || modalAbierto4 == true) {
+        if (modalAbierto1 == true || modalAbierto3 == true || modalAbierto4 == true ||
+            modGloria == true || modClaudia == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
             cerrarmodal1();
             modalAbierto1 = false;
             cerrarmodal3();
             modalAbierto3 = false;
             cerrarAyuda();
             modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
         }
         abrirmodal2();
         modalAbierto2 = true;
     }
 
     function abrirModal33() {
-        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto4 == true) {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto4 == true ||
+            modGloria == true || modClaudia == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
             cerrarmodal1();
             modalAbierto1 = false;
             cerrarModal2();
             modalAbierto2 = false;
             cerrarAyuda();
             modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
         }
         abrirmodal3();
         modalAbierto3 = true;
     }
 
     function abrirModalAyuda() {
-        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true) {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true ||
+            modGloria == true || modClaudia == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
             cerrarmodal1();
             modalAbierto1 = false;
             cerrarModal2();
             modalAbierto2 = false;
             cerrarmodal3();
             modalAbierto3 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
         }
         abrirAyuda();
         modalAbierto4 = true;
     }
+
+    function abrirModalGloria() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modClaudia == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+        }
+        modalGloria();
+        modGloria = true;
+    }
+
+    function abrirModalClaudia() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modEzzio == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+        }
+        modalclaudia();
+        modClaudia = true;
+    }
+
+    function abrirModalEzzio() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modClaudia == true || modFati == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalFati();
+            modFati = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+        }
+        modalEzzio();
+        modEzzio = true;
+    }
+
+    function abrirModalFati() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modClaudia == true || modEzzio == true
+            || modHilda == true || modLaura == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+        }
+        modalFati();
+        modFati = true;
+    }
+
+    function abrirModalHilda() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modClaudia == true || modEzzio == true
+            || modFati == true || modLaura == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+            cerrarModalFati();
+            modFati = false
+        }
+        modalHilda()
+        modHilda = true;
+    }
+
+    function abrirModalLaura() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modClaudia == true || modEzzio == true
+            || modFati == true || modHilda == true || modLourdes == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLourdes();
+            modLourdes = false;
+            cerrarModalFati();
+            modFati = false
+        }
+        modalLaura();
+        modLaura = true;
+    }
+
+    function abrirModalLourdes() {
+        if (modalAbierto1 == true || modalAbierto2 == true || modalAbierto3 == true || modalAbierto4 == true
+            || modGloria == true || modClaudia == true || modEzzio == true
+            || modFati == true || modHilda == true || modLaura == true
+        ) {
+            cerrarmodal1();
+            modalAbierto1 = false;
+            cerrarModal2();
+            modalAbierto2 = false;
+            cerrarmodal3();
+            modalAbierto3 = false;
+            cerrarAyuda();
+            modalAbierto4 = false;
+            cerrarModalGloria();
+            modGloria = false;
+            cerrarModalclaudia();
+            modClaudia = false;
+            cerrarModalEzzio();
+            modEzzio = false;
+            cerrarModalHilda();
+            modHilda = false;
+            cerrarModalLaura();
+            modLaura = false;
+            cerrarModalFati();
+            modFati = false
+        }
+        modalLourdes();
+        modLourdes = true;
+    }
+
     // prueba faq        
 
     let abrirfaqBasicaP = function () {
@@ -483,9 +890,11 @@ document.addEventListener("DOMContentLoaded", function () {
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
         'uuuno': abrirMenuPrincipal,
+        'menú': abrirMenuPrincipal,
 
         'dos': cerrarMenuPrincipal,
         '2': cerrarMenuPrincipal,
+        'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
         'tres': getPageNext,
@@ -570,7 +979,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '27': section27,
         'Veintisiete': section27,
-        
+
+        '28': abrirModalGloria,
+        'Veintiocho': abrirModalGloria,
+
+        '29': cerrarModalGloria,
+        'Veintinueve': cerrarModalGloria,
+
+        '30': abrirModalClaudia,
+        'treinta': abrirModalClaudia,
+
+        '31': cerrarModalclaudia,
+        'treinta y uno': cerrarModalclaudia,
+
+        '32': abrirModalEzzio,
+        'treinta y dos': abrirModalEzzio,
+
+        '33': cerrarModalEzzio,
+        'treinta y tres': cerrarModalEzzio,
+
+        '34': abrirModalFati,
+        'treinta y cuatro': abrirModalFati,
+
+        '35': cerrarModalFati,
+        'treinta y cinco': cerrarModalFati,
+
+        '36': abrirModalHilda,
+        'treinta y séis': abrirModalHilda,
+
+        '37': cerrarModalHilda,
+        'treinta y siete': cerrarModalHilda,
+
+        '38': abrirModalLaura,
+        'treinta y ocho': abrirModalLaura,
+
+        '39': cerrarModalLaura,
+        'treinta y nueve': cerrarModalLaura,
+
+        '40': abrirModalLourdes,
+        'Cuarenta': abrirModalLourdes,
+
+        '41': cerrarModalLourdes,
+        'cuarenta y uno': cerrarModalLourdes,
+
         // abrirCerrarfaq,
 
         // '18': abrirCerrarfaq2,
@@ -596,6 +1047,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     annyang.setLanguage("es-MX");
 });
+
+let icon_read_1 = document.getElementById("icon_read_1");
+let icon_read_2 = document.getElementById("icon_read_2");
 
 let iconComandoVoz = document.getElementById("icon_comando_voz");
 let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
@@ -700,6 +1154,10 @@ let num13_1 = document.getElementById("ident1_2");
 
 let num15_3 = document.getElementById("ident15_3");
 // 
+btnLectura.addEventListener('mouseover', function () {
+    icon_read_1.style.display = "none";        
+})
+
 
 enlaceaLecturaF.addEventListener('click', function () {
     btnLectura.classList.add('animate__animated', 'animate__shakeX', 'animate__slow', 'animate__delay-1s');

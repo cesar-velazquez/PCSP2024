@@ -11,7 +11,7 @@
 
 .tab-pane {
     padding: 2rem;
-    
+
 }
 
 .tam-content {
@@ -47,9 +47,9 @@
 }
 
 .bg-tab-content {
-    background: #E5F5FD;
-    border-bottom: 2px solid #3C3D8B;
-    border-top: 2px solid #3C3D8B;
+    background: #FAEBDD;
+    border-bottom: 2px solid #1E4566;
+    border-top: 2px solid #1E4566;
     margin-bottom: 3rem;
 }
 
@@ -70,9 +70,9 @@
 }
 
 li.nav-item.tab-1-item.waves-effect.waves-light a.active {
-    color: #3C3D8B !important;
+    color: #1E4566 !important;
     background: #fff !important;
-    
+
 }
 
 .nav-tabs .nav-item {
@@ -81,10 +81,10 @@ li.nav-item.tab-1-item.waves-effect.waves-light a.active {
 
 li.nav-item.tab-1-item.waves-effect.waves-light a {
     color: #fff !important;
-    background: #3C3D8B !important;
+    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%) !important;
     width: 100%;
     height: 100%;
-    border: 2px solid #3C3D8B !important;
+    border: 2px solid #1E4566 !important;
 }
 
 .nav-tabs .nav-link:focus,
