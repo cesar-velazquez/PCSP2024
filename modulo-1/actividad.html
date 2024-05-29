@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 1. Actividades de aprendizaje</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet" />
+
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/modulo1.css" />
+
+    
+
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only">
+            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona las teclas  Alt + X, en MacOS Esc
+        </p>
+    </div>
+
+    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="I">
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </button>
+
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+        </div>
+
+        <menu-component></menu-component>
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+        <div class="">
+            <div class="js-pleca pleca">
+                <a class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
+                        <span class="font-weight-bold">MENÚ</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen">
+                            <b>Modulo 1. Actividades de aprendizaje</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <img class="ocultar" src="../images/PCSP24-_banner-paginasec-e.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+
+            <img class="mostrar" src="../images/PCSP24-_banner-paginasec-r.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+        </div>
+
+        <div class="container">
+            <h1 class="titulo-principal-unit">
+                Modulo 1. 
+                <span>Actividades de aprendizaje</span>
+            </h1>
+        </div>
+        
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+        <!-- introduction -->
+        <section class="actividad-separador">            
+            <div class="container">
+                <div class="caja">
+                    <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución</h2>
+                    
+                    <p class="instruccion"><b>Instrucción:</b> Presiona el botón de video para iniciar la reproducción.</p>
+
+                    <div class="mb-2rem">
+                        <div class="vid3 embed-responsive embed-responsive-16by9">
+                            <!--<p id="ident12" class="play_video identificador2 ">12</p>
+                            <p id="ident13" class="fullScreen identificador2 ">13</p>-->
+                            <video id="" src="../videos/unit1/modulo-1.mp4" type="video/mp4" controls></video>
+                            <!-- <iframe
+                                src="https://lumen.uv.mx/resources/files/videos/2022/5/18/6696/a34f4f0f-404e-4a7d-8f39-a2bd09dd6b02.mp4"
+                                width="80%" height="500" allowfullscreen="" scrolling="no"></iframe> -->
+                        </div>
+                    </div>
+
+                    <details class="collapsables-gi" id="basic1">
+                        <summary class="btn waves-effect waves-light btn_guion">
+                            <strong>Guion de video</strong>
+                        </summary>
+                        <div class="collapsables-gi__content">
+                            
+                            <p><b>Nociones de problema-solución</b></p>
+
+                            <p>La identificación, solución y resolución de problemas, es tan ancestral como la adaptación del hombre a su contexto y tan actual como la globalización.</p>
+
+                            <p>En el marco del modelo educativo de nuestra universidad, las Habilidades de pensamiento crítico representan la base para la Solución y/o resolución de problemas.</p>
+
+                            <p>Mediante el desarrollo de las habilidades de pensamiento y la metacognición, el individuo es capaz de identificar, en su dinámica, situaciones problemáticas a las que se enfrenta, analizándolas y tomando la mejor decisión para la solución.</p>
+
+                            <p>Las competencias que caracterizan al pensamiento crítico son: analizar, reflexionar, cuestionar, debatir, entre otras.</p>
+
+                            <p>Para Franco, Almeida y Saiz (2014), el uso de estas competencias posibilita en el pensamiento crítico "identificar la información relevante, utilizarla para tomar decisiones sólidas, de manera autónoma, que permitan solucionar problemas del mejor modo posible. De esta forma, se aumenta la eficacia en muchos ámbitos y facetas de la vida".</p>
+
+                            <p class="mb-0">Los problemas se presentan continuamente en la vida personal y profesional, ser capaz de detectarlos y encontrar las mejores alternativas para solucionarlos, te hará una persona crítica y eficiente.</p>
+
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="separador" aria-hidden="true" >
+
+        <section>            
+            <div class="container">
+
+                <div class="caja">
+                    
+                    <p class="mb-0">Creamer (2011) concibe al pensamiento crítico como "el pensamiento intelectualmente disciplinado de conceptualizar, aplicar, analizar, sintetizar y evaluar la información recabada a partir de la observación, experiencia, reflexión, razonamiento o comunicación. Este tipo de pensamiento es un procedimiento que da valor racional a las creencias y emociones". Su propósito es generar un juicio reflexivo basado en un núcleo de desarrollo de habilidades.</p>
+
+                </div>
+
+                <div class="contenedor-botones escritorio">
+
+                    <p class="instruccion dos-pad"><b>Instrucción:</b> Presiona cada botón para conocer la información.</p>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-1">
+                        a. Habilidad de interpretación
+                    </button>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-2">
+                        b. Habilidad de análisis
+                    </button>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-3">
+                        c. Habilidad de evaluación
+                    </button>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-4">
+                        d. Habilidad de inferencia
+                    </button>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-5">
+                        e. Habilidad de explicación
+                    </button>
+
+                    <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-6">
+                        f. Habilidad de autorregulación
+                    </button>
+                </div>
+
+                <div class="movil">
+                
+                    <div class="text-center">
+                        <p class="text-azul">
+                            a. Habilidad de interpretación
+                        </p>
+                    </div>
+
+                    <p><b>Descripción.</b> Comprensión y expresión del significado de la experiencia, situaciones, eventos, juicios, creencias, reglas, procedimientos, entre otros.</p>
+
+                    <p class="mb-0"><b>Actividades.</b> Categorización, decodificación del significado y clarificación de conceptos.</p>
+                    
+                
+                    <div class="text-center">
+                        <p class="text-azul">
+                            b. Habilidad de análisis
+                        </p>
+                    </div>
+                    
+                    <p><b>Descripción.</b> Identifica las relaciones de inferencia entre declaraciones, preguntas, conceptos, expresiones, entre otros.</p>
+
+                    <p class="mb-0"><b>Actividades.</b> Examinación de ideas, detección y análisis de argumentos.</p>
+
+                
+                    <div class="text-center">
+                        <p class="text-azul">
+                            c. Habilidad de evaluación
+                        </p>
+                    </div>
+
+                    <p><b>Descripción.</b> Credibilidad de lo establecido o de otras representaciones como la descripción de una persona, percepciones, experiencia, situaciones, juicios, creencias u opiniones; evalúa las relaciones de inferencia entre declaraciones, preguntas, conceptos, expresiones, entre otras.</p>
+
+                    <p><b>Actividades.</b> Evaluar la credibilidad de demandas y evaluar la calidad de argumentos que se utilizan e inducen o deducen razonamientos.</p>
+
+              
+                    <div class="text-center">
+                        <p class="text-azul">
+                            d. Habilidad de inferencia
+                        </p>
+                    </div>
+
+                    <p><b>Descripción.</b> Identificar y asegurar los elementos que se requieren para crear una conclusión razonable; formar conjeturas e hipótesis; considerar información relevante y deducir las consecuencias provenientes de datos, evidencia, creencias, juicios, opiniones, conceptos, descripciones, entre otros.</p>
+
+                    <p class="mb-0"><b>Actividades.</b> Consulta de pruebas, conjeturas de alternativas y obtención de conclusiones.</p>
+                    
+                
+                    <div class="text-center">
+                        <p class="text-azul">
+                            e. Habilidad de explicación
+                        </p>
+                    </div>
+
+                    <p><b>Descripción.</b> Representación coherente de los resultados.</p>
+
+                    <p class="mb-0"><b>Actividades.</b> Descripción de métodos y resultados, justificación de procedimientos, objetivos y explicaciones conceptuales, argumentaciones, entre otros.</p>
+                    
+                
+                    <div class="text-center">
+                        <p class="text-azul">
+                            f. Habilidad de autorregulación
+                        </p>
+                    </div>
+
+                    <p><b>Descripción.</b> Actividad cognitiva de monitoreo autoconsciente. Se emplean habilidades de análisis y evaluación.</p>
+
+                    <p class="mb-0"><b>Actividades.</b> Incluye la autoexaminación y autocorrección.</p>
+                    
+                </div>
+
+                
+            </div>
+        </section>
+
+        <hr class="separador" aria-hidden="true" >
+
+        <section>            
+            <div class="container">
+
+                <div class="caja">
+
+                    <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución</h2>
+
+                    <p>En esta actividad efectuarás el llenado de un formato denominado COMSOLP_PRE, en el cual debes responder a 11 preguntas acerca de un problema que personalmente hayas vivido y solucionado, con el fin de darte cuenta de cómo identificas, enfrentas  y solucionas problemas.</p>
+
+                    <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+                    <div class="actividad-enc">
+                        <div><p class="mb-0">Paso 1.</p></div>
+                        <p class="mb-0">Lee los siguientes textos</p></div>
+
+                    <ol class="ml-4">
+                        <li>
+                            <a class="enlace-icono" href="../descargas/modulo1/Estrategia-didactico-formativa-para-la-autoobservacion-y-desarrollo-de-COMSOLP.pdf" download>
+                                [D] Estrategia didáctico-formativa para la autoobservación y desarrollo de Competencias en Solución de Problemas (COMSOLP).
+                                <span class="sr-only">Documento en PDF</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="enlace-icono" href="../descargas/modulo1/EL-PENSAMIENTO-CRITICO-PARA-LA-SOLUCION-A-UN-PROBLEMA.pdf" download>
+                                [H] El pensamiento crítico para la solución a un problema.
+                                <span class="sr-only">Documento en PDF</span>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <div class="actividad-enc">
+                        <div><p class="mb-0">Paso 2.</p></div>
+                        <p class="mb-0">Reflexiona y responde los siguientes cuestionamientos</p></div>
+
+                    <ol class="ml-4 mb-0">
+                        <li>Descarga el formato: <br aria-hidden="true">
+                            <a class="enlace-icono" href="../descargas/modulo1/Act01-Plantilla-COMSOLP.docx" download>
+                                [D] Plantilla COMSOLP.
+                                <span class="sr-only">Documento de word</span>
+                            </a>
+                        </li>
+                        <li>Contesta las 11 preguntas, llenando sólo la primera columna: primera respuesta (pretest o diagnóstica).</li>
+                        <li>Completa la primera pregunta de la sección final: "Metacognición" (Con mis primeras respuestas "Me di cuenta de...").</li>
+                        <li>Guarda el formato resuelto en un archivo de <i lang="en">Word</i>.</li>
+                        <li>Conserva una copia de tu actividad porque posteriormente realizarás en este mismo formato el llenado de la segunda columna que quedó en blanco.</li>
+                    </ol>
+
+                </div>
+
+                <div class="fondo-degradado">
+                    <p class="instruccion"><b>Instrucciones:</b> Presiona el botón para descargar el archivo.</p>
+
+                    <div class="text-center">
+                        <a class="btn-modales btn" href="" target="_blank" download="">
+                            Rúbrica de evaluación
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+         <hr class="separador" aria-hidden="true" >
+
+        <section>            
+            <div class="container">
+
+                <div class="caja">
+
+                    <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución</h2>
+
+                    <details class="collapsables-gi">
+                        <summary class="btn waves-effect waves-light">
+                            <p>Lineamientos de entrega</p>
+                        </summary>
+                        <div class="collapsables-gi__content">
+                            <ul class="ml-4 mb-0">
+                                <li>Nombra tu archivo de la siguiente manera: ED01_PrimerApellidoyPrimerNombre.ext</li>
+                                <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la plataforma Eminus.</li>
+                                <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de Eminus.</li>
+                            </ul>
+
+                           
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <hr class="separador" aria-hidden="true" >
+
+        <section>            
+            <div class="container">
+
+                <div class="fondo-degradado">
+                    <p class="instruccion"><b>Instrucciones:</b> Presiona el botón para descargar el archivo.</p>
+
+                    <div class="text-center">
+
+                    <a id="btnLectura" class="btn_lecturaF btn" href="" target="_blank" download="">
+                        Lectura fácil
+                    </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="separador" aria-hidden="true" >
+
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer class="footer">
+
+        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </span>
+
+        <img class="tamaño__img escritorio" src="./images/PCSP24-_firmauv-r.png" loading="lazy" width="100%" height="auto" alt="Logo de la Universidad Veracruzana">
+        <img class="movil" src="./images/PCSP24-_firmauv-e.png" alt="Banner Principal" aria-hidden="true" width="100%" height="auto">
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal fade" id="habilidad-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                a. Habilidad de interpretación
+                            </p>
+                        </div>
+
+                        <p><b>Descripción.</b> Comprensión y expresión del significado de la experiencia, situaciones, eventos, juicios, creencias, reglas, procedimientos, entre otros.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Categorización, decodificación del significado y clarificación de conceptos.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="habilidad-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                b. Habilidad de análisis
+                            </p>
+                        </div>
+                        
+                        <p><b>Descripción.</b> Identifica las relaciones de inferencia entre declaraciones, preguntas, conceptos, expresiones, entre otros.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Examinación de ideas, detección y análisis de argumentos.</p>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="habilidad-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                c. Habilidad de evaluación
+                            </p>
+                        </div>
+
+                        <p><b>Descripción.</b> Credibilidad de lo establecido o de otras representaciones como la descripción de una persona, percepciones, experiencia, situaciones, juicios, creencias u opiniones; evalúa las relaciones de inferencia entre declaraciones, preguntas, conceptos, expresiones, entre otras.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Evaluar la credibilidad de demandas y evaluar la calidad de argumentos que se utilizan e inducen o deducen razonamientos.</p>
+
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="habilidad-4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                d. Habilidad de inferencia
+                            </p>
+                        </div>
+
+                        <p><b>Descripción.</b> Identificar y asegurar los elementos que se requieren para crear una conclusión razonable; formar conjeturas e hipótesis; considerar información relevante y deducir las consecuencias provenientes de datos, evidencia, creencias, juicios, opiniones, conceptos, descripciones, entre otros.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Consulta de pruebas, conjeturas de alternativas y obtención de conclusiones.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="habilidad-5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                e. Habilidad de explicación
+                            </p>
+                        </div>
+
+                        <p><b>Descripción.</b> Representación coherente de los resultados.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Descripción de métodos y resultados, justificación de procedimientos, objetivos y explicaciones conceptuales, argumentaciones, entre otros.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="habilidad-6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                f. Habilidad de autorregulación
+                            </p>
+                        </div>
+
+                        <p><b>Descripción.</b> Actividad cognitiva de monitoreo autoconsciente. Se emplean habilidades de análisis y evaluación.</p>
+
+                        <p class="mb-0"><b>Actividades.</b> Incluye la autoexaminación y autocorrección.</p>
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="information-1" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" >
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-cerrar-modal" data-dismiss="modal" aria-label="Close" accesskey="X">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+                        
+                        <div class="text-center mb-3">
+    
+                            <p class="parrafo mt-4">
+                                <strong>Información de ayuda</strong>
+                            </p>
+    
+                        </div>
+                        
+                        <p class="parrafo">
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                        </p>
+
+                        <p class="parrafo mb-0"><b>Windows</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Alt + M</li>
+                            <li>Cerrar menú principal Alt + C</li>
+                        </ul>
+
+                        <p class="parrafo mb-0"><b>MacOS</b></p>
+
+                        <ul class="parrafo ml-4">
+                            <li>Abrir menú principal Option + M</li>
+                            <li>Cerrar menú principal Option + C</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <!-- ../scripts/home.js -->
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <!-- ../scripts/scroll-timeline.js -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <script>
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: "block",
+            scrollOffsets: [
+                new CSSUnitValue(0, "percent"),
+                new CSSUnitValue(100, "percent"),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector("#progress"),
+                {
+                    transform: ["scaleX(0)", "scaleX(1)"],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+        $(document).ready(function () {
+            $(".ir-arriba").click(function () {
+                $("body, html").animate(
+                    {
+                        scrollTop: "0px",
+                    },
+                    300
+                );
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(".ir-arriba").slideDown(300);
+                } else {
+                    $(".ir-arriba").slideUp(300);
+                }
+            });
+        });
+    </script>
+</body>
+<script src="scripts/Pestañas.js"></script>
+
+</html>

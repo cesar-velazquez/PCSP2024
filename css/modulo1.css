@@ -1,4 +1,4 @@
-p, button{
+p, button, ul, ol{
     font-size: 1.125rem;
     margin-bottom: 1rem;
     line-height: 1.8;
@@ -8,7 +8,7 @@ p, button{
 
 @media screen and (min-width: 768px) {
 
-    p, button {
+    p, button, ul, ol {
         font-size: 1.3rem;
         margin-bottom: 2em;
     }
@@ -16,7 +16,7 @@ p, button{
 }
 
 .titulo-principal-unit{
-    color: #3C3D8B;
+    color: #1E4566;
     font-weight: bold;
     position: absolute;
     top: 7rem;
@@ -36,19 +36,13 @@ p, button{
     margin: 2rem auto;
 }
 
-.fondo-degradado {
-    background: rgb(237, 237, 252);
-    background: linear-gradient(90deg, rgba(237, 237, 252, 1) 50%, rgba(250, 235, 221, 1) 100%);
-    border-radius: .5rem;
-    padding: 2rem;
-}
-
 .fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem }
 .fondo-blanco{ 
 	border-bottom: .15rem solid;
 	padding: 1rem 1rem 1rem 2rem;
     margin-bottom: 1rem;
 }
+
 .color-3{ color: #FF811A;
     margin-right: .5rem; }
 .percent {
@@ -82,6 +76,53 @@ p, button{
     border-radius: 3rem 0 0 3rem; }
 
 .btn_lecturaf{ background:#17529C; color:#fff; border:1px solid; }
+
+.espaciov{ margin:3rem 0; border:none; }
+
+.actividad-separador{ 
+    background: linear-gradient(180deg, #e7eff7 0%, #fff 70%);
+ }
+.contenedor-botones{ max-width:66rem; margin:0 auto; }
+.btn-modales {
+    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
+    color: #FFFFFF;
+    padding: 1rem .5rem;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: none;
+    width: 32%;
+    border: .1rem solid transparent;
+}
+
+.btn-modales:hover{ color:#1E4566; background:#fff; border: .1rem solid #1E4566; }
+
+.actividad-enc{ 
+    background: #EDEDFC;
+    color: #1E4566;
+    border-bottom: 1px solid #1E4566;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    padding: .5rem 1rem .5rem 8rem;
+    position: relative;
+}
+.actividad-enc div {
+    display: flex;
+    background: #1E4566;
+    color: #fff;
+    padding: .3rem 1rem;
+    border-left: .6rem solid #FF811A;
+    margin-right: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    align-items: center;
+}
+.enlace-icono{
+    background: url(../images/modulo1/icono-descarga.png) no-repeat 0 / 1.5rem;
+    padding-left: 2rem;
+}
+@media screen and (max-width: 1199px){.btn-modales{ width:48% }}
 
 @media screen and (max-width: 767px){
     .titulo-principal-unit{        
