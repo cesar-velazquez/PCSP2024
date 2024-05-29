@@ -1051,20 +1051,20 @@ document.addEventListener("DOMContentLoaded", function () {
 let icon_read_1 = document.getElementById("icon_read_1");
 let icon_read_2 = document.getElementById("icon_read_2");
 
-// let iconComandoVoz = document.getElementById("icon_comando_voz");
-// let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
+let iconComandoVoz = document.getElementById("icon_comando_voz");
+let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
-let iconLink = document.getElementById("icon_Link");
-let iconLinkActive = document.getElementById("icon_Link_Active");
+// let iconLink = document.getElementById("icon_Link");
+// let iconLinkActive = document.getElementById("icon_Link_Active");
 
 
 // let btn_Cursor = document.getElementById("cursorBig");
 // let iconCursor = document.getElementById("icon_Cursor");
 // let iconCursorActive = document.getElementById("icon_Cursor_Active");
 
-let lineaLectura = document.getElementById("lineaLectura");
-let iconLectura = document.getElementById("icon_Linea_Lectura");
-let iconLecturaActive = document.getElementById("icon_Linea_Lectura_Active");
+// let lineaLectura = document.getElementById("lineaLectura");
+// let iconLectura = document.getElementById("icon_Linea_Lectura");
+// let iconLecturaActive = document.getElementById("icon_Linea_Lectura_Active");
 
 // let LectorInmersivo = document.getElementById("btn_lectorInmersivo");
 // let iconLectorInmersivo = document.getElementById("icon_lector_inmersivo");
@@ -1155,7 +1155,7 @@ let num13_1 = document.getElementById("ident1_2");
 let num15_3 = document.getElementById("ident15_3");
 // 
 btnLectura.addEventListener('mouseover', function () {
-    icon_read_1.style.display = "none";        
+    icon_read_1.style.display = "none";
 })
 
 
@@ -1180,21 +1180,21 @@ btnLectura.addEventListener('mouseover', function () {
 //     LectorInmersivo.classList.remove("HerramientaActivada");
 // });
 
-let lineaSelect = false;
-lineaLectura.addEventListener('click', function () {
-    if (!lineaSelect) {
-        lineaSelect = true;
-        iconLectura.style.display = "none";
-        iconLecturaActive.style.display = "inline-flex";
-        lineaLectura.classList.add("HerramientaActivada");
-    } else {
-        lineaSelect = false;
-        iconLectura.style.display = "inline-flex";
-        iconLecturaActive.style.display = "none";
-        lineaLectura.classList.remove("HerramientaActivada");
-        lineaLectura.style.transitionDuration = ".5s";
-    }
-});
+// let lineaSelect = false;
+// lineaLectura.addEventListener('click', function () {
+//     if (!lineaSelect) {
+//         lineaSelect = true;
+//         iconLectura.style.display = "none";
+//         iconLecturaActive.style.display = "inline-flex";
+//         lineaLectura.classList.add("HerramientaActivada");
+//     } else {
+//         lineaSelect = false;
+//         iconLectura.style.display = "inline-flex";
+//         iconLecturaActive.style.display = "none";
+//         lineaLectura.classList.remove("HerramientaActivada");
+//         lineaLectura.style.transitionDuration = ".5s";
+//     }
+// });
 
 
 // let cursor = false;
@@ -1249,7 +1249,7 @@ btn_access.addEventListener('click', function () {
         // iconComandoVoz.style.backgroundImage= ""        
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -1281,7 +1281,7 @@ btn_access.addEventListener('click', function () {
         num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num42.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
         // modales:

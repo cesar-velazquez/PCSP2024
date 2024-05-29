@@ -27,12 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var abrirMenuPrincipal = function () {
-        // Obtener el elemento al que deseas agregar la clase
-        var elemento = document.getElementById("menu-item"); // Ejemplo: Obtener el elemento con ID "menu-item"
-        // Agregar la clase "active" al elemento
+        var elemento = document.getElementById("menu-item");
         elemento.classList.add("active");
-
-        var elemento = document.querySelector(".overlay"); // Ejemplo: Obtener el elemento con ID "menu-item"
+        var elemento = document.querySelector(".overlay");
         elemento.classList.add("active");
     }
 
@@ -125,85 +122,85 @@ document.addEventListener("DOMContentLoaded", function () {
         cerrarfaq.nextElementSibling.classList.remove('show');
     }
 
-    let nextarget = function () {
-        let pasar = document.getElementById("swip1");
-        pasar.style.zIndex = "2";
-        pasar.style.transform = "translate3d(calc(-7.25% + 0px), 0px, -100px) rotateZ(-2deg) scale(1)";
-        pasar.style.transitionDuration = "0.5s"
-    }
+    // let nextarget = function () {
+    //     let pasar = document.getElementById("swip1");
+    //     pasar.style.zIndex = "2";
+    //     pasar.style.transform = "translate3d(calc(-7.25% + 0px), 0px, -100px) rotateZ(-2deg) scale(1)";
+    //     pasar.style.transitionDuration = "0.5s"
+    // }
 
-    let nexttarget2 = function () {
-        let swip1 = document.getElementById("swip1");
-        let swip2 = document.getElementById("swip2");
-        let swip3 = document.getElementById("swip3");
-        //  width: 888px; 
-        //  z-index: 1; 
-        //  transform: translate3d(calc(-13% + 0px), 0px, -200px) rotateZ(-4deg) scale(1); 
-        //  transition-duration: 0ms;
-        // swip1.style.width = "888px";
-        swip1.style.zIndex = "1";
-        swip1.style.transform = "translate3d(calc(-13% + 0px), 0px, -200px) rotateZ(-4deg) scale(1)";
-        swip1.style.transitionDuration = "0.5s";
+    // let nexttarget2 = function () {
+    //     let swip1 = document.getElementById("swip1");
+    //     let swip2 = document.getElementById("swip2");
+    //     let swip3 = document.getElementById("swip3");
+    //     //  width: 888px; 
+    //     //  z-index: 1; 
+    //     //  transform: translate3d(calc(-13% + 0px), 0px, -200px) rotateZ(-4deg) scale(1); 
+    //     //  transition-duration: 0ms;
+    //     // swip1.style.width = "888px";
+    //     swip1.style.zIndex = "1";
+    //     swip1.style.transform = "translate3d(calc(-13% + 0px), 0px, -200px) rotateZ(-4deg) scale(1)";
+    //     swip1.style.transitionDuration = "0.5s";
 
-        // width: 888px; 
-        // z-index: 2; 
-        // transform: translate3d(calc(-7.25% - 888px), 0px, -100px) rotateZ(-2deg) scale(1); 
-        // transition-duration: 0ms;
-        // swip2.style.width = "888px"
-        swip2.style.zIndex = "2";
-        swip2.style.transform = "translate3d(calc(-7.25% - 888px), 0px, -100px) rotateZ(-2deg) scale(1)";
-        swip2.style.transitionDuration = "0.5s"
+    //     // width: 888px; 
+    //     // z-index: 2; 
+    //     // transform: translate3d(calc(-7.25% - 888px), 0px, -100px) rotateZ(-2deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     // swip2.style.width = "888px"
+    //     swip2.style.zIndex = "2";
+    //     swip2.style.transform = "translate3d(calc(-7.25% - 888px), 0px, -100px) rotateZ(-2deg) scale(1)";
+    //     swip2.style.transitionDuration = "0.5s"
 
-        // width: 888px; 
-        // z-index: 3; 
-        // transform: translate3d(-1776px, 0px, 0px) rotateZ(0deg) scale(1); 
-        // transition-duration: 0ms;
-        swip3.style.zIndex = "3";
-        swip3.style.transform = "translate3d(-1776px, 0px, 0px) rotateZ(0deg) scale(1)";
-        swip3.style.transitionDuration = "0.5s";
-    }
+    //     // width: 888px; 
+    //     // z-index: 3; 
+    //     // transform: translate3d(-1776px, 0px, 0px) rotateZ(0deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     swip3.style.zIndex = "3";
+    //     swip3.style.transform = "translate3d(-1776px, 0px, 0px) rotateZ(0deg) scale(1)";
+    //     swip3.style.transitionDuration = "0.5s";
+    // }
 
     // Regresar tarjetas
 
-    let previoustarget = function () {
-        let swip3 = document.getElementById("swip3");
-        let swip2 = document.getElementById("swip2");
-        // width: 888px; 
-        // z-index: 2; 
-        // transform: translate3d(calc(7.25% - 1776px), 0px, -100px) rotateZ(2deg) scale(1); 
-        // transition-duration: 0ms;
-        swip3.style.zIndex = "2";
-        swip3.style.transform = "translate3d(calc(7.25% - 1776px), 0px, -100px) rotateZ(2deg) scale(1)";
-        swip3.style.transitionDuration = "0.5s";
-        // width: 888px; 
-        // z-index: 3; 
-        // transform: translate3d(-888px, 0px, 0px) rotateZ(0deg) scale(1); 
-        // transition-duration: 0ms;
-        swip2.style.zIndex = "3";
-        swip2.style.transform = "translate3d(-888px, 0px, 0px) rotateZ(0deg) scale(1)";
-        swip2.style.transitionDuration = ".5s";
-    }
+    // let previoustarget = function () {
+    //     let swip3 = document.getElementById("swip3");
+    //     let swip2 = document.getElementById("swip2");
+    //     // width: 888px; 
+    //     // z-index: 2; 
+    //     // transform: translate3d(calc(7.25% - 1776px), 0px, -100px) rotateZ(2deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     swip3.style.zIndex = "2";
+    //     swip3.style.transform = "translate3d(calc(7.25% - 1776px), 0px, -100px) rotateZ(2deg) scale(1)";
+    //     swip3.style.transitionDuration = "0.5s";
+    //     // width: 888px; 
+    //     // z-index: 3; 
+    //     // transform: translate3d(-888px, 0px, 0px) rotateZ(0deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     swip2.style.zIndex = "3";
+    //     swip2.style.transform = "translate3d(-888px, 0px, 0px) rotateZ(0deg) scale(1)";
+    //     swip2.style.transitionDuration = ".5s";
+    // }
 
-    let previoustarget1 = function () {
-        let swip1 = document.getElementById("swip1");
-        let swip2 = document.getElementById("swip2");
-        let swip3 = document.getElementById("swip3");
-        // width: 888px; 
-        // z-index: 3; 
-        // transform: translate3d(0px, 0px, 0px) rotateZ(0deg) scale(1); 
-        // transition-duration: 0ms;
-        swip1.style.zIndex = "3";
-        swip1.style.transform = "translate3d(0px, 0px, 0px) rotateZ(0deg) scale(1)"
-        swip1.style.transitionDuration = ".5s"
+    // let previoustarget1 = function () {
+    //     let swip1 = document.getElementById("swip1");
+    //     let swip2 = document.getElementById("swip2");
+    //     let swip3 = document.getElementById("swip3");
+    //     // width: 888px; 
+    //     // z-index: 3; 
+    //     // transform: translate3d(0px, 0px, 0px) rotateZ(0deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     swip1.style.zIndex = "3";
+    //     swip1.style.transform = "translate3d(0px, 0px, 0px) rotateZ(0deg) scale(1)"
+    //     swip1.style.transitionDuration = ".5s"
 
-        // width: 888px; 
-        // z-index: 2; 
-        // transform: translate3d(calc(7.25% - 888px), 0px, -100px) rotateZ(2deg) scale(1); 
-        // transition-duration: 0ms;
-        swip2.style.zIndex = "2";
-        swip2.style.transform = "translate3d(calc(7.25% - 888px), 0px, -100px) rotateZ(2deg) scale(1)";
-        swip2.style.transitionDuration = "0.5s";
-    }
+    //     // width: 888px; 
+    //     // z-index: 2; 
+    //     // transform: translate3d(calc(7.25% - 888px), 0px, -100px) rotateZ(2deg) scale(1); 
+    //     // transition-duration: 0ms;
+    //     swip2.style.zIndex = "2";
+    //     swip2.style.transform = "translate3d(calc(7.25% - 888px), 0px, -100px) rotateZ(2deg) scale(1)";
+    //     swip2.style.transitionDuration = "0.5s";
+    // }
 
     let secondtab = function () {
         let secondtab = document.getElementById("secondtab");
@@ -391,10 +388,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "Cerrar modal esquema": cerrarmodalEsquema,
         "abrir botón colapsado uno": abrirfaq1,
         "cerrar botón colapsado uno": cerrarfaq1,
-        "Pasar tarjeta 1": nextarget,
-        "Pasar tarjeta 2": nexttarget2,
-        "Volver a tarjeta 2": previoustarget,
-        "Volver a tarjeta 1": previoustarget1,
+        // "Pasar tarjeta 1": nextarget,
+        // "Pasar tarjeta 2": nexttarget2,
+        // "Volver a tarjeta 2": previoustarget,
+        // "Volver a tarjeta 1": previoustarget1,
         "Actividad": activity,
         "Abrir opción 1": option1
     };
@@ -411,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     annyang.setLanguage("es-MX");
 
-    annyang.start();
+    // annyang.start();
 
 });
 const btn_access = document.getElementById('btn-access');
@@ -419,6 +416,8 @@ let contenedor_notas = document.getElementById("container_notes");
 let num1_h = document.getElementById("ident1_h");
 let cerrar = document.getElementById("identcerrar");
 let microfono = document.getElementById("micro");
+let iconComandoVoz = document.getElementById("icon_comando_voz");
+let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -435,41 +434,261 @@ let num11 = document.getElementById("ident11");
 let num12 = document.getElementById("ident12");
 let num13 = document.getElementById("ident13");
 let num14 = document.getElementById("ident14");
+let num15 = document.getElementById("ident15");
+let num16 = document.getElementById("ident16");
+let num17 = document.getElementById("ident17");
+let num18 = document.getElementById("ident18");
+let num19 = document.getElementById("ident19");
+let num20 = document.getElementById("ident20");
+let num21 = document.getElementById("ident21");
+let num22 = document.getElementById("ident22");
+let num23 = document.getElementById("ident23");
+let num24 = document.getElementById("ident24");
 
+// btn_access.addEventListener('click', function () {
+//     contenedor_notas.style.display = "flex";
+//     contenedor_notas.style.flexDirection = "column";
+//     contenedor_notas.style.justifyContent = "center";
+//     contenedor_notas.style.alignItems = "center";
+//     contenedor_notas.style.padding = "2rem";
+//     contenedor_notas.style.zIndex = "53";
+
+//     microfono.classList.add("activeMicro");
+//     microfono.style.transitionDuration = "1s";
+
+
+//     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+//     // num1.style.display = "flex";
+//     // num1.style.transitionDuration = "3s";
+//     // num1.style.animationDuration = "3s";
+//     // num1.classList.add('animate__animated', 'animate__heartBeat');
+//     num2.style.display = "inline-flex";
+//     num3.style.display = "inline-flex";
+//     num4.style.display = "inline-flex";
+//     num5.style.display = "inline-flex";
+//     num6.classList.add("ident_Universal");
+//     num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+//     num6.classList.add('animate__animated', 'animate__heartBeat');
+//     // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+//     cerrar.style.display = "inline-flex";
+//     num1_h.style.display = "inline-flex";
+// })
+
+
+
+
+
+// PRUEBAAAAA
+
+let menuactivo = false;
 btn_access.addEventListener('click', function () {
-    contenedor_notas.style.display = "flex";
-    contenedor_notas.style.flexDirection = "column";
-    contenedor_notas.style.justifyContent = "center";
-    contenedor_notas.style.alignItems = "center";
-    contenedor_notas.style.padding = "2rem";
-    contenedor_notas.style.zIndex = "53";
+    if (!menuactivo) {
+        menuactivo = true;
+        const parrafos = document.querySelectorAll('.section-comandos');
+        parrafos.forEach(parrafo => parrafo.style.display = 'block');
+        annyang.start();
+        console.log("Inicio Reconocimiento de voz");
 
-    microfono.classList.add("activeMicro");
-    microfono.style.transitionDuration = "1s";
+        microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
+        microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
+        microfono.style.transitionDuration = "1s";
+        contenedor_notas.classList.add('contenedorActivo');
+        btn_access.classList.add("HerramientaActivada");
+        // btn_tamFuente.classList.add("HerramientaActivada");
+        iconComandoVoz.style.display = "none";
+        icon_comandovoz_Active.style.display = "inline-flex";
+        // iconComandoVoz.style.backgroundImage= ""        
+
+        num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num2.style.display = "flex";
+        num3.style.display = "inline-flex";
+        num4.style.display = "inline-flex";
+        num5.style.display = "inline-flex";
+        num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+        num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num25.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num26.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num27.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num30.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num32.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num34.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+
+        // // modales:
+        // cerrar.style.display = "inline-flex";
+        // cerrar_help.style.display = "inline-flex";
+
+        // num19.style.display = "inline-flex";
+        // num19_1.style.display = "inline-flex";
+
+        // num21.style.display = "inline-flex";
+        // num21_1.style.display = "inline-flex";
+
+        // num23.style.display = "inline-flex";
+        // num23_1.style.display = "inline-flex";
+
+        // num29.style.display = "inline-flex";
+        // num29_1.style.display = "inline-flex";
+
+        // num31.style.display = "inline-flex";
+        // num31_1.style.display = "inline-flex";
+
+        // num33.style.display = "inline-flex";
+        // num33_1.style.display = "inline-flex";
+
+        // num35.style.display = "inline-flex";
+        // num35_1.style.display = "inline-flex";
+
+        // num37.style.display = "inline-flex";
+        // num37_1.style.display = "inline-flex";
+
+        // num39.style.display = "inline-flex";
+        // num39_1.style.display = "inline-flex";
+
+        // num41.style.display = "inline-flex";
+        // num41_1.style.display = "inline-flex";
+
+        // btones cerrar modales :
+        // modal etiqueta 0
+        // cerrar.style.display = "inline-flex";
+        // num1_h.style.display = "inline-flex";
+        // modal etqueta 10        
+        // num11_1.style.display = "inline-flex";
+        // modal etiqueta 12
+        // num13_1.style.display = "inline-flex";
+        // num13.style.display = "inline-flex";
+        // modal etiqueta 14:
+        // num15.style.display = "inline-flex";
+        // num15_3.style.display = "inline-flex";
+    } else if (menuactivo) {
+        menuactivo = false;
+        annyang.abort();
+        console.log("Fin Reconocimiento de voz");
+
+        microfono.classList.add("bx", "bxs-microphone-off", "bx-flip-horizontal");
+        microfono.classList.remove("activeMicro", "bx-microphone", "bx-flip-horizontal");
+        microfono.style.transitionDuration = "1s";
+        contenedor_notas.classList.remove('contenedorActivo');
+        // btn_access.style.backgroundColor = "white";
+        iconComandoVoz.style.display = "inline-flex";
+        icon_comandovoz_Active.style.display = "none";
+        btn_access.classList.remove("HerramientaActivada");
+        btn_access.style.transitionDuration = "1s";
 
 
-    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.style.display = "flex";
-    num1.style.transitionDuration = "3s";
-    num1.style.animationDuration = "3s";
-    num1.classList.add('animate__animated', 'animate__heartBeat');
-    num2.style.display = "inline-flex";
-    num3.style.display = "inline-flex";
-    num4.style.display = "inline-flex";
-    num5.style.display = "inline-flex";
-    num6.classList.add("ident_Universal");
-    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        num1.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num2.style.display = "none";
+        num3.style.display = "none";
+        num4.style.display = "none";
+        num5.style.display = "none";
+        num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num18.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num19.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num20.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num21.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num22.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num23.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        num24.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num25.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num26.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num27.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num28.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num30.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num32.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num34.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num36.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num38.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num40.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num42.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // // btones cerrar modales:
+        // cerrar.style.display = "none";
+        // cerrar_help.style.display = "none";
 
-    num6.classList.add('animate__animated', 'animate__heartBeat');
-    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num19.style.display = "none";
+        // num19_1.style.display = "none";
 
-    cerrar.style.display = "inline-flex";
-    num1_h.style.display = "inline-flex";
-})
+        // num21.style.display = "none";
+        // num21_1.style.display = "none";
 
+        // num23.style.display = "none";
+        // num23_1.style.display = "none";
+
+        // num29.style.display = "none";
+        // num29_1.style.display = "none";
+
+        // num31.style.display = "none";
+        // num31_1.style.display = "none";
+
+        // num33.style.display = "none";
+        // num33_1.style.display = "none";
+
+        // num35.style.display = "none";
+        // num35_1.style.display = "none";
+
+        // num37.style.display = "none";
+        // num37_1.style.display = "none";
+
+        // num39.style.display = "none";
+        // num39_1.style.display = "none";
+
+        // num41.style.display = "none";
+        // num41_1.style.display = "none";
+        // // modal etiqueta 0
+        // // cerrar.style.display = "none";
+        // // num1_h.style.display = "none";
+        // // modal etqueta 10
+        // // num11.style.display = "none";
+        // // num11_1.style.display = "none";
+        // // modal etiqueta 12
+        // // num13_1.style.display = "none";
+        // // num13.style.display = "none";
+        // // modal etiqueta 14:
+        // // num15.style.display = "none";
+        // // num15_3.style.display = "none";
+    }
+});
