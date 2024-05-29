@@ -20,14 +20,24 @@
     <link rel="stylesheet" href="css/unit1.css" />
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/menuacces.css">
-
+    <!-- Menu accesible .css -->
+    <link rel="stylesheet" href="css/menuacces.css">
+    <!-- Libreria de Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Libreria para animar  los recursos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
-
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
     <!-- Instrucción para información de ayuda -->
+    <div id="container_notes" class="contenedor_notas">
+    </div>
+
+    <div class="microfono">
+        <i id='micro' class="bx bxs-microphone-off bx-flip-horizontal" style='color:#ffffff'></i>
+    </div>
+
     <div>
         <p class="sr-only">
             Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las
@@ -36,10 +46,161 @@
         </p>
     </div>
 
-    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda"
+
+    <!-- <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda"
         data-toggle="modal" data-target="#information-1" accesskey="I">
         <i class="fa fa-info-circle" aria-hidden="true"></i>
-    </button>
+    </button> -->
+
+    <!-- Implementacion del boton menu accesible: -->
+    <div class="ocultar">
+        <button onclick="handleMenu()" class="btnAccessUniversal">
+            <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
+        </button>
+
+        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+        waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
+            <i class='bx bxs-help-circle'></i>
+        </button>
+        <span id="ident0" class="identificador2">0</span>
+    </div>
+
+    <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span id="closed" aria-hidden="true">×</span>
+                        <span id="cerrar" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Ayuda
+                            </p>
+                        </div>
+                        <p class="instruccion"><b>Instrucciones: </b></p>
+                        <p class="parrafo">
+                            Para recargar la página solo dí 'F5'.
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="identcerrar" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- fin modal ayuda -->
+
+    <!-- menuaccesShow -->
+
+    <div class="menuacces ">
+        <div class="menuComponentAcces">
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="font_size">
+                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                        Tamaño de fuente
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="link_resaltar">
+                        <img id="icon_Link" src="./images/accesibilidad/MA-_m-hiper-a.png"
+                            alt="Icon auxiliar hipervinculos">
+                        <img id="icon_Link_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
+                        Hipervínculos
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="cursorBig" class="btn_accesible">
+                        <img id="icon_Cursor" src="./images/accesibilidad/MA-_m-cursor-a.png"
+                            alt="Icon auxiliar cursor">
+                        <img id="icon_Cursor_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
+                        Cursor
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
+                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
+                        aria-hidden="true">
+                        <img id="icon_lector_inmersivo" src="./images/accesibilidad/MA-_m-lector-a.png"
+                            alt="Icon auxiliar Lector">
+                        <img id="icon_lector_inmersivo_active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
+                        Lector Inmersivo
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces section_voice">
+                <div>
+                    <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img id="icon_comando_voz" src="./images/accesibilidad/MA-_m-comandos-a.png"
+                            alt="Icon auxiliar comandos de voz">
+                        <img id="icon_comandovoz_activo" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
+                        Comandos de voz
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id="enlaceaLecturaF"
+                        class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        Lectura fácil
+                    </a>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button onclick="showLine()" id="lineaLectura" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img id="icon_Linea_Lectura" src="./images/accesibilidad/MA-_m-regla-a.png"
+                            alt="Icon auxiliar línea de lectura">
+                        <img id="icon_Linea_Lectura_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
+                        Línea de lectura
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- fin menú accesible -->
 
     <!-- Barra de progreso en la parte superior -->
     <div id="progress"></div>
@@ -104,8 +265,8 @@
                         <b>Nombre de la EE: </b> Pensamiento Crítico para la Solución de Problemas/Habilidades del
                         Pensamiento Crítico y Creativo.
                     </p>
-                    <p class="parrafo"><b>Área Curricular a la que pertenece:</b> Área de Formación Básica General.
-                        Valor crediticio: 4 créditos/5 créditos.</p>
+                    <p class="parrafo"><b>Área Curricular a la que pertenece:</b> Área de Formación Básica General.</p>
+                    <p class="parrafo"><b>Valor crediticio:</b> 4 créditos/5 créditos.</p>
                     <p class="parrafo"><b>Oportunidades de evaluación: </b>ordinaria.</p>
                     <p class="parrafo mb-0"><b>Clave administrativa de la EE: </b> BGRE80002/FBGR80002.</p>
                 </div>
@@ -160,25 +321,26 @@
                 </div>
 
                 <div class="padding-e">
-                    <p class="parrafo ">
-                        Para conocer los Programas Educativos descarga los siguientes archivos.
-                    </p>
 
                     <p class="parrafo instruccion-color-verde"> <b>Instrucción:</b> Presiona cada botón para descargar
                         los Programas Educativos.</p>
 
                     <div class="section_btns">
-                        <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                        <!-- <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
                             data-target="#modul-3">
                             <b>Programa Educativo BGRE80002</b>
                             <span id="ident22" class="identificador2 ">22</span>
-                        </button>
+                        </button> -->
+                        <a class="btn_module btn btn-azul-modals waves-effect waves-light" href="./downaaa"
+                            download="">Programa Educativo BGRE80002</a>
 
-                        <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
+                        <!-- <button class="btn_module btn btn-azul-modals waves-effect waves-light" data-toggle="modal"
                             data-target="#modul-3">
                             <b>Programa Educativo FBGR80002</b>
                             <span id="ident22" class="identificador2 ">22</span>
-                        </button>
+                        </button> -->
+                        <a class="btn_module btn btn-azul-modals waves-effect waves-light" href="./downaaa"
+                            download="">Programa Educativo FBGR80002</a>
                     </div>
                 </div>
 
@@ -195,45 +357,105 @@
                         </b>
                     </p>
 
-                    <div class="container_antologias container_moduls">
-                        <div class="section_modul">
-                            <div class="section_line">
-                                <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
-                                <div class="line_orange"></div>
-                                <div class="line_orange_2"></div>
+                    <div class="ocultar">
+                        <div class="container_antologias container_moduls">
+                            <div class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
+                                    </p>
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                    <p></p>
+                                </div>
+                                <p class="parrafo text-center bold mb-0">Pensamiento crítico para la solución de
+                                    problemas
                                 </p>
                             </div>
-                            <p class="parrafo text-center bold mb-0">Pensamiento crítico para la solución de problemas
-                            </p>
-                        </div>
-                        <div class="section_modul">
-                            <div class="section_line">
-                                <p class="parrafo text-center bold mb-4 ">Módulo 2</p>
-                                <div class="line_orange"></div>
-                                <div class="line_orange_2"></div>
+                            <div id="cuadro_modul" class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 2</p>
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                </div>
+                                <p class="parrafo text-center bold">Pensamiento crítico para formular problemas</p>
                             </div>
-                            <p class="parrafo text-center bold">Pensamiento crítico para formular problemas</p>
-                        </div>
-                        <div class="section_modul">
-                            <div class="section_line">
-                                <p class="parrafo text-center bold mb-4 ">Módulo 3</p>
-                                <div class="line_orange"></div>
-                                <div class="line_orange_2"></div>
+                            <div class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 3</p>
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                </div>
+                                <p class="parrafo text-center bold mb-0">Pensamiento crítico para solucionar problemas
+                                </p>
                             </div>
-                            <p class="parrafo text-center bold mb-0">Pensamiento crítico para solucionar problemas</p>
                         </div>
                     </div>
+
+                    <div class="mostrar">
+                        <div class="container_antologias container_moduls">
+                            <p class="parrafo bold">Módulo 1</p>
+                            <ul class="parrafo padding_left">
+                                <li>Pensamiento crítico para la solución de problemas </li>
+                            </ul>
+                            <p class="parrafo  bold">Módulo 2</p>
+                            <ul class="parrafo padding_left">
+                                <li>Pensamiento crítico para formular problemas</li>
+                            </ul>
+                            <p class="parrafo bold">Módulo 3</p>
+                            <ul class="parrafo padding_left mb-0">
+                                <li>Pensamiento crítico para solucionar problemas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="container_antologias container_moduls">                    
+                        <div class="ocultar">
+                            <div class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                    </p>
+                                </div>
+                                <p class="parrafo text-center bold mb-0">Pensamiento crítico para la solución de
+                                    problemas
+                                </p>
+                            </div>
+                            <div class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 2</p>
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                </div>
+                                <p class="parrafo text-center bold">Pensamiento crítico para formular problemas</p>
+                            </div>
+                            <div class="section_modul">
+                                <div class="section_line">
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 3</p>
+                                    <div class="line_orange"></div>
+                                    <div class="line_orange_2"></div>
+                                </div>
+                                <p class="parrafo text-center bold mb-0">Pensamiento crítico para solucionar problemas
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
 
-                <p class="instruccion-color-verde parrafo mt-2em"> <b>Instrucción:</b> Presiona el botón para descargar
-                    el
-                    archivo.</p>
+                <div class="padding-e">
+                    <p class="instruccion-color-verde parrafo mt-2em"> <b>Instrucción:</b> Presiona el botón para
+                        descargar
+                        el
+                        archivo.</p>
 
-                <button class="btn_module btn btn-azul-modals waves-effect waves-light btn_center" data-toggle="modal"
-                    data-target="#modul-3">
-                    <b>Evaluación de actividades</b>
-                    <span id="ident22" class="identificador2 ">22</span>
-                </button>
+                    <!-- <a download="" href="./sldk" class="btn_module btn btn-azul-modals waves-effect waves-light btn_center"
+                        data-toggle="modal" data-target="#modul-3">
+                        <b>Evaluación de actividades</b>
+                        <span id="ident22" class="identificador2 ">22</span>
+                    </a> -->
+                    <a class="btn btn-azul-modals btn_center waves-effect waves-light" href="./downaaa"
+                        download="">Evaluación de actividades</a>
+                </div>
 
                 <div class="radial-ellipse-size" aria-hidden="true"></div>
 
@@ -252,7 +474,7 @@
 
                 <!-- Inicia Pestañas -->
                 <div class="padding-e">
-                    <h2 class="subt mb-2rem text-azul subtitulos_spadding ">Dinámica del curso</h2>
+                    <h2 class="subt mb-2rem text-azul subtitulos_spadding ">Dinámica de trabajo</h2>
 
                     <div class="escritorio">
 
@@ -327,7 +549,8 @@
                                             tarea que debas enviar, misma que servirá de guía para reconocer tus
                                             trabajos. Esta clave está formada por varios elementos, entre ellos el
                                             número de la actividad, así como tu nombre y apellido:
-
+                                        </p>
+                                        <p class="parrafo">
                                             <b>ED##_<wbr>Primer<wbr>ApellidoyPrimerNombre.ext</b>
                                         </p>
 
@@ -405,9 +628,15 @@
 
 
                 <div class="padding-e">
-                    <h2 class="parrafop text-azul subtitulos_spadding">
+                    <h2 class="subt text-azul subtitulos_spadding">
                         Lineamientos
                     </h2>
+                    <div class="mostrar">
+                        <p class="instruccion parrafo "> <b>Instrucción:</b> Presiona el botón para descargar el
+                            archivo.</p>
+                        <a class="btn btn_lineamientos btn-azul-modals  waves-effect waves-light" href="./downaaa"
+                            download="">Lineamientos de la Experiencia Educativa</a>
+                    </div>
                     <div class="ocultar">
                         <p class="instruccion parrafo "> <b>Instrucción:</b> Presiona cada botón para conocer
                             la información.</p>
@@ -443,8 +672,11 @@
                                                 señalado depende de cada facilitador.</li>
                                             <li>Información sobre qué procede en caso de actividades plagiadas o entrega
                                                 fuera de tiempo.</li>
-                                            <li>Correo para dudas técnicas o administrativas afbgfacilitadores@uv.mx
+                                            <li>Correo para dudas técnicas o administrativas
+                                                <a rel="noopener noreferrer" href="mailto:afbgfacilitadores@uv.mx"
+                                                    target="_blank">afbgfacilitadores@uv.mx</a>
                                             </li>
+                                            <!-- <a rel="noopener noreferrer" href="mailto:alblanco@uv.mx" target="_blank">alblanco@uv.mx</a> -->
                                         </ol>
                                     </li>
                                 </ul>
@@ -479,7 +711,9 @@
                                                 los
                                                 tiempos establecidos, en cuyo caso deberá informársele al estudiante al
                                                 inicio del curso el mecanismo de penalización al que estará sujeto.</li>
-                                            <li>Canaliza al centro de ayuda (afbgfacilitadores@uv.mx) al estudiante que
+                                            <li>Canaliza al centro de ayuda
+                                                (<a rel="noopener noreferrer" href="mailto:afbgfacilitadores@uv.mx"
+                                                    target="_blank">afbgfacilitadores@uv.mx</a>) al estudiante que
                                                 manifieste dudas técnicas, administrativas o incumplimiento para que se
                                                 le
                                                 dé atención y seguimiento.</li>
@@ -547,7 +781,9 @@
                                     <li>Atender los comunicados (correos) de mi facilitador a través del apartado
                                         Mensajes.
                                     </li>
-                                    <li>Enviar mensajes al centro de ayuda (afbgfacilitadores@uv.mx) en caso de dudas
+                                    <li>Enviar mensajes al centro de ayuda (<a rel="noopener noreferrer"
+                                            href="mailto:afbgfacilitadores@uv.mx"
+                                            target="_blank">afbgfacilitadores@uv.mx</a>) en caso de dudas
                                         técnicas o administrativas para recibir atención y seguimiento.</li>
                                 </ul>
 
@@ -617,8 +853,9 @@
                 <!-- espacio -->
                 <div class="container ">
                     <div class="padding-e">
-                        <h2 class="parrafop text-azul subtitulos_spadding ">Fuentes de información</h2>
-                        <p class="instruccion parrafo mt-2em "> <b>Instrucción:</b> Presiona el botón para descargar el
+                        <h2 class="subt text-azul subtitulos_spadding ">Fuentes de información</h2>
+                        <p class="instruccion-color-verde parrafo mt-2em "> <b>Instrucción:</b> Presiona el botón para
+                            descargar el
                             archivo.</p>
                         <a class="btn btn-azul-modals btn_center" href="./downaaa" download="">Fuentes de
                             información</a>
@@ -632,23 +869,24 @@
 
                         <!-- <p class="instruccion parrafo mt-2em "> <b>Instrucción:</b> Presiona el botón para descargar el
                             archivo.</p>
-                             -->
-                        <div class="container">
+                            -->
+                    </div>
+                    <div class="">
 
-                            <div class="fondo-degradado">
-                                <p class="instruccion mb-2em">Instrucciones: Presiona el botón para descargar el
-                                    archivo.</p>
+                        <div class="fondo-degradado">
+                            <p class="parrafo instruccion-color-verde mb-2em"><b>Instrucción:</b> Presiona el botón para
+                                descargar el
+                                archivo.</p>
 
-                                <div class="text-center">
+                            <div class="text-center">
 
-                                    <a id="btnLectura" class="btn_lecturaF btn waves-effect waves-light" href=""
-                                        target="_blank" download="">
-                                        Lectura fácil
-                                    </a>
-                                </div>
+                                <a id="btnLectura" class="btn_lecturaF btn waves-effect waves-light" href=""
+                                    target="_blank" download="">
+                                    Lectura fácil
+                                </a>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </section>
@@ -741,6 +979,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
 
     <!-- Funcionalidad general -->
     <!-- ../scripts/home.js -->
@@ -748,6 +987,9 @@
     <script type="text/javascript" src="scripts/menu.js"></script>
     <script src="scripts/menuacces.js"></script>
     <script src="scripts/annyang-2.js"></script>
+    <script src="scripts/change-fonts.js"></script>
+    <script src="scripts/links.js"></script>
+    <script src="scripts/marcador.js"></script>
 
     <!-- Funcionalidad para Progress-bar-scroll del inicio -->
     <!-- ../scripts/scroll-timeline.js -->
