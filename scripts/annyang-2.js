@@ -279,10 +279,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let section12 = function () {
-        let element = document.getElementById("ident12_v");
+        let element = document.getElementById("section12");
         PositionTop100(element);
     }
 
+    let section13 = function () {
+        let element = document.getElementById("section13");
+        PositionTop100(element);
+    }
+
+    let section14 = function () {
+        let element = document.getElementById("section14");
+        PositionTop100(element);
+    }
 
     let abrirAyuda = function () {
         let modal = document.getElementById("methods-help");
@@ -314,6 +323,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
+        'uuno': abrirMenuPrincipal,
+        'menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
@@ -348,6 +359,12 @@ document.addEventListener("DOMContentLoaded", function () {
         '12': section12,
         'doce': section12,
 
+        '13': section13,
+        'trece': section13,
+
+        '14': section14,
+        'catorce': section14,
+
         // '13': function () {
         //     console.log("Comando 'trece' reconocido.");
         //     var player = document.getElementById('video');
@@ -375,8 +392,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 'Trece': playvideo,
 
-        '14': volverA,
-        'catorce': volverA,
+        '31': volverA,
+        'treinta y uno': volverA,
 
         'cerrar': cerrarAyuda,
 
