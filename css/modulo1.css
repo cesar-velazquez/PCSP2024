@@ -1,17 +1,8 @@
-p, button, ul, ol{
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-    line-height: 1.8;
-}
-
 .subtitulo{ font-size:1.3rem; margin-bottom:1rem }
 
 @media screen and (min-width: 768px) {
 
-    p, button, ul, ol {
-        font-size: 1.3rem;
-        margin-bottom: 2em;
-    }
+    
     .subtitulo{ font-size:1.5rem; margin-bottom:1rem }
 }
 

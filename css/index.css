@@ -108,6 +108,30 @@ body {
     margin-bottom: 1rem !important;
 }
 
+.btn {
+    font-size: 1.125rem !important;
+    text-transform: none;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgb(129, 100, 158);
+    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
+    transition: none;
+    border: .1rem solid transparent;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #1E4566;
+    border: .1rem solid #1E4566;
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        font-size: 1.3rem !important;
+        z-index: 1;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     .subt {
@@ -130,6 +154,12 @@ body {
     }
 }
 
+p, button, ul, ol{
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
 @media screen and (min-width: 768px) {
     .escritorio {
         display: block;
@@ -138,6 +168,11 @@ body {
 
     .movil {
         display: none;
+    }
+
+    p, button, ul, ol {
+        font-size: 1.3rem;
+        margin-bottom: 2em;
     }
 }
 
@@ -430,34 +465,36 @@ body {
 
 .btn-menu {
     margin: -23px;
-    padding: 0.5rem 0.25rem !important;
+    padding: 0.5rem 0.25rem;
     position: absolute;
-    background-color: #fff;
+    background: #fff;
     color: #3E5089;
     width: 115px;
     right: 11em;
     top: 3em;
     border-radius: .3em;
     box-shadow: none;
+    font-weight: normal;
 }
 
 .btn-menu:hover {
-    box-shadow: none;
-    color: #fff !important;
-    background-color: #3C3D8B !important;
-    font-weight: bold;
+    /*box-shadow: none;*/
+    color: #fff;
+    background: #3C3D8B;
+    /*font-weight: bold;*/
+    
 }
 
 .btn-menu-circular {
-    width: 2em !important;
-    height: 2em !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    width: 2em;
+    height: 2em ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: .2s linear all !important;
-    background-color: #3C3D8B !important;
-    color: #fff !important;
+    background: #3C3D8B;
+    color: #fff;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
@@ -466,8 +503,9 @@ body {
 }
 
 .btn-menu-circular:hover {
-    color: #1f5198 !important;
-    background: white !important;
+    border: 2px solid #fff;
+    color: #1f5198;
+    background: white;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
@@ -538,17 +576,6 @@ body {
         top: 75px;
     }
 }
-
-/* @media screen and (max-width: 767px) {
-    .section_tema {
-        background-color: transparent;
-    }
-
-    .pleca_principal {
-        background-color: red;
-        width: 95%;
-    }
-} */
 
 .pleca__ee {
     margin-left: .7em !important;
@@ -822,18 +849,6 @@ a.sidebar__enlace {
     }
 }
 
-.btn {
-    font-size: 1.125rem !important;
-    text-transform: none;
-}
-
-.btn:hover {
-    background-color: #3C3D8B;
-    color: #fff;
-    font-weight: bold;
-    text-transform: none !important;
-}
-
 .overlay.active {
     display: block;
     opacity: 1;
@@ -851,12 +866,6 @@ a.sidebar__enlace {
     opacity: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .btn {
-        font-size: 1.3rem !important;
-        z-index: 1;
-    }
-}
 
 .introduction {
     z-index: 61;
@@ -907,11 +916,6 @@ a.sidebar__enlace {
     padding-left: 1.3rem;
 }
 
-/* .subtitulos_spadding {
-    font-size: 1.3rem !important;
-    margin-bottom: 1rem;
-} */
-
 @media screen and (min-width: 768px) {
 
     .parrafo {
@@ -941,49 +945,20 @@ a.sidebar__enlace {
 
 /* Estilos para FAQS */
 
-.collapsables-gi summary {
-    background: #ffffff;
-    color: #003470;
-    text-align: center;
-    position: relative;
-    display: block;
-    height: 55px;
-    border-radius: 0;
-}
+.collapsables-gi{ margin:1rem auto 0; }
 
 .collapsables-gi summary {
-    background: #003470;
-    color: #ffffff;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-
-.collapsables-gi .btn {
-    border: none;
     width: 100%;
-    /* background: linear-gradient(90deg, #0051a0 0%, #0b1b74 70%); */
-    background: rgb(129, 100, 158);
-    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
-    padding: 0.7rem 0 1rem 0;
-    width: 800px;
+    padding: .8rem 0;
+    margin: 0;
 }
 
-
-/*
-.btn:first-child:hover,
-.btn:focus-visible,
-.btn:hover,
-:not(.btn-check) + .btn:hover {
-  box-shadow: var(--mdb-btn-hover-box-shadow);
-}*/
-.collapsables-gi .btn:hover {
-    background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
-}
+.btn_guion{ max-width:800px; }
 
 .collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
-    color: #0051a0;
+    color: #1E4566;
+    border-bottom: .15rem solid #1E4566;
 }
 
 .collapsables-gi summary::after {
@@ -1002,28 +977,11 @@ a.sidebar__enlace {
     transform: translateY(-52%);
     content: "-";
     font-size: 50px;
-    /*font-weight: lighter;*/
 }
 
 .collapsables-gi__content {
     background: linear-gradient(#ffffff, #dfedff);
     padding: 2rem;
-    border: #fff;
-    width: 800px;
-    margin: auto;
-    font-size: 1.3125em;
-}
-
-.btn_guion {
-    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
-    text-transform: none;
-    transition-duration: 1s;
-}
-
-.btn_guion:hover {
-    color: #1E4566;
-    border-bottom: 2px solid #1E4566;
-    transition-duration: 1s;
 }
 
 .containers_module {
@@ -1223,14 +1181,9 @@ a:hover {
     background-repeat: no-repeat;
 }
 
-/* .instruccion {
-    color: #056e31;
-    margin: 2em 0;
-} */
 .instruccion {
     color: #056e31;
 }
-
 
 @media (max-width: 767px) {
     .container_moduls {
@@ -1339,27 +1292,6 @@ a:hover {
         margin: 0 auto;
     }
 
-    .collapsables-gi summary,
-    .collapsables-gi__content {
-        width: 690px !important;
-    }
-}
-
-.video1-1 .btn-colapsar {
-    margin: 0;
-    border: 2px solid #E7EFF7;
-}
-
-.video1-1 {
-    width: 800px;
-    margin: 0 auto;
-
-}
-
-@media screen and (max-width: 991px) {
-    .video1-1 {
-        width: 100%;
-    }
 }
 
 .separador {
