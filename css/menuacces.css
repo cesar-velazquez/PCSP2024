@@ -163,7 +163,8 @@
 
 /* Contenedor Notas */
 .contenedor_notas {
-    text-overflow: ellipsis;
+    overflow: auto;
+    padding: 3.5rem 1rem;
     width: 900px;
     height: 70px;
     position: fixed;

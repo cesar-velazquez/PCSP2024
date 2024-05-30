@@ -15,14 +15,14 @@ body {
     font-weight: 400;
 }
 
-.ul_z{
+.ul_z {
     position: relative;
     z-index: 1 !important;
     color: #17529C;
     border-bottom: 2px solid #17529C;
 }
 
-.ul_z:hover{
+.ul_z:hover {
     color: #17529C;
 }
 
@@ -152,7 +152,10 @@ body {
     }
 }
 
-p, button, ul, ol{
+p,
+button,
+ul,
+ol {
     font-size: 1.125rem;
     margin-bottom: 1rem;
     line-height: 1.8;
@@ -168,7 +171,10 @@ p, button, ul, ol{
         display: none;
     }
 
-    p, button, ul, ol {
+    p,
+    button,
+    ul,
+    ol {
         font-size: 1.3rem;
         margin-bottom: 2em;
     }
@@ -480,12 +486,12 @@ p, button, ul, ol{
     color: #fff;
     background: #3C3D8B;
     /*font-weight: bold;*/
-    
+
 }
 
 .btn-menu-circular {
     width: 2em;
-    height: 2em ;
+    height: 2em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -944,7 +950,9 @@ a.sidebar__enlace {
 
 /* Estilos para FAQS */
 
-.collapsables-gi{ margin:1rem auto 0; }
+.collapsables-gi {
+    margin: 1rem auto 0;
+}
 
 .collapsables-gi summary {
     width: 100%;
@@ -952,7 +960,9 @@ a.sidebar__enlace {
     margin: 0;
 }
 
-.btn_guion{ max-width:800px; }
+.btn_guion {
+    max-width: 800px;
+}
 
 .collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
@@ -1551,8 +1561,9 @@ a:hover {
 }
 
 .collapsable_width {
-    width: 100% !important;
-    margin-bottom: 1rem !important;
+    width: 100% !important;    
+    padding: .8rem 1rem !important;
+    margin: 0;
 }
 
 .fondo-degradado {

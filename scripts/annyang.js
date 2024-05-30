@@ -775,7 +775,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia abajo la cantidad especificada
-        window.scrollBy(0, 200);
+        window.scrollBy(0, 500);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia arriba la cantidad especificada
-        window.scrollBy(0, -200);
+        window.scrollBy(0, -500);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -904,21 +904,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '5': getPageNext2,
         'cinco': getPageNext2,
-
-        // '6': section6,
-        // 'seis': section6,
-
-        // '7': section7,
-        // 'siete': section7,
-
-        // '8': section8,
-        // 'ocho': section8,
-
-        // '9': section9,
-        // 'nueve': section9,
-
-        // '11': cerrarmodal1,
-        // 'Once': cerrarmodal1,
 
         '11': section11,
         'Once': section11,
