@@ -956,13 +956,16 @@ a.sidebar__enlace {
 
 .collapsables-gi summary {
     width: 100%;
-    padding: .8rem 0;
+    padding: .8rem 2rem;
     margin: 0;
+    text-align: left;
 }
 
 .btn_guion {
     max-width: 800px;
 }
+
+.btn_guion  summary { text-align:center; }
 
 .collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
