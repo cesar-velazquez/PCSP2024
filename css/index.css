@@ -765,13 +765,6 @@ p, button, ul, ol{
     outline-offset: 0;
 }
 
-/*
-.subrayar-enlace:hover, a:focus-visited
-.sidebar__enlace:hover {
-    color: #fff;
-    background: #3C3D8B;
-}*/
-
 a.sidebar__enlace {
     display: block;
     padding: 1rem 2rem 1rem 2rem;
@@ -810,9 +803,9 @@ a.sidebar__enlace {
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    background: #fff;
-    color: #3C3D8B;
-    border: 2px solid #3C3D8B;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -823,6 +816,7 @@ a.sidebar__enlace {
 .btn-link:hover {
     background-color: white;
     color: #09227A;
+    border: 2px solid #fff;
     text-decoration: none;
 }
 
