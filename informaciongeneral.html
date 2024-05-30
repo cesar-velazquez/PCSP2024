@@ -118,7 +118,10 @@
             <div class="sectionAcces">
                 <div>
                     <button class="btn_accesible" id="font_size">
-                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                        <img id="icon_FontSize" src="./images/accesibilidad/MA-_m-tamanofuente-a.png"
+                            alt="Icon auxiliar font size">
+                        <img id="icon_FontSize_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
                         Tamaño de fuente
                     </button>
                 </div>
@@ -176,8 +179,8 @@
 
             <div class="sectionAcces">
                 <div>
-                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id="enlaceaLecturaF"
-                        class="btn_accesible" aria-label="Botón accesibilidad">
+                    <a accesskey="6" tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
                         <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
                         Lectura fácil
                     </a>
@@ -220,7 +223,8 @@
     <header class="banner-1">
         <div class="">
             <div class="js-pleca pleca">
-                <a class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+                <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad
+                    Veracruzana</a>
 
                 <div class="dropdown">
 
@@ -369,7 +373,7 @@
 
                     <div class="ocultar">
                         <div class="container_antologias container_moduls">
-                            <div class="section_modul">
+                            <div id="cuadroModul1" class="section_modul">
                                 <div class="section_line">
                                     <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
                                     </p>
@@ -381,7 +385,7 @@
                                     problemas
                                 </p>
                             </div>
-                            <div id="cuadro_modul" class="section_modul">
+                            <div id="cuadroModul2" class="section_modul">
                                 <div class="section_line">
                                     <p class="parrafo text-center bold mb-4 ">Módulo 2</p>
                                     <div class="line_orange"></div>
@@ -389,7 +393,7 @@
                                 </div>
                                 <p class="parrafo text-center bold">Pensamiento crítico para formular problemas</p>
                             </div>
-                            <div class="section_modul">
+                            <div id="cuadroModul3" class="section_modul">
                                 <div class="section_line">
                                     <p class="parrafo text-center bold mb-4 ">Módulo 3</p>
                                     <div class="line_orange"></div>
@@ -467,7 +471,7 @@
                         <ul class="centerPestaña nav nav-tabs tabs-1-nav mt-4">
 
                             <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
-                                <a data-toggle="tab" href="#ppaso-1"
+                                <a id="firsttab" data-toggle="tab" href="#ppaso-1"
                                     class="tamano-btn nav-link tab-1-link active text-center ajuste-altura">
                                     <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Comunicación e
                                         interacción
@@ -477,7 +481,7 @@
                             </li>
 
                             <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
-                                <a data-toggle="tab" href="#ppaso-2"
+                                <a id="secondtab" data-toggle="tab" href="#ppaso-2"
                                     class="tamano-btn nav-link tab-1-link text-center ajuste-altura">
                                     <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Nomenclatura para los
                                         archivos
@@ -615,7 +619,7 @@
 
 
                 <div class="padding-e">
-                    <h2 class="subt text-azul subtitulos_spadding">
+                    <h2 id="section24" class="subt text-azul subtitulos_spadding">
                         Lineamientos
                         <span id="ident24" class="identificador2">24</span>
                     </h2>
@@ -626,10 +630,11 @@
                             download="">Lineamientos de la Experiencia Educativa</a>
                     </div>
                     <div class="ocultar">
-                        <p class="instruccion parrafo "> <b>Instrucción:</b> Presiona cada botón para conocer
-                            la información.</p>                        
+                        <p id="sectionFaq" class="instruccion parrafo "> <b>Instrucción:</b> Presiona cada botón para
+                            conocer
+                            la información.</p>
 
-                        <details class="collapsables-gi" id="lineamientos1">
+                        <details id="faq1" class="collapsables-gi" id="lineamientos1">
                             <summary class="left_text collapsable_width btn waves-effect waves-light ">
                                 <strong>a.
                                     Lineamientos de facilitadores</strong>
@@ -733,7 +738,7 @@
                             </div>
                         </details>
 
-                        <details class="collapsables-gi" id="lineamientos1">
+                        <details id="faq2" class="collapsables-gi" id="lineamientos1">
                             <summary class="left_text collapsable_width btn waves-effect waves-light ">
                                 <strong>b. Lineamientos de estudiantes</strong>
                                 <span id="ident26" class="identificador2">26</span>
@@ -796,7 +801,7 @@
                             </div>
                         </details>
 
-                        <details class="collapsables-gi" id="lineamientos1">
+                        <details id="faq3" class="collapsables-gi" id="lineamientos1">
                             <summary class="left_text collapsable_width btn waves-effect waves-light ">
                                 <strong>c. Lineamientos para la participación en foros</strong>
                                 <span id="ident27" class="identificador2">27</span>
@@ -841,12 +846,13 @@
                 <!-- espacio -->
                 <div class="container ">
                     <div class="padding-e">
-                        <h2 class="subt text-azul subtitulos_spadding ">Fuentes de información <span id="ident28"
-                                class="identificador2">28</span></h2>
+                        <h2 id="section28" class="subt text-azul subtitulos_spadding ">Fuentes de información <span
+                                id="ident28" class="identificador2">28</span></h2>
                         <p class="instruccion-color-verde parrafo mt-2em "> <b>Instrucción:</b> Presiona el botón para
                             descargar el
                             archivo.</p>
-                        <a class="btn btn-azul-modals btn_center" href="./downaaa" download="">Fuentes de
+                        <a id="fuentesInf" class="btn btn-azul-modals btn_center" href="./downaaa" download="">Fuentes
+                            de
                             información <span id="ident29" class="identificador2">29</span></a>
 
                         <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
@@ -867,7 +873,7 @@
                                 descargar el
                                 archivo.</p>
 
-                            <div class="text-center">
+                            <div id="sectionLect" class="text-center">
 
                                 <a id="btnLectura" class="btn_lecturaF btn waves-effect waves-light" href=""
                                     target="_blank" download="">
@@ -886,7 +892,8 @@
 
     <!-- PIE DE PAGINA -->
     <footer class="footer">
-        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+        <span id="btnVolver_Arriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true"
+            aria-label="Volver arriba">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
             <span id="ident31" class="identificador2">31</span>
         </span>

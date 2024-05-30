@@ -109,8 +109,11 @@
 
             <div class="sectionAcces">
                 <div>
-                    <button class="btn_accesible" id="font_size">
-                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                    <button class="btn_accesible" id="font_size">                        
+                        <img id="icon_FontSize" src="./images/accesibilidad/MA-_m-tamanofuente-a.png"
+                            alt="Icon auxiliar font size">
+                        <img id="icon_FontSize_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
                         Tamaño de fuente
                     </button>
                 </div>
@@ -168,8 +171,8 @@
 
             <div class="sectionAcces">
                 <div>
-                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id="enlaceaLecturaF"
-                        class="btn_accesible" aria-label="Botón accesibilidad">
+                    <a accesskey="6" tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
                         <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
                         Lectura fácil
                     </a>
@@ -216,7 +219,7 @@
 
         <div class="js-pleca pleca">
 
-            <a class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
+            <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
 
             <div class="dropdown">
                 <!-- btn  -->
@@ -273,7 +276,8 @@
                 <div class="vid3 embed-responsive embed-responsive-16by9">
                     <p id="ident12" class="play_video identificador2 ">12</p>
                     <p id="ident13" class="fullScreen identificador2 ">13</p>
-                    <video id="video1" src="./videos/unit1/video1.mp4" type="video/mp4" controls></video>
+                    <video id="video1" poster="./images/video/video1.png" src="./videos/unit1/video1.mp4"
+                        type="video/mp4" controls></video>
                     <!-- <iframe
                         src="https://lumen.uv.mx/resources/files/videos/2022/5/18/6696/a34f4f0f-404e-4a7d-8f39-a2bd09dd6b02.mp4"
                         width="80%" height="500" allowfullscreen="" scrolling="no"></iframe> -->
@@ -1023,7 +1027,7 @@
                 <div class="fondo-degradado">
                     <p class="parrafo instruccion-color-verde"><b>Instrucción:</b> Presiona el botón para descargar el
                         archivo.</p>
-                    <div class="text-center">
+                    <div id="sectionLect" class="text-center">
                         <a id="btnLectura" class="btn_lecturaF btn waves-effect waves-light" href="" target="_blank"
                             download="">
                             Lectura fácil

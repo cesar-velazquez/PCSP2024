@@ -128,7 +128,8 @@ body {
 .btn.btn_lecturaF:hover {
     color: #17529C;
     background: url(../images/accesibilidad/lecturaf-a.png) no-repeat 2rem center #fff;
-    border: .2rem solid #17529C;}
+    border: .2rem solid #17529C;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -535,7 +536,8 @@ ol {
 @media screen and (max-width: 767px) {
     .btn-menu {
         padding: 0.5rem !important;
-        width: 100px;
+        width: 2.5em;
+        height: 2.5em;
         left: 85%;
         top: 75px;
         position: fixed;
@@ -1567,7 +1569,7 @@ a:hover {
 }
 
 .collapsable_width {
-    width: 100% !important;    
+    width: 100% !important;
     padding: .8rem 1rem !important;
     margin: 0;
 }

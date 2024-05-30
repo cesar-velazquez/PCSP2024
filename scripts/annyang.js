@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // if (screen.width < 1024)
+    //     console.log("Insuficiente");
+    // else
+    //     if (screen.width < 1280)
+    //         console.log("Suficiente");
+    //     else
+    //         console.log("Óptima");
+
+
+
+
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
     }
@@ -1057,7 +1068,7 @@ let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 // let cerrarLectorIn = document.getElementById("cerrarLectorIn");
 
 // let enlaceaLecturaF = document.getElementById("enlaceaLecturaF");
-let btnLectura = document.getElementById("btnLectura");
+// let btnLectura = document.getElementById("btnLectura");
 
 
 let microfono = document.getElementById("micro");
@@ -1139,9 +1150,9 @@ let num13_1 = document.getElementById("ident1_2");
 
 let num15_3 = document.getElementById("ident15_3");
 // 
-btnLectura.addEventListener('mouseover', function () {
-    icon_read_1.style.display = "none";
-})
+// btnLectura.addEventListener('mouseover', function () {
+//     icon_read_1.style.display = "none";
+// })
 
 
 // enlaceaLecturaF.addEventListener('click', function () {
@@ -1214,9 +1225,18 @@ btnLectura.addEventListener('mouseover', function () {
 //     }
 // });
 
+// if (screen.width < 1024)
+//     document.write("Insuficiente")
+// // annyang.abort();
+// else
+//     if (screen.width < 1280)
+//         document.write("Suficiente")
+//     else
+//         document.write("Óptima")
+
 let menuactivo = false;
 btn_access.addEventListener('click', function () {
-    if (!menuactivo) {
+    if (!menuactivo && screen.width > 1023) {
         menuactivo = true;
         const parrafos = document.querySelectorAll('.section-comandos');
         parrafos.forEach(parrafo => parrafo.style.display = 'block');
@@ -1302,20 +1322,8 @@ btn_access.addEventListener('click', function () {
 
         num41.style.display = "inline-flex";
         num41_1.style.display = "inline-flex";
-
-        // btones cerrar modales :
-        // modal etiqueta 0
-        // cerrar.style.display = "inline-flex";
-        // num1_h.style.display = "inline-flex";
-        // modal etqueta 10        
-        // num11_1.style.display = "inline-flex";
-        // modal etiqueta 12
-        // num13_1.style.display = "inline-flex";
-        // num13.style.display = "inline-flex";
-        // modal etiqueta 14:
-        // num15.style.display = "inline-flex";
-        // num15_3.style.display = "inline-flex";
-    } else if (menuactivo) {
+    } else if (menuactivo || screen.width < 1024) {
+        
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
@@ -1324,7 +1332,6 @@ btn_access.addEventListener('click', function () {
         microfono.classList.remove("activeMicro", "bx-microphone", "bx-flip-horizontal");
         microfono.style.transitionDuration = "1s";
         contenedor_notas.classList.remove('contenedorActivo');
-        // btn_access.style.backgroundColor = "white";
         iconComandoVoz.style.display = "inline-flex";
         icon_comandovoz_Active.style.display = "none";
         btn_access.classList.remove("HerramientaActivada");
@@ -1398,17 +1405,5 @@ btn_access.addEventListener('click', function () {
 
         num41.style.display = "none";
         num41_1.style.display = "none";
-        // modal etiqueta 0
-        // cerrar.style.display = "none";
-        // num1_h.style.display = "none";
-        // modal etqueta 10
-        // num11.style.display = "none";
-        // num11_1.style.display = "none";
-        // modal etiqueta 12
-        // num13_1.style.display = "none";
-        // num13.style.display = "none";
-        // modal etiqueta 14:
-        // num15.style.display = "none";
-        // num15_3.style.display = "none";
     }
 });
