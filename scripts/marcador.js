@@ -1,5 +1,7 @@
 // Resaltar enlaces:
 let link_resaltar = document.getElementById('link_resaltar');
+let iconLink = document.getElementById("icon_Link");
+let iconLinkActive = document.getElementById("icon_Link_Active");
 
 let linkactivo = false;
 link_resaltar.addEventListener('click', function () {
@@ -54,15 +56,33 @@ LectorInmersivo.addEventListener('click', function () {
     }
 });
 
-cerrarLectorIn.addEventListener('click', function () {
-    LectorIn = false;
-    console.log("remove Ha");
-    iconLectorInmersivo.style.display = "inline-flex";
-    iconLectorInmersivoActive.style.display = "none";
-    LectorInmersivo.classList.remove("HerramientaActivada");
+// cerrarLectorIn.addEventListener('click', function () {
+//     LectorIn = false;
+//     console.log("remove Ha");
+//     iconLectorInmersivo.style.display = "inline-flex";
+//     iconLectorInmersivoActive.style.display = "none";
+//     LectorInmersivo.classList.remove("HerramientaActivada");
+// });
+
+
+let lineaLectura = document.getElementById("lineaLectura");
+let iconLectura = document.getElementById("icon_Linea_Lectura");
+let iconLecturaActive = document.getElementById("icon_Linea_Lectura_Active");
+
+let lineaSelect = false;
+lineaLectura.addEventListener('click', function () {
+    if (!lineaSelect) {
+        lineaSelect = true;
+        iconLectura.style.display = "none";
+        iconLecturaActive.style.display = "inline-flex";
+        lineaLectura.classList.add("HerramientaActivada");
+    } else {
+        lineaSelect = false;
+        iconLectura.style.display = "inline-flex";
+        iconLecturaActive.style.display = "none";
+        lineaLectura.classList.remove("HerramientaActivada");
+        lineaLectura.style.transitionDuration = ".5s";
+    }
 });
 
-
-let iconComandoVoz = document.getElementById("icon_comando_voz");
-let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
