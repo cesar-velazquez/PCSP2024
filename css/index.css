@@ -572,7 +572,6 @@ ol {
     }
 }
 
-
 @media screen and (max-width: 991px) {
     .btn-menu {
         right: 4em;
@@ -586,35 +585,6 @@ ol {
         right: 2rem;
     }
 }
-/*
-@media screen and (max-width:440px) {
-    .btn-menu {
-        left: 70%;
-        top: 6.4%;
-    }
-
-    .btn-menu-circular {
-        left: 80%;
-        top: 75px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .btn-menu {
-        left: 68%;
-        top: 60px;
-    }
-
-    .top_h1 {
-        font-size: 1.5rem;
-        padding: 1rem;
-    }
-
-    .btn-menu-circular {
-        left: 80%;
-        top: 75px;
-    }
-}*/
 
 .pleca__ee {
     margin-left: .7em !important;
@@ -657,8 +627,6 @@ ol {
 }
 
 .img-banner {
-    /*background: url("../images/SDI-_icono-estrella.png") no-repeat 0 center;*/
-
     background: url(../images/PCSP24-_cuadroshp.png) no-repeat center /5rem;
     height: 2rem;
     border-top: 3rem;
