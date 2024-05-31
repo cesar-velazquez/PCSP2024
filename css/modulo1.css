@@ -65,6 +65,11 @@ ul{ list-style:disc; }
 }
 .temario p{ margin-bottom:0; }
 
+.referencias p {
+    text-indent: -2rem;
+    padding-left: 2rem;
+}
+
 .titulos-encab{ 
     background: url(../images/modulo1/modulo-A.png) no-repeat 0 center / auto 100%, url(../images/modulo1/modulo-b.png) no-repeat right center / auto 100% #FFBA6A;
     width: 100%;
