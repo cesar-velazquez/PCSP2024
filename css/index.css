@@ -575,13 +575,14 @@ ol {
 
 @media screen and (max-width: 1199px) {
     .btn-menu-circular {
-        left: 6em;
+        right: 6em;
     }
 }
 
+
 @media screen and (max-width: 991px) {
     .btn-menu-circular {
-        left: 4em;
+        right: 4em;
         top: 65px;
     }
 }
