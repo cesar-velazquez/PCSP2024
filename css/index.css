@@ -719,35 +719,29 @@ ol {
     }
 }
 
-.sidebar__enlace,
-.sidebar__icono {
-    color: #fff;
-    font-size: 1rem;
-}
-
 .sidebar__enlace.deshabilitado {
     cursor: default;
 }
 
-.sidebar__encabezado:hover .sidebar__icono,
+.sidebar__enlace {
+    color: #fff;
+    display: block;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: none;
+    -webkit-transition: none;
+}
+
 .sidebar__enlace:hover {
     color: #164992;
     background: linear-gradient(90deg, #DDE9E8 5%, rgba(252, 253, 253, 1) 50%);
     transition: none;
     -webkit-transition: none;
+    text-decoration: none;
 }
 
-.sidebar__encabezado:focus-visible .sidebar__icono,
 .sidebar__enlace:focus-visible {
     outline: none;
     outline-offset: 0;
-}
-
-a.sidebar__enlace {
-    display: block;
-    padding: 1rem 2rem 1rem 2rem;
-    transition: none;
-    -webkit-transition: none;
 }
 
 .sidebar__elemento--borde {
@@ -805,15 +799,6 @@ a.sidebar__enlace {
     }
 }
 
-@media screen and (min-width: 768px) {
-
-    .sidebar__enlace,
-    .sidebar__icono,
-    .sidebar__collapse {
-        font-size: 1.3rem;
-    }
-}
-
 @media screen and (max-width: 645px) {
     .sidebar__collapse {
         top: 6rem;
@@ -851,7 +836,6 @@ a.sidebar__enlace {
 }
 
 /* Size para titulos y parrafos */
-
 .parrafo {
     font-size: 1.125rem;
     margin-bottom: 1rem;
