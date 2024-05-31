@@ -1164,6 +1164,90 @@ a:focus {
     height: auto;
 }
 
+.tam-tab {
+    width: 32%;
+}
+
+.tab-pane {
+    padding: 2rem;
+}
+
+.tam-content {
+    min-height: 22rem;
+    display: flex;
+    align-items: center;
+}
+
+.tam-tres{ width:28%; min-width:10rem }
+
+@media screen and (max-width: 991px) {
+    .tam-content {
+        height: 750px;
+    }
+
+    .tam-tab {
+        width: 33.33%;
+    }
+}
+
+.ajuste-altura {
+    height: 82px;
+}
+
+.ajuste-altura span {
+    align-self: center;
+}
+
+.bg-tab-content {
+    background: #FAEBDD;
+    border-bottom: 2px solid #1E4566;
+    border-top: 2px solid #1E4566;
+    margin-bottom: 3rem;
+}
+
+.centerPestaña {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+li.nav-item.waves-effect.waves-light a.active {
+    
+
+    color: #fff;
+    background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -2px;
+    z-index: 1;
+}
+
+li.nav-item.waves-effect.waves-light a {
+    transition: none;
+    color: #1E4566;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #1E4566;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
 @media (max-width: 767px) {
     .btn_program {
         width: 230px;
