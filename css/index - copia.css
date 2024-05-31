@@ -38,11 +38,14 @@ body {
     color: #056e31;
 }
 
-.espacio{ padding:2rem; margin:1.5rem auto; }
+.espacio {
+    padding: 2rem;
+    margin: 1.5rem auto;
+}
 
 /* FIN */
 @media screen and (max-width: 767px) {
-    
+
     .padding__movil_contenido {
         padding: 0 1rem;
     }
@@ -50,7 +53,10 @@ body {
     .movil {
         display: block;
     }
-    .espacio{ padding:1rem }
+
+    .espacio {
+        padding: 1rem
+    }
 }
 
 @media screen and (idth: 768px) {
@@ -200,7 +206,7 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    
+
     .img__principal {
         height: 600px;
         object-fit: initial;
@@ -737,13 +743,15 @@ a.sidebar__enlace {
 }
 
 @media screen and (min-width: 768px) {
-    
+
     .parrafo {
         font-size: 1.3125rem;
         margin-bottom: 2em;
     }
 
-    .subtitulos{ padding-left:2rem; }
+    .subtitulos {
+        padding-left: 2rem;
+    }
 
     .subtitulost,
     .subtitulos,
@@ -754,7 +762,7 @@ a.sidebar__enlace {
 }
 
 @media screen and (max-width: 991px) {
-   
+
     .subtitulost {
         min-height: 3.1rem
     }
@@ -768,6 +776,7 @@ a.sidebar__enlace {
     transition: .5s linear all;
 
 }
+
 .colapsador {
     box-shadow: none;
     font-size: 1.5rem;
@@ -844,7 +853,7 @@ a.sidebar__enlace {
 }
 
 @media screen and (min-width: 768px) {
-    
+
     .boton-colapsar,
     .btn-colapsar {
         font-size: 1.3rem;
@@ -1204,8 +1213,7 @@ a:hover {
 
 /*UAT*/
 .btn-information {
-    background: linear-gradient(90deg, #3C3D8B 0%, #0051a0  70%)
-    color: #FFFFFF;
+    background: linear-gradient(90deg, #3C3D8B 0%, #0051a0 70%) color: #FFFFFF;
     padding: 1em;
     width: 2em;
     height: 2em;
@@ -1281,4 +1289,6 @@ a:hover {
     padding-top: 2rem;
 }
 
-.dos-pad{ padding-left:2rem; }
+.dos-pad {
+    padding-left: 2rem;
+}

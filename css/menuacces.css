@@ -94,7 +94,7 @@
     width: 2rem;
     border: none;
     font-size: 1.5rem;
-
+    outline: none !important;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -130,9 +130,12 @@
     text-indent: 0em;
     font-weight: bold;
     z-index: 1;
-    background: #f8c5fd;
-    width: 20px;
-    height: 20px;
+    background: #FFFFFF;
+    color: #18529D;
+    font-weight: bold !important;
+    border: 2px solid #18529D;
+    width: 25px;
+    height: 25px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -246,7 +249,7 @@
 .menuacces.active {
     right: 6rem;
     display: block;
-    z-index: 100;    
+    z-index: 100;
 }
 
 .icon_desactivado {
@@ -370,7 +373,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .menuComponentAcces{
+    .menuComponentAcces {
         display: none;
     }
 }

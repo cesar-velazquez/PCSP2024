@@ -687,7 +687,7 @@ ol {
 }
 
 .aparecer-desaparecer {
-    display: block;
+    display: block !important;
     animation: animacion-pleca .6s ease-in-out;
 }
 
@@ -1119,7 +1119,7 @@ a:hover {
 
 .btn_module {
     width: 260px;
-    height: auto;
+    height: 70px;
 }
 
 .container_moduls {
@@ -1211,7 +1211,16 @@ a:hover {
     color: #056e31;
 }
 
+.btn_program {
+    width: 260px;
+    height: auto;
+}
+
 @media (max-width: 767px) {
+    .btn_program {
+        width: 230px;
+    }
+
     .container_moduls {
         gap: 0;
         justify-content: flex-start;
@@ -1524,6 +1533,11 @@ a:hover {
 .modal-body {
     padding: 2rem;
 }
+
+body.modal-open {
+    overflow: hidden;
+}
+
 
 .seccion-content {
     padding: 0 2rem;

@@ -1268,7 +1268,7 @@ btn_access.addEventListener('click', function () {
 
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -1322,8 +1322,7 @@ btn_access.addEventListener('click', function () {
 
         num41.style.display = "inline-flex";
         num41_1.style.display = "inline-flex";
-    } else if (menuactivo || screen.width < 1024) {
-        
+    } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
@@ -1352,7 +1351,7 @@ btn_access.addEventListener('click', function () {
         num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
