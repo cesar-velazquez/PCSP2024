@@ -328,8 +328,6 @@ ol {
 @media screen and (max-width: 767px) {
     .texto-tema-margen {
         max-width: 510px;
-        /*margin: auto;*/
-        margin-top: -2px;
     }
 }
 
@@ -523,23 +521,20 @@ ol {
     border-radius: .3em;
     box-shadow: none;
     font-weight: normal;
+    border: .15rem solid #17529C;
 }
 
 .btn-menu:hover {
-    color: #fff;
-    background: #3C3D8B;
+    color: #17529C;
+    background: #fff;
+    border: .15rem solid #17529C;
 }
-
 @media screen and (max-width: 767px) {
     .btn-menu {
-        padding: 0.5rem !important;
+        /*padding: 0.5rem !important;*/
         width: 100px;
-        left: 85%;
-        top: 75px;
-        position: fixed;
-        background: #3E5089;
-        color: white;
-        box-shadow: none;
+        /*left: 85%;*/
+        top: 40px;
     }
 }
 
@@ -551,8 +546,6 @@ ol {
     justify-content: center;
     align-items: center;
     transition: .2s linear all !important;
-    background: #3C3D8B;
-    color: #fff;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
@@ -574,26 +567,26 @@ ol {
 }
 
 @media screen and (max-width: 1199px) {
-    .btn-menu-circular {
+    .btn-menu {
         right: 6em;
     }
 }
 
 
 @media screen and (max-width: 991px) {
-    .btn-menu-circular {
+    .btn-menu {
         right: 4em;
-        top: 65px;
     }
+
+    .btn-menu-circular{ top: 65px; }
 }
 
 @media screen and (max-width:550px) {
     .btn-menu {
-        left: 80%;
-        top: 75px;
+        right: 2rem;
     }
 }
-
+/*
 @media screen and (max-width:440px) {
     .btn-menu {
         left: 70%;
@@ -621,7 +614,7 @@ ol {
         left: 80%;
         top: 75px;
     }
-}
+}*/
 
 .pleca__ee {
     margin-left: .7em !important;
