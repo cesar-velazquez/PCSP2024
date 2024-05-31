@@ -110,7 +110,10 @@
             <div class="sectionAcces">
                 <div>
                     <button class="btn_accesible" id="font_size">
-                        <img src="./images/accesibilidad/MA-_m-tamanofuente-a.png" alt="Icon auxiliar tamaño de fuente">
+                        <img id="icon_FontSize" src="./images/accesibilidad/MA-_m-tamanofuente-a.png"
+                            alt="Icon auxiliar font size">
+                        <img id="icon_FontSize_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
                         Tamaño de fuente
                     </button>
                 </div>
@@ -168,8 +171,8 @@
 
             <div class="sectionAcces">
                 <div>
-                    <a accesskey="6" tabindex="0" onclick="handleLectura()" href="#btnLectura" id="enlaceaLecturaF"
-                        class="btn_accesible" aria-label="Botón accesibilidad">
+                    <a accesskey="6" tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
                         <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
                         Lectura fácil
                     </a>
@@ -216,7 +219,7 @@
 
         <div class="js-pleca pleca">
 
-            <a class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
+            <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
 
             <div class="dropdown">
                 <!-- btn  -->
@@ -273,7 +276,8 @@
                 <div class="vid3 embed-responsive embed-responsive-16by9">
                     <p id="ident12" class="play_video identificador2 ">12</p>
                     <p id="ident13" class="fullScreen identificador2 ">13</p>
-                    <video id="video1" src="./videos/unit1/video1.mp4" type="video/mp4" controls></video>
+                    <video id="video1" poster="./images/video/video1.png" src="./videos/unit1/video1.mp4"
+                        type="video/mp4" controls></video>
                     <!-- <iframe
                         src="https://lumen.uv.mx/resources/files/videos/2022/5/18/6696/a34f4f0f-404e-4a7d-8f39-a2bd09dd6b02.mp4"
                         width="80%" height="500" allowfullscreen="" scrolling="no"></iframe> -->
@@ -362,8 +366,9 @@
             <div class="container">
 
                 <div id="section15" class="cuadro-azul-degradado espacio mt-4 ">
-
-                    <h2 class="text-azul parrafo subtitulos_spadding">
+                    <!-- <h2 id="section12" 
+                        class="parrafop text-azul padding-L-2r subt">Bienvenida <span id="ident12" class="identificador2">12</span></h2> -->
+                    <h2 class="parrafop text-azul subt">
                         <img class="ocultar img_subtitulo" src="./images/PCSP24-_icono03.png" alt="Icon Support">
                         Competencia
                         <p id="ident15" class="identificador2 ">15</p>
@@ -385,9 +390,9 @@
                 <div class="seccion-content">
 
                     <!-- text-azul subtitulost -->
-                    <h2 id="section16" class="text-azul parrafo subtitulos_spadding">
-                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
-                        Descripción general
+                    <h2 id="section16" class="text-azul parrafop subt">
+                        <img class="ocultar img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                        Descripción
                         <p id="ident16" class="identificador2 ">16</p>
                     </h2>
 
@@ -489,8 +494,8 @@
 
                 <div class="seccion-content">
 
-                    <h2 id="section26" class="text-azul parrafo subtitulos_spadding">
-                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                    <h2 id="section26" class="text-azul parrafop subt">
+                        <img class="ocultar img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
                         Contenido
                         <span id="ident26" class="identificador2 ">26</span>
                     </h2>
@@ -544,8 +549,8 @@
             <div class="container_experts">
 
                 <div class="container">
-                    <h2 id="section27" class="text-azul parrafo subtitulos parrafo font_Expert">
-                        <img class="img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
+                    <h2 id="section27" class="text-azul parrafop subt">
+                        <img class="ocultar img_subtitulo" src="./images/PCSP24-_icono02.png" alt="Icon Support">
                         Expertos en contenido
                         <span id="ident27" class="identificador2 ">27</span>
                     </h2>
@@ -1017,13 +1022,13 @@
                     </a>
             </div>
         </div> -->
-        <section>
+        <div>
             <div class="container">
 
                 <div class="fondo-degradado">
                     <p class="parrafo instruccion-color-verde"><b>Instrucción:</b> Presiona el botón para descargar el
                         archivo.</p>
-                    <div class="text-center">
+                    <div id="sectionLect" class="text-center">
                         <a id="btnLectura" class="btn_lecturaF btn waves-effect waves-light" href="" target="_blank"
                             download="">
                             Lectura fácil
@@ -1033,7 +1038,7 @@
                 </div>
 
             </div>
-        </section>
+        </div>
 
     </main>
 
@@ -1175,11 +1180,10 @@
                         </div>
 
                         <p class="parrafo">
-                            <b>Pensamiento crítico para solucionar problemas.</b> En este módulo
-                            se presentan y analizan como propuestas para construir alternativas de solución, tres
-                            modelos teóricos:
-                            TRIZ, ARDESOS-DIAPROVE y ACRISPO; cada uno de ellos precisan estrategias, instrumentos y
-                            recursos propios para solucionar problemas.
+                            <b>Pensamiento crítico para solucionar problemas.</b> En este módulo se presentan y analizan
+                            como propuestas para construir alternativas de solución los siguientes tres modelos
+                            teóricos: TRIZ, ARDESOS-DIAPROVE y ACRISPO; cada uno de ellos precisan estrategias,
+                            instrumentos y recursos propios para solucionar problemas.
                         </p>
                     </div>
                 </div>

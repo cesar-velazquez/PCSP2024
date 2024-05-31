@@ -122,29 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
         cerrarfaq.nextElementSibling.classList.remove('show');
     }
 
-    let secondtab = function () {
-        let secondtab = document.getElementById("secondtab");
-        let firstab = document.getElementById("firsttab")
-        let parrafo1 = document.getElementById("ppaso-1");
-        let parrafo2 = document.getElementById("ppaso-2");
-        firstab.classList.remove("active");
-        secondtab.classList.add("active");
-        parrafo2.classList.add("active");
-        parrafo1.classList.remove("active");
-    }
-
-    let firstab = function () {
-        let firstab = document.getElementById("firsttab")
-        let secondtab = document.getElementById("secondtab");
-        let parrafo1 = document.getElementById("ppaso-1");
-        let parrafo2 = document.getElementById("ppaso-2");
-
-        firstab.classList.add("active");
-        secondtab.classList.remove("active");
-        parrafo1.classList.add("active");
-        parrafo2.classList.remove("active");
-    }
-
     let PositionTop = function (element) {
         if (element) {
             // Calcula la posición del elemento en relación con la parte superior de la página
@@ -233,6 +210,157 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(section);
     }
 
+    let secondtab = function () {
+        let secondtab = document.getElementById("secondtab");
+        let firstab = document.getElementById("firsttab")
+        let parrafo1 = document.getElementById("ppaso-1");
+        let parrafo2 = document.getElementById("ppaso-2");
+        firstab.classList.remove("active");
+        secondtab.classList.add("active");
+        parrafo2.classList.add("active");
+        parrafo1.classList.remove("active");
+    }
+
+    let firstab = function () {
+        let firstab = document.getElementById("firsttab")
+        let secondtab = document.getElementById("secondtab");
+        let parrafo1 = document.getElementById("ppaso-1");
+        let parrafo2 = document.getElementById("ppaso-2");
+
+        firstab.classList.add("active");
+        secondtab.classList.remove("active");
+        parrafo1.classList.add("active");
+        parrafo2.classList.remove("active");
+    }
+
+    function section24() {
+        let section = document.getElementById("section24");
+        PositionTop100(section);
+    }
+
+    // prueba faq    
+
+    let AbrirFaqLineamiento1 = function () {
+        let abrirfaq = document.getElementById("faq1");
+        let section = document.getElementById("sectionFaq");
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.setAttribute('open', '');
+        PositionTop100(section);
+    }
+
+    let CerrarFaqLineamiento1 = function () {
+        let cerrarfaq = document.getElementById("faq1");
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.removeAttribute('open', '');
+    }
+
+    let faqAbierto = false;
+
+    function abrirCerrarfaq1() {
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto) {
+            // Si el FAQ está cerrado, ábrelo
+            AbrirFaqLineamiento1();
+            faqAbierto = true;
+
+            CerrarFaqLineamiento2();
+            faqAbierto2 = false;
+            CerrarFaqLineamiento3();
+            faqAbierto3 = false;
+
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaqLineamiento1();
+            faqAbierto = false;
+        }
+    }
+
+    // faq2
+    let AbrirFaqLineamiento2 = function () {
+        let abrirfaq = document.getElementById("faq2");
+        let section = document.getElementById("sectionFaq");
+
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.setAttribute('open', '');
+        PositionTop100(section);
+    }
+
+    let CerrarFaqLineamiento2 = function () {
+        let cerrarfaq = document.getElementById("faq2");
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.removeAttribute('open', '');
+    }
+
+    let faqAbierto2 = false;
+    function abrirCerrarfaq2() {
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto2) {
+            // Si el FAQ está cerrado, ábrelo
+            AbrirFaqLineamiento2();
+            faqAbierto2 = true;
+
+            CerrarFaqLineamiento1();
+            faqAbierto = false;
+            CerrarFaqLineamiento3();
+            faqAbierto3 = false;
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaqLineamiento2();
+            faqAbierto2 = false;
+        }
+    }
+
+    // faq3
+    let AbrirFaqLineamiento3 = function () {
+        let abrirfaq = document.getElementById("faq3");
+        let section = document.getElementById("sectionFaq");
+
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.setAttribute('open', '');
+        PositionTop100(section);
+    }
+
+    let CerrarFaqLineamiento3 = function () {
+        let cerrarfaq = document.getElementById("faq3");
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.removeAttribute('open', '');
+    }
+
+    let faqAbierto3 = false;
+    function abrirCerrarfaq3() {
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto3) {
+            // Si el FAQ está cerrado, ábrelo
+            AbrirFaqLineamiento3();
+            faqAbierto3 = true;
+
+            CerrarFaqLineamiento1();
+            faqAbierto = false;
+            CerrarFaqLineamiento2();
+            faqAbierto2 = false;
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaqLineamiento3();
+            faqAbierto3 = false;
+        }
+    }
+
+    function section28() {
+        let section = document.getElementById("section28");
+        PositionTop100(section);
+    }
+
+    function download29() {
+        let btn = document.getElementById("fuentesInf");
+        btn.click();
+    }
+
+    function download30() {
+        let btn = document.getElementById("btnLectura");
+        btn.click();
+    }
+
+
     let abrirAyuda = function () {
         let modal = document.getElementById("methods-help");
         let backdrop = document.getElementById("modal-backdrop");
@@ -251,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
         backdrop.style.display = "none";
     }
 
-    let volver_Arriba = document.getElementById("volver_Arr");
+    let volver_Arriba = document.getElementById("btnVolver_Arriba");
     let volverA = function () {
         volver_Arriba.click();
     }
@@ -316,6 +444,33 @@ document.addEventListener("DOMContentLoaded", function () {
         '21': section21,
         'veintiuno': section21,
 
+        "23": secondtab,
+        "veintitrés": secondtab,
+
+        "22": firstab,
+        "veintidos": firstab,
+
+        '24': section24,
+        'veinticuatro': section24,
+
+        '25': abrirCerrarfaq1,
+        'veinticinco': abrirCerrarfaq1,
+
+        '26': abrirCerrarfaq2,
+        'veintiséis': abrirCerrarfaq2,
+
+        '27': abrirCerrarfaq3,
+        'veintiséis': abrirCerrarfaq3,
+
+        '28': section28,
+        'veintiocho': section28,
+
+        '29': download29,
+        'veintinueve': download29,
+
+        '30': download30,
+        'treinta': download30,
+
         '31': volverA,
         'treinta y uno': volverA,
 
@@ -331,9 +486,9 @@ document.addEventListener("DOMContentLoaded", function () {
     annyang.addCommands(commands);
 
     annyang.addCallback("result", frases => {
-        console.log("Usted a dicho: ", frases);
+        console.log("Usted ha dicho: ", frases);
         function escribir() {
-            document.getElementById("container_notes").innerHTML = ' <b>Usted a dicho: </b>' + "'" + frases + "'";
+            document.getElementById("container_notes").innerHTML = ' <b>Usted ha dicho: </b>' + "'" + frases + "'";
         }
         escribir();
     });
