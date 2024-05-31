@@ -31,7 +31,7 @@ body {
 }
 
 .subt {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     margin-bottom: 2rem;
 }
 
@@ -134,7 +134,7 @@ body {
 @media screen and (max-width: 767px) {
 
     .subt {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
         margin-bottom: 1rem;
     }
 
@@ -967,7 +967,9 @@ a.sidebar__enlace {
     max-width: 800px;
 }
 
-.btn_guion  summary { text-align:center; }
+.btn_guion summary {
+    text-align: center;
+}
 
 .collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
@@ -1071,13 +1073,13 @@ a:hover {
     font-weight: bold;
 }
 
-.modal-footer .btn-cerrar-modal{ 
+.modal-footer .btn-cerrar-modal {
     padding: 1rem 2rem;
     border-radius: .5rem;
     border: .1rem solid transparent;
 }
 
-.modal-footer .btn-cerrar-modal:hover{ 
+.modal-footer .btn-cerrar-modal:hover {
     border: .1rem solid #1E4566;
 }
 
