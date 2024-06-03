@@ -1,16 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // if (screen.width < 1024)
-    //     console.log("Insuficiente");
-    // else
-    //     if (screen.width < 1280)
-    //         console.log("Suficiente");
-    //     else
-    //         console.log("Óptima");
-
-
-
-
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
     }
@@ -579,21 +568,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let abrirfaqBasicaP = function () {
         let abrirfaq = document.getElementById("basic1");
-        // abrirfaq.classList.remove('collapsed');
+
         abrirfaq.setAttribute('aria-expanded', 'true');
         abrirfaq.setAttribute('open', '');
-        // abrirfaq.clas
-        // abrirfaq.nextElementSibling.classList.add('show');
+        PositionTop100(abrirfaq);
     }
 
     let cerrarfaqBasicP = function () {
         let cerrarfaq = document.getElementById("basic1");
-        // cerrarfaq.classList.add('collapsed');
         cerrarfaq.setAttribute('aria-expanded', 'false');
         cerrarfaq.removeAttribute('open', '');
         cerrarfaq.setAttribute('close', '');
-        // cerrarfaq.nextElementSibling.classList.remove('show')
-        // faqAbierto = false;
+        PositionTop100(cerrarfaq);
     }
 
     let faqAbierto = false;
@@ -642,44 +628,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // prueba faq fin
-
-    // let abrirfaqBasic = function () {
-    //     let abrirfaq = document.getElementById("basicas-1");
-    //     abrirfaq.classList.remove('collapsed');
-    //     abrirfaq.setAttribute('aria-expanded', 'true');
-    //     // abrirfaq.nextElementSibling.classList.add('show');
-    // }
-
-    // let abrirfaqBasic2 = function () {
-    //     let abrirfaq = document.getElementById("basicas-2");
-    //     abrirfaq.classList.remove('collapsed');
-    //     abrirfaq.setAttribute('aria-expanded', 'true');
-    //     abrirfaq.nextElementSibling.classList.add('show');
-    // }
-
-    // let cerrarfaqBasic = function () {
-    //     let cerrarfaq = document.getElementById("basicas-1");
-    //     cerrarfaq.classList.add('collapsed');
-    //     cerrarfaq.setAttribute('aria-expanded', 'false');
-    //     cerrarfaq.nextElementSibling.classList.remove('show')
-    // }
-
-    // let cerrarfaqBasic2 = function () {
-    //     let cerrarfaq = document.getElementById("basicas-2");
-    //     cerrarfaq.classList.add('collapsed');
-    //     cerrarfaq.setAttribute('aria-expanded', 'false');
-    //     cerrarfaq.nextElementSibling.classList.remove('show')
-    // }
-
-
-
-
-    // let descargarlecturafacil = function () {
-    //     location.href = '#btnLectura';
-    //     let descargar = document.getElementById("btnLectura");
-    //     descargar.click();
-    // }
+    // prueba fin
 
     let PositionTop = function (element) {
         if (element) {
@@ -712,27 +661,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-
-    // let section6 = function () {
-    //     let element = document.getElementById('ident1_6');
-    //     PositionTop(element);
-    // }
-
-
-    // let section7 = function () {
-    //     let element = document.getElementById('ident1_7');
-    //     PositionTop(element);
-    // }
-
-    // let section8 = function () {
-    //     let element = document.getElementById('ident1_8');
-    //     PositionTop100(element);
-    // }
-
-    // let section9 = function () {
-    //     let element = document.getElementById('ident1_9');
-    //     PositionTop(element);
-    // }
 
     let section11 = function () {
         let element = document.getElementById('section11');
@@ -854,24 +782,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    let fullScreen = false
     let fullScreenVideo = function () {
-        videoOn = true;
         VideoPlay.requestFullscreen();
+        fullScreen = true;
     }
 
     let fullScreenVideoExit = function () {
-        videoOn = false;
-        if (videoOn == false) {
-            document.exitFullscreen();
-        }
+        document.exitFullscreen();
+        fullScreen = false;
     }
 
     let fullScreenVideo1 = function () {
-        videoOn = true;
-        if (videoOn == true) {
+        if (fullScreen == false) {
+            fullScreen = true;
             fullScreenVideo();
         } else {
-            videoOn = false;
             fullScreenVideoExit();
         }
     }
@@ -931,9 +857,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '15': section15,
         'Quince': section15,
-
-        // '15': cerrarmodal3,
-        // 'Quince': cerrarmodal3,
 
         '16': section16,
         'Dieciséis': section16,
@@ -1018,11 +941,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '41': cerrarModalLourdes,
         'cuarenta y uno': cerrarModalLourdes,
 
-        // abrirCerrarfaq,
-
-        // '18': abrirCerrarfaq2,
-        // 'Dieciocho': abrirCerrarfaq2,
-
         '42': downloadbtnLectura,
         'cuarenta y dos': downloadbtnLectura,
 
@@ -1040,6 +958,18 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("container_notes").innerHTML = ' <b>Usted ha dicho: </b>' + "'" + frases + "'";
         }
         escribir();
+        // if (frases in commands) {
+        //     console.log("La frase '" + frases + "' está definida como un comando.");
+        //     // Escribir la frase en el contenedor HTML
+        //     document.getElementById("container_notes").innerHTML = '<b>Usted ha dicho: </b>' + "'" + frases + "'";
+        //     // Ejecutar la función asociada al comando
+        //     commands[frases]();
+        // } else {
+        //     console.log("La frase '" + frases + "' no es un comando definido.");
+        //     // Escribir un mensaje de error en el contenedor HTML
+        //     document.getElementById("container_notes").innerHTML = '<b>Usted ha dicho: </b>' + "'" + "Frase no válida" + "'";
+        // }
+
     });
     annyang.setLanguage("es-MX");
 });
@@ -1050,31 +980,10 @@ let icon_read_2 = document.getElementById("icon_read_2");
 let iconComandoVoz = document.getElementById("icon_comando_voz");
 let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
-// let iconLink = document.getElementById("icon_Link");
-// let iconLinkActive = document.getElementById("icon_Link_Active");
-
-
-// let btn_Cursor = document.getElementById("cursorBig");
-// let iconCursor = document.getElementById("icon_Cursor");
-// let iconCursorActive = document.getElementById("icon_Cursor_Active");
-
-// let lineaLectura = document.getElementById("lineaLectura");
-// let iconLectura = document.getElementById("icon_Linea_Lectura");
-// let iconLecturaActive = document.getElementById("icon_Linea_Lectura_Active");
-
-// let LectorInmersivo = document.getElementById("btn_lectorInmersivo");
-// let iconLectorInmersivo = document.getElementById("icon_lector_inmersivo");
-// let iconLectorInmersivoActive = document.getElementById("icon_lector_inmersivo_active");
-// let cerrarLectorIn = document.getElementById("cerrarLectorIn");
-
-// let enlaceaLecturaF = document.getElementById("enlaceaLecturaF");
-// let btnLectura = document.getElementById("btnLectura");
-
 
 let microfono = document.getElementById("micro");
 const btn_access = document.getElementById('btn-access');
 let btn_tamFuente = document.getElementById('font_size');
-// let link_resaltar = document.getElementById('link_resaltar');
 let contenedor_notas = document.getElementById("container_notes");
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -1149,90 +1058,6 @@ let num13_1 = document.getElementById("ident1_2");
 // botones cerrar modal 14
 
 let num15_3 = document.getElementById("ident15_3");
-// 
-// btnLectura.addEventListener('mouseover', function () {
-//     icon_read_1.style.display = "none";
-// })
-
-
-// enlaceaLecturaF.addEventListener('click', function () {
-//     btnLectura.classList.add('animate__animated', 'animate__shakeX', 'animate__slow', 'animate__delay-1s');
-// });
-
-// let LectorIn = false;
-// LectorInmersivo.addEventListener('click', function () {
-//     if (!LectorIn) {
-//         LectorIn = true;
-//         iconLectorInmersivo.style.display = "none";
-//         iconLectorInmersivoActive.style.display = "inline-flex";
-//         LectorInmersivo.classList.add("HerramientaActivada");
-//     }
-// });
-
-// cerrarLectorIn.addEventListener('click', function () {
-//     LectorIn = false;
-//     iconLectorInmersivo.style.display = "inline-flex";
-//     iconLectorInmersivoActive.style.display = "none";
-//     LectorInmersivo.classList.remove("HerramientaActivada");
-// });
-
-// let lineaSelect = false;
-// lineaLectura.addEventListener('click', function () {
-//     if (!lineaSelect) {
-//         lineaSelect = true;
-//         iconLectura.style.display = "none";
-//         iconLecturaActive.style.display = "inline-flex";
-//         lineaLectura.classList.add("HerramientaActivada");
-//     } else {
-//         lineaSelect = false;
-//         iconLectura.style.display = "inline-flex";
-//         iconLecturaActive.style.display = "none";
-//         lineaLectura.classList.remove("HerramientaActivada");
-//         lineaLectura.style.transitionDuration = ".5s";
-//     }
-// });
-
-
-// let cursor = false;
-// btn_Cursor.addEventListener('click', function () {
-//     if (!cursor) {
-//         cursor = true;
-//         iconCursor.style.display = "none";
-//         iconCursorActive.style.display = "inline-flex";
-//         btn_Cursor.classList.add("HerramientaActivada");
-//     } else {
-//         cursor = false;
-//         iconCursor.style.display = "inline-flex";
-//         iconCursorActive.style.display = "none";
-//         btn_Cursor.classList.remove("HerramientaActivada");
-//         btn_Cursor.style.transitionDuration = ".5s";
-//     }
-// });
-
-// let linkactivo = false;
-// link_resaltar.addEventListener('click', function () {
-//     if (!linkactivo) {
-//         linkactivo = true;
-//         iconLink.style.display = "none";
-//         iconLinkActive.style.display = "inline-flex";
-//         link_resaltar.classList.add("HerramientaActivada");
-//     } else {
-//         linkactivo = false;
-//         iconLink.style.display = "inline-flex";
-//         iconLinkActive.style.display = "none";
-//         link_resaltar.classList.remove("HerramientaActivada");
-//         link_resaltar.style.transitionDuration = ".5s";
-//     }
-// });
-
-// if (screen.width < 1024)
-//     document.write("Insuficiente")
-// // annyang.abort();
-// else
-//     if (screen.width < 1280)
-//         document.write("Suficiente")
-//     else
-//         document.write("Óptima")
 
 let menuactivo = false;
 btn_access.addEventListener('click', function () {
