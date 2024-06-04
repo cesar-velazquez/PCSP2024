@@ -15,8 +15,14 @@ body {
     font-weight: 400;
 }
 
-a{ color:#3333FF }
-a:hover{ color:#3333FF; text-decoration: underline; }
+a {
+    color: #3333FF
+}
+
+a:hover {
+    color: #3333FF;
+    text-decoration: underline;
+}
 
 .ul_z {
     position: relative;
@@ -131,7 +137,8 @@ a:hover{ color:#3333FF; text-decoration: underline; }
 .btn.btn_lecturaF:hover {
     color: #17529C;
     background: url(../images/accesibilidad/lecturaf-a.png) no-repeat 2rem center #fff;
-    border: .2rem solid #17529C;}
+    border: .2rem solid #17529C;
+}
 
 @media screen and (max-width: 767px) {
 
@@ -241,13 +248,19 @@ ol {
 
 @media screen and (min-width: 768px) {
 
-    .pleca { height: 77px;}
+    .pleca {
+        height: 77px;
+    }
+
     .pleca {
         display: grid;
         grid-template-columns: .66fr 6fr max-content;
     }
 
-    .tam-font { font-size: 1.3rem; line-height: 1.8}
+    .tam-font {
+        font-size: 1.3rem;
+        line-height: 1.8
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -319,9 +332,11 @@ ol {
     }
 
 }
+
 .texto-tema-margen {
-        margin: 1rem;
-    }
+    margin: 1rem;
+}
+
 @media screen and (max-width:768px) {
     .texto-tema-margen {
         margin: 0;
@@ -532,6 +547,7 @@ ol {
     background: #fff;
     border: .15rem solid #17529C;
 }
+
 @media screen and (max-width: 767px) {
     .btn-menu {
         /*padding: 0.5rem !important;*/
@@ -580,7 +596,9 @@ ol {
         right: 4em;
     }
 
-    .btn-menu-circular{ top: 65px; }
+    .btn-menu-circular {
+        top: 65px;
+    }
 }
 
 @media screen and (max-width:550px) {
@@ -921,7 +939,9 @@ ol {
     max-width: 800px;
 }
 
-.btn_guion  summary { text-align:center; }
+.btn_guion summary {
+    text-align: center;
+}
 
 .collapsables-gi[open] summary {
     background: linear-gradient(90deg, #fff 0%, #fff 70%) !important;
@@ -1021,13 +1041,13 @@ a:focus {
     font-weight: bold;
 }
 
-.modal-footer .btn-cerrar-modal{ 
+.modal-footer .btn-cerrar-modal {
     padding: 1rem 2rem;
     border-radius: .5rem;
     border: .1rem solid transparent;
 }
 
-.modal-footer .btn-cerrar-modal:hover{ 
+.modal-footer .btn-cerrar-modal:hover {
     border: .1rem solid #1E4566;
 }
 
@@ -1178,7 +1198,10 @@ a:focus {
     align-items: center;
 }
 
-.tam-tres{ width:28%; min-width:10rem }
+.tam-tres {
+    width: 28%;
+    min-width: 10rem
+}
 
 @media screen and (max-width: 991px) {
     .tam-content {
@@ -1212,7 +1235,7 @@ a:focus {
 }
 
 li.nav-item.waves-effect.waves-light a.active {
-    
+
 
     color: #fff;
     background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
@@ -1587,7 +1610,7 @@ body.modal-open {
 }
 
 #information-1 .modal-content {
-    background: #FBDAE9
+    background: #FFFFFF
 }
 
 .color_parrafo {
@@ -1624,7 +1647,7 @@ body.modal-open {
 }
 
 .collapsable_width {
-    width: 100% !important;    
+    width: 100% !important;
     padding: .8rem 1rem !important;
     margin: 0;
 }

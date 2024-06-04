@@ -59,11 +59,19 @@ btnLineaLect.addEventListener('click', function () {
 
 // Función para mostrar linea
 let linea = document.getElementById("readline");
+let estadoLinea = localStorage.getItem("LineaActiva");
+
+if (estadoLinea) {
+    linea.classList.add("active");
+}
+
 function showLine() {
     if (linea.classList.contains('active')) {
         linea.classList.remove('active');
+        localStorage.removeItem("LineaActiva");
     } else {
         linea.classList.add('active');
+        localStorage.setItem("LineaActiva", "activado");
     }
 }
 
@@ -76,16 +84,24 @@ function detectarPosicionMouse(event) {
 // Fin función
 
 
+let estadoCursor = localStorage.getItem("cursor");
+
+if (estadoCursor) {
+    document.body.style.cursor = estadoCursor;
+}
+
 // Función para cambiar el tamaño del cursor
 let btncursor = document.getElementById("cursorBig");
-let cursorActivo = false;
+let cursorActivo = !!estadoCursor;
 
 btncursor.addEventListener('click', function (e) {
     if (!cursorActivo) {
         document.body.style.cursor = "url('./images/cursor/cursoracces.png'), auto";
         btncursor.classList.add("active");
         cursorActivo = true;
+        localStorage.setItem("cursor", document.body.style.cursor);
     } else {
+        localStorage.removeItem("cursor");
         document.body.style.cursor = "auto";
         btncursor.classList.remove("active");
         cursorActivo = false;
