@@ -36,7 +36,7 @@ ul{ list-style:disc; }
     margin: 1rem auto;
 }
 .espacio-fin{ margin-top:2rem; }
-.fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem }
+.fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem; border-radius:.5rem }
 .fondo-blanco{ 
 	border-bottom: .15rem solid;
 	padding: 1rem 1rem 1rem 2rem;
@@ -53,16 +53,27 @@ ul{ list-style:disc; }
     top: 0;
     display: flex;
     align-items: center;
-    background: #81649E;
+    background: #fff;
     color: #fff;
     justify-content: center;
     font-weight: bold;
     border-left: .3rem solid #fff;
 }
+
+.percent div{
+    background: #81649E;
+    justify-content: center;
+    border-radius: .5rem;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
 .temario{ 
 	color: #1E4566;
     max-width: 52rem;
-    margin: 3rem auto;
+    margin: 3rem auto 0;
 }
 .temario p{ margin-bottom:0; }
 
@@ -76,7 +87,7 @@ ul{ list-style:disc; }
     width: 100%;
     text-align: center;
     margin: 0 auto 2rem;
-    max-width: 17rem;
+    max-width: 20rem;
     padding: .5rem 0;
     border-radius: 3rem 0 0 3rem; }
 
@@ -138,9 +149,15 @@ ul{ list-style:disc; }
     background: url(../images/modulo1/icono-descarga.png) no-repeat 0 / 1.5rem;
     padding-left: 2rem;
 }
-
+.enlace-iconoh{
+    background: url(../images/modulo1/icono-hipervinculo.png) no-repeat 0 / 1.5rem;
+    padding-left: 2rem;
+}
+.enlace-icono:focus-visible, .enlace-iconoh:focus-visible{ outline:none; }
 .imagen-ac1{ width:100%; max-width:26rem; margin:0 auto 2rem; }
-
+.imagen-ac2{ width:70%; margin:0 auto 2rem; }
+.imagen-ac3{ width:100%; margin:0 auto 2rem; }
+.text-rigth{ text-align:right; }
 @media screen and (max-width: 1300px){
     .titulo-principal-unit{ top:5rem }
 }
@@ -162,16 +179,15 @@ ul{ list-style:disc; }
     }
 
     .separador {
+        background: url(../images/PCSP24-_separador-contenido-r.png) no-repeat center 0 / 75%;
+        height: 2rem;
+        margin: 2rem auto;
         width: 100%;
-        margin: 1rem 0;
     }
-
-    .separador-con { width: 100%;
-        margin: 1rem 0;}
 
     .subtitulo{ font-size:1.3rem; margin-bottom:1rem }
 
-    .fondo-degradado{ padding:1rem }
+    .fondo-degradado{ padding:1rem; margin-top:1rem; margin-bottom:2.5rem  }
 
     .inicio-act{
     background: url(../images/separador-seccion-actividad-r.png) no-repeat center 0 / auto 80%;
@@ -179,6 +195,7 @@ ul{ list-style:disc; }
     }
 
     .separador-con {
+        width: 100%;
         background: url(../images/PCSP24-_separador-interior-actividad-r.png) no-repeat center / 70%;
         margin: 2rem auto;
         height: 2rem;
@@ -190,6 +207,15 @@ ul{ list-style:disc; }
 
     .actividad-enc{ padding:.5rem 1rem .5rem 7rem; margin:2rem 0 1rem }
 
+    .temario{ margin:1rem auto 2.5rem; }
+    .titulos-encab{ margin-bottom:1rem; }
+
+    .imagen-ac1, .imagen-ac2, .imagen-ac3{ margin:1rem auto; }
+    .imagen-ac2{ width:100% }
+
+    .fondo-movil{ padding:1rem; background:#EDEDFC; margin-bottom:2.5rem }
+    .btn-modales{ width:90%; }
+    .fondo-lila{ background:#EDEDFC; padding:1rem; margin-bottom:1rem }
 
 }
 
