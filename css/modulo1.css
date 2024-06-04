@@ -1,4 +1,4 @@
-.subtitulo{ font-size:1.3rem; margin-bottom:1rem }
+.subtitulo{ font-size:1.3rem; margin-bottom:1rem; line-height:1.8 }
 ul{ list-style:disc; }
 
 @media screen and (min-width: 768px) {
@@ -12,6 +12,7 @@ ul{ list-style:disc; }
     top: 7rem;
     font-size: 2rem;
     padding-left: 2rem;
+    line-height: 1.8;
 }
 .caja{ padding:2rem }
 
@@ -23,7 +24,7 @@ ul{ list-style:disc; }
     border-top: 3rem;
     width: 80%;
     max-width: 55rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .separador-con {
@@ -32,9 +33,9 @@ ul{ list-style:disc; }
     border-top: 3rem;
     width: 80%;
     max-width: 55rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
-
+.espacio-fin{ margin-top:2rem; }
 .fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem }
 .fondo-blanco{ 
 	border-bottom: .15rem solid;
@@ -94,9 +95,10 @@ ul{ list-style:disc; }
     border-top: none;
     height: 6rem;
     width: 80%;
-    margin: 0 auto;
+    margin: 1rem auto 0;
  }
-.contenedor-botones{ max-width:66rem; margin:0 auto; }
+ .bg-tab-content{ margin-bottom:0 }
+.contenedor-botones{ max-width:66rem; margin:0 auto 3rem; }
 .btn-modales {
     background: linear-gradient(90deg, rgba(129, 100, 158, 1) 50%, rgba(30, 69, 102, 1) 100%);
     color: #FFFFFF;
@@ -107,7 +109,7 @@ ul{ list-style:disc; }
     width: 32%;
     border: .1rem solid transparent;
 }
-
+.fondo-degradado{ margin-bottom:3rem; }
 .btn-modales:hover{ color:#1E4566; background:#fff; border: .1rem solid #1E4566; }
 
 .actividad-enc{ 
@@ -136,11 +138,27 @@ ul{ list-style:disc; }
     background: url(../images/modulo1/icono-descarga.png) no-repeat 0 / 1.5rem;
     padding-left: 2rem;
 }
-@media screen and (max-width: 1199px){.btn-modales{ width:48% }}
+
+.imagen-ac1{ width:100%; max-width:26rem; margin:0 auto 2rem; }
+
+@media screen and (max-width: 1300px){
+    .titulo-principal-unit{ top:5rem }
+}
+@media screen and (max-width: 1199px){
+    .btn-modales{ width:48% }
+    .titulo-principal-unit{ top:3rem }
+}
+
+@media screen and (max-width: 991px){
+    
+    .titulo-principal-unit{ top:2rem }
+}
 
 @media screen and (max-width: 767px){
-    .titulo-principal-unit{        
-    
+    .titulo-principal-unit {
+        font-size: 6vw;
+        top: 4rem;
+        padding-left: 0;    
     }
 
     .separador {
@@ -156,7 +174,22 @@ ul{ list-style:disc; }
     .fondo-degradado{ padding:1rem }
 
     .inicio-act{
-    background: url(../images/separador-seccion-actividad-r.png) no-repeat center / auto 100%;}
+    background: url(../images/separador-seccion-actividad-r.png) no-repeat center 0 / auto 80%;
+    height: 4rem;
+    }
+
+    .separador-con {
+        background: url(../images/PCSP24-_separador-interior-actividad-r.png) no-repeat center / 70%;
+        margin: 2rem auto;
+        height: 2rem;
+    }
+
+    .caja {
+        padding: 0rem;
+    }
+
+    .actividad-enc{ padding:.5rem 1rem .5rem 7rem; margin:2rem 0 1rem }
+
 
 }
 
