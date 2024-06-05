@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // annyang.setLanguage('es-MX');
-    // annyang.start();
 
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
@@ -8,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var getPageNext = function () {
         location.href = './index.html';
-        // window.open("https://github.com/TalAter/annyang", '_blank');
     }
 
     var getPageNext1 = function () {
@@ -108,19 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
         backdrop.style.display = "none";
         document.body.classList.add("close-modal");
-    }
-
-    let abrirfaq1 = function () {
-        let abrirfaquno = document.getElementById("faq1");
-        abrirfaquno.classList.remove('collapsed');
-        abrirfaquno.setAttribute('aria-expanded', 'true');
-        abrirfaquno.nextElementSibling.classList.add('show');
-    }
-    let cerrarfaq1 = function () {
-        let cerrarfaq = document.getElementById("faq1");
-        cerrarfaq.classList.add('collapsed');
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.nextElementSibling.classList.remove('show');
     }
 
     let PositionTop = function (element) {
@@ -242,27 +226,27 @@ document.addEventListener("DOMContentLoaded", function () {
     // prueba faq    
 
     let AbrirFaqLineamiento1 = function () {
-        let abrirfaq = document.getElementById("faq1");
-        let section = document.getElementById("sectionFaq");
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.setAttribute('open', '');
-        PositionTop100(section);
+        let abrirfaqL1 = document.getElementById("faq1");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
     }
 
     let CerrarFaqLineamiento1 = function () {
-        let cerrarfaq = document.getElementById("faq1");
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.removeAttribute('open', '');
+        let cerrarfaqL1 = document.getElementById("faq1");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
     }
 
     let faqAbierto = false;
 
     function abrirCerrarfaq1() {
+        let sectionLineamiento = document.getElementById("section24");
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto) {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaqLineamiento1();
             faqAbierto = true;
+            PositionTop100(sectionLineamiento);
 
             CerrarFaqLineamiento2();
             faqAbierto2 = false;
@@ -273,32 +257,32 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está abierto, ciérralo
             CerrarFaqLineamiento1();
             faqAbierto = false;
+            PositionTop100(sectionLineamiento);
         }
     }
 
     // faq2
     let AbrirFaqLineamiento2 = function () {
-        let abrirfaq = document.getElementById("faq2");
-        let section = document.getElementById("sectionFaq");
-
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.setAttribute('open', '');
-        PositionTop100(section);
+        let abrirfaqL2 = document.getElementById("faq2");
+        abrirfaqL2.setAttribute('aria-expanded', 'true');
+        abrirfaqL2.setAttribute('open', '');
     }
 
     let CerrarFaqLineamiento2 = function () {
-        let cerrarfaq = document.getElementById("faq2");
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.removeAttribute('open', '');
+        let cerrarfaqL2 = document.getElementById("faq2");
+        cerrarfaqL2.setAttribute('aria-expanded', 'false');
+        cerrarfaqL2.removeAttribute('open', '');
     }
 
     let faqAbierto2 = false;
     function abrirCerrarfaq2() {
+        let sectionLineamiento = document.getElementById("section24");
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto2) {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaqLineamiento2();
             faqAbierto2 = true;
+            PositionTop100(sectionLineamiento);
 
             CerrarFaqLineamiento1();
             faqAbierto = false;
@@ -308,32 +292,32 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está abierto, ciérralo
             CerrarFaqLineamiento2();
             faqAbierto2 = false;
+            PositionTop100(sectionLineamiento);
         }
     }
 
     // faq3
     let AbrirFaqLineamiento3 = function () {
-        let abrirfaq = document.getElementById("faq3");
-        let section = document.getElementById("sectionFaq");
-
-        abrirfaq.setAttribute('aria-expanded', 'true');
-        abrirfaq.setAttribute('open', '');
-        PositionTop100(section);
+        let abrirfaqL3 = document.getElementById("faq3");
+        abrirfaqL3.setAttribute('aria-expanded', 'true');
+        abrirfaqL3.setAttribute('open', '');
     }
 
     let CerrarFaqLineamiento3 = function () {
-        let cerrarfaq = document.getElementById("faq3");
-        cerrarfaq.setAttribute('aria-expanded', 'false');
-        cerrarfaq.removeAttribute('open', '');
+        let cerrarfaqL3 = document.getElementById("faq3");
+        cerrarfaqL3.setAttribute('aria-expanded', 'false');
+        cerrarfaqL3.removeAttribute('open', '');
     }
 
     let faqAbierto3 = false;
     function abrirCerrarfaq3() {
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto3) {
+            let sectionLineamiento = document.getElementById("section24");
             // Si el FAQ está cerrado, ábrelo
             AbrirFaqLineamiento3();
             faqAbierto3 = true;
+            PositionTop100(sectionLineamiento);
 
             CerrarFaqLineamiento1();
             faqAbierto = false;
@@ -343,6 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está abierto, ciérralo
             CerrarFaqLineamiento3();
             faqAbierto3 = false;
+            PositionTop100(sectionLineamiento);
         }
     }
 
@@ -399,9 +384,11 @@ document.addEventListener("DOMContentLoaded", function () {
         'uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
+        'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
+        'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
         'tres': getPageNext,
@@ -478,8 +465,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         'Abrir modal esquema': abrirModalEsquema,
         "Cerrar modal esquema": cerrarmodalEsquema,
-        "abrir botón colapsado uno": abrirfaq1,
-        "cerrar botón colapsado uno": cerrarfaq1,
         "Actividad": activity,
         "Abrir opción 1": option1
     };
@@ -494,20 +479,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         escribir();
     });
-
-    // annyang.setLanguage("es-MX");
-
-    // annyang.start();
-
 });
 const btn_access = document.getElementById('btn-access');
-// let contenedor_notas = document.getElementById("container_notes");
 let num1_h = document.getElementById("ident1_h");
 let cerrar = document.getElementById("identcerrar");
-// let microfono = document.getElementById("micro");
-// let iconComandoVoz = document.getElementById("icon_comando_voz");
-// let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
-
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
 let num2 = document.getElementById("ident2");
@@ -543,30 +518,55 @@ let num31 = document.getElementById("ident31");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log(activoNumberIndex);
-// activoNumberIndex = localStorage.getItem("NumberAnnyang_2");
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     menuactivo = true;
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num2.style.display = "flex";
+    num3.style.display = "inline-flex";
+    num4.style.display = "inline-flex";
+    num5.style.display = "inline-flex";
+    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num25.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num26.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num27.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
     annyang.setLanguage('es-MX');
     annyang.start();
 }
 
-// let menuactivo = false;
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
         menuactivo = true;
-        const parrafos = document.querySelectorAll('.section-comandos');
-        parrafos.forEach(parrafo => parrafo.style.display = 'block');
         annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "activado");
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -577,7 +577,6 @@ btn_access.addEventListener('click', function () {
         num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -598,6 +597,7 @@ btn_access.addEventListener('click', function () {
         num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
@@ -605,7 +605,6 @@ btn_access.addEventListener('click', function () {
         btn_access.style.transitionDuration = "1s";
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
@@ -636,5 +635,6 @@ btn_access.addEventListener('click', function () {
         num29.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num30.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num31.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });

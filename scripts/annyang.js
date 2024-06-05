@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var getPageNext = function () {
         location.href = './index.html';
         location.reload();
-        // window.open("https://github.com/TalAter/annyang", '_blank');
     }
 
     var getPageNext1 = function () {
@@ -828,13 +827,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
-        'uuuno': abrirMenuPrincipal,
+        'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
+        'abrir menú': abrirMenuPrincipal,
 
-        'dos': cerrarMenuPrincipal,
         '2': cerrarMenuPrincipal,
+        'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
-
+        
         '3': getPageNext,
         'tres': getPageNext,
 
@@ -1045,8 +1045,72 @@ let Numbers = localStorage.getItem("NumberAnnyang_1");
 if (Numbers === "activado") {
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
+    num2.style.display = "flex";
+    num3.style.display = "inline-flex";
+    num4.style.display = "inline-flex";
+    num5.style.display = "inline-flex";
+    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num22.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num25.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num26.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num27.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num30.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num32.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num34.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+
+    // modales:
+    cerrar.style.display = "inline-flex";
+    cerrar_help.style.display = "inline-flex";
+
+    num19.style.display = "inline-flex";
+    num19_1.style.display = "inline-flex";
+
+    num21.style.display = "inline-flex";
+    num21_1.style.display = "inline-flex";
+
+    num23.style.display = "inline-flex";
+    num23_1.style.display = "inline-flex";
+
+    num29.style.display = "inline-flex";
+    num29_1.style.display = "inline-flex";
+
+    num31.style.display = "inline-flex";
+    num31_1.style.display = "inline-flex";
+
+    num33.style.display = "inline-flex";
+    num33_1.style.display = "inline-flex";
+
+    num35.style.display = "inline-flex";
+    num35_1.style.display = "inline-flex";
+
+    num37.style.display = "inline-flex";
+    num37_1.style.display = "inline-flex";
+
+    num39.style.display = "inline-flex";
+    num39_1.style.display = "inline-flex";
+
+    num41.style.display = "inline-flex";
+    num41_1.style.display = "inline-flex";
     annyang.setLanguage('es-MX');
     annyang.start();
 
@@ -1056,15 +1120,12 @@ let menuactivo = Numbers === "activado";
 btn_access.addEventListener('click', function () {
     if (!menuactivo && screen.width > 1023) {
         menuactivo = true;
-        const parrafos = document.querySelectorAll('.section-comandos');
-        parrafos.forEach(parrafo => parrafo.style.display = 'block');
         annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -1075,9 +1136,7 @@ btn_access.addEventListener('click', function () {
         num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "activado");
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -1099,7 +1158,6 @@ btn_access.addEventListener('click', function () {
         num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
         // modales:
         cerrar.style.display = "inline-flex";
         cerrar_help.style.display = "inline-flex";
@@ -1133,6 +1191,7 @@ btn_access.addEventListener('click', function () {
 
         num41.style.display = "inline-flex";
         num41_1.style.display = "inline-flex";
+        localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
@@ -1171,7 +1230,7 @@ btn_access.addEventListener('click', function () {
         num36.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num38.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
         num40.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num42.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        num42.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // btones cerrar modales:
         cerrar.style.display = "none";
