@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-    // if (typeof (Storage) !== "undefined") {
-    //     console.log("LocalStorage disponible");
-    //     localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");
-    //     localStorage.getItem("titulo");        
-
-    // } else {
-    //     console.log("LocalStorage no soportado en este navegador");
-    // }
-
-
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
     }
@@ -227,12 +216,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 const btn_access = document.getElementById('btn-access');
-let contenedor_notas = document.getElementById("container_notes");
+// let contenedor_notas = document.getElementById("container_notes");
 let num1_h = document.getElementById("ident1_h");
 let cerrar = document.getElementById("identcerrar");
-let microfono = document.getElementById("micro");
-let iconComandoVoz = document.getElementById("icon_comando_voz");
-let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
+// let microfono = document.getElementById("micro");
+// let iconComandoVoz = document.getElementById("icon_comando_voz");
+// let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -263,13 +252,13 @@ btn_access.addEventListener('click', function () {
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
 
-        microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
-        microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
-        microfono.style.transitionDuration = "1s";
-        contenedor_notas.classList.add('contenedorActivo');
-        btn_access.classList.add("HerramientaActivada");
-        iconComandoVoz.style.display = "none";
-        icon_comandovoz_Active.style.display = "inline-flex";
+        // microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
+        // microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
+        // microfono.style.transitionDuration = "1s";
+        // contenedor_notas.classList.add('contenedorActivo');
+        // btn_access.classList.add("HerramientaActivada");
+        // iconComandoVoz.style.display = "none";
+        // icon_comandovoz_Active.style.display = "inline-flex";
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
@@ -295,14 +284,14 @@ btn_access.addEventListener('click', function () {
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
 
-        microfono.classList.add("bx", "bxs-microphone-off", "bx-flip-horizontal");
-        microfono.classList.remove("activeMicro", "bx-microphone", "bx-flip-horizontal");
-        microfono.style.transitionDuration = "1s";
-        contenedor_notas.classList.remove('contenedorActivo');
-        iconComandoVoz.style.display = "inline-flex";
-        icon_comandovoz_Active.style.display = "none";
-        btn_access.classList.remove("HerramientaActivada");
-        btn_access.style.transitionDuration = "1s";
+        // microfono.classList.add("bx", "bxs-microphone-off", "bx-flip-horizontal");
+        // microfono.classList.remove("activeMicro", "bx-microphone", "bx-flip-horizontal");
+        // microfono.style.transitionDuration = "1s";
+        // contenedor_notas.classList.remove('contenedorActivo');
+        // iconComandoVoz.style.display = "inline-flex";
+        // icon_comandovoz_Active.style.display = "none";
+        // btn_access.classList.remove("HerramientaActivada");
+        // btn_access.style.transitionDuration = "1s";
 
 
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');

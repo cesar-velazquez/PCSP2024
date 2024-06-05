@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // annyang.setLanguage('es-MX');
+    // annyang.start();
 
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
@@ -21,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let option1 = function () {
-        console.log("annyang-2")
         let btnOpction1 = document.getElementById("activity4-1");
         btnOpction1.click();
     }
@@ -484,7 +485,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     annyang.addCommands(commands);
-
+    // inicio
+    // prueba
     annyang.addCallback("result", frases => {
         console.log("Usted ha dicho: ", frases);
         function escribir() {
@@ -493,18 +495,18 @@ document.addEventListener("DOMContentLoaded", function () {
         escribir();
     });
 
-    annyang.setLanguage("es-MX");
+    // annyang.setLanguage("es-MX");
 
     // annyang.start();
 
 });
 const btn_access = document.getElementById('btn-access');
-let contenedor_notas = document.getElementById("container_notes");
+// let contenedor_notas = document.getElementById("container_notes");
 let num1_h = document.getElementById("ident1_h");
 let cerrar = document.getElementById("identcerrar");
-let microfono = document.getElementById("micro");
-let iconComandoVoz = document.getElementById("icon_comando_voz");
-let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
+// let microfono = document.getElementById("micro");
+// let iconComandoVoz = document.getElementById("icon_comando_voz");
+// let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
 
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -539,29 +541,32 @@ let num29 = document.getElementById("ident29");
 let num30 = document.getElementById("ident30");
 let num31 = document.getElementById("ident31");
 
+let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
+console.log(activoNumberIndex);
+// activoNumberIndex = localStorage.getItem("NumberAnnyang_2");
 
+let menuactivo = activoNumberIndex === "activado";
+if (activoNumberIndex === "activado") {
+    menuactivo = true;
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+    num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    annyang.setLanguage('es-MX');
+    annyang.start();
+}
 
-let menuactivo = false;
+// let menuactivo = false;
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
         menuactivo = true;
         const parrafos = document.querySelectorAll('.section-comandos');
         parrafos.forEach(parrafo => parrafo.style.display = 'block');
+        annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
 
-        microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
-        microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
-        microfono.style.transitionDuration = "1s";
-        contenedor_notas.classList.add('contenedorActivo');
-        btn_access.classList.add("HerramientaActivada");
-        // btn_tamFuente.classList.add("HerramientaActivada");
-        iconComandoVoz.style.display = "none";
-        icon_comandovoz_Active.style.display = "inline-flex";
-        // iconComandoVoz.style.backgroundImage= ""        
-
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "activado");
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -597,20 +602,10 @@ btn_access.addEventListener('click', function () {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
-
-        microfono.classList.add("bx", "bxs-microphone-off", "bx-flip-horizontal");
-        microfono.classList.remove("activeMicro", "bx-microphone", "bx-flip-horizontal");
-        microfono.style.transitionDuration = "1s";
-        contenedor_notas.classList.remove('contenedorActivo');
-        // btn_access.style.backgroundColor = "white";
-        iconComandoVoz.style.display = "inline-flex";
-        icon_comandovoz_Active.style.display = "none";
-        btn_access.classList.remove("HerramientaActivada");
         btn_access.style.transitionDuration = "1s";
-
-
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
