@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    annyang.setLanguage("es-MX");
 
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var getPageNext = function () {
         location.href = './index.html';
+        location.reload();
         // window.open("https://github.com/TalAter/annyang", '_blank');
     }
 
@@ -959,20 +961,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         escribir();
     });
-    annyang.setLanguage("es-MX");
+    // annyang.setLanguage("es-MX");
 });
 
-// let icon_read_1 = document.getElementById("icon_read_1");
-// let icon_read_2 = document.getElementById("icon_read_2");
 
-// let iconComandoVoz = document.getElementById("icon_comando_voz");
-// let icon_comandovoz_Active = document.getElementById("icon_comandovoz_activo");
-
-
-// let microfono = document.getElementById("micro");
 const btn_access = document.getElementById('btn-access');
-// let btn_tamFuente = document.getElementById('font_size');
-// let contenedor_notas = document.getElementById("container_notes");
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
 let num2 = document.getElementById("ident2");
@@ -1052,30 +1045,26 @@ let Numbers = localStorage.getItem("NumberAnnyang_1");
 if (Numbers === "activado") {
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    annyang.setLanguage('es-MX');
     annyang.start();
+
 }
 
 let menuactivo = Numbers === "activado";
-btn_access.addEventListener('click', function () {    
+btn_access.addEventListener('click', function () {
     if (!menuactivo && screen.width > 1023) {
         menuactivo = true;
         const parrafos = document.querySelectorAll('.section-comandos');
         parrafos.forEach(parrafo => parrafo.style.display = 'block');
+        annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-        // microfono.classList.remove("bxs-microphone-off", "bx-flip-horizontal");
-        // microfono.classList.add("activeMicro", "bx-microphone", "bx-flip-horizontal");
-        // microfono.style.transitionDuration = "1s";
-        // contenedor_notas.classList.add('contenedorActivo');
-
-        // btn_access.classList.add("HerramientaActivada");        
-        // iconComandoVoz.style.display = "none";
-        // icon_comandovoz_Active.style.display = "inline-flex";
-        // iconComandoVoz.style.backgroundImage= ""        
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "activado");        
+
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -1088,6 +1077,7 @@ btn_access.addEventListener('click', function () {
         num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "activado");
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -1149,7 +1139,7 @@ btn_access.addEventListener('click', function () {
         console.log("Fin Reconocimiento de voz");
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");        
+
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
@@ -1161,6 +1151,7 @@ btn_access.addEventListener('click', function () {
         num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
         num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -1217,10 +1208,3 @@ btn_access.addEventListener('click', function () {
         num41_1.style.display = "none";
     }
 });
-
-// function pruebaa() {
-//     console.log("pruebaaaa");
-
-    
-//     console.log(first)
-// }

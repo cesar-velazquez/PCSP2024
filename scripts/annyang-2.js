@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // annyang.setLanguage('es-MX');
+    // annyang.start();
 
     if (!annyang) {
         return alert("Tu navegador no soporta el reconcimiento de voz");
@@ -483,7 +485,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     annyang.addCommands(commands);
-
+    // inicio
+    // prueba
     annyang.addCallback("result", frases => {
         console.log("Usted ha dicho: ", frases);
         function escribir() {
@@ -492,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
         escribir();
     });
 
-    annyang.setLanguage("es-MX");
+    // annyang.setLanguage("es-MX");
 
     // annyang.start();
 
@@ -540,28 +543,30 @@ let num31 = document.getElementById("ident31");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log(activoNumberIndex);
-activoNumberIndex = localStorage.getItem("NumberAnnyang_2");
+// activoNumberIndex = localStorage.getItem("NumberAnnyang_2");
 
+let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
+    menuactivo = true;
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    annyang.setLanguage('es-MX');
     annyang.start();
 }
 
-
-let menuactivo = activoNumberIndex === "activado";
 // let menuactivo = false;
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
         menuactivo = true;
         const parrafos = document.querySelectorAll('.section-comandos');
         parrafos.forEach(parrafo => parrafo.style.display = 'block');
+        annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
 
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_2", "activado");
+        localStorage.setItem("NumberAnnyang_1", "activado");
         num2.style.display = "flex";
         num3.style.display = "inline-flex";
         num4.style.display = "inline-flex";
@@ -600,7 +605,7 @@ btn_access.addEventListener('click', function () {
         btn_access.style.transitionDuration = "1s";
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_2", "desactivado");
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
