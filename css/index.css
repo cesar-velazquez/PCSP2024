@@ -476,7 +476,7 @@ ol {
 
     .contenedor_pestañas {
         background-color: #FAEBDD;
-        margin: 0 1rem;
+        margin: 1rem 0;
         border-top: 2px solid #1E4566;
         border-bottom: 2px solid #1E4566;
         padding: 1rem;
@@ -968,7 +968,8 @@ ol {
 }
 
 .collapsables-gi__content {
-    background: linear-gradient(#ffffff, #dfedff);
+    /*background: linear-gradient(#ffffff, #dfedff);*/
+    background: #fff;
     padding: 2rem;
 }
 
@@ -1007,8 +1008,7 @@ ol {
     transition: background-size .3s;
 }
 
-.subrayar-enlace:hover,
-a:focus {
+.subrayar-enlace:hover {
     background-size: 100% 2px;
 }
 
