@@ -31,7 +31,7 @@ class Menu extends HTMLElement {
             </li>
 
             <li class="sidebar__elemento sangria-menu">
-                <a class="sidebar__enlace" href="#">Módulo 3 Pensamiento crítico para solucionar problemas<span id="ident9" class="identificador2"> 9 </span>
+                <a class="sidebar__enlace" href="#">Módulo 3. Pensamiento crítico para solucionar problemas<span id="ident9" class="identificador2"> 9 </span>
                 </a>
             </li>
 
