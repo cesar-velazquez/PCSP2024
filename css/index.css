@@ -1289,7 +1289,7 @@ ol {
     gap: .5rem;
 }
 
-li.nav-item.waves-effect.waves-light a.active {
+li.nav-item.waves-effect.waves-light button.active {
 
 
     color: #fff;
@@ -1301,30 +1301,35 @@ li.nav-item.waves-effect.waves-light a.active {
     z-index: 1;
 }
 
-li.nav-item.waves-effect.waves-light a {
+li.nav-item.waves-effect.waves-light button {
     transition: none;
     color: #1E4566;
     background: #fff;
     width: 100%;
-    height: 100%;
     border: 2px solid #1E4566;
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
+li.nav-item.waves-effect.waves-light button:focus { outline:none; }
+
+/*
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
     border-color: transparent;
 }
+*/
 
+/*
 .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-}
+}*/
 
 @media (max-width: 767px) {
     .btn_program {

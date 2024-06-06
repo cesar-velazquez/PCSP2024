@@ -76,7 +76,8 @@ ul{ list-style:disc; }
     margin: 3rem auto 0;
 }
 .temario p{ margin-bottom:0; }
-
+.titulos-encab{ font-weight:bold; }
+.titulos-encab span{ display:block; }
 .referencias p {
     text-indent: -2rem;
     padding-left: 2rem;
@@ -155,7 +156,7 @@ ul{ list-style:disc; }
 .enlace-icono:focus-visible, .enlace-iconoh:focus-visible{ outline:none; }
 .imagen-ac1{ width:100%; max-width:26rem; margin:0 auto 2rem; }
 .imagen-ac2{ width:70%; margin:0 auto 2rem; }
-.imagen-ac3{ width:100%; margin:0 auto 2rem; }
+.imagen-ac3{ width:100%; margin:2rem auto 0; }
 .text-rigth{ text-align:right; }
 @media screen and (max-width: 1300px){
     .titulo-principal-unit{ top:5rem }
@@ -208,7 +209,7 @@ ul{ list-style:disc; }
     .temario{ margin:1rem auto 2.5rem; }
     .titulos-encab{ margin-bottom:1rem; }
 
-    .imagen-ac1, .imagen-ac2, .imagen-ac3{ margin:1rem auto; }
+    .imagen-ac1{ margin:1rem auto; }
     .imagen-ac2{ width:100% }
 
     .fondo-movil{ padding:1rem; background:#EDEDFC; margin-bottom:2.5rem }
