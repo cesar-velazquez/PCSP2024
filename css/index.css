@@ -188,13 +188,14 @@ ol {
 }
 
 @media screen and (max-width: 767px) {
+
     p,
     button,
     ul,
     ol {
         font-size: 1.125rem !important;
         margin-bottom: 1rem;
-        
+
     }
 }
 
@@ -517,11 +518,11 @@ ol {
     }
 
     .padding-e {
-        padding: 0 1rem;
+        padding: 0 0rem;
     }
 
     .padding-L-2r {
-        padding-left: 1rem !important;
+        padding-left: 0rem !important;
     }
 
 }
@@ -1702,6 +1703,12 @@ body.modal-open {
     min-height: 280px;
 }
 
+.section_antologias {
+    background-color: #EDEDFC;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
 .collapsable_width {
     width: 100% !important;
     padding: .8rem 1rem !important;
@@ -1716,6 +1723,10 @@ body.modal-open {
 }
 
 @media screen and (max-width: 767px) {
+    .container_experts {
+        padding: 0;
+    }
+
     .padding_top {
         padding-top: 0;
     }
@@ -1733,12 +1744,17 @@ body.modal-open {
         margin: 1rem auto;
     }
 
+    .section_antologias {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
     .seccion-content {
-        padding: 0 1rem;
+        padding: 0 0rem;
     }
 
     .espacio_v2 {
-        padding: 1rem 1rem 0rem;
+        padding: 1rem 0rem 0rem;
         margin: 1em auto;
     }
 

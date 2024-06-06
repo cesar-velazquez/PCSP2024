@@ -37,15 +37,14 @@
     </div>
 
     <div>
-        <p class="sr-only">
-            Instrucción: Para acceder a la información de ayuda de esta Experiencia Educativa en <i
-                lang="en">Windows</i> presiona las
-            teclas Alt + i, en MacOS presiona las teclas <i lang="en">Option</i> + i
+        <p class="sr-only" style="font-size: 1.3rem;">
+            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            las teclas Alt + i, en MacOS presiona las teclas <i lang="en">Option</i> + i
             Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
-            en MacOS presiona
-            la tecla Esc
+            en MacOS presiona la tecla Esc
         </p>
     </div>
+
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
         <button onclick="handleMenu()" class="btnAccessUniversal">
@@ -311,7 +310,7 @@
 
                 <div class="ocultar">
                     <div class="section_div">
-                        <img class="img_info_G" src="./images/img_example.png" alt="Image Support">
+                        <img class="img_info_G" src="./images/img_example.png" alt="Imagen de apoyo">
                         <p class="parrafo position_fuente">Fuente: Geralt (2019).</p>
                     </div>
                 </div>
@@ -458,7 +457,13 @@
                     </a>
                 </div>
 
-                <div class="radial-ellipse-size" aria-hidden="true"></div>
+                <!-- <div class="radial-ellipse-size" aria-hidden="true"></div> -->
+                <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
+                    <img src="./images/separador-interior-ee.png" alt="Separador - Imagen de apoyo" aria-hidden="true"
+                        width="80%" height="auto" class="escritorio">
+                    <img src="./images/separador-interior-rr.png" alt="Separador movil - Imagen de apoyo"
+                        aria-hidden="true" width="80%" height="auto" class="movil">
+                </div>
 
                 <h2 id="section20" class="parrafop text-azul padding-L-2r subt">Acreditación
                     <span id="ident20" class="identificador2">20</span>
@@ -489,23 +494,23 @@
                         <ul class="centerPestaña nav nav-tabs tabs-1-nav mt-4">
 
                             <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
-                                <a id="firsttab" data-toggle="tab" href="#ppaso-1"
+                                <button id="firsttab" data-toggle="tab" href="#ppaso-1"
                                     class="tamano-btn nav-link tab-1-link active text-center ajuste-altura">
                                     <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Comunicación e
                                         interacción
                                         <span id="ident22" class="identificador2">22</span>
                                     </span>
-                                </a>
+                                </button>
                             </li>
 
                             <li class="tamano-li link nav-item tab-1-item waves-effect waves-light tam-tab">
-                                <a id="secondtab" data-toggle="tab" href="#ppaso-2"
+                                <button id="secondtab" data-toggle="tab" href="#ppaso-2"
                                     class="tamano-btn nav-link tab-1-link text-center ajuste-altura">
                                     <span class="tabs-1-texto parrafo mb-0 font-weight-bold">Nomenclatura para los
                                         archivos
                                         <span id="ident23" class="identificador2">23</span>
                                     </span>
-                                </a>
+                                </button>
                             </li>
 
                         </ul>
@@ -686,7 +691,12 @@
                                                 fuera de tiempo.</li>
                                             <li>Correo para dudas técnicas o administrativas
                                                 <a rel="noopener noreferrer" href="mailto:afbgfacilitadores@uv.mx"
-                                                    target="_blank">afbgfacilitadores@uv.mx</a>
+                                                    target="_blank">
+                                                    <span aria-hidden="true">afbgfacilitadores@uv.mx</span>
+                                                    <span class="sr-only">a f b g facilitadores@<span
+                                                            aria-hidden="true">UV</span>
+                                                        <span class="sr-only">U V</span> .mx</span>
+                                                </a>
                                             </li>
                                             <!-- <a rel="noopener noreferrer" href="mailto:alblanco@uv.mx" target="_blank">alblanco@uv.mx</a> -->
                                         </ol>
@@ -725,7 +735,12 @@
                                                 inicio del curso el mecanismo de penalización al que estará sujeto.</li>
                                             <li>Canaliza al centro de ayuda
                                                 (<a rel="noopener noreferrer" href="mailto:afbgfacilitadores@uv.mx"
-                                                    target="_blank">afbgfacilitadores@uv.mx</a>) al estudiante que
+                                                    target="_blank">
+                                                    <span aria-hidden="true">afbgfacilitadores@uv.mx</span>
+                                                    <span class="sr-only">a f b g facilitadores@<span
+                                                            aria-hidden="true">UV</span>
+                                                        <span class="sr-only">U V</span> .mx</span>
+                                                </a>) al estudiante que
                                                 manifieste dudas técnicas, administrativas o incumplimiento para que se
                                                 le
                                                 dé atención y seguimiento.</li>
@@ -742,7 +757,11 @@
                                             <li>Breve introducción motivadora.</li>
                                             <li>Informe sobre el registro de calificaciones en el sistema de control
                                                 escolar
-                                                para que sea consultada por los estudiantes en el sistema MiUV.</li>
+                                                para que sea consultada por los estudiantes en el sistema Mi<span
+                                                    aria-hidden="true">UV</span>
+                                                <span class="sr-only">U V</span>
+                                                .
+                                            </li>
                                             <li>Breve conclusión a modo de cierre.</li>
                                         </ol>
                                     </li>
@@ -777,7 +796,8 @@
                                     <li>Potencializar mis habilidades de lectura y escritura en un ambiente en línea.
                                     </li>
                                     <li>Respetar los derechos de autor y citar con estilo APA mis tareas.</li>
-                                    <li>Emplear licencias públicas de derechos de autor y <i>software</i> libre.</li>
+                                    <li>Emplear licencias públicas de derechos de autor y <i lang="en">software</i>
+                                        libre.</li>
                                 </ul>
                                 <p class="parrafo bold mb-0">Retos en plataforma educativa Eminus</p>
                                 <p class="parrafo mb-0">Si me inscribí a una Experiencia Educativa en línea, debo:</p>
@@ -794,8 +814,11 @@
                                         Mensajes.
                                     </li>
                                     <li>Enviar mensajes al centro de ayuda (<a rel="noopener noreferrer"
-                                            href="mailto:afbgfacilitadores@uv.mx"
-                                            target="_blank">afbgfacilitadores@uv.mx</a>) en caso de dudas
+                                            href="mailto:afbgfacilitadores@uv.mx" target="_blank"><span
+                                                aria-hidden="true">afbgfacilitadores@uv.mx</span>
+                                            <span class="sr-only">a f b g facilitadores@<span
+                                                    aria-hidden="true">UV</span>
+                                                <span class="sr-only">U V</span> .mx</span></a>) en caso de dudas
                                         técnicas o administrativas para recibir atención y seguimiento.</li>
                                 </ul>
 
@@ -840,7 +863,8 @@
                                     Es necesario que evites:
                                 </p>
                                 <ul class="padding_left mb-0" style="list-style: lower-latin;">
-                                    <li>Emplear respuestas cortas o monosílabos: "Sí", "Ok", "Estoy de acuerdo", "Muy
+                                    <li>Emplear respuestas cortas o monosílabos: "Sí", "<i lang="en">Ok</i>", "Estoy de
+                                        acuerdo", "Muy
                                         bien",
                                         "Claro", otras.​</li>
                                     <li>Utilizar oraciones o frases sin sentido.​</li>

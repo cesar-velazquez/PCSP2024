@@ -8,14 +8,9 @@ let tamFuenteSubtitulos = parseFloat(localStorage.getItem("FuenteActualSubtitulo
 let tamFuentePleca = parseFloat(localStorage.getItem("FuenteActualPleca")) || 1;
 
 btnAumentarFuente.addEventListener('click', function () {
-    console.log("entré aqui");
     tamFuenteParrafos += 0.25;
     tamFuenteSubtitulos += 0.25;
     tamFuentePleca += 0.25;
-
-    if (screen.width < 768) {
-        console.log("estoy dentro");
-    }
 
     if (tamFuenteParrafos > 1.8) {
         tamFuenteParrafos = 1.3;
