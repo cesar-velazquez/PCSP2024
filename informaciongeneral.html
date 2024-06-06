@@ -38,18 +38,14 @@
 
     <div>
         <p class="sr-only">
-            Instrucción: Para acceder a la información de ayuda de esta experiencia educativa en Windows presiona las
-            teclas Alt + i, en MacOS Option + i, Para cerrar la ventana con la información de ayuda en Windows presiona
-            las teclas Alt + X, en MacOS Esc
+            Instrucción: Para acceder a la información de ayuda de esta Experiencia Educativa en <i
+                lang="en">Windows</i> presiona las
+            teclas Alt + i, en MacOS presiona las teclas <i lang="en">Option</i> + i
+            Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
+            en MacOS presiona
+            la tecla Esc
         </p>
     </div>
-
-
-    <!-- <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda"
-        data-toggle="modal" data-target="#information-1" accesskey="I">
-        <i class="fa fa-info-circle" aria-hidden="true"></i>
-    </button> -->
-
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
         <button onclick="handleMenu()" class="btnAccessUniversal">
@@ -85,7 +81,32 @@
                                 Ayuda
                             </p>
                         </div>
-                        <p class="instruccion"><b>Instrucciones: </b></p>
+                        <ul class="padding_left">
+                            <li>
+                                <p class="parrafo mb-0">Lector inmersivo: abre una modal de ayuda.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Comandos de voz: abre una modal de ayuda.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Lectura fácil: desplaza hasta el botón para descarga del archivo
+                                    de
+                                    lectura fácil.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Línea de lectura: activa y desactiva la línea de lectura</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Tamaño del cursor: aumenta/disminuye tamaño del puntero.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Tamaño fuente: aumenta/disminuye el tamaño de la tipografía.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Resaltar enlaces: marca todos los hipervínculos.</p>
+                            </li>
+                        </ul>
                         <p class="parrafo">
                             Para recargar la página solo dí 'F5'.
                         </p>
@@ -252,7 +273,7 @@
         </div>
 
         <div class="container titulo-principal-unit">
-            <h1 class="titulo-principal">
+            <h1 class="titulo_Prin">
                 Información general
             </h1>
         </div>
@@ -266,15 +287,16 @@
             <div id="section11" class="container  ">
                 <div class="mb-4 mb-md-5 presentacion">
                     <!-- <h2 class="text-azul pl-0 subtitulos">Presentación</h2> -->
-                    <p class="parrafo">
+                    <p class="parrafo parrafo_EE">
                         <span id="ident11" class="identificador2">11</span>
                         <b>Nombre de la EE: </b> Pensamiento Crítico para la Solución de Problemas/Habilidades del
                         Pensamiento Crítico y Creativo.
                     </p>
-                    <p class="parrafo"><b>Área Curricular a la que pertenece:</b> Área de Formación Básica General.</p>
-                    <p class="parrafo"><b>Valor crediticio:</b> 4 créditos/5 créditos.</p>
-                    <p class="parrafo"><b>Oportunidades de evaluación: </b>ordinaria.</p>
-                    <p class="parrafo mb-0"><b>Clave administrativa de la EE: </b> BGRE80002/FBGR80002.</p>
+                    <p class="parrafo parrafo_EE"><b>Área Curricular a la que pertenece:</b> Área de Formación Básica
+                        General.</p>
+                    <p class="parrafo parrafo_EE"><b>Valor crediticio:</b> 4 créditos/5 créditos.</p>
+                    <p class="parrafo parrafo_EE"><b>Oportunidades de evaluación: </b>ordinaria.</p>
+                    <p class="parrafo  mb-0"><b>Clave administrativa de la EE: </b> BGRE80002/FBGR80002.</p>
                 </div>
 
                 <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
@@ -287,15 +309,18 @@
                 <h2 id="section12" class="parrafop text-azul padding-L-2r subt">Bienvenida <span id="ident12"
                         class="identificador2">12</span></h2>
 
-                <div class="section_div">
-                    <img class="img_info_G" src="./images/img_example.png" alt="Image Support">
-                    <p class="parrafo position_fuente">Fuente: Geralt (2019).</p>
+                <div class="ocultar">
+                    <div class="section_div">
+                        <img class="img_info_G" src="./images/img_example.png" alt="Image Support">
+                        <p class="parrafo position_fuente">Fuente: Geralt (2019).</p>
+                    </div>
                 </div>
+
                 <div class="parrafo padding-e">
-                    <p>
-                        Te damos la más cordial de las bienvenidas a este curso-taller denominado Pensamiento Crítico
-                        para
-                        la Solución de Problemas. En esta Experiencia Educativa desarrollarás y fortalecerás tus
+                    <p class="parrafo">
+                        Te damos la más cordial de las bienvenidas a este curso-taller denominado <b>Pensamiento Crítico
+                            para la Solución de Problemas</b>. En esta Experiencia Educativa desarrollarás y
+                        fortalecerás tus
                         habilidades
                         analíticas, críticas y creativas de pensamiento.
                     </p>
@@ -305,7 +330,7 @@
                         A lo largo del curso podrás desarrollar tus capacidades reflexivas y analíticas mismas que te
                         permitirán detectar y solucionar las problemáticas que se presenten en la vida cotidiana y
                         profesional. De igual forma se te brindarán sugerencias para mejorar el orden, la claridad y la
-                        precisión de tu pensamiento, a través del Modelo COL (Compresión Ordenada del Lenguaje), así
+                        precisión de tu pensamiento, a través del Modelo COL (Comprensión Ordenada del Lenguaje), así
                         como el
                         uso de las estrategias didácticas-metodológicas, bitácora OP (Orden de Pensamiento) y COL, lo
                         anterior tiene la finalidad de evitar que en el futuro manejes expresiones como: ¡Tomé la
@@ -374,7 +399,7 @@
                     </p>
 
                     <div class="ocultar">
-                        <div class="container_antologias container_moduls">
+                        <div class="container_antologias container_moduls text-azul">
                             <div id="cuadroModul1" class="section_modul">
                                 <div class="section_line">
                                     <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
@@ -393,7 +418,7 @@
                                     <div class="line_orange"></div>
                                     <div class="line_orange_2"></div>
                                 </div>
-                                <p class="parrafo text-center bold">Pensamiento crítico para formular problemas</p>
+                                <p class="parrafo text-center bold mb-0">Pensamiento crítico para formular problemas</p>
                             </div>
                             <div id="cuadroModul3" class="section_modul">
                                 <div class="section_line">
@@ -409,18 +434,12 @@
 
                     <div class="mostrar">
                         <div class="container_antologias container_moduls">
-                            <p class="parrafo bold">Módulo 1</p>
-                            <ul class="parrafo padding_left">
-                                <li>Pensamiento crítico para la solución de problemas </li>
-                            </ul>
-                            <p class="parrafo  bold">Módulo 2</p>
-                            <ul class="parrafo padding_left">
-                                <li>Pensamiento crítico para formular problemas</li>
-                            </ul>
-                            <p class="parrafo bold">Módulo 3</p>
-                            <ul class="parrafo padding_left mb-0">
-                                <li>Pensamiento crítico para solucionar problemas</li>
-                            </ul>
+                            <p class="parrafo"><span class="bold">Módulo 1.</span> Pensamiento crítico para la
+                                solución de problemas</p>
+                            <p class="parrafo"> <span class="bold">Módulo 2.</span> Pensamiento crítico para formular
+                                problemas</p>
+                            <p class="parrafo mb-0"><span class="bold">Módulo 3.</span>Pensamiento crítico para
+                                solucionar problemas</p>
                         </div>
                     </div>
                 </div>
@@ -431,12 +450,7 @@
                         <span id="ident18" class="identificador2">18</span>
                     </p>
 
-                    <!-- <a download="" href="./sldk" class="btn_module btn btn-azul-modals waves-effect waves-light btn_center"
-                        data-toggle="modal" data-target="#modul-3">
-                        <b>Evaluación de actividades</b>
-                        <span id="ident22" class="identificador2 ">22</span>
-                    </a> -->
-                    <a id="evaluacionActividades" class="btn btn-azul-modals btn_center waves-effect waves-light"
+                    <a id="evaluacionActividades" class="btn btn-azul-modals btn_center waves-effect waves-light mb-2em"
                         href="./descargas/InfoGeneral/PCSP24-Evaluacion_de_actividades.pdf" download="">Evaluación de
                         actividades
                         <span class="parrafo sr-only">Archivo PDF</span>
@@ -496,7 +510,7 @@
 
                         </ul>
 
-                        <div class="tab-content bg-tab-content">
+                        <div class="tab-content bg-tab-content height_content">
 
                             <div id="ppaso-1" class="tab-pane container active">
 
@@ -545,7 +559,7 @@
                                             trabajos. Esta clave está formada por varios elementos, entre ellos el
                                             número de la actividad, así como tu nombre y apellido:
                                         </p>
-                                        <p class="parrafo">
+                                        <p class="parrafo mb-0">
                                             <b>ED##_<wbr>Primer<wbr>ApellidoyPrimerNombre.ext</b>
                                         </p>
 
@@ -858,7 +872,7 @@
                             archivo.</p>
                         <a id="fuentesInf" class="btn btn-azul-modals btn_center" href="./downaaa" download="">Fuentes
                             de información
-                            <span class="parrafo sr-only">Archivo PDF</span> <span id="ident29"
+                            <span class="parrafo sr-only">Archivo de WORD</span> <span id="ident29"
                                 class="identificador2">29</span></a>
 
                         <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">

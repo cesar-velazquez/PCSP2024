@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
         location.href = './index.html';
     }
 
+    let refreshPage = function () {
+        location.reload();
+    }
+
     var getPageNext1 = function () {
         location.href = './info-gral.html';
     }
@@ -461,6 +465,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '31': volverA,
         'treinta y uno': volverA,
+
+        'F5': refreshPage,
+        'efe cinco': refreshPage,
 
 
         'Abrir modal esquema': abrirModalEsquema,

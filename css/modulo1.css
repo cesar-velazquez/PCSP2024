@@ -1,8 +1,8 @@
-.subtitulo{ font-size:1.3rem; margin-bottom:1rem; line-height:1.8 }
-ul{ list-style:disc; }
 
-@media screen and (min-width: 768px) {
-    .subtitulo{ font-size:1.5rem; margin-bottom:2rem }
+ul{ list-style:disc; }
+.subtitulo{ font-size:1.5rem; margin-bottom:2rem; line-height:1.8 }
+@media screen and (max-width: 767px) {
+    .subtitulo{ font-size:1.3rem !important; margin-bottom:1rem;  }
 }
 
 .titulo-principal-unit{

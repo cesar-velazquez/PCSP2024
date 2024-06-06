@@ -28,7 +28,7 @@ a:hover {
     position: relative;
     z-index: 1 !important;
     color: #17529C;
-    border-bottom: 2px solid #17529C;
+    /* border-bottom: 2px solid #17529C; */
 }
 
 .ul_z:hover {
@@ -114,10 +114,20 @@ a:hover {
     border: .1rem solid #1E4566;
 }
 
+.titulo_Prin {
+    color: #1E4566;
+    font-weight: bold;
+    padding: 2rem;
+}
+
 @media screen and (min-width: 768px) {
     .btn {
         font-size: 1.3rem !important;
         z-index: 1;
+    }
+
+    .parrafo_EE {
+        margin-bottom: 0rem !important;
     }
 }
 
@@ -141,9 +151,13 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    .titulo_Prin {
+        padding: 1rem;
+        font-size: 2rem;
+    }
 
     .subt {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
         margin-bottom: 1rem;
     }
 
@@ -162,13 +176,26 @@ a:hover {
     }
 }
 
+
+
 p,
 button,
 ul,
 ol {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 2em;
     line-height: 1.8;
+}
+
+@media screen and (max-width: 767px) {
+    p,
+    button,
+    ul,
+    ol {
+        font-size: 1.125rem !important;
+        margin-bottom: 1rem;
+        
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -181,14 +208,9 @@ ol {
         display: none;
     }
 
-    p,
-    button,
-    ul,
-    ol {
-        font-size: 1.3rem;
-        margin-bottom: 2em;
-    }
 }
+
+
 
 @media screen and (max-width: 991px) {
     .escritorio-2 {
@@ -379,12 +401,12 @@ ol {
 
 .section-experts {
     background: rgb(231, 239, 247);
-    background: linear-gradient(180deg, rgba(231, 239, 247, 1) 50%, rgba(255, 255, 255, 1) 100%);
-    /* padding-bottom: 2rem; */
+    background: linear-gradient(180deg, rgba(231, 239, 247, 1) 0%, rgba(255, 255, 255) 9%);
 }
 
 .container_experts {
-    max-width: 1140px;
+    max-width: 1110px;
+    padding: 0 1rem;
     margin: auto;
 }
 
@@ -421,7 +443,9 @@ ol {
 
 .section_tema {
     border-radius: 2rem;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     display: flex;
     justify-content: left;
     align-items: baseline;
@@ -586,12 +610,20 @@ ol {
 }
 
 @media screen and (max-width: 1199px) {
+    .container_experts {
+        max-width: 930px;
+    }
+
     .btn-menu {
         right: 6em;
     }
 }
 
 @media screen and (max-width: 991px) {
+    .container_experts {
+        max-width: 690px;
+    }
+
     .btn-menu {
         right: 4em;
     }
@@ -632,6 +664,12 @@ ol {
 
     .pleca_principal {
         width: 96%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .pleca_principal span {
+        font-size: 1.125rem !important;
     }
 }
 
@@ -854,11 +892,11 @@ ol {
 }
 
 /* Size para titulos y parrafos */
-.parrafo {
-    font-size: 1.125rem;
+/* .parrafo {
+    font-size: 1.125rem !important;
     margin-bottom: 1rem;
     line-height: 1.8;
-}
+} */
 
 .subtitulost {
     font-size: 1.3rem !important;
@@ -1060,6 +1098,12 @@ ol {
 }
 
 @media (max-width: 767px) {
+    .parrafo {
+        font-size: 1.125rem !important;
+        margin-bottom: 1rem;
+        line-height: 1.8;
+    }
+
     .btn-cerrar-modal {
         font-size: 1em !important;
     }
@@ -1104,7 +1148,7 @@ ol {
 }
 
 .section_modul {
-    width: 300px;
+    width: 270px;
     min-height: 195px;
     height: auto;
     border: 3px solid #1E4566;
@@ -1113,7 +1157,8 @@ ol {
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    box-shadow: rgb(0 0 0 / 40%) -15px 15px;
+    justify-content: center;
+    box-shadow: rgb(146 135 207 / 1) -15px 15px;
 }
 
 .section_line {
@@ -1203,7 +1248,18 @@ ol {
     min-width: 10rem
 }
 
+.height_content {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 991px) {
+    .height_content {
+        height: 815px;
+    }
+
     .tam-content {
         height: 750px;
     }
@@ -1532,7 +1588,7 @@ li.nav-item.waves-effect.waves-light a {
     right: 11%;
     top: 5%;
     font-size: 2.1em;
-    background-color: #3C3D8B;
+    background: linear-gradient(90deg, #0051a0 0%, #0b1b74 70%);
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
@@ -1644,6 +1700,7 @@ body.modal-open {
     background-color: #EDEDFC;
     padding: 2rem;
     margin-top: 2rem;
+    min-height: 280px;
 }
 
 .collapsable_width {

@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         location.href = './index.html';
     }
 
+    let refreshPage = function () {
+        location.reload();
+    }
+
     var getPageNext1 = function () {
         location.href = './informaciongeneral.html';
     }
@@ -200,6 +204,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '17': volverA,
         'diecisiete': volverA,
+
+        'F5': refreshPage,
+        'efe cinco': refreshPage,
 
     };
 
