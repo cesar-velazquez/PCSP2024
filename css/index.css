@@ -1479,8 +1479,15 @@ li.nav-item.waves-effect.waves-light button:focus {
     margin: 1rem auto;
 }
 
+.m-separador {
+    margin: 3em auto !important;
+}
 
 @media screen and (max-width: 767px) {
+    .m-separador {
+        margin: 2em auto !important;
+    }
+
     .separador {
         width: 100%;
         margin: 1rem 0;
