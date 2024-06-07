@@ -23,11 +23,11 @@ class Menu extends HTMLElement {
 
 
             <li class="sidebar__elemento sangria-menu">
-                <a class="sidebar__enlace" href="#">Módulo 2. Pensamiento crítico para formular problemas <span id="ident7" class="identificador2"> 7 </span></a>
+                <a class="sidebar__enlace" href="modulo-2.html">Módulo 2. Pensamiento crítico para formular problemas <span id="ident7" class="identificador2"> 7 </span></a>
             </li>
 
             <li class="sidebar__elemento sangria-menu">
-            <a class="sidebar__enlace" href="tema1.html">Módulo 2. Actividades de aprendizaje <span id="ident8" class="identificador2"> 8 </span> </a>
+            <a class="sidebar__enlace" href="modulo-2/modulo-2-actividad.html">Módulo 2. Actividades de aprendizaje <span id="ident8" class="identificador2"> 8 </span> </a>
             </li>
 
             <li class="sidebar__elemento sangria-menu">

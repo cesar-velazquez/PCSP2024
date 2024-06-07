@@ -144,7 +144,7 @@ a:hover {
     z-index: 1;
 }
 
-.btn.btn_lecturaF:hover {
+.btn_lecturaF:hover {
     color: #17529C;
     background: url(../images/accesibilidad/lecturaf-a.png) no-repeat 2rem center #fff;
     border: .2rem solid #17529C;
@@ -238,7 +238,7 @@ ol {
 .pleca__uv {
     align-self: start;
     background-color: #18529D;
-    color: white !important;
+    color: white;
     letter-spacing: 1.75px;
     padding: 0.3rem;
 }
