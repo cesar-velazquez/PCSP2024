@@ -179,7 +179,7 @@ ul{ list-style:disc; }
     }
 
     .separador {
-        background: url(../images/PCSP24-_separador-contenido-r.png) no-repeat center 0 / 75%;
+        background: url(../images/PCSP24-_separador-contenido-r.png) no-repeat center 0 / auto 80%;
         height: 2rem;
         margin: 2rem auto;
         width: 100%;
