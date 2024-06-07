@@ -20,13 +20,21 @@
     <link rel="stylesheet" href="../css/modulo1.css" />
     <!-- Menu accesible .css -->
     <link rel="stylesheet" href="../css/menuacces.css">
-
+    <!-- Libreria de Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Libreria para animar  los recursos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
+    <!-- Instrucción para información de ayuda -->
+    <div id="container_notes" class="contenedor_notas">
+    </div>
 
+    <div class="microfono">
+        <i id='micro' class="bx bxs-microphone-off bx-flip-horizontal" style='color:#ffffff'></i>
+    </div>
     <!-- Instrucción para información de ayuda -->
     <div>
         <p class="sr-only">
@@ -37,21 +45,193 @@
             en MacOS presiona la tecla Esc
         </p>
     </div>
-
-    <button class="btn btn-azul-modals btn-information" aria-label="Información de ayuda" title="Información de ayuda"
-        data-toggle="modal" data-target="#information-1" accesskey="I">
-        <i class="fa fa-info-circle" aria-hidden="true"></i>
-    </button>
-
     <!-- Barra de progreso en la parte superior -->
     <div id="progress"></div>
 
+
+    <!-- Implementacion del boton menu accesible: -->
+    <div class="ocultar">
+        <button onclick="handleMenu()" class="btnAccessUniversal">
+            <img src="../images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
+        </button>
+
+        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+            waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
+            <i class='bx bxs-help-circle'></i>
+        </button>
+        <span id="ident0" class="identificador2">0</span>
+    </div>
+
+    <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span id="closed" aria-hidden="true">×</span>
+                        <span id="cerrar" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <p class="parrafo text-azul">
+                                Ayuda
+                            </p>
+                        </div>
+                        <ul class="padding_left">
+                            <li>
+                                <p class="parrafo mb-0">Lector inmersivo: abre una modal de ayuda.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Comandos de voz: abre una modal de ayuda.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Lectura fácil: desplaza hasta el botón para descarga del archivo
+                                    de
+                                    lectura fácil.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Línea de lectura: activa y desactiva la línea de lectura.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Tamaño del cursor: aumenta/disminuye tamaño del puntero.</p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Tamaño fuente: aumenta/disminuye el tamaño de la tipografía.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="parrafo mb-0">Resaltar enlaces: marca todos los hipervínculos.</p>
+                            </li>
+                        </ul>
+                        <p class="parrafo mb-0">
+                            Para recargar la página solo di 'F5'.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">
+                        Cerrar
+                        <span id="identcerrar" class="identificador3 btn_fuente">cerrar</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- fin modal ayuda -->
+
+    <!-- menuaccesShow -->
+    <div class="menuacces ">
+        <div class="menuComponentAcces">
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="font_size">
+                        <img id="icon_FontSize" src="../images/accesibilidad/MA-_m-tamanofuente-a.png"
+                            alt="Icon auxiliar font size">
+                        <img id="icon_FontSize_Active" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
+                        Tamaño de fuente
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="link_resaltar">
+                        <img id="icon_Link" src="../images/accesibilidad/MA-_m-hiper-a.png"
+                            alt="Icon auxiliar hipervinculos">
+                        <img id="icon_Link_Active" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
+                        Hipervínculos
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="cursorBig" class="btn_accesible">
+                        <img id="icon_Cursor" src="../images/accesibilidad/MA-_m-cursor-a.png"
+                            alt="Icon auxiliar cursor">
+                        <img id="icon_Cursor_Active" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
+                        Cursor
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
+                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
+                        aria-hidden="true">
+                        <img id="icon_lector_inmersivo" src="../images/accesibilidad/MA-_m-lector-a.png"
+                            alt="Icon auxiliar Lector">
+                        <img id="icon_lector_inmersivo_active" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
+                        Lector Inmersivo
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces section_voice">
+                <div>
+                    <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img id="icon_comando_voz" src="../images/accesibilidad/MA-_m-comandos-a.png"
+                            alt="Icon auxiliar comandos de voz">
+                        <img id="icon_comandovoz_activo" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
+                        Comandos de voz
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <a accesskey="6" tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img src="../images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        Lectura fácil
+                    </a>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button onclick="showLine()" id="lineaLectura" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img id="icon_Linea_Lectura" src="../images/accesibilidad/MA-_m-regla-a.png"
+                            alt="Icon auxiliar línea de lectura">
+                        <img id="icon_Linea_Lectura_Active" class="icon_desactivado"
+                            src="../images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
+                        Línea de lectura
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- fin menú accesible -->
+
+
     <!-- SIDEBAR MENÚ -->
-    <navbar class="sidebar" style="overflow-y: scroll">
+    <navbar id="menu-item" class="sidebar" style="overflow-y: scroll">
         <div class="sidebar__encabezado">
             <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
                 <span>X</span>
             </button>
+            <span id="ident2" class="identificador2 ">2</span>
         </div>
 
         <menu-component></menu-component>
@@ -61,13 +241,15 @@
     <header class="banner-1">
         <div class="">
             <div class="js-pleca pleca">
-                <a class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+                <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad
+                    Veracruzana</a>
 
                 <div class="dropdown">
                     <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
                         <span class="font-weight-bold">MENÚ</span>
                         <i class="fas fa-bars"></i>
+                        <span id="ident1" class="identificador2">1</span>
                     </button>
                 </div>
 
@@ -103,21 +285,19 @@
             <section>
                 <hr class="inicio-act" aria-hidden="true">
                 <div class="container">
-                    <div class="caja">
-                        <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución</h2>
+                    <div id="section11" class="caja">
+                        <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución <span
+                                id="ident11" class="identificador2">11</span></h2>
 
                         <p class="instruccion"><b>Instrucción:</b> Presiona el botón de video para iniciar la
                             reproducción.</p>
 
                         <div class="mb-2rem">
                             <div class="vid3 embed-responsive embed-responsive-16by9">
-                                <!--<p id="ident12" class="play_video identificador2 ">12</p>
-                            <p id="ident13" class="fullScreen identificador2 ">13</p>-->
-                                <video id="" src="../videos/unit1/modulo-1.mp4" type="video/mp4"
+                                <p id="ident12" class="play_video identificador2 ">12</p>
+                                <p id="ident13" class="fullScreen identificador2 ">13</p>
+                                <video id="video2" src="../videos/unit1/modulo-1.mp4" type="video/mp4"
                                     poster="../images/video/video1.png" controls></video>
-                                <!-- <iframe
-                                src="https://lumen.uv.mx/resources/files/videos/2022/5/18/6696/a34f4f0f-404e-4a7d-8f39-a2bd09dd6b02.mp4"
-                                width="80%" height="500" allowfullscreen="" scrolling="no"></iframe> -->
                             </div>
                         </div>
 
@@ -126,6 +306,7 @@
                             <details class="collapsables-gi btn_guion" id="basic1">
                                 <summary class="btn waves-effect waves-light">
                                     <strong>Guion de video</strong>
+                                    <span id="ident14" class="identificador2 ">14</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
 
@@ -186,12 +367,15 @@
 
                         <div class="caja">
 
-                            <p class="mb-0">Creamer (2011) concibe al pensamiento crítico como "el pensamiento
+                            <p class="mb-0">
+                                <span id="ident15" class="identificador2 ">15</span>
+                                Creamer (2011) concibe al pensamiento crítico como "el pensamiento
                                 intelectualmente disciplinado de conceptualizar, aplicar, analizar, sintetizar y evaluar
                                 la información recabada a partir de la observación, experiencia, reflexión, razonamiento
                                 o comunicación. Este tipo de pensamiento es un procedimiento que da valor racional a las
                                 creencias y emociones". Su propósito es generar un juicio reflexivo basado en un núcleo
-                                de desarrollo de habilidades.</p>
+                                de desarrollo de habilidades.
+                            </p>
 
                         </div>
 
@@ -203,30 +387,37 @@
                         <div class="contenedor-botones escritorio">
 
                             <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
+                                <span id="ident16" class="identificador2 ">16</span>
                             </p>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-1">
                                 a. Habilidad de interpretación
+                                <span id="ident17" class="identificador2 ">17</span>
                             </button>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-2">
                                 b. Habilidad de análisis
+                                <span id="ident19" class="identificador2 ">19</span>
                             </button>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-3">
                                 c. Habilidad de evaluación
+                                <span id="ident21" class="identificador2 ">21</span>
                             </button>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-4">
                                 d. Habilidad de inferencia
+                                <span id="ident23" class="identificador2 ">23</span>
                             </button>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-5">
                                 e. Habilidad de explicación
+                                <span id="ident25" class="identificador2 ">25</span>
                             </button>
 
                             <button class="btn btn-modales" data-toggle="modal" data-target="#habilidad-6">
                                 f. Habilidad de autorregulación
+                                <span id="ident27" class="identificador2 ">27</span>
                             </button>
                         </div>
 
@@ -311,7 +502,9 @@
 
                     <div class="caja">
 
-                        <h3 class="text-azul subtitulo">Descripción de la actividad</h3>
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident29" class="identificador2 ">29</span>
+                        </h3>
 
                         <p>En esta actividad efectuarás el llenado de un formato denominado COMSOLP_PRE, en el cual
                             debes responder a 11 preguntas acerca de un problema que personalmente hayas vivido y
@@ -1321,7 +1514,7 @@
                 <div class="fondo-degradado espacio-fin">
                     <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.</p>
 
-                    <div class="text-center">
+                    <div id="sectionLect" class="text-center">
 
                         <a id="btnLectura" class="btn_lecturaF btn" href="" target="_blank" download="">
                             Lectura fácil
@@ -1360,6 +1553,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident18" class="identificador2 ">18</span>
                     </button>
                 </div>
 
@@ -1383,6 +1577,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident18_1" class="identificador2 ">18</span>
                     </button>
                 </div>
 
@@ -1398,6 +1593,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident20_1" class="identificador2 ">20</span>
                     </button>
                 </div>
 
@@ -1421,6 +1617,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident20" class="identificador2 ">20</span>
                     </button>
                 </div>
 
@@ -1436,6 +1633,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident22" class="identificador2 ">22</span>
                     </button>
                 </div>
 
@@ -1462,6 +1660,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident22_1" class="identificador2 ">22</span>
                     </button>
                 </div>
 
@@ -1477,6 +1676,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident24" class="identificador2 ">24</span>
                     </button>
                 </div>
 
@@ -1502,6 +1702,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident24_1" class="identificador2 ">24</span>
                     </button>
                 </div>
 
@@ -1517,6 +1718,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident26" class="identificador2 ">26</span>
                     </button>
                 </div>
 
@@ -1539,6 +1741,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident26_1" class="identificador2 ">26</span>
                     </button>
                 </div>
 
@@ -1554,6 +1757,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">×</span>
+                        <span id="ident28" class="identificador2 ">28</span>
                     </button>
                 </div>
 
@@ -1576,6 +1780,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
                         Cerrar
+                        <span id="ident28_1" class="identificador2 ">28</span>
                     </button>
                 </div>
 
@@ -1607,32 +1812,23 @@
                         </div>
 
                         <p class="parrafo">
-                            Para navegar dentro de la Experiencia Educativa y acceder de forma más rápida en algunos
-                            elementos como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+                            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+                            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
                         </p>
 
-                        <p class="parrafo mb-0"><b><i lang="en">Windows</i></b></p>
+                        <p class="parrafo mb-0"><b>Windows</b></p>
 
                         <ul class="parrafo ml-4">
                             <li>Abrir menú principal Alt + M</li>
                             <li>Cerrar menú principal Alt + C</li>
-                            <li>Archivo de lectura fácil Alt + L</li>
-                            <li>Actividad 01 Alt + 1</li>
-                            <li>Actividad 02 Alt + 2</li>
-                            <li>Actividad 03 Alt + 3</li>
-
                         </ul>
 
                         <p class="parrafo mb-0"><b>MacOS</b></p>
 
                         <ul class="parrafo ml-4">
-                            <li>Abrir menú principal <i lang="en">Option</i> + M</li>
-                            <li>Cerrar menú principal <i lang="en">Option</i> + C</li>
-                            <li>Archivo de lectura fácil <i lang="en">Option</i> + L</li>
-                            <li>Actividad 01 <i lang="en">Option</i> + 1</li>
-                            <li>Actividad 02 <i lang="en">Option</i> + 2</li>
-                            <li>Actividad 03 <i lang="en">Option</i> + 3</li>
-
+                            <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+                            <li>Cerrar menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+                            <li>Archivo de lectura fácil <i lang="en">Control</i> + <i lang="en">Option</i> + L</li>
                         </ul>
 
                     </div>
@@ -1640,10 +1836,9 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
-                        style="border-radius: 7px;" data-dismiss="modal">Close</button>
+                    <button id="cerrarLectorIn" type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                        style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -1657,11 +1852,19 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
 
     <!-- Funcionalidad general -->
     <!-- ../scripts/home.js -->
     <script src="../scripts/home.js"></script>
     <script type="text/javascript" src="../scripts/menu-2.js"></script>
+    <!-- accesibilidad -->
+    <script src="../scripts/menuacces.js"></script>
+    <script src="../scripts/annyang-4.js"></script>
+    <script src="../scripts/change-fonts.js"></script>
+    <script src="../scripts/links.js"></script>
+    <script src="../scripts/marcador.js"></script>
+    <script src="../scripts/annyang_Storage.js"></script>
 
     <!-- Funcionalidad para Progress-bar-scroll del inicio -->
     <!-- ../scripts/scroll-timeline.js -->
@@ -1715,6 +1918,6 @@
         });
     </script>
 </body>
-<script src="scripts/Pestañas.js"></script>
+<script src="../scripts/Pestañas.js"></script>
 
 </html>

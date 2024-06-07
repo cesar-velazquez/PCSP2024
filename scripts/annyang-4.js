@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext = function () {
-        location.href = './index.html';
+        location.href = '../index.html';
     }
 
     let refreshPage = function () {
@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext1 = function () {
-        location.href = './informaciongeneral.html';
+        location.href = '../informaciongeneral.html';
     }
 
     var getPageNext2 = function () {
-        location.href = './modulo-1.html';
+        location.href = '../modulo-1.html';
     }
 
     var getPageNext3 = function () {
@@ -111,15 +111,40 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(element);
     }
 
-    let section12 = function () {
-        let element = document.getElementById("section12");
-        PositionTop100(element);
+    // let section12 = function () {
+    //     let element = document.getElementById("section12");
+    //     PositionTop100(element);
+    // }
+    let videoOn = false;
+    let VideoPlay = document.getElementById("video2");
+    let playVideo = function () {
+        videoOn = true;
+        VideoPlay.play();
+        // VideoPlay.requestFullscreen();
+        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
-    let section13 = function () {
-        let element = document.getElementById("section13");
-        PositionTop100(element);
+    // let VideoOff = document.getElementById("video1");
+    let offVideo = function () {
+        videoOn = false;
+        if (videoOn == false) {
+            VideoPlay.pause();
+        }
     }
+
+    let playVideo1 = function () {
+        if (!videoOn) {
+            playVideo();
+        } else {
+            videoOn = true;
+            offVideo();
+        }
+    }
+
+    // let section13 = function () {
+    //     let element = document.getElementById("section13");
+    //     PositionTop100(element);
+    // }
 
     let section14 = function () {
         let element = document.getElementById("section14");
@@ -194,11 +219,11 @@ document.addEventListener("DOMContentLoaded", function () {
         '11': section11,
         'once': section11,
 
-        '12': section12,
-        'doce': section12,
+        '12': playVideo1,
+        'Doce': playVideo1,
 
-        '13': section13,
-        'trece': section13,
+        // '13': section13,
+        // 'trece': section13,
 
         '14': section14,
         'catorce': section14,
@@ -253,10 +278,40 @@ let num14 = document.getElementById("ident14");
 let num15 = document.getElementById("ident15");
 let num16 = document.getElementById("ident16");
 let num17 = document.getElementById("ident17");
+let num19 = document.getElementById("ident19");
+let num21 = document.getElementById("ident21");
+let num23 = document.getElementById("ident23");
+let num25 = document.getElementById("ident25");
+let num27 = document.getElementById("ident27");
+let num29 = document.getElementById("ident29");
+let num30 = document.getElementById("ident30");
+let num31 = document.getElementById("ident31");
+let num32 = document.getElementById("ident32");
+let num33 = document.getElementById("ident33");
+let num34 = document.getElementById("ident34");
+let num35 = document.getElementById("ident35");
+
+// BTNS PARA CERRAR MODALES
+let num18 = document.getElementById("ident18");
+let num18_1 = document.getElementById("ident18_1");
+
+let num20 = document.getElementById("ident20");
+let num20_1 = document.getElementById("ident20_1");
+
+let num22 = document.getElementById("ident22");
+let num22_1 = document.getElementById("ident22_1");
+
+let num24 = document.getElementById("ident24");
+let num24_1 = document.getElementById("ident24_1");
+
+let num26 = document.getElementById("ident26");
+let num26_1 = document.getElementById("ident26_1");
+
+let num28 = document.getElementById("ident28");
+let num28_1 = document.getElementById("ident28_1");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log(activoNumberIndex);
-
 
 
 
@@ -278,10 +333,36 @@ if (activoNumberIndex === "activado") {
 
     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+    // cerrar modales:
+    num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
     annyang.setLanguage('es-MX');
     annyang.start();
 }
@@ -308,10 +389,37 @@ btn_access.addEventListener('click', function () {
 
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+        // modales btn cerrar
+        num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+
         localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
@@ -321,7 +429,7 @@ btn_access.addEventListener('click', function () {
 
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
+
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
@@ -334,9 +442,35 @@ btn_access.addEventListener('click', function () {
         num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num23.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num25.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num27.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num29.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+
+        // btns cerra modal:
+        num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num18_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num20.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num20_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num22_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num24.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num24_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num26.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num26_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+        num28.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num28_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });

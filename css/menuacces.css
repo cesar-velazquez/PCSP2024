@@ -288,9 +288,9 @@
     margin-bottom: 0;
 }
 
-.btn_accesible:hover {
+/* .btn_accesible:hover {
     color: #000;
-}
+} */
 
 .btn_accesible:focus {
     outline: none;

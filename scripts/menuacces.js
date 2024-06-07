@@ -97,16 +97,14 @@ let cursorActivo = !!estadoCursor;
 btncursor.addEventListener('click', function (e) {
     if (!cursorActivo) {
         document.body.style.cursor = "url('./images/cursor/cursoracces.png'), auto";
-        btncursor.classList.add("active");
         cursorActivo = true;
         localStorage.setItem("cursor", document.body.style.cursor);
     } else {
         localStorage.removeItem("cursor");
         document.body.style.cursor = "auto";
-        btncursor.classList.remove("active");
         cursorActivo = false;
     }
-})
+});
 
 
 
