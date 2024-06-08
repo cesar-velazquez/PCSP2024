@@ -290,6 +290,21 @@ let num32 = document.getElementById("ident32");
 let num33 = document.getElementById("ident33");
 let num34 = document.getElementById("ident34");
 let num35 = document.getElementById("ident35");
+let num36 = document.getElementById("ident36");
+let num37 = document.getElementById("ident37");
+let num38 = document.getElementById("ident38");
+let num39 = document.getElementById("ident39");
+let num40 = document.getElementById("ident40");
+let num41 = document.getElementById("ident41");
+let num42 = document.getElementById("ident42");
+let num43 = document.getElementById("ident43");
+let num44 = document.getElementById("ident44");
+let num45 = document.getElementById("ident45");
+let num46 = document.getElementById("ident46");
+let num47 = document.getElementById("ident47");
+let num48 = document.getElementById("ident48");
+let num49 = document.getElementById("ident49");
+let num50 = document.getElementById("ident50");
 
 // BTNS PARA CERRAR MODALES
 let num18 = document.getElementById("ident18");
@@ -348,7 +363,22 @@ if (activoNumberIndex === "activado") {
     num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num35.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
     // cerrar modales:
     num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
@@ -410,7 +440,22 @@ btn_access.addEventListener('click', function () {
         num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num35.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
         // modales btn cerrar
         num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
@@ -469,7 +514,22 @@ btn_access.addEventListener('click', function () {
         num32.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num33.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num34.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num35.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num35.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num36.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num37.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num38.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num39.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num40.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num41.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num42.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num43.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num44.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num45.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num46.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num47.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num48.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num49.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num50.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
         // btns cerra modal:
         num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
