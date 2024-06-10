@@ -1760,7 +1760,7 @@ body.modal-open {
     background-color: #EDEDFC;
     padding: 2rem;
     margin-top: 2rem;
-    min-height: 280px;
+    height: auto;
 }
 
 .section_antologias {
@@ -1802,6 +1802,7 @@ body.modal-open {
     .container_antologias {
         padding: 1rem;
         margin: 1rem auto;
+        height: auto !important;
     }
 
     .section_antologias {

@@ -3,6 +3,10 @@ const ActualContainer = document.getElementById('content_tabs');
 let AlturaPrimerNivel = localStorage.getItem("PrimerNivel");
 let AlturaSegundoNivel = localStorage.getItem("SegundoNivel");
 
+let cuadroM1 = document.getElementById("cuadroModul1");
+let cuadroM2 = document.getElementById("cuadroModul2");
+let cuadroM3 = document.getElementById("cuadroModul3");
+
 if (AlturaPrimerNivel === "activado") {
     ActualContainer.style.height = "710px";
     ActualContainer.style.transitionDuration = "1s";
@@ -21,15 +25,30 @@ function ajustarAlturaContenedor() {
         // console.log("mayor a 1200");
         if (contadorActual == 2) {
             ActualContainer.style.height = "710px";
+
+            cuadroM1.style.height = "262px";
+            cuadroM2.style.height = "262px";
+            cuadroM3.style.height = "262px";
+
             ActualContainer.style.transitionDuration = "1s";
             localStorage.setItem("PrimerNivel", "activado");
         } else if (contadorActual == 3) {
             ActualContainer.style.height = "917px";
+
+            cuadroM1.style.height = "292px";
+            cuadroM2.style.height = "292px";
+            cuadroM3.style.height = "292px";
+
             ActualContainer.style.transitionDuration = "1s";
             localStorage.setItem("PrimerNivel", "desactivado");
             localStorage.setItem("SegundoNivel", "activado");
         } else if (contadorActual == 1) {
             ActualContainer.style.height = "600px";
+
+            cuadroM1.style.height = "auto";
+            cuadroM2.style.height = "auto";
+            cuadroM3.style.height = "auto";
+
             ActualContainer.style.transitionDuration = "1s";
             localStorage.setItem("SegundoNivel", "desactivado");
         }
@@ -38,6 +57,9 @@ function ajustarAlturaContenedor() {
         if (contadorActual == 2) {
             // ActualContainer.style.backgroundColor = "red";
             ActualContainer.style.height = "790px";
+            cuadroM1.style.height = "262px";
+            cuadroM2.style.height = "262px";
+            cuadroM3.style.height = "262px";
         } else if (contadorActual == 3) {
             // ActualContainer.style.backgroundColor = "pink";
             ActualContainer.style.height = "1020px";
@@ -67,4 +89,3 @@ window.addEventListener('resize', ajustarAlturaContenedor);
 btnTamFuente.addEventListener('click', function () {
     ajustarAlturaContenedor();
 });
-
