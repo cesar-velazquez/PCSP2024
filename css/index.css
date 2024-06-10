@@ -1260,6 +1260,30 @@ ol {
     align-items: center;
 }
 
+/* @media screen and (max-width: 1199px) {
+    .height_content {
+        height: auto !important;
+        background-color: red !important;
+    }
+
+    #content_tabs {
+        font-size: 1.3rem !important;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #content_tabs {
+        font-size: 1.125rem !important;
+    }
+} */
+/* @media screen and (max-width: 1034px) {
+    #content_tabs {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+} */
+
 @media screen and (max-width: 991px) {
     .height_content {
         height: 815px;

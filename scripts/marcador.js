@@ -72,12 +72,6 @@ btn_Cursor.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-
 // tamaño fuente:
 let btn_FontSize = document.getElementById("font_size");
 let iconFontSize = document.getElementById("icon_FontSize");
@@ -106,11 +100,11 @@ btn_FontSize.addEventListener('click', function () {
         btn_FontSize.classList.add("HerramientaActivada");
         localStorage.setItem("marcaAzulFuente", "activado");
         localStorage.setItem("contador", cont.toString());
-        console.log("contador: " + cont)
+        // console.log("contador: " + cont)
     }
     else if (cont != 2 || cont != 3) {
         cont = 1;
-        console.log("es:" + cont)
+        // console.log("es:" + cont)
         iconFontSize.style.display = "inline-flex";
         iconFontSizeActive.style.display = "none";
         btn_FontSize.classList.remove("HerramientaActivada");
