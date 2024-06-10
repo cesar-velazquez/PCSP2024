@@ -305,6 +305,16 @@ let num47 = document.getElementById("ident47");
 let num48 = document.getElementById("ident48");
 let num49 = document.getElementById("ident49");
 let num50 = document.getElementById("ident50");
+let num51 = document.getElementById("ident51");
+let num52 = document.getElementById("ident52");
+let num53 = document.getElementById("ident53");
+let num54 = document.getElementById("ident54");
+let num55 = document.getElementById("ident55");
+let num56 = document.getElementById("ident56");
+let num57 = document.getElementById("ident57");
+let num58 = document.getElementById("ident58");
+let num59 = document.getElementById("ident59");
+let num60 = document.getElementById("ident60");
 
 // BTNS PARA CERRAR MODALES
 let num18 = document.getElementById("ident18");
@@ -379,6 +389,10 @@ if (activoNumberIndex === "activado") {
     num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num53.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num54.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
     // cerrar modales:
     num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
@@ -456,6 +470,10 @@ btn_access.addEventListener('click', function () {
         num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num53.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num54.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
         // modales btn cerrar
         num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
@@ -530,6 +548,10 @@ btn_access.addEventListener('click', function () {
         num48.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num49.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num50.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num51.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num52.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num53.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num54.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
         // btns cerra modal:
         num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
