@@ -15,6 +15,10 @@ body {
     font-weight: 400;
 }
 
+.cursorAdd {
+    cursor: url('../images/cursor/cursoracces.png'), auto;
+}
+
 a {
     color: #3333FF
 }
@@ -1317,7 +1321,9 @@ li.nav-item.waves-effect.waves-light button {
     margin-bottom: 0;
 }
 
-li.nav-item.waves-effect.waves-light button:focus { outline:none; }
+li.nav-item.waves-effect.waves-light button:focus {
+    outline: none;
+}
 
 /*
 .nav-tabs .nav-link:focus,
@@ -1473,8 +1479,15 @@ li.nav-item.waves-effect.waves-light button:focus { outline:none; }
     margin: 1rem auto;
 }
 
+.m-separador {
+    margin: 3em auto !important;
+}
 
 @media screen and (max-width: 767px) {
+    .m-separador {
+        margin: 2em auto !important;
+    }
+
     .separador {
         width: 100%;
         margin: 1rem 0;

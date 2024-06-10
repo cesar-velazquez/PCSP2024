@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var getPageNext2 = function () {
         location.href = './modulo-1.html';
     }
+    var getPageNext3 = function () {
+        location.href = '../modulo-1/actividad.html';
+    }
 
     var abrirMenuPrincipal = function () {
         var elemento = document.getElementById("menu-item");
@@ -834,7 +837,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
-        
+
         '3': getPageNext,
         'tres': getPageNext,
 
@@ -843,6 +846,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+
+        '6': getPageNext3,        
+        'Seis': getPageNext3,
 
         '11': section11,
         'Once': section11,

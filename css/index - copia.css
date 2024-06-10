@@ -1213,7 +1213,8 @@ a:hover {
 
 /*UAT*/
 .btn-information {
-    background: linear-gradient(90deg, #3C3D8B 0%, #0051a0 70%) color: #FFFFFF;
+    background: linear-gradient(90deg, #3C3D8B 0%, #0051a0 70%);
+    color: #FFFFFF;
     padding: 1em;
     width: 2em;
     height: 2em;

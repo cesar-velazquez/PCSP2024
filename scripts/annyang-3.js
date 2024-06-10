@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         location.href = './modulo-1.html';
     }
 
+    var getPageNext3 = function () {
+        location.href = '../modulo-1/actividad.html';
+    }
+
     var abrirMenuPrincipal = function () {
         var elemento = document.getElementById("menu-item");
         elemento.classList.add("active");
@@ -183,6 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+
+        '6': getPageNext3,
+        'Seis': getPageNext3,
 
         '11': section11,
         'once': section11,

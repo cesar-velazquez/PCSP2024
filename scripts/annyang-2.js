@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var getPageNext2 = function () {
         location.href = './modulo-1.html';
     }
+
+    var getPageNext3 = function () {
+        location.href = '../modulo-1/actividad.html';
+    }
+
     let activity = function () {
         location.href = './actividad.html';
     }
@@ -402,6 +407,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+
+        '6': getPageNext3,
+        'Seis': getPageNext3,
 
         '11': section11,
         'once': section11,
