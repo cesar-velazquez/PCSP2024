@@ -1243,7 +1243,7 @@ ol {
 }
 
 .tam-content {
-    min-height: 22rem;
+    min-height: 12rem;
     display: flex;
     align-items: center;
 }
@@ -1255,6 +1255,13 @@ ol {
 
 .height_content {
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.height_content_activity {
+    height: 340px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1289,9 +1296,9 @@ ol {
         height: 815px;
     }
 
-    .tam-content {
+    /* .tam-content {
         height: 750px;
-    }
+    } */
 
     .tam-tab {
         width: 33.33%;
