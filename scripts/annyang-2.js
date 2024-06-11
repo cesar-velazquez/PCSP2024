@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'diecisiete': section17,
 
         '18': section18,
-        'diecisiete': section18,
+        'dieciocho': section18,
 
         '19': download19,
         'diecinueve': download19,
@@ -496,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 const btn_access = document.getElementById('btn-access');
-let num1_h = document.getElementById("ident1_h");
+let cerrarident = document.getElementById("cerrar");
 let cerrar = document.getElementById("identcerrar");
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -537,6 +537,8 @@ let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     menuactivo = true;
+    cerrarident.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num2.style.display = "flex";
@@ -579,7 +581,8 @@ btn_access.addEventListener('click', function () {
         annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-
+        cerrarident.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "flex";
@@ -618,6 +621,8 @@ btn_access.addEventListener('click', function () {
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
         btn_access.style.transitionDuration = "1s";
+        cerrarident.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "none";

@@ -847,7 +847,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '5': getPageNext2,
         'cinco': getPageNext2,
 
-        '6': getPageNext3,        
+        '6': getPageNext3,
         'Seis': getPageNext3,
 
         '11': section11,
@@ -855,6 +855,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '12': playVideo1,
         'Doce': playVideo1,
+        'Play': playVideo1,
+        'Pausa': playVideo1,
 
 
         '13': fullScreenVideo1,
@@ -1085,8 +1087,8 @@ if (Numbers === "activado") {
     num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
     // modales:
-    cerrar.style.display = "inline-flex";
-    cerrar_help.style.display = "inline-flex";
+    cerrar.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
     num19.style.display = "inline-flex";
     num19_1.style.display = "inline-flex";
@@ -1165,8 +1167,8 @@ btn_access.addEventListener('click', function () {
         num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // modales:
-        cerrar.style.display = "inline-flex";
-        cerrar_help.style.display = "inline-flex";
+        cerrar.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
         num19.style.display = "inline-flex";
         num19_1.style.display = "inline-flex";
@@ -1239,8 +1241,8 @@ btn_access.addEventListener('click', function () {
         num42.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // btones cerrar modales:
-        cerrar.style.display = "none";
-        cerrar_help.style.display = "none";
+        cerrar.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        cerrar_help.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
         num19.style.display = "none";
         num19_1.style.display = "none";

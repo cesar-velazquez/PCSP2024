@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 const btn_access = document.getElementById('btn-access');
-let num1_h = document.getElementById("ident1_h");
+let num1_h = document.getElementById("cerrar");
 let cerrar = document.getElementById("identcerrar");
 
 
@@ -263,6 +263,8 @@ console.log(activoNumberIndex);
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     menuactivo = true;
+    num1_h.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num2.style.display = "flex";
@@ -292,7 +294,8 @@ btn_access.addEventListener('click', function () {
         menuactivo = true;
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-
+        num1_h.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "flex";
@@ -318,7 +321,8 @@ btn_access.addEventListener('click', function () {
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
 
-
+        num1_h.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         localStorage.setItem("NumberAnnyang_1", "desactivado");
