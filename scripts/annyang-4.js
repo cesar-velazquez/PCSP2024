@@ -176,15 +176,24 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             abrirfaqBasicaP();
             faqAbierto = true;
-
             CerrarFaq38();
             faqAbierto38 = false;
-
             CerrarFaq39();
             faqAbierto39 = false;
-
             CerrarFaq40();
             faqAbierto40 = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
         } else {
             // Si el FAQ está abierto, ciérralo
             cerrarfaqBasicP();
@@ -566,6 +575,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto40 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
             PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
@@ -596,13 +617,24 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq39();
             faqAbierto39 = true;
-
             CerrarFaq38();
             faqAbierto38 = false;
             CerrarFaq40();
             faqAbierto40 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
             PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
@@ -640,6 +672,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto39 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
             PositionTop100(section38);
         } else {
             let section38 = document.getElementById("sectionAct38");
@@ -743,12 +787,25 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq56();
             faqAbierto56 = true;
-            PositionTop100(sectionLineamiento);
-
             CerrarFaq57();
             faqAbierto57 = false;
             CerrarFaq58();
             faqAbierto58 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
+            PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
             CerrarFaq56();
@@ -778,12 +835,25 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq57();
             faqAbierto57 = true;
-            PositionTop100(sectionLineamiento);
-
             CerrarFaq56();
             faqAbierto56 = false;
             CerrarFaq58();
             faqAbierto58 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
+            PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
             CerrarFaq57();
@@ -819,6 +889,21 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto56 = false;
             CerrarFaq57();
             faqAbierto57 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq76();
+            faqAbierto76 = false;
+            CerrarFaq77();
+            faqAbierto77 = false;
+            CerrarFaq78();
+            faqAbierto78 = false;
+            PositionTop100(section58);
         } else {
             let section58 = document.getElementById("sectionAct58");
             CerrarFaq58();
@@ -972,13 +1057,26 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq76();
             faqAbierto76 = true;
-            PositionTop100(sectionLineamiento);
 
             CerrarFaq77();
             faqAbierto77 = false;
             CerrarFaq78();
             faqAbierto78 = false;
-
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
             CerrarFaq76();
@@ -1002,18 +1100,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let faqAbierto77 = false;
     function abrirCerrarfaq77() {
-        let sectionLineamiento = document.getElementById("sectionAct57");
+        let sectionLineamiento = document.getElementById("sectionFaq76");
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto77) {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq77();
             faqAbierto77 = true;
-            PositionTop100(sectionLineamiento);
 
             CerrarFaq76();
             faqAbierto76 = false;
             CerrarFaq78();
             faqAbierto78 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
             CerrarFaq77();
@@ -1043,12 +1155,26 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está cerrado, ábrelo
             AbrirFaq78();
             faqAbierto78 = true;
-            PositionTop100(section78);
 
             CerrarFaq76();
             faqAbierto76 = false;
             CerrarFaq77();
             faqAbierto77 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            CerrarFaq38();
+            faqAbierto38 = false;
+            CerrarFaq39();
+            faqAbierto39 = false;
+            CerrarFaq40();
+            faqAbierto40 = false;
+            CerrarFaq56();
+            faqAbierto56 = false;
+            CerrarFaq57();
+            faqAbierto57 = false;
+            CerrarFaq58();
+            faqAbierto58 = false;
+            PositionTop100(section78);
         } else {
             let section78 = document.getElementById("sectionFaq76");
             CerrarFaq78();

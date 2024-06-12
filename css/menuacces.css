@@ -404,6 +404,8 @@
 
 @media screen and (max-width: 1023px) {
 
+    /* helpA */
+    .help,
     .section_voice,
     .contenedor_notas,
     .microfono,
@@ -411,6 +413,10 @@
     .identificador2 {
         display: none !important;
     }
+
+    /* .modal-backdrop.show {
+        opacity: 0 !important;
+    } */
 
     /* #container_notes{
         display: none !important;

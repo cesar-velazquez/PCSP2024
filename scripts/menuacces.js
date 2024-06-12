@@ -96,7 +96,7 @@ let cursorActivo = !!estadoCursor;
 
 btncursor.addEventListener('click', function (e) {
     if (!cursorActivo) {
-        document.body.style.cursor = "url('./images/cursor/cursoracces.png'), auto";
+        document.body.style.cursor = "url('../images/cursor/cursoracces.png'), auto";
         cursorActivo = true;
         localStorage.setItem("cursor", document.body.style.cursor);
     } else {
