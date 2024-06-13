@@ -168,6 +168,7 @@ ul {
     border: .1rem solid transparent;
 }
 
+.contenedor-modales{ width:100%; max-width:43rem; margin:0 auto; }
 .fondo-degradado {
     margin-bottom: 3rem;
 }
@@ -177,6 +178,20 @@ ul {
     background: #fff;
     border: .1rem solid #1E4566;
 }
+
+.btn-image {
+    background: transparent;
+    border: none;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.btn-image img {
+    width: 52%;
+    margin-bottom: 1rem;
+}
+
+.btn-image .btn-modales{ width:100%; margin:0; padding:1rem 2rem; }
 
 .actividad-enc {
     background: #EDEDFC;
@@ -213,7 +228,7 @@ ul {
 }
 
 .enlace-icono:focus-visible,
-.enlace-iconoh:focus-visible {
+.enlace-iconoh:focus-visible, .btn-image:focus, .btn-image:focus-visible {
     outline: none;
 }
 
@@ -289,14 +304,6 @@ ul {
         background: url(../images/separador-seccion-actividad-r.png) no-repeat center 0 / auto 80%;
         height: 4rem;
     }
-
-    /*.separador-con {
-        width: 100%;
-        background: url(../images/PCSP24-_separador-interior-actividad-r.png) no-repeat center / 70%;
-        margin: 2rem auto;
-        height: 2rem;
-    }
-    */
 
     .caja {
         padding: 0rem;
