@@ -23,6 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var getPageNext3 = function () {
         location.href = '../pcsp-2024/modulo-1/actividad.html';
     }
+    var getPageNext4 = function () {
+        location.href = './modulo-2.html';
+    }
+    var getPageNext5 = function () {
+        location.href = '../pcsp-2024/modulo-2/modulo-2-actividad.html';
+    }
+    var getPageNext6 = function () {
+        location.href = './modulo-3.html';
+    }
+    var getPageNext7 = function () {
+        location.href = '../pcsp-2024/modulo-3/modulo-3-actividad.html';
+    }
+
 
     let activity = function () {
         location.href = './actividad.html';
@@ -412,9 +425,24 @@ document.addEventListener("DOMContentLoaded", function () {
         'número cinco': getPageNext2,
 
         '6': getPageNext3,
-        'Seis': getPageNext3,
         'seis': getPageNext3,
         'número seis': getPageNext3,
+
+        '7': getPageNext4,
+        'siete': getPageNext4,
+        'número siete': getPageNext4,
+
+        '8': getPageNext5,
+        'ocho': getPageNext5,
+        'número ocho': getPageNext5,
+
+        '9': getPageNext6,
+        'nueve': getPageNext6,
+        'número nueve': getPageNext6,
+
+        '10': getPageNext7,
+        'diez': getPageNext7,
+        'número diez': getPageNext7,
 
         '11': section11,
         'once': section11,

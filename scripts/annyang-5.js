@@ -10,15 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let refreshPage = function () {
         location.reload();
     }
+
     var getPageNext1 = function () {
         location.href = './informaciongeneral.html';
     }
+
     var getPageNext2 = function () {
         location.href = './modulo-1.html';
     }
+
     var getPageNext3 = function () {
         location.href = '../pcsp-2024/modulo-1/actividad.html';
     }
+
     var getPageNext4 = function () {
         location.href = './modulo-2.html';
     }
@@ -116,31 +120,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let section11 = function () {
-        let element = document.getElementById('section11');
+        let element = document.getElementById('section11M2');
         PositionTop100(element);
     }
 
     let section12 = function () {
-        let element = document.getElementById("section12");
+        let element = document.getElementById("sectionM212");
         PositionTop100(element);
     }
 
     let section13 = function () {
-        let element = document.getElementById("section13");
+        let element = document.getElementById("sectionM213");
         PositionTop100(element);
     }
 
     let section14 = function () {
-        let element = document.getElementById("section14");
+        let element = document.getElementById("sectionM214");
         PositionTop100(element);
     }
 
     let section15 = function () {
-        let element = document.getElementById("section15");
+        let element = document.getElementById("sectionM215");
         PositionTop100(element);
     }
 
-    function download16() {
+    let section16 = function () {
+        let element = document.getElementById("sectionM216");
+        PositionTop100(element);
+    }
+
+    let section17 = function () {
+        let element = document.getElementById("sectionM217");
+        PositionTop100(element);
+    }
+
+    let section18 = function () {
+        let element = document.getElementById("sectionM218");
+        PositionTop100(element);
+    }
+
+    let section19 = function () {
+        let element = document.getElementById("sectionM219");
+        PositionTop100(element);
+    }
+
+    let section20 = function () {
+        let element = document.getElementById("sectionM220");
+        PositionTop100(element);
+    }
+
+    function download21() {
         let btn = document.getElementById("btnLectura");
         btn.click();
     }
@@ -222,27 +251,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '11': section11,
         'once': section11,
+        'número once': section11,
 
         '12': section12,
         'doce': section12,
+        'número doce': section12,
 
         '13': section13,
         'trece': section13,
+        'número trece': section13,
 
         '14': section14,
         'catorce': section14,
+        'número catorce': section14,
 
         '15': section15,
         'quince': section15,
+        'número quince': section15,
 
-        '16': download16,
-        'dieciséis': download16,
+        '16': section16,
+        'dieciséis': section16,
+        'número dieciséis': section16,
 
-        '17': volverA,
-        'diecisiete': volverA,
+        '17': section17,
+        'diecisiete': section17,
+        'número diecisiete': section17,
+
+        '18': section18,
+        'dieciocho': section18,
+        'número dieciocho': section18,
+
+        '19': section19,
+        'diecinueve': section19,
+        'número diecinueve': section19,
+
+        '20': section20,
+        'veinte': section20,
+        'número veinte': section20,
+
+        '21': download21,
+        'veintiuno': download21,
+        'número veintiuno': download21,
+
+        '22': volverA,
+        'veintidos': volverA,
+        'número veintidos': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
+        'Recargar': refreshPage,
 
     };
 
@@ -282,6 +339,13 @@ let num14 = document.getElementById("ident14");
 let num15 = document.getElementById("ident15");
 let num16 = document.getElementById("ident16");
 let num17 = document.getElementById("ident17");
+let num18 = document.getElementById("ident18");
+let num19 = document.getElementById("ident19");
+let num20 = document.getElementById("ident20");
+let num21 = document.getElementById("ident21");
+let num22 = document.getElementById("ident22");
+let num23 = document.getElementById("ident23");
+let num24 = document.getElementById("ident24");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log(activoNumberIndex);
@@ -306,13 +370,19 @@ if (activoNumberIndex === "activado") {
     num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num23.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     annyang.setLanguage('es-MX');
     annyang.start();
 }
@@ -337,13 +407,19 @@ btn_access.addEventListener('click', function () {
         num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num23.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
@@ -371,5 +447,10 @@ btn_access.addEventListener('click', function () {
         num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num20.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     }
 });
