@@ -2,7 +2,7 @@ class Ayuda extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-        <div class="helpA modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
 
@@ -25,7 +25,7 @@ class Ayuda extends HTMLElement {
                             </p>
                         </div>
                         <p>Para utilizar esta función:
-                            Presiona el botón <img src="/images/accesibilidad/comandosdeVozMayuda3.png"
+                            Presiona el botón <img src="./images/accesibilidad/comandosdeVozMayuda3.png"
                                 alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
                         <p class="text-azul mb-0">
                             Elementos en pantalla:
@@ -67,7 +67,7 @@ class Ayuda extends HTMLElement {
                             <li>
                                 <p class="mb-0 parrafo">Para recargar la página menciona: F5</p>
                             </li>
-                        </ol>                       
+                        </ol>
 
                     </div>
 
@@ -76,8 +76,8 @@ class Ayuda extends HTMLElement {
                 <div class="modal-footer">
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
                         style="border-radius: 7px;" data-dismiss="modal">
-                        Cerrar
-                        <span id="identcerrar" class="identificador3">cerrar</span>
+                        Cerrar    
+                        <span id="btnCerrarv2" class="identificador3">cerrar</span>                    
                     </button>
                 </div>
 

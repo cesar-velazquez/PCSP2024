@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext3 = function () {
-        location.href = '../modulo-1/actividad.html';
+        location.href = '../pcsp-2024/modulo-1/actividad.html';
     }
 
     let activity = function () {
@@ -401,15 +401,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '3': getPageNext,
         'tres': getPageNext,
+        'número tres': getPageNext,
 
         '4': getPageNext1,
         'cuatro': getPageNext1,
+        'número cuatro': getPageNext1,
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+        'número cinco': getPageNext2,
 
         '6': getPageNext3,
         'Seis': getPageNext3,
+        'seis': getPageNext3,
+        'número seis': getPageNext3,
 
         '11': section11,
         'once': section11,
@@ -496,8 +501,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 const btn_access = document.getElementById('btn-access');
-let cerrarident = document.getElementById("cerrar");
-let cerrar = document.getElementById("identcerrar");
+let cerrar_help = document.getElementById("cerrar");
+let cerrarAyudaM = document.getElementById("btnCerrarv2");
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
 let num2 = document.getElementById("ident2");
@@ -537,8 +542,8 @@ let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     menuactivo = true;
-    cerrarident.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num2.style.display = "flex";
@@ -581,8 +586,8 @@ btn_access.addEventListener('click', function () {
         annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-        cerrarident.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrar.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "flex";
@@ -621,8 +626,8 @@ btn_access.addEventListener('click', function () {
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
         btn_access.style.transitionDuration = "1s";
-        cerrarident.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrar.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num2.style.display = "none";
