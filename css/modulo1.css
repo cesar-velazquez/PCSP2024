@@ -168,7 +168,7 @@ ul {
     border: .1rem solid transparent;
 }
 
-.contenedor-modales{ width:100%; max-width:43rem; margin:0 auto; }
+.contenedor-modales{ width:100%; max-width:43rem; margin:0 auto 3rem; }
 .fondo-degradado {
     margin-bottom: 3rem;
 }
@@ -439,3 +439,24 @@ ul {
     right: 2rem;
     bottom: 1rem;
 }
+
+/*Modulo 2*/
+
+.contenedor-grafico {
+    background: url(../images/modulo2/PCSP24-M2.png) no-repeat center center / auto 12rem;
+    width: 100%;
+    max-width: 43rem;
+    margin: 0 auto;
+    position: relative;
+    height: 19rem;
+}
+.btn-modales-gr{ position:absolute; width:26%; margin:0; }
+.imagen-gr{ position:absolute; width:7rem; }
+#img-gr-1{ top: 34%; left: 0}
+#img-gr-2{ top: 0; right: 28%}
+#img-gr-3{ top: 62%; right: 28%}
+
+#btn-gr-1{top: 40%; left: 19%;}
+#btn-gr-2{top: 8%; right: 0;}
+#btn-gr-3{top: 70%; right: 0;}
+
