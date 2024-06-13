@@ -1243,7 +1243,7 @@ ol {
 }
 
 .tam-content {
-    min-height: 22rem;
+    min-height: 12rem;
     display: flex;
     align-items: center;
 }
@@ -1260,14 +1260,45 @@ ol {
     align-items: center;
 }
 
+.height_content_activity {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @media screen and (max-width: 1199px) {
+    .height_content {
+        height: auto !important;
+        background-color: red !important;
+    }
+
+    #content_tabs {
+        font-size: 1.3rem !important;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #content_tabs {
+        font-size: 1.125rem !important;
+    }
+} */
+/* @media screen and (max-width: 1034px) {
+    #content_tabs {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+} */
+
 @media screen and (max-width: 991px) {
     .height_content {
         height: 815px;
     }
 
-    .tam-content {
+    /* .tam-content {
         height: 750px;
-    }
+    } */
 
     .tam-tab {
         width: 33.33%;
@@ -1736,7 +1767,7 @@ body.modal-open {
     background-color: #EDEDFC;
     padding: 2rem;
     margin-top: 2rem;
-    min-height: 280px;
+    height: auto;
 }
 
 .section_antologias {
@@ -1778,6 +1809,7 @@ body.modal-open {
     .container_antologias {
         padding: 1rem;
         margin: 1rem auto;
+        height: auto !important;
     }
 
     .section_antologias {

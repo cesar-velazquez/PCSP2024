@@ -50,12 +50,14 @@
     position: absolute;
     font-weight: bold;
     z-index: 1;
-    background: #f8c5fd;
+    background-color: white;
+    color: #18529D;
     width: 49px;
-    height: 20px;
+    height: 25px;
     display: none;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    border: 2px solid #18529D;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     top: 0;
     right: 1rem;
@@ -376,8 +378,10 @@
     background-repeat: no-repeat;
     background-position: 2rem center;
     /*background: url(../images/accesibilidad/lecturaf-a.png) no-repeat 2rem center #fff;*/
-    border: .2rem solid #000;;
+    border: .2rem solid #000;
+    ;
 }
+
 /* cuando el boton de comandos de voz se encuentre activo: */
 .HerramientaActivada {
     background-color: #18529D;
@@ -400,6 +404,8 @@
 
 @media screen and (max-width: 1023px) {
 
+    /* helpA */
+    .help,
     .section_voice,
     .contenedor_notas,
     .microfono,
@@ -407,6 +413,10 @@
     .identificador2 {
         display: none !important;
     }
+
+    /* .modal-backdrop.show {
+        opacity: 0 !important;
+    } */
 
     /* #container_notes{
         display: none !important;

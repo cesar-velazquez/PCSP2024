@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         location.href = './modulo-1.html';
     }
     var getPageNext3 = function () {
-        location.href = '../modulo-1/actividad.html';
+        location.href = '../pcsp-2024/modulo-1/actividad.html';
     }
 
     var abrirMenuPrincipal = function () {
@@ -762,10 +762,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let videoOn = false;
     let VideoPlay = document.getElementById("video1");
+    let positionVid1 = document.getElementById("section11");
     let playVideo = function () {
         videoOn = true;
         VideoPlay.play();
-        // VideoPlay.requestFullscreen();
+        PositionTop100(positionVid1);
         num12.style.backgroundColor = "#f8c5fd3d";
     }
 
@@ -774,6 +775,7 @@ document.addEventListener("DOMContentLoaded", function () {
         videoOn = false;
         if (videoOn == false) {
             VideoPlay.pause();
+            PositionTop100(positionVid1);
         }
     }
 
@@ -788,23 +790,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let fullScreen = false
     let fullScreenVideo = function () {
+        VideoPlay.click();
         VideoPlay.requestFullscreen();
         fullScreen = true;
     }
 
     let fullScreenVideoExit = function () {
-        document.exitFullscreen();
-        fullScreen = false;
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+            fullScreen = false;
+        }
     }
 
-    let fullScreenVideo1 = function () {
-        if (fullScreen == false) {
-            fullScreen = true;
+    let fullScreenVideoToggle = function () {
+        if (!fullScreen) {
             fullScreenVideo();
         } else {
             fullScreenVideoExit();
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let num13Screen = document.getElementById("ident13");
+        num13Screen.click();
+    });
 
     let btn19 = document.getElementById("ident42");
     let downloadbtnLectura = function () {
@@ -840,25 +849,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '3': getPageNext,
         'tres': getPageNext,
+        'número tres': getPageNext,
 
         '4': getPageNext1,
         'cuatro': getPageNext1,
+        'número cuatro': getPageNext1,
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+        'número cinco': getPageNext2,
 
-        '6': getPageNext3,        
+        '6': getPageNext3,
         'Seis': getPageNext3,
+        'seis': getPageNext3,
+        'número seis': getPageNext3,
 
         '11': section11,
         'Once': section11,
 
         '12': playVideo1,
         'Doce': playVideo1,
+        'Play': playVideo1,
+        'Pausa': playVideo1,
 
 
-        '13': fullScreenVideo1,
-        'Trece': fullScreenVideo1,
+        '13': fullScreenVideoToggle,
+        'Trece': fullScreenVideoToggle,
 
         '14': abrirCerrarfaq,
         'catorce': abrirCerrarfaq,
@@ -1030,15 +1046,12 @@ let num41 = document.getElementById("ident41");
 let num41_1 = document.getElementById("ident41_1");
 
 let cerrar_help = document.getElementById("cerrar");
-let cerrar_1 = document.getElementById("identcerrar");
-
-
 
 // botones cerrar modal 0
 let num11_1 = document.getElementById("ident1_1");
 // botones cerrar modal 10
-let num1_h = document.getElementById("ident1_h");
-let cerrar = document.getElementById("identcerrar");
+// let num1_h = document.getElementById("ident1_h");
+let cerrarAyudaM = document.getElementById("btnCerrarv2");
 // botones cerrar modal 12
 let num13_1 = document.getElementById("ident1_2");
 // let num14 = document.getElementById("ident14");
@@ -1085,8 +1098,8 @@ if (Numbers === "activado") {
     num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
     // modales:
-    cerrar.style.display = "inline-flex";
-    cerrar_help.style.display = "inline-flex";
+    cerrarAyudaM.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
     num19.style.display = "inline-flex";
     num19_1.style.display = "inline-flex";
@@ -1165,8 +1178,8 @@ btn_access.addEventListener('click', function () {
         num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // modales:
-        cerrar.style.display = "inline-flex";
-        cerrar_help.style.display = "inline-flex";
+        // cerrarAyudaM.tyle.display = "inline-flex";
+        cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
         num19.style.display = "inline-flex";
         num19_1.style.display = "inline-flex";
@@ -1204,7 +1217,6 @@ btn_access.addEventListener('click', function () {
         console.log("Fin Reconocimiento de voz");
         num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
         num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
         num2.style.display = "none";
         num3.style.display = "none";
         num4.style.display = "none";
@@ -1216,7 +1228,6 @@ btn_access.addEventListener('click', function () {
         num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
         num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
@@ -1239,8 +1250,8 @@ btn_access.addEventListener('click', function () {
         num42.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
         // btones cerrar modales:
-        cerrar.style.display = "none";
-        cerrar_help.style.display = "none";
+        cerrarAyudaM.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        cerrar_help.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
 
         num19.style.display = "none";
         num19_1.style.display = "none";
@@ -1271,5 +1282,6 @@ btn_access.addEventListener('click', function () {
 
         num41.style.display = "none";
         num41_1.style.display = "none";
+        localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });

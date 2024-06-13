@@ -72,19 +72,13 @@ btn_Cursor.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-
 // tamaño fuente:
 let btn_FontSize = document.getElementById("font_size");
 let iconFontSize = document.getElementById("icon_FontSize");
 let iconFontSizeActive = document.getElementById("icon_FontSize_Active");
-let cuadroM1 = document.getElementById("cuadroModul1");
-let cuadroM2 = document.getElementById("cuadroModul2");
-let cuadroM3 = document.getElementById("cuadroModul3");
+// let cuadroM1 = document.getElementById("cuadroModul1");
+// let cuadroM2 = document.getElementById("cuadroModul2");
+// let cuadroM3 = document.getElementById("cuadroModul3");
 
 let marcaAzulFuente = localStorage.getItem("marcaAzulFuente");
 let contador = parseFloat(localStorage.getItem("contador")) || 1;
@@ -106,30 +100,30 @@ btn_FontSize.addEventListener('click', function () {
         btn_FontSize.classList.add("HerramientaActivada");
         localStorage.setItem("marcaAzulFuente", "activado");
         localStorage.setItem("contador", cont.toString());
-        console.log("contador: " + cont)
+        // console.log("contador: " + cont)
     }
     else if (cont != 2 || cont != 3) {
         cont = 1;
-        console.log("es:" + cont)
+        // console.log("es:" + cont)
         iconFontSize.style.display = "inline-flex";
         iconFontSizeActive.style.display = "none";
         btn_FontSize.classList.remove("HerramientaActivada");
         localStorage.setItem("marcaAzulFuente", "desactivado");
         localStorage.setItem("contador", cont.toString());
     }
-    if (cont == 2) {
-        cuadroM1.style.height = "262px";
-        cuadroM2.style.height = "262px";
-        cuadroM3.style.height = "262px";
-    } else if (cont == 3) {
-        cuadroM1.style.height = "292px";
-        cuadroM2.style.height = "292px";
-        cuadroM3.style.height = "292px";
-    } else {
-        cuadroM1.style.height = "auto";
-        cuadroM2.style.height = "auto";
-        cuadroM3.style.height = "auto";
-    }
+    // if (cont == 2) {
+    //     cuadroM1.style.height = "262px";
+    //     cuadroM2.style.height = "262px";
+    //     cuadroM3.style.height = "262px";
+    // } else if (cont == 3) {
+    //     cuadroM1.style.height = "292px";
+    //     cuadroM2.style.height = "292px";
+    //     cuadroM3.style.height = "292px";
+    // } else {
+    //     cuadroM1.style.height = "auto";
+    //     cuadroM2.style.height = "auto";
+    //     cuadroM3.style.height = "auto";
+    // }
 });
 
 

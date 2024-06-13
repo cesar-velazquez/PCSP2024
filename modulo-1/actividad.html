@@ -62,6 +62,8 @@
         <span id="ident0" class="identificador2">0</span>
     </div>
 
+    <div id="modal-backdrop"></div>
+    <!-- <modal-ayuda></modal-ayuda> -->
     <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -71,7 +73,7 @@
                     <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span id="closed" aria-hidden="true">×</span>
-                        <span id="cerrar" class="identificador3 btn_fuente">cerrar</span>
+                        <span id="cerrar" class="identificador3">cerrar</span>
                     </button>
                 </div>
 
@@ -81,38 +83,54 @@
 
                         <div class="text-center">
                             <p class="parrafo text-azul">
-                                Ayuda
+                                Comandos de voz
                             </p>
                         </div>
-                        <ul class="padding_left">
+                        <p>Para utilizar esta función:
+                            Presiona el botón <img src="../images/accesibilidad/comandosdeVozMayuda3.png"
+                                alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
+                        <p class="text-azul mb-0">
+                            Elementos en pantalla:
+                        </p>
+                        <ol class="padding_left" style="list-style: lower-latin;">
                             <li>
-                                <p class="parrafo mb-0">Lector inmersivo: abre una modal de ayuda.</p>
+                                En la parte inferior de la página, ubica el micrófono y la barra de voz.
                             </li>
                             <li>
-                                <p class="parrafo mb-0">Comandos de voz: abre una modal de ayuda.</p>
+                                El micrófono en verde indica que está recibiendo información.
                             </li>
                             <li>
-                                <p class="parrafo mb-0">Lectura fácil: desplaza hasta el botón para descarga del archivo
-                                    de
-                                    lectura fácil.</p>
+                                La barra de voz escribirá la función que estás activando.
                             </li>
+                        </ol>
+                        <p class="text-azul mb-0">
+                            Para navegar:
+                        </p>
+                        <ol class="padding_left" style="list-style: lower-latin;">
                             <li>
-                                <p class="parrafo mb-0">Línea de lectura: activa y desactiva la línea de lectura.</p>
-                            </li>
-                            <li>
-                                <p class="parrafo mb-0">Tamaño del cursor: aumenta/disminuye tamaño del puntero.</p>
-                            </li>
-                            <li>
-                                <p class="parrafo mb-0">Tamaño fuente: aumenta/disminuye el tamaño de la tipografía.
+                                <p class="parrafo mb-0">
+                                    Menciona de manera clara el número de la sección a la cual te deseas dirigir.
+                                </p>
+                                <p class="mb-0">
+                                    Ejemplo:
+                                </p>
+                                <p class="parrafo mb-0">
+                                    Uno (abrirá el menú).
+                                </p>
+                                <p class="parrafo mb-0">
+                                    Dos (cerrará el menú).
                                 </p>
                             </li>
+
                             <li>
-                                <p class="parrafo mb-0">Resaltar enlaces: marca todos los hipervínculos.</p>
+                                <p class="mb-0 parrafo">Para abrir nuevamente esta ventana menciona: cero.</p>
+                                <p class="mb-0 parrafo"> Para cerrarla menciona: cerrar.</p>
                             </li>
-                        </ul>
-                        <p class="parrafo mb-0">
-                            Para recargar la página solo di 'F5'.
-                        </p>
+                            <li>
+                                <p class="mb-0 parrafo">Para recargar la página menciona: F5</p>
+                            </li>
+                        </ol>
+
                     </div>
 
                 </div>
@@ -121,14 +139,13 @@
                     <button type="button" class="btn btn-cerrar-modal waves-effect waves-light"
                         style="border-radius: 7px;" data-dismiss="modal">
                         Cerrar
-                        <span id="identcerrar" class="identificador3 btn_fuente">cerrar</span>
+                        <span id="btnCerrarv2" class="identificador3">cerrar</span>
                     </button>
                 </div>
 
             </div>
         </div>
     </div>
-
     <!-- fin modal ayuda -->
 
     <!-- menuaccesShow -->
@@ -289,13 +306,13 @@
                         <h2 class="text-azul subtitulo">Actividad 01. Identifica las nociones de problema-solución <span
                                 id="ident11" class="identificador2">11</span></h2>
 
-                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón de video para iniciar la
+                        <p id="vid2" class="instruccion"><b>Instrucción:</b> Presiona el botón de video para iniciar la
                             reproducción.</p>
 
                         <div class="mb-2rem">
                             <div class="vid3 embed-responsive embed-responsive-16by9">
-                                <p id="ident12" class="play_video identificador2 ">12</p>
-                                <p id="ident13" class="fullScreen identificador2 ">13</p>
+                                <span id="ident12" class="play_video identificador2 ">12</span>
+                                <span id="ident13" class="fullScreen identificador2 ">13</span>
                                 <video id="video2" src="../videos/unit1/modulo-1.mp4" type="video/mp4"
                                     poster="../images/video/video1.png" controls></video>
                             </div>
@@ -365,7 +382,7 @@
                 <div>
                     <div class="container">
 
-                        <div class="caja">
+                        <div id="section15Act1" class="caja">
 
                             <p class="mb-0">
                                 <span id="ident15" class="identificador2 ">15</span>
@@ -384,7 +401,7 @@
                                 aria-hidden="true" />
                         </div>
 
-                        <div class="contenedor-botones escritorio">
+                        <div id="section16Act1" class="contenedor-botones escritorio">
 
                             <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
                                 <span id="ident16" class="identificador2 ">16</span>
@@ -500,7 +517,7 @@
 
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section29Act1" class="caja">
 
                         <h3 class="text-azul subtitulo">Descripción de la actividad
                             <span id="ident29" class="identificador2 ">29</span>
@@ -514,7 +531,7 @@
                         <p>Para desarrollar la actividad atiende los siguientes pasos:
                         </p>
 
-                        <div class="actividad-enc">
+                        <div id="section30Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 1</p>
                             </div>
@@ -525,29 +542,29 @@
 
                         <ol class="ml-4">
                             <li>
-                                <a class="enlace-icono"
+                                <a id="download31" class="enlace-icono"
                                     href="../descargas/modulo1/Estrategia-didactico-formativa-para-la-autoobservacion-y-desarrollo-de-COMSOLP.pdf"
                                     download>
                                     Estrategia didáctico-formativa para la autoobservación y desarrollo de Competencias
                                     en Solución de Problemas (COMSOLP)
-                                    <span id="ident31" class="identificador2 ">31</span>
                                     <i aria-hidden="true">.</i>
+                                    <span id="ident31" class="identificador2 ">31</span>
                                     <span class="sr-only">Archivo PDF</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="enlace-iconoh"
+                                <a id="click32" class="enlace-iconoh"
                                     href="../descargas/modulo1/EL-PENSAMIENTO-CRITICO-PARA-LA-SOLUCION-A-UN-PROBLEMA.pdf"
                                     target="_blank">
                                     El pensamiento crítico para la solución a un problema
-                                    <span id="ident32" class="identificador2 ">32</span>
                                     <i aria-hidden="true">.</i>
+                                    <span id="ident32" class="identificador2 ">32</span>
                                     <span class="sr-only">Se abre en nueva pestaña</span>
                                 </a>
                             </li>
                         </ol>
 
-                        <div class="actividad-enc">
+                        <div id="section33Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 2</p>
                             </div>
@@ -558,11 +575,11 @@
 
                         <ol class="ml-4 mb-0">
                             <li>Descarga el formato: <br aria-hidden="true">
-                                <a class="enlace-icono" href="../descargas/modulo1/Act01-Plantilla-COMSOLP.docx"
-                                    download>
+                                <a id="download34" class="enlace-icono"
+                                    href="../descargas/modulo1/Act01-Plantilla-COMSOLP.docx" download>
                                     Plantilla COMSOLP
-                                    <span id="ident34" class="identificador2 ">34</span>
                                     <i aria-hidden="true">.</i>
+                                    <span id="ident34" class="identificador2 ">34</span>
                                     <span class="sr-only">Documento de word</span>
                                 </a>
                             </li>
@@ -577,13 +594,14 @@
 
                     </div>
 
-                    <div class="fondo-degradado">
+                    <div id="sectionAct35" class="fondo-degradado">
                         <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
                             <span id="ident35" class="identificador2">35</span>
                         </p>
 
                         <div class="text-center">
-                            <a class="btn-modales btn" href="../descargas/modulo1/PCSP24-Rubrica-ACT01.docx" download>
+                            <a id="download36" class="btn-modales btn"
+                                href="../descargas/modulo1/PCSP24-Rubrica-ACT01.docx" download>
                                 Rúbrica de evaluación
                                 <span id="ident36" class="identificador2 ">36</span>
                                 <span class="sr-only">Documento de word</span>
@@ -599,7 +617,7 @@
 
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="sectionAct37" class="caja">
 
                         <h3 class="text-azul subtitulo">Información para entrega
                             <span id="ident37" class="identificador2 ">37</span>
@@ -607,10 +625,11 @@
 
                         <div class="escritorio">
 
-                            <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
+                            <p id="sectionAct38" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
                             </p>
 
-                            <details class="collapsables-gi">
+                            <details id="faq38" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Lineamientos de entrega
                                     <span id="ident38" class="identificador2 ">38</span>
@@ -629,7 +648,7 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq39" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Criterios de evaluación
                                     <span id="ident39" class="identificador2 ">39</span>
@@ -647,7 +666,7 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq40" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Fuentes de información
                                     <span id="ident40" class="identificador2 ">40</span>
@@ -737,7 +756,7 @@
                 <hr class="inicio-act" aria-hidden="true">
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section41Act1" class="caja">
 
                         <h2 class="text-azul subtitulo">Actividad 02. Analiza los conceptos clave y tipos de pregunta.
                             Foro 1
@@ -753,7 +772,7 @@
                             <p class="text-rigth">Fuente: Geralt (2014).</p>
                         </div>
 
-                        <p>
+                        <p id="section42Act1">
                             <span id="ident42" class="identificador2 ">42</span>
                             La base de todo aprendizaje es la pregunta, pues ésta se encuentra detrás de toda
                             información; formular preguntas nos permite procesar información (describirla, catalogarla,
@@ -776,7 +795,7 @@
 
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section43Act1" class="caja">
 
                         <h3 class="text-azul subtitulo">Descripción de la actividad
                             <span id="ident43" class="identificador2 ">43</span>
@@ -787,7 +806,7 @@
 
                         <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
 
-                        <div class="actividad-enc">
+                        <div id="section44Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 1</p>
                             </div>
@@ -800,17 +819,17 @@
                             <li>Descarga los documentos:</li>
                             <ul class="ml-4">
                                 <li>
-                                    <a class="enlace-icono" href="../descargas/modulo1/Glosario1-Programa2017.pdf"
-                                        download>
+                                    <a id="download45Act1" class="enlace-icono"
+                                        href="../descargas/modulo1/Glosario1-Programa2017.pdf" download>
                                         Glosario 1. Programa 2017
-                                        <span id="ident45" class="identificador2 ">45</span>
                                         <i aria-hidden="true">.</i>
+                                        <span id="ident45" class="identificador2 ">45</span>
                                         <span class="sr-only">Archivo PDF</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="enlace-icono" href="../descargas/modulo1/HPCyC-Toma-de-decisiones.pdf"
-                                        download>
+                                    <a id="download46Act1" class="enlace-icono"
+                                        href="../descargas/modulo1/HPCyC-Toma-de-decisiones.pdf" download>
                                         Habilidades de Pensamiento Crítico y Creativo. Toma de decisiones. Lecturas y
                                         ejercicios para el nivel universitario.
                                         <span id="ident46" class="identificador2 ">46</span>
@@ -828,7 +847,7 @@
 
                         </ol>
 
-                        <div class="actividad-enc">
+                        <div id="section47Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 2</p>
                             </div>
@@ -842,31 +861,33 @@
                                 mental, red semántica, entre otros). Te sugerimos algunas herramientas:</li>
                             <ul class="ml-4">
                                 <li>
-                                    <a class="enlace-iconoh" href="https://app.diagrams.net/" target="_blank">
+                                    <a id="click48" class="enlace-iconoh" href="https://app.diagrams.net/"
+                                        target="_blank">
                                         Diagrams
+                                        <i aria-hidden="true">.</i>
                                         <span id="ident48" class="identificador2 ">48</span>
-                                        <i aria-hidden="true">.</i>
                                         <span class="sr-only">Se abre en nueva pestaña</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="enlace-iconoh" href="https://coggle.it/?lang=es" target="_blank">
+                                    <a id="click49" class="enlace-iconoh" href="https://coggle.it/?lang=es"
+                                        target="_blank">
                                         Coogle
+                                        <i aria-hidden="true">.</i>
                                         <span id="ident49" class="identificador2 ">49</span>
-                                        <i aria-hidden="true">.</i>
                                         <span class="sr-only">Se abre en nueva pestaña</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="enlace-iconoh" href="https://www.canva.com/" target="_blank">
+                                    <a id="click50" class="enlace-iconoh" href="https://www.canva.com/" target="_blank">
                                         Canva
-                                        <span id="ident50" class="identificador2 ">50</span>
                                         <i aria-hidden="true">.</i>
+                                        <span id="ident50" class="identificador2 ">50</span>
                                         <span class="sr-only">Se abre en nueva pestaña</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="enlace-iconoh" href="https://infogram.com/" target="_blank">
+                                    <a id="click51" class="enlace-iconoh" href="https://infogram.com/" target="_blank">
                                         Infogram<i aria-hidden="true">.</i>
                                         <span id="ident51" class="identificador2 ">51</span>
                                         <span class="sr-only">Se abre en nueva pestaña</span>
@@ -880,7 +901,7 @@
                             <li>Guarda tu archivo.</li>
                         </ol>
 
-                        <div class="actividad-enc">
+                        <div id="section52Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 3</p>
                             </div>
@@ -904,15 +925,16 @@
 
                     </div>
 
-                    <div class="fondo-degradado">
+                    <div id="section53Act1" class="fondo-degradado">
                         <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
-                            <span id="ident52" class="identificador2 ">52</span>
+                            <span id="ident53" class="identificador2 ">53</span>
                         </p>
 
                         <div class="text-center">
-                            <a class="btn-modales btn" href="../descargas/modulo1/PCSP24-Rubrica-ACT02.docx" download>
+                            <a id="download54" class="btn-modales btn"
+                                href="../descargas/modulo1/PCSP24-Rubrica-ACT02.docx" download>
                                 Rúbrica de evaluación
-                                <span id="ident53" class="identificador2 ">53</span>
+                                <span id="ident54" class="identificador2 ">54</span>
                                 <span class="sr-only">Documento de word</span>
                             </a>
                         </div>
@@ -927,20 +949,22 @@
 
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section55Act1" class="caja">
 
-                        <h3 class="text-azul subtitulo">Información para entrega</h3>
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident55" class="identificador2 ">55</span>
+                        </h3>
 
                         <div class="escritorio">
 
-                            <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
-                                <span id="ident54" class="identificador2 ">54</span>
+                            <p id="sectionFaqs55" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
                             </p>
 
-                            <details class="collapsables-gi">
+                            <details id="faq56" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Lineamientos de entrega
-                                    <span id="ident55" class="identificador2 ">55</span>
+                                    <span id="ident56" class="identificador2 ">56</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
                                     <ul class="ml-4 mb-0">
@@ -957,10 +981,10 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq57" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Criterios de evaluación
-                                    <span id="ident56" class="identificador2 ">56</span>
+                                    <span id="ident57" class="identificador2 ">57</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
 
@@ -982,10 +1006,10 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq58" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Fuentes de información
-                                    <span id="ident57" class="identificador2 ">57</span>
+                                    <span id="ident58" class="identificador2 ">58</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
                                     <div class="referencias">
@@ -1093,17 +1117,18 @@
                 <hr class="inicio-act" aria-hidden="true">
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section59Act1" class="caja">
 
                         <h2 class="text-azul subtitulo">Actividad 03. Elabora la bitácora COL tercer nivel con
-                            Metacognición. Foro 2</h2>
+                            Metacognición. Foro 2 <span id="ident59" class="identificador2 ">59</span></h2>
 
                         <p class="mb-0">En las dos actividades anteriores te pudiste dar cuenta que al hablar de la
                             solución de problemas y toma de decisiones es necesario hacer una pausa y razonar lo que has
                             aprendido, es decir, realizar una metacognición; es necesario analizar tus conocimientos,
                             habilidades y actitudes adquiridas hasta este momento.</p>
 
-                        <div class="text-center escritorio">
+                        <div id="section60" class="text-center escritorio">
+                            <span id="ident60" class="identificador2 ">60</span>
                             <img class="imagen-ac3" src="../images/modulo1/PCSP24-M1_act03.png" alt="imagen de apoyo"
                                 aria-hidden="true" />
                         </div>
@@ -1122,31 +1147,38 @@
                         <div class="escritorio">
 
                             <p class="instruccion"> <b>Instrucción:</b> Presiona cada botón para conocer la información.
+                                <span id="ident61" class="identificador2 ">61</span>
                             </p>
 
                             <ul class="nav nav-tabs centerPestaña">
 
                                 <li class="link nav-item tam-tres">
-                                    <button data-toggle="tab" href="#ppaso-1" class="nav-link active">
-                                        <span>Conocimiento</span>
+                                    <button id="firstTab" data-toggle="tab" href="#ppaso-1" class="nav-link active">
+                                        <span>Conocimiento
+                                            <span id="ident62" class="identificador2 ">62</span>
+                                        </span>
                                     </button>
                                 </li>
 
                                 <li class="tamano-li link nav-item tam-tres">
-                                    <button data-toggle="tab" href="#ppaso-2" class="nav-link">
-                                        <span>Modelo COL</span>
+                                    <button id="secondtab" data-toggle="tab" href="#ppaso-2" class="nav-link">
+                                        <span>Modelo COL
+                                            <span id="ident63" class="identificador2 ">63</span>
+                                        </span>
                                     </button>
                                 </li>
 
                                 <li class="tamano-li link nav-item tam-tres">
-                                    <button data-toggle="tab" href="#ppaso-3" class="nav-link">
-                                        <span>Bitácora COL</span>
+                                    <button id="thirdtab" data-toggle="tab" href="#ppaso-3" class="nav-link">
+                                        <span>Bitácora COL
+                                            <span id="ident64" class="identificador2 ">64</span>
+                                        </span>
                                     </button>
                                 </li>
 
                             </ul>
 
-                            <div class="tab-content bg-tab-content">
+                            <div id="tam_content" class="tab-content bg-tab-content height_content_activity">
 
                                 <div id="ppaso-1" class="tab-pane container active">
 
@@ -1271,7 +1303,9 @@
 
                     <div class="caja">
 
-                        <h3 class="text-azul subtitulo">Descripción de la actividad</h3>
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident65" class="identificador2 ">65</span>
+                        </h3>
 
                         <p>En esta actividad elaborarás la bitácora COL (Comprensión Ordenada del Lenguaje) de tercer
                             nivel, que consiste en un apunte que recoge, a manera de diario de campo, información
@@ -1279,52 +1313,61 @@
 
                         <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
 
-                        <div class="actividad-enc">
+                        <div id="section66Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 1</p>
                             </div>
-                            <p class="mb-0">Lee y analiza los materiales</p>
+                            <p class="mb-0">Lee y analiza los materiales
+                                <span id="ident66" class="identificador2 ">66</span>
+                            </p>
                         </div>
 
                         <ol class="ml-4">
                             <li>Descarga los documentos:</li>
                             <ul class="ml-4">
                                 <li>
-                                    <a class="enlace-icono" href="../descargas/modulo1/Modelo-COL-y-bitacora-COL.pdf"
-                                        download>
+                                    <a id="download67" class="enlace-icono"
+                                        href="../descargas/modulo1/Modelo-COL-y-bitacora-COL.pdf" download>
                                         Modelo COL y bitácora COL
+                                        <span id="ident67" class="identificador2 ">67</span>
                                         <span class="sr-only">Archivo PDF</span>
                                     </a>
                                     (disponible en Campirán, capítulo dos: Estratégias didácticas).
                                 </li>
                                 <li>
-                                    <a class="enlace-icono" href="../descargas/modulo1/Act03-LasEmociones.pdf" download>
+                                    <a id="download68" class="enlace-icono"
+                                        href="../descargas/modulo1/Act03-LasEmociones.pdf" download>
                                         Las emociones<i aria-hidden="true">.</i>
+                                        <span id="ident68" class="identificador2 ">68</span>
                                         <span class="sr-only">Archivo PDF</span>
                                     </a>
                             </ul>
 
                         </ol>
 
-                        <div class="actividad-enc">
+                        <div id="section69Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 2</p>
                             </div>
-                            <p class="mb-0">Elabora tu bitácora COL</p>
+                            <p class="mb-0">Elabora tu bitácora COL
+                                <span id="ident69" class="identificador2 ">69</span>
+                            </p>
                         </div>
 
                         <ol class="ml-4">
                             <li>Consulta el archivo para llenado
-                                <a class="enlace-icono"
+                                <a id="download70" class="enlace-icono"
                                     href="../descargas/modulo1/consideraciones-para-Elaborar-Bitacora-COL.pdf" download>
                                     Consideraciones para elaborar la bitácora COL 1<i aria-hidden="true">.</i>
+                                    <span id="ident70" class="identificador2 ">70</span>
                                     <span class="sr-only">Archivo PDF</span>
                                 </a>
                             </li>
                             <li>Elabora tu
-                                <a class="enlace-icono"
+                                <a id="download71" class="enlace-icono"
                                     href="../descargas/modulo1/Formato-de-bitacora-COL-de-tercer-nivel.docx" download>
                                     bitácora COL<i aria-hidden="true">.</i>
+                                    <span id="ident71" class="identificador2 ">71</span>
                                     <span class="sr-only">Documento de word</span>
                                 </a>
                             </li>
@@ -1334,11 +1377,13 @@
 
                         </ol>
 
-                        <div class="actividad-enc">
+                        <div id="section72Act1" class="actividad-enc">
                             <div>
                                 <p class="mb-0">Paso 3</p>
                             </div>
-                            <p class="mb-0">Participa en el foro 2: Metacogniciones de bitácora COL 1 en Eminus</p>
+                            <p class="mb-0">Participa en el foro 2: Metacogniciones de bitácora COL 1 en Eminus
+                                <span id="ident72" class="identificador2 ">72</span>
+                            </p>
                         </div>
 
                         <ol class="ml-4 mb-0">
@@ -1349,12 +1394,16 @@
 
                     </div>
 
-                    <div class="fondo-degradado">
-                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.</p>
+                    <div id="section73Act1" class="fondo-degradado">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                            <span id="ident73" class="identificador2 ">73</span>
+                        </p>
 
                         <div class="text-center">
-                            <a class="btn-modales btn" href="../descargas/modulo1/PCSP24-Rubrica-ACT03.docx" download>
+                            <a id="download74" class="btn-modales btn"
+                                href="../descargas/modulo1/PCSP24-Rubrica-ACT03.docx" download>
                                 Rúbrica de evaluación
+                                <span id="ident74" class="identificador2 ">74</span>
                                 <span class="sr-only">Documento de word</span>
                             </a>
                         </div>
@@ -1369,17 +1418,21 @@
 
                 <div class="container">
 
-                    <div class="caja">
+                    <div id="section75Act1" class="caja">
 
-                        <h3 class="text-azul subtitulo">Información para entrega</h3>
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident75" class="identificador2 ">75</span>
+                        </h3>
 
                         <div class="escritorio">
-                            <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
+                            <p id="sectionFaq76" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
                             </p>
 
-                            <details class="collapsables-gi">
+                            <details id="faq76" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Lineamientos de entrega
+                                    <span id="ident76" class="identificador2 ">76</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
                                     <ul class="ml-4 mb-0">
@@ -1396,9 +1449,10 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq77" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Criterios de evaluación
+                                    <span id="ident77" class="identificador2 ">77</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
 
@@ -1422,9 +1476,10 @@
                                 </div>
                             </details>
 
-                            <details class="collapsables-gi">
+                            <details id="faq78" class="collapsables-gi">
                                 <summary class="btn waves-effect waves-light">
                                     Fuentes de información
+                                    <span id="ident78" class="identificador2 ">78</span>
                                 </summary>
                                 <div class="collapsables-gi__content">
                                     <div class="referencias">
@@ -1559,14 +1614,19 @@
         <div>
             <div class="container">
 
-                <div class="fondo-degradado espacio-fin">
-                    <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.</p>
+                <div id="section79Act1" class="fondo-degradado espacio-fin">
+                    <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                        <span id="ident79" class="identificador2 ">79</span>
+                    </p>
 
                     <div id="sectionLect" class="text-center">
 
-                        <a id="btnLectura" class="btn_lecturaF btn" href="" target="_blank" download="">
+                        <a id="btnLectura" class="btn_lecturaF btn"
+                            href="../descargas/modulo1/Lectura-facil-Contenido-Modulo-1.docx" target="_blank"
+                            download="">
                             Lectura fácil
-                            <span class="sr-only">Archivo PDF</span>
+                            <span id="ident80" class="identificador2 ">80</span>
+                            <span class="sr-only">Documento de Word</span>
                         </a>
                     </div>
                 </div>
@@ -1581,8 +1641,10 @@
 
     <footer class="footer">
 
-        <span type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+        <span type="button" id="btnVolver_Arriba" class="btn-volver-arriba ir-arriba" aria-hidden="true"
+            aria-label="Volver arriba">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
+            <span id="ident81" class="identificador2 ">81</span>
         </span>
 
         <img class="tamaño__img escritorio" src="../images/PCSP24-_firmauv-r.png" loading="lazy" width="100%"
@@ -1908,11 +1970,14 @@
     <script type="text/javascript" src="../scripts/menu-2.js"></script>
     <!-- accesibilidad -->
     <script src="../scripts/menuacces.js"></script>
+    <script src="../scripts/modalAyuda.js"></script>
+    <script src="../scripts/cursor.js"></script>
     <script src="../scripts/annyang-4.js"></script>
     <script src="../scripts/change-fonts.js"></script>
     <script src="../scripts/links.js"></script>
     <script src="../scripts/marcador.js"></script>
     <script src="../scripts/annyang_Storage.js"></script>
+    <script src="../scripts/TabsActividad1.js"></script>
 
     <!-- Funcionalidad para Progress-bar-scroll del inicio -->
     <!-- ../scripts/scroll-timeline.js -->
