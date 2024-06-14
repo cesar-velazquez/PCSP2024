@@ -1074,6 +1074,7 @@ ol {
     border: none;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
     line-height: 1rem;
+    margin-bottom: 0;
 }
 
 .btn-cerrar-modal:hover {
