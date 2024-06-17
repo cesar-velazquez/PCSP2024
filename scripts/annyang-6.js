@@ -120,30 +120,205 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let section11 = function () {
-        let element = document.getElementById('section11M2');
+        let element = document.getElementById('section11Act2');
         PositionTop100(element);
     }
 
     let section12 = function () {
-        let element = document.getElementById("sectionM212");
+        let element = document.getElementById("section12Act2");
         PositionTop100(element);
     }
 
-    let section13 = function () {
-        let element = document.getElementById("sectionM213");
-        PositionTop100(element);
+    let videoOn = false;
+    let VideoPlay = document.getElementById("video3");
+    let positionVid1 = document.getElementById("section13Act2");
+    let playVideo = function () {
+        videoOn = true;
+        VideoPlay.play();
+        PositionTop100(positionVid1);
+        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
-    let section14 = function () {
-        let element = document.getElementById("sectionM214");
-        PositionTop100(element);
+    // let VideoOff = document.getElementById("video1");
+    let offVideo = function () {
+        videoOn = false;
+        if (videoOn == false) {
+            VideoPlay.pause();
+            PositionTop100(positionVid1);
+        }
+    }
+
+    let playVideo3 = function () {
+        if (!videoOn) {
+            playVideo();
+        } else {
+            videoOn = true;
+            offVideo();
+        }
+    }
+
+
+    let abrirfaqBasicaP = function () {
+        let abrirfaq = document.getElementById("basic1Act2");
+
+        abrirfaq.setAttribute('aria-expanded', 'true');
+        abrirfaq.setAttribute('open', '');
+        PositionTop100(abrirfaq);
+    }
+
+    let cerrarfaqBasicP = function () {
+        let cerrarfaq = document.getElementById("basic1Act2");
+        cerrarfaq.setAttribute('aria-expanded', 'false');
+        cerrarfaq.removeAttribute('open', '');
+        cerrarfaq.setAttribute('close', '');
+        PositionTop100(cerrarfaq);
+    }
+
+    let faqAbierto = false;
+
+    function GuionVideo1Act2() {
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto) {
+            // Si el FAQ está cerrado, ábrelo
+            abrirfaqBasicaP();
+            faqAbierto = true;
+            // CerrarFaq38();
+            // faqAbierto38 = false;
+            // CerrarFaq39();
+            // faqAbierto39 = false;
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            cerrarfaqBasicP();
+            faqAbierto = false;
+        }
     }
 
     let section15 = function () {
-        let element = document.getElementById("sectionM215");
+        let element = document.getElementById("section15Act2");
         PositionTop100(element);
     }
 
+    // Inicio modales
+    let abrirAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarAyuda = function () {
+        let modal = document.getElementById("methods-help");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let abrirModal16 = function () {
+        let modal = document.getElementById("modal16");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal16 = function () {
+        let modal = document.getElementById("modal16");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let abrirModal18 = function () {
+        let modal = document.getElementById("habilidad-4");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal18 = function () {
+        let modal = document.getElementById("habilidad-4");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let abrirModal20 = function () {
+        let modal = document.getElementById("habilidad-5");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal20 = function () {
+        let modal = document.getElementById("habilidad-5");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let abrirModal22 = function () {
+        let modal = document.getElementById("habilidad-6");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal22 = function () {
+        let modal = document.getElementById("habilidad-6");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+
+    let modalAyuda0 = false;
+    let modalAbierto17 = false;
+    let modalAbierto19 = false;
+    let modalAbierto21 = false;
+    let modalAbierto23 = false;
+    let modalAbierto25 = false;
+    let modalAbierto27 = false;
+
+    function abrirModalAyuda() {
+        if (modalAbierto17 == true || modalAbierto19 == true ||
+            modalAbierto21 == true || modalAbierto23 == true ||
+            modalAbierto25 == true || modalAbierto27 == true
+        ) {
+            cerrarModal17();
+            modalAbierto17 = false;
+            cerrarModal19();
+            modalAbierto19 = false;
+            cerrarModal21();
+            modalAbierto21 = false;
+            cerrarModal23();
+            modalAbierto23 = false;
+            cerrarModal25();
+            modalAbierto25 = false;
+            cerrarModal27();
+            modalAbierto27 = false;
+        }
+        abrirAyuda();
+        modalAyuda0 = true;
+    }
+    // fin modales
     let section16 = function () {
         let element = document.getElementById("sectionM216");
         PositionTop100(element);
@@ -174,23 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.click();
     }
 
-    let abrirAyuda = function () {
-        let modal = document.getElementById("methods-help");
-        let backdrop = document.getElementById("modal-backdrop");
-        modal.style.display = "block";
-        modal.style.paddingRight = "14px"
-        modal.classList.add("show");
-        document.body.classList.add("modal-open");
-        backdrop.style.display = "block";
-    }
 
-    let cerrarAyuda = function () {
-        let modal = document.getElementById("methods-help");
-        let backdrop = document.getElementById("modal-backdrop");
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-        backdrop.style.display = "none";
-    }
 
     let volver_Arriba = document.getElementById("btnVolver_Arriba");
     let volverA = function () {
@@ -257,13 +416,14 @@ document.addEventListener("DOMContentLoaded", function () {
         'doce': section12,
         'número doce': section12,
 
-        '13': section13,
-        'trece': section13,
-        'número trece': section13,
+        '13': playVideo3,
+        'trece': playVideo3,
+        'número trece': playVideo3,
+        'Pausa': playVideo3,
 
-        '14': section14,
-        'catorce': section14,
-        'número catorce': section14,
+        '14': GuionVideo1Act2,
+        'catorce': GuionVideo1Act2,
+        'número catorce': GuionVideo1Act2,
 
         '15': section15,
         'quince': section15,
@@ -316,83 +476,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // annyang.setLanguage("es-MX");
 });
 
-// // INICIO
-// const btn_access = document.getElementById('btn-access');
-// let cerrar_help = document.getElementById("cerrar");
-// let cerrarAyudaM = document.getElementById("btnCerrarv2");
-
-// // Array con los elementos identificados por su ID
-// let numbers = [];
-// for (let i = 0; i <= 24; i++) {
-//     numbers.push(document.getElementById(`ident${i}`));
-// }
-
-// // Obtener el estado de activación desde localStorage
-// let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-// console.log(activoNumberIndex);
-
-// // Función para actualizar el estado visual y de reconocimiento de voz
-// function actualizarEstado(menuactivo) {
-//     if (menuactivo) {
-//         console.log("Inicio Reconocimiento de voz");
-//         annyang.start();
-//         annyang.setLanguage('es-MX');    
-//         cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[0].classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-//         numbers[1].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[2].style.display = "flex";
-//         numbers[3].style.display = "inline-flex";
-//         numbers[4].style.display = "inline-flex";
-//         numbers[5].style.display = "inline-flex";
-//         for (let i = 6; i <= 22; i++) {
-//             numbers[i].classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         }
-//         numbers[15].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[16].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[17].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[18].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[19].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[20].classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         numbers[21].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[22].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         localStorage.setItem("NumberAnnyang_1", "activado");
-//     } else {
-//         console.log("Fin Reconocimiento de voz");
-//         annyang.abort();
-//         cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[0].classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-//         numbers[1].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         localStorage.setItem("NumberAnnyang_1", "desactivado");
-//         numbers[2].style.display = "none";
-//         numbers[3].style.display = "none";
-//         numbers[4].style.display = "none";
-//         numbers[5].style.display = "none";
-//         for (let i = 6; i <= 22; i++) {
-//             numbers[i].classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         }
-//         numbers[15].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[16].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[17].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[18].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[19].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[20].classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         numbers[21].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[22].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     }
-// }
-
-// // Inicializar el estado basado en localStorage
-// let menuactivo = activoNumberIndex === "activado";
-// actualizarEstado(menuactivo);
-
-// // Evento click del botón
-// btn_access.addEventListener('click', function () {
-//     menuactivo = !menuactivo;
-//     actualizarEstado(menuactivo);
-// });
-// // FIN
+// INICIO
+// FIN
 
 const btn_access = document.getElementById('btn-access');
 let cerrar_help = document.getElementById("cerrar");
@@ -424,100 +509,194 @@ let num21 = document.getElementById("ident21");
 let num22 = document.getElementById("ident22");
 let num23 = document.getElementById("ident23");
 let num24 = document.getElementById("ident24");
+let num25 = document.getElementById("ident25");
+let num26 = document.getElementById("ident26");
+let num27 = document.getElementById("ident27");
+let num28 = document.getElementById("ident28");
+let num29 = document.getElementById("ident29");
+let num30 = document.getElementById("ident30");
+let num31 = document.getElementById("ident31");
+let num32 = document.getElementById("ident32");
+let num33 = document.getElementById("ident33");
+let num34 = document.getElementById("ident34");
+let num35 = document.getElementById("ident35");
+let num36 = document.getElementById("ident36");
+let num37 = document.getElementById("ident37");
+let num38 = document.getElementById("ident38");
+let num39 = document.getElementById("ident39");
+let num40 = document.getElementById("ident40");
+let num41 = document.getElementById("ident41");
+let num42 = document.getElementById("ident42");
+let num43 = document.getElementById("ident43");
+let num44 = document.getElementById("ident44");
+let num45 = document.getElementById("ident45");
+let num46 = document.getElementById("ident46");
+let num47 = document.getElementById("ident47");
+let num48 = document.getElementById("ident48");
+let num49 = document.getElementById("ident49");
+let num50 = document.getElementById("ident50");
+let num51 = document.getElementById("ident51");
+let num52 = document.getElementById("ident52");
+let num53 = document.getElementById("ident53");
+let num54 = document.getElementById("ident54");
+let num55 = document.getElementById("ident55");
+let num56 = document.getElementById("ident56");
+let num57 = document.getElementById("ident57");
+let num58 = document.getElementById("ident58");
+let num59 = document.getElementById("ident59");
+let num60 = document.getElementById("ident60");
+let num61 = document.getElementById("ident61");
+let num62 = document.getElementById("ident62");
+let num63 = document.getElementById("ident63");
+let num64 = document.getElementById("ident64");
+let num65 = document.getElementById("ident65");
+let num66 = document.getElementById("ident66");
+let num67 = document.getElementById("ident67");
+let num68 = document.getElementById("ident68");
+let num69 = document.getElementById("ident69");
+let num70 = document.getElementById("ident70");
+let num71 = document.getElementById("ident71");
+let num72 = document.getElementById("ident72");
+let num73 = document.getElementById("ident73");
+let num74 = document.getElementById("ident74");
+let num75 = document.getElementById("ident75");
+let num76 = document.getElementById("ident76");
+let num77 = document.getElementById("ident77");
+let num78 = document.getElementById("ident78");
+let num79 = document.getElementById("ident79");
+let num80 = document.getElementById("ident80");
+let num81 = document.getElementById("ident81");
+let num82 = document.getElementById("ident82");
+let num83 = document.getElementById("ident83");
+let num84 = document.getElementById("ident84");
+let num85 = document.getElementById("ident85");
+let num86 = document.getElementById("ident86");
+let num87 = document.getElementById("ident87");
+let num88 = document.getElementById("ident88");
+let num89 = document.getElementById("ident89");
+let num90 = document.getElementById("ident90");
+let num91 = document.getElementById("ident91");
+let num92 = document.getElementById("ident92");
+let num93 = document.getElementById("ident93");
+let num94 = document.getElementById("ident94");
+let num95 = document.getElementById("ident95");
+let num96 = document.getElementById("ident96");
+let num97 = document.getElementById("ident97");
+let num98 = document.getElementById("ident98");
+let num99 = document.getElementById("ident99");
+let num100 = document.getElementById("ident100");
+let num101 = document.getElementById("ident101");
+let num102 = document.getElementById("ident102");
+let num103 = document.getElementById("ident103");
+let num104 = document.getElementById("ident104");
+let num105 = document.getElementById("ident105");
+let num106 = document.getElementById("ident106");
+let num107 = document.getElementById("ident107");
+let num108 = document.getElementById("ident108");
+let num109 = document.getElementById("ident109");
+let num110 = document.getElementById("ident110");
+let num111 = document.getElementById("ident111");
+let num112 = document.getElementById("ident112");
+let num113 = document.getElementById("ident113");
+let num114 = document.getElementById("ident114");
+let num115 = document.getElementById("ident115");
+let num116 = document.getElementById("ident116");
+let num117 = document.getElementById("ident117");
+let num118 = document.getElementById("ident118");
+let num119 = document.getElementById("ident119");
+
+// cerrar modales
+let cerrar17 = document.getElementById("cerrar17");
+let cerrar19 = document.getElementById("cerrar19");
+let cerrar21 = document.getElementById("cerrar21");
+let cerrar23 = document.getElementById("cerrar23");
+let cerrar39 = document.getElementById("cerrar39");
+let cerrar41 = document.getElementById("cerrar41");
+let cerrar43 = document.getElementById("cerrar43");
+
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-console.log(activoNumberIndex);
+console.log("annyang6: " + activoNumberIndex);
 
+
+
+// inicio prueba
 function numbersActives() {
     menuactivo = true;
-    cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    annyang.setLanguage('es-MX');
+    annyang.start();
     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num2.style.display = "flex";
-    num3.style.display = "inline-flex";
-    num4.style.display = "inline-flex";
-    num5.style.display = "inline-flex";
-    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    // Código para texto plano
+    const elementsToAnimateUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num15,
+        num24, num25, num26, num27, num28, num29, num30, num31, num32, num33, num37, num44,
+        num45, num46, num47, num48, num49, num50, num51, num52, num53, num54, num55, num56,
+        num57, num59, num63, num64, num67, num68, num69, num70, num71, num72, num73, num74, num75,
+        num76, num77, num78,
+        num80, num84, num85, num87, num88, num89, num90, num91, num92, num93, num94, num95, num97, num101,
+        num102, num103, num104, num105, num106, num107, num108, num109, num110, num111, num113, num117
+    ];
+
+    elementsToAnimateUniversal.forEach(element => {
+        element.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // Código para botones y faqs    
+    const elementsToAnimateFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num14, num16, num17, cerrar17, num18, num19, cerrar19,
+        num20, num21, cerrar21, num22, num23, cerrar23, num32, num34, num35, num36, num38,
+        cerrar39, num39, num40, cerrar41, num41, num42, num43, cerrar43, num58, num60, num61, num62,
+        num65, num66, num79,
+        num81, num82, num83, num86, num96, num98, num99, num100, num112, num114, num115, num116, num118, num119
+
+    ]
+    elementsToAnimateFaqs.forEach(elementFaq => {
+        elementFaq.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    })
+    localStorage.setItem("NumberAnnyang_1", "activado");
 }
 
+// fin prueba
+
 function removeNumbers() {
-    cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+
+    // CODIGO PARA TEXTO PLANO
+    const elementToRemoveUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13, num15,
+        num24, num25, num26, num27, num28, num29, num30, num31, num33, num37, num44, num45,
+        num46, num47, num48, num49, num50, num51, num52, num53, num54, num55, num56, num57,
+        num59, num63, num64, num67, num68, num69, num70, num71, num72, num73, num74, num75,
+        num76, num77, num78, num80, num84, num85, num87, num88, num89, num90, num91, num92, num93, num94, num95, num97, num101,
+        num102, num103, num104, num105, num106, num107, num108, num109, num110, num111, num113, num117
+    ]
+
+    elementToRemoveUniversal.forEach(elementUniversal => {
+        elementUniversal.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // CÓDIGO PARA FAQS Y BOTONES    
+    const elementsToRemoveFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num14, num16, num17, cerrar17, num18, num19, cerrar19,
+        num20, num21, cerrar21, num22, num23, cerrar23, num32, num34, num35, num36, num38,
+        num39, cerrar39, num40, cerrar41, num41, num42, cerrar43, num43, num58, num60, num61, num62,
+        num65, num66, num79, num81, num82, num83, num86, num96, num98, num99, num100, num112, num114,
+        num115, num116, num118, num119
+    ]
+
+    elementsToRemoveFaqs.forEach(elementToRemove => {
+        elementToRemove.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat')
+    });
     localStorage.setItem("NumberAnnyang_1", "desactivado");
-    num2.style.display = "none";
-    num3.style.display = "none";
-    num4.style.display = "none";
-    num5.style.display = "none";
-    num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num20.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 }
 
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     numbersActives();
-    // menuactivo = true;
-    // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num2.style.display = "flex";
-    // num3.style.display = "inline-flex";
-    // num4.style.display = "inline-flex";
-    // num5.style.display = "inline-flex";
-    // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
-    annyang.setLanguage('es-MX');
-    annyang.start();
+    // annyang.setLanguage('es-MX');
+    // annyang.start();
 }
 
 
@@ -526,64 +705,44 @@ btn_access.addEventListener('click', function () {
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
         numbersActives();
-        // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num2.style.display = "flex";
-        // num3.style.display = "inline-flex";
-        // num4.style.display = "inline-flex";
-        // num5.style.display = "inline-flex";
-        // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');        
-        localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
         removeNumbers();
-
-        // cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // localStorage.setItem("NumberAnnyang_1", "desactivado");
-        // num2.style.display = "none";
-        // num3.style.display = "none";
-        // num4.style.display = "none";
-        // num5.style.display = "none";
-        // num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     }
 });
 
+
+
+
+// function numbersActives() {
+//     menuactivo = true;
+//     cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+//     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num2.style.display = "flex";
+//     num3.style.display = "inline-flex";
+//     num4.style.display = "inline-flex";
+//     num5.style.display = "inline-flex";
+//     num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+//     num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num21.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num22.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num23.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+//     num24.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+// }

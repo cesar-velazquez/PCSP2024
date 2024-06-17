@@ -136,8 +136,9 @@
     color: #18529D;
     font-weight: bold !important;
     border: 2px solid #18529D;
-    width: 25px;
+    min-width: 25px;
     height: 25px;
+    width: auto;
     display: none;
     justify-content: center;
     align-items: center;
