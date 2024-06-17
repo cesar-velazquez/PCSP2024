@@ -1095,6 +1095,18 @@ ol {
     border: .1rem solid #1E4566;
 }
 
+.btn_swipper{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.btn_swipper .active{
+    color: red;
+}
+
+
 @media (min-width: 992px) {
 
     .modal-lg,

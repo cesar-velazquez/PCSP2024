@@ -52,11 +52,21 @@ ul {
     max-width: 55rem;
     margin: 1rem auto;
 }*/
-.espacio-fin{ margin-top:2rem; }
-.fondo-rosa{ background:#EDEDFC; position:relative; padding:.5rem 1rem; padding-right:4.3rem; border-radius:.5rem }
-.fondo-blanco{ 
-	border-bottom: .15rem solid;
-	padding: 1rem 1rem 1rem 2rem;
+.espacio-fin {
+    margin-top: 2rem;
+}
+
+.fondo-rosa {
+    background: #EDEDFC;
+    position: relative;
+    padding: .5rem 1rem;
+    padding-right: 4.3rem;
+    border-radius: .5rem
+}
+
+.fondo-blanco {
+    border-bottom: .15rem solid;
+    padding: 1rem 1rem 1rem 2rem;
     margin-bottom: 1rem;
 }
 
@@ -168,7 +178,12 @@ ul {
     border: .1rem solid transparent;
 }
 
-.contenedor-modales{ width:100%; max-width:43rem; margin:0 auto 3rem; }
+.contenedor-modales {
+    width: 100%;
+    max-width: 43rem;
+    margin: 0 auto 3rem;
+}
+
 .fondo-degradado {
     margin-bottom: 3rem;
 }
@@ -191,7 +206,11 @@ ul {
     margin-bottom: 1rem;
 }
 
-.btn-image .btn-modales{ width:100%; margin:0; padding:1rem 2rem; }
+.btn-image .btn-modales {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+}
 
 .actividad-enc {
     background: #EDEDFC;
@@ -228,7 +247,9 @@ ul {
 }
 
 .enlace-icono:focus-visible,
-.enlace-iconoh:focus-visible, .btn-image:focus, .btn-image:focus-visible {
+.enlace-iconoh:focus-visible,
+.btn-image:focus,
+.btn-image:focus-visible {
     outline: none;
 }
 
@@ -362,19 +383,26 @@ ul {
 
 /* Estilos swiper - slide */
 
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{ display:none; }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{ display:none; }
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    display: none;
+}
 
 .swiper {
     width: 100%;
     height: 500px;
-    box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 11px -1px rgba(0, 0, 0, 0.75);
     background: #fff;
 }
 
-.contenedor-botones-sw{
+.contenedor-botones-sw {
     background: #caebd4;
     background: linear-gradient(90deg, rgba(237, 237, 252, 1) 50%, rgba(250, 235, 221, 1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(237, 237, 252, 1) 50%, rgba(250, 235, 221, 1) 100%);
@@ -387,19 +415,26 @@ ul {
     z-index: 1;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     bottom: 0;
     top: auto;
     position: relative;
     min-height: 2rem;
-    width: 10rem ;
-    margin: 1rem auto ;
-    display: inline-block ;
-    height: auto ;
+    width: 10rem;
+    margin: 1rem auto;
+    display: inline-block;
+    height: auto;
     padding: 0.3rem;
 }
-.swiper-button-next{ margin-left:1rem ; }
-.swiper-button-prev{ margin-right:1rem; }
+
+.swiper-button-next {
+    margin-left: 1rem;
+}
+
+.swiper-button-prev {
+    margin-right: 1rem;
+}
 
 /*
 @media screen and (max-width: 1340px) {
@@ -423,25 +458,31 @@ ul {
 
 @media screen and (max-width: 1199px) {
     .swiper {
-       
+
         height: 550px;
     }
-    .swiper-slide{ height:85% }
+
+    .swiper-slide {
+        height: 85%
+    }
 }
 
 @media screen and (max-width: 991px) {
     .swiper {
         height: 620px;
     }
-    .swiper-slide{ height:87% }
+
+    .swiper-slide {
+        height: 87%
+    }
 }
 
 
-.text-grey{
+.text-grey {
     font-weight: 700;
     position: absolute;
     right: 2rem;
-    bottom: 1rem;
+    bottom: .5rem;
 }
 
 /*Modulo 2*/
@@ -454,13 +495,44 @@ ul {
     position: relative;
     height: 19rem;
 }
-.btn-modales-gr{ position:absolute; width:26%; margin:0; }
-.imagen-gr{ position:absolute; width:7rem; }
-#img-gr-1{ top: 34%; left: 0}
-#img-gr-2{ top: 0; right: 28%}
-#img-gr-3{ top: 62%; right: 28%}
 
-#btn-gr-1{top: 40%; left: 19%;}
-#btn-gr-2{top: 8%; right: 0;}
-#btn-gr-3{top: 70%; right: 0;}
+.btn-modales-gr {
+    position: absolute;
+    width: 26%;
+    margin: 0;
+}
 
+.imagen-gr {
+    position: absolute;
+    width: 7rem;
+}
+
+#img-gr-1 {
+    top: 34%;
+    left: 0
+}
+
+#img-gr-2 {
+    top: 0;
+    right: 28%
+}
+
+#img-gr-3 {
+    top: 62%;
+    right: 28%
+}
+
+#btn-gr-1 {
+    top: 40%;
+    left: 19%;
+}
+
+#btn-gr-2 {
+    top: 8%;
+    right: 0;
+}
+
+#btn-gr-3 {
+    top: 70%;
+    right: 0;
+}
