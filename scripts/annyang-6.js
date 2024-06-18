@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia abajo la cantidad especificada
-        window.scrollBy(0, 500);
+        window.scrollBy(0, 350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia arriba la cantidad especificada
-        window.scrollBy(0, -500);
+        window.scrollBy(0, -350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -157,6 +157,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // video 2:
+    let videoOn2 = false;
+    let VideoPlay2 = document.getElementById("video85");
+    let positionVid2 = document.getElementById("SectionVideo85");
+    let playVideo2 = function () {
+        videoOn2 = true;
+        VideoPlay2.play();
+        PositionTop100(positionVid2);
+        num12.style.backgroundColor = "#f8c5fd3d";
+    }
+
+    // let VideoOff = document.getElementById("video1");
+    let offVideo2 = function () {
+        videoOn2 = false;
+        if (videoOn2 == false) {
+            VideoPlay2.pause();
+            PositionTop100(positionVid2);
+        }
+    }
+
+    let playVideo85 = function () {
+        if (!videoOn2) {
+            playVideo2();
+        } else {
+            videoOn2 = true;
+            offVideo2();
+        }
+    }
+
 
     let abrirfaqBasicaP = function () {
         let abrirfaq = document.getElementById("basic1Act2");
@@ -176,22 +205,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let faqAbierto = false;
 
-    function GuionVideo1Act2() {
+    function abrircerrarfaqAyuda() {
+        let sectionLineamiento = document.getElementById("faqGuionVideo14");
         // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
         if (!faqAbierto) {
-            // Si el FAQ está cerrado, ábrelo
+            // Si el FAQ está cerrado, ábrelo            
             abrirfaqBasicaP();
             faqAbierto = true;
-            // CerrarFaq38();
-            // faqAbierto38 = false;
-            // CerrarFaq39();
-            // faqAbierto39 = false;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
             cerrarfaqBasicP();
             faqAbierto = false;
+            PositionTop100(sectionLineamiento);
         }
     }
+
 
     let section15 = function () {
         let element = document.getElementById("section15Act2");
@@ -218,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirModal16 = function () {
-        let modal = document.getElementById("modal16");
+        let modal = document.getElementById("habilidad-1");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px"
@@ -228,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let cerrarModal16 = function () {
-        let modal = document.getElementById("modal16");
+        let modal = document.getElementById("habilidad-1");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -236,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirModal18 = function () {
-        let modal = document.getElementById("habilidad-4");
+        let modal = document.getElementById("habilidad-2");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px"
@@ -246,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let cerrarModal18 = function () {
-        let modal = document.getElementById("habilidad-4");
+        let modal = document.getElementById("habilidad-2");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -254,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirModal20 = function () {
-        let modal = document.getElementById("habilidad-5");
+        let modal = document.getElementById("habilidad-3");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px"
@@ -264,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let cerrarModal20 = function () {
-        let modal = document.getElementById("habilidad-5");
+        let modal = document.getElementById("habilidad-3");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -272,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let abrirModal22 = function () {
-        let modal = document.getElementById("habilidad-6");
+        let modal = document.getElementById("habilidad-4");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "block";
         modal.style.paddingRight = "14px"
@@ -282,7 +330,58 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let cerrarModal22 = function () {
-        let modal = document.getElementById("habilidad-6");
+        let modal = document.getElementById("habilidad-4");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+    let abrirModal38 = function () {
+        let modal = document.getElementById("modelo-1");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal38 = function () {
+        let modal = document.getElementById("modelo-1");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+    let abrirModal40 = function () {
+        let modal = document.getElementById("modelo-2");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal40 = function () {
+        let modal = document.getElementById("modelo-2");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+        backdrop.style.display = "none";
+    }
+    let abrirModal42 = function () {
+        let modal = document.getElementById("modelo-3");
+        let backdrop = document.getElementById("modal-backdrop");
+        modal.style.display = "block";
+        modal.style.paddingRight = "14px"
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
+        backdrop.style.display = "block";
+    }
+
+    let cerrarModal42 = function () {
+        let modal = document.getElementById("modelo-3");
         let backdrop = document.getElementById("modal-backdrop");
         modal.style.display = "none";
         document.body.classList.remove("modal-open");
@@ -290,65 +389,931 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let modalAyuda0 = false;
-    let modalAbierto17 = false;
-    let modalAbierto19 = false;
-    let modalAbierto21 = false;
-    let modalAbierto23 = false;
-    let modalAbierto25 = false;
-    let modalAbierto27 = false;
+    let modalAbierto16 = false;
+    let modalAbierto18 = false;
+    let modalAbierto20 = false;
+    let modalAbierto22 = false;
+    let modalAbierto38 = false;
+    let modalAbierto40 = false;
+    let modalAbierto42 = false;
+
+    // function abrirModalAyuda() {
+    //     if (modalAbierto16 == true || modalAbierto18 == true ||
+    //         modalAbierto20 == true || modalAbierto22 == true ||
+    //         modalAbierto38 == true || modalAbierto40 == true ||
+    //         modalAbierto42 == true
+    //     ) {
+    //         cerrarModal16();
+    //         modalAbierto16 = false;
+    //         cerrarModal18();
+    //         modalAbierto18 = false;
+    //         cerrarModal20();
+    //         modalAbierto20 = false;
+    //         cerrarModal22();
+    //         modalAbierto22 = false;
+    //         cerrarModal38();
+    //         modalAbierto38 = false;
+    //         cerrarModal40();
+    //         modalAbierto40 = false;
+    //         cerrarModal42();
+    //         modalAbierto42 = false;
+    //     }
+    //     abrirAyuda();
+    //     modalAyuda0 = true;
+    // }
 
     function abrirModalAyuda() {
-        if (modalAbierto17 == true || modalAbierto19 == true ||
-            modalAbierto21 == true || modalAbierto23 == true ||
-            modalAbierto25 == true || modalAbierto27 == true
+        if (modalAbierto16 == true || modalAbierto18 == true ||
+            modalAbierto20 == true || modalAbierto22 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
         ) {
-            cerrarModal17();
-            modalAbierto17 = false;
-            cerrarModal19();
-            modalAbierto19 = false;
-            cerrarModal21();
-            modalAbierto21 = false;
-            cerrarModal23();
-            modalAbierto23 = false;
-            cerrarModal25();
-            modalAbierto25 = false;
-            cerrarModal27();
-            modalAbierto27 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
         }
         abrirAyuda();
         modalAyuda0 = true;
     }
+
+    function abrirModalAct216() {
+        if (modalAyuda0 == true || modalAbierto18 == true ||
+            modalAbierto20 == true || modalAbierto22 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal16();
+        modalAbierto16 = true;
+    }
+
+    function abrirModalAct218() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto20 == true || modalAbierto22 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal18();
+        modalAbierto18 = true;
+    }
+
+    function abrirModalAct220() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto18 == true || modalAbierto22 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal20();
+        modalAbierto20 = true;
+    }
+
+    function abrirModalAct222() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto18 == true || modalAbierto20 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal22();
+        modalAbierto22 = true;
+    }
+
+    function abrirModalAct238() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto18 == true || modalAbierto20 == true ||
+            modalAbierto22 == true || modalAbierto40 == true ||
+            modalAbierto42 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal38();
+        modalAbierto38 = true;
+    }
+
+    function abrirModalAct240() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto18 == true || modalAbierto20 == true ||
+            modalAbierto38 == true || modalAbierto22 == true ||
+            modalAbierto42 == true
+        ) {
+            abrirModal40();
+            modalAbierto40 = true;
+
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal42();
+            modalAbierto42 = false;
+        }
+        abrirModal40();
+        modalAbierto40 = true;
+    }
+
+    function abrirModalAct242() {
+        if (modalAyuda0 == true || modalAbierto16 == true ||
+            modalAbierto18 == true || modalAbierto20 == true ||
+            modalAbierto38 == true || modalAbierto40 == true ||
+            modalAbierto22 == true
+        ) {
+            cerrarAyuda();
+            modalAyuda0 = false;
+            cerrarModal16();
+            modalAbierto16 = false;
+            cerrarModal18();
+            modalAbierto18 = false;
+            cerrarModal20();
+            modalAbierto20 = false;
+            cerrarModal38();
+            modalAbierto38 = false;
+            cerrarModal40();
+            modalAbierto40 = false;
+            cerrarModal22();
+            modalAbierto22 = false;
+        }
+        abrirModal42();
+        modalAbierto42 = true;
+    }
     // fin modales
-    let section16 = function () {
-        let element = document.getElementById("sectionM216");
-        PositionTop100(element);
+    function section24() {
+        let element = document.getElementById("section24Act2");
+        PositionTop100(element)
     }
 
-    let section17 = function () {
-        let element = document.getElementById("sectionM217");
-        PositionTop100(element);
+    function section25() {
+        let element = document.getElementById("section25Act2");
+        PositionTop100(element)
     }
 
-    let section18 = function () {
-        let element = document.getElementById("sectionM218");
-        PositionTop100(element);
-    }
-
-    let section19 = function () {
-        let element = document.getElementById("sectionM219");
-        PositionTop100(element);
-    }
-
-    let section20 = function () {
-        let element = document.getElementById("sectionM220");
-        PositionTop100(element);
-    }
-
-    function download21() {
-        let btn = document.getElementById("btnLectura");
+    function download26() {
+        let btn = document.getElementById("glosario26");
         btn.click();
     }
 
+    function visit27() {
+        let btn = document.getElementById("visit27");
+        btn.click();
+    }
+
+    function section28() {
+        let element = document.getElementById("section28Act2");
+        PositionTop100(element)
+    }
+
+    function download29() {
+        let btn = document.getElementById("otp29");
+        btn.click();
+    }
+
+    function download30() {
+        let btn = document.getElementById("ots30");
+        btn.click();
+    }
+
+    function section31() {
+        let element = document.getElementById("section31Act2");
+        PositionTop100(element)
+    }
+
+    function download32() {
+        let btn = document.getElementById("rubrica32");
+        btn.click();
+    }
+
+    function section33() {
+        let element = document.getElementById("section33Act2");
+        PositionTop100(element)
+    }
+
+    // Inicio Faqs 34, 35, 36
+    let AbrirFaq34 = function () {
+        let abrirfaqL1 = document.getElementById("faq34Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq34 = function () {
+        let cerrarfaqL1 = document.getElementById("faq34Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+
+    let AbrirFaq35 = function () {
+        let abrirfaqL1 = document.getElementById("faq35Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq35 = function () {
+        let cerrarfaqL1 = document.getElementById("faq35Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+
+    let AbrirFaq36 = function () {
+        let abrirfaqL1 = document.getElementById("faq36Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq36 = function () {
+        let cerrarfaqL1 = document.getElementById("faq36Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq60 = function () {
+        let abrirfaqL1 = document.getElementById("faq60Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq60 = function () {
+        let cerrarfaqL1 = document.getElementById("faq60Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq61 = function () {
+        let abrirfaqL1 = document.getElementById("faq61Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq61 = function () {
+        let cerrarfaqL1 = document.getElementById("faq61Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq62 = function () {
+        let abrirfaqL1 = document.getElementById("faq62Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq62 = function () {
+        let cerrarfaqL1 = document.getElementById("faq62Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq81 = function () {
+        let abrirfaqL1 = document.getElementById("faq81Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq81 = function () {
+        let cerrarfaqL1 = document.getElementById("faq81Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq82 = function () {
+        let abrirfaqL1 = document.getElementById("faq82Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq82 = function () {
+        let cerrarfaqL1 = document.getElementById("faq82Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq83 = function () {
+        let abrirfaqL1 = document.getElementById("faq83Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq83 = function () {
+        let cerrarfaqL1 = document.getElementById("faq83Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq86 = function () {
+        let abrirfaqL1 = document.getElementById("faq86Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+
+    let CerrarFaq86 = function () {
+        let cerrarfaqL1 = document.getElementById("faq86Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let faqAbierto34 = false;
+    let faqAbierto35 = false;
+    let faqAbierto36 = false;
+    let faqAbierto60 = false;
+    let faqAbierto61 = false;
+    let faqAbierto62 = false;
+    let faqAbierto81 = false;
+    let faqAbierto82 = false;
+    let faqAbierto83 = false;
+    let faqAbierto86 = false;
+
+
+    function abrircerrarfaq34() {
+        let sectionLineamiento = document.getElementById("sectionFaqs30sAct2");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto34) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq34();
+            faqAbierto34 = true;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq34();
+            faqAbierto34 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+
+    function abrircerrarfaq35() {
+        let sectionLineamiento = document.getElementById("sectionFaqs30sAct2");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto35) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq35();
+            faqAbierto35 = true;
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq35();
+            faqAbierto35 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+
+    function abrircerrarfaq36() {
+        let sectionLineamiento = document.getElementById("sectionFaqs30sAct2");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto36) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq36();
+            faqAbierto36 = true;
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq36();
+            faqAbierto36 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq60() {
+        let sectionLineamiento = document.getElementById("sectionFaqs60s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto60) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq60();
+            faqAbierto60 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq60();
+            faqAbierto60 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq61() {
+        let sectionLineamiento = document.getElementById("sectionFaqs60s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto61) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq61();
+            faqAbierto61 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq61();
+            faqAbierto61 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq62() {
+        let sectionLineamiento = document.getElementById("sectionFaqs60s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto62) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq62();
+            faqAbierto62 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq62();
+            faqAbierto62 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq81() {
+        let sectionLineamiento = document.getElementById("sectionFaqs80s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto81) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq81();
+            faqAbierto81 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq81();
+            faqAbierto81 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq82() {
+        let sectionLineamiento = document.getElementById("sectionFaqs80s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto82) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq82();
+            faqAbierto82 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq82();
+            faqAbierto82 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq83() {
+        let sectionLineamiento = document.getElementById("sectionFaqs80s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto83) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq83();
+            faqAbierto83 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq83();
+            faqAbierto83 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq86() {
+        let sectionLineamiento = document.getElementById("faq86Act2");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto86) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq86();
+            faqAbierto86 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq86();
+            faqAbierto86 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    // Fin faqs 34, 35, 36
+    // section37Act2
+    function section37() {
+        let element = document.getElementById("section37Act2");
+        PositionTop100(element)
+    }
+
+    function section44() {
+        let element = document.getElementById("section44Act2");
+        PositionTop100(element);
+    }
+
+    function section45() {
+        let element = document.getElementById("section45Act2");
+        PositionTop100(element);
+    }
+
+    function download46() {
+        let btn = document.getElementById("download46");
+        btn.click();
+    }
+
+    function download47() {
+        let btn = document.getElementById("download47");
+        btn.click();
+    }
+
+    function section48() {
+        let element = document.getElementById("section48Act2");
+        PositionTop100(element);
+    }
+
+    function visit49() {
+        let element = document.getElementById("visit49");
+        element.click();
+        PositionTop100(element);
+    }
+
+    function visit50() {
+        let element = document.getElementById("visit50");
+        element.click();
+        PositionTop100(element);
+    }
+
+    function visit51() {
+        let element = document.getElementById("visit51");
+        element.click();
+        PositionTop100(element);
+    }
+    function visit52() {
+        let element = document.getElementById("visit52");
+        element.click();
+        PositionTop100(element);
+    }
+    function visit53() {
+        let element = document.getElementById("visit53");
+        element.click();
+        PositionTop100(element);
+    }
+    function visit54() {
+        let element = document.getElementById("visit54");
+        element.click();
+        PositionTop100(element);
+    }
+    function visit55() {
+        let element = document.getElementById("visit55");
+        element.click();
+        PositionTop100(element);
+    }
+    function download56() {
+        let btn = document.getElementById("download56");
+        btn.click();
+        PositionTop100(btn);
+    }
+    function section57() {
+        let element = document.getElementById("section57Act2");
+        PositionTop100(element);
+    }
+    function download58() {
+        let btn = document.getElementById("download58");
+        btn.click();
+        PositionTop100(btn);
+    }
+    function section59() {
+        let element = document.getElementById("section59Act2");
+        PositionTop100(element);
+    }
+
+    function section63() {
+        let element = document.getElementById("section63Act2");
+        PositionTop100(element);
+    }
+    function section64() {
+        let element = document.getElementById("section64Act2");
+        PositionTop100(element);
+    }
+    function click65() {
+        let element = document.getElementById("clic65");
+        let position = document.getElementById("section64Act2");
+        element.click();
+        PositionTop100(position);
+    }
+    function click66() {
+        let element = document.getElementById("clic66");
+        let position = document.getElementById("section64Act2");
+        element.click();
+        PositionTop100(position);
+    }
+    function section67() {
+        let element = document.getElementById("section67Act2");
+        PositionTop100(element)
+    }
+    function section68() {
+        let element = document.getElementById("section68Act2");
+        PositionTop100(element)
+    }
+    function download69() {
+        let btn = document.getElementById("download69");
+        btn.click();
+    }
+    function download70() {
+        let btn = document.getElementById("download70");
+        btn.click();
+    }
+    function download71() {
+        let btn = document.getElementById("download71");
+        btn.click();
+    }
+    function download72() {
+        let btn = document.getElementById("download72");
+        btn.click();
+    }
+    function download73() {
+        let btn = document.getElementById("download73");
+        btn.click();
+    }
+    function download74() {
+        let btn = document.getElementById("download74");
+        btn.click();
+    }
+    function section75() {
+        let element = document.getElementById("section75Act2");
+        PositionTop100(element)
+    }
+    function section76() {
+        let element = document.getElementById("section76Act2");
+        PositionTop100(element)
+    }
+    function download77() {
+        let btn = document.getElementById("download77");
+        btn.click();
+    }
+    function section78() {
+        let element = document.getElementById("section78Act2");
+        PositionTop100(element)
+    }
+    function download79() {
+        let btn = document.getElementById("download79");
+        btn.click();
+    }
+    function section80() {
+        let element = document.getElementById("section80Act2");
+        PositionTop100(element)
+    }
+    function section84() {
+        let element = document.getElementById("section84Act2");
+        PositionTop100(element)
+    }
+
+    function section87() {
+        let element = document.getElementById("section87Act2");
+        PositionTop100(element)
+    }
 
 
     let volver_Arriba = document.getElementById("btnVolver_Arriba");
@@ -358,8 +1323,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var commands = {
 
-        '0': abrirAyuda,
-        'cero': abrirAyuda,
+        '0': abrirModalAyuda,
+        'cero': abrirModalAyuda,
         'cerrar': cerrarAyuda,
 
         'Inicio': inicioPagina,
@@ -421,45 +1386,273 @@ document.addEventListener("DOMContentLoaded", function () {
         'número trece': playVideo3,
         'Pausa': playVideo3,
 
-        '14': GuionVideo1Act2,
-        'catorce': GuionVideo1Act2,
-        'número catorce': GuionVideo1Act2,
+        '14': abrircerrarfaqAyuda,
+        'catorce': abrircerrarfaqAyuda,
+        'número catorce': abrircerrarfaqAyuda,
 
         '15': section15,
         'quince': section15,
         'número quince': section15,
 
-        '16': section16,
-        'dieciséis': section16,
-        'número dieciséis': section16,
+        '16': abrirModalAct216,
+        'dieciséis': abrirModalAct216,
+        'número dieciséis': abrirModalAct216,
 
-        '17': section17,
-        'diecisiete': section17,
-        'número diecisiete': section17,
+        '17': cerrarModal16,
+        'diecisiete': cerrarModal16,
+        'número diecisiete': cerrarModal16,
 
-        '18': section18,
-        'dieciocho': section18,
-        'número dieciocho': section18,
+        '18': abrirModalAct218,
+        'dieciocho': abrirModalAct218,
+        'número dieciocho': abrirModalAct218,
 
-        '19': section19,
-        'diecinueve': section19,
-        'número diecinueve': section19,
+        '19': cerrarModal18,
+        'diecinueve': cerrarModal18,
+        'número diecinueve': cerrarModal18,
 
-        '20': section20,
-        'veinte': section20,
-        'número veinte': section20,
+        '20': abrirModalAct220,
+        'veinte': abrirModalAct220,
+        'número veinte': abrirModalAct220,
 
-        '21': download21,
-        'veintiuno': download21,
-        'número veintiuno': download21,
+        '21': cerrarModal20,
+        'veintiuno': cerrarModal20,
+        'número veintiuno': cerrarModal20,
 
-        '22': volverA,
-        'veintidos': volverA,
-        'número veintidos': volverA,
+        '22': abrirModalAct222,
+        'veintidos': abrirModalAct222,
+        'número veintidos': abrirModalAct222,
+
+        '23': cerrarModal22,
+        'veintitres': cerrarModal22,
+        'número veintitres': cerrarModal22,
+
+        '24': section24,
+        'veinticuatro': section24,
+
+        '25': section25,
+        'veinticinco': section25,
+
+        '26': download26,
+        'veintiseis': download26,
+
+        '27': visit27,
+        'veintisiete': visit27,
+
+        '28': section28,
+        'veintiocho': section28,
+
+        '29': download29,
+        'veintinueve': download29,
+
+        '30': download30,
+        'treinta': download30,
+
+        '31': section31,
+        'treinta y uno': section31,
+
+        '32': download32,
+        'treinta y dos': download32,
+
+        '33': section33,
+        'treinta y tres': section33,
+
+        '34': abrircerrarfaq34,
+        'treinta y cuatro': abrircerrarfaq34,
+
+        '35': abrircerrarfaq35,
+        'treinta y cinco': abrircerrarfaq35,
+
+        '36': abrircerrarfaq36,
+        'treinta y seis': abrircerrarfaq36,
+
+        '37': section37,
+        'treinta y siete': section37,
+
+        '38': abrirModalAct238,
+        'treinta y ocho': abrirModalAct238,
+
+        '39': cerrarModal38,
+        'treinta y nueve': cerrarModal38,
+
+        '40': abrirModalAct240,
+        'cuarenta': abrirModalAct240,
+
+        '41': cerrarModal40,
+        'cuarenta y uno': cerrarModal40,
+
+        '42': abrirModalAct242,
+        'cuarenta y dos': abrirModalAct242,
+
+        '43': cerrarModal42,
+        'cuarenta y tres': cerrarModal42,
+
+        '44': section44,
+        'cuarenta y cuatro': section44,
+
+        '45': section45,
+        'cuarenta y cinco': section45,
+
+        '46': download46,
+        'cuarenta y seis': download46,
+
+        '47': download47,
+        'cuarenta y siete': download47,
+
+        '48': section48,
+        'cuarenta y ocho': section48,
+
+        '49': visit49,
+        'cuarenta y nueve': visit49,
+
+        '50': visit50,
+        'cincuenta': visit50,
+
+        '51': visit51,
+        'cincuenta y uno': visit51,
+
+        '52': visit52,
+        'cincuenta y dos': visit52,
+
+        '53': visit53,
+        'cincuenta y tres': visit53,
+
+        '54': visit54,
+        'cincuenta y cuatro': visit54,
+
+        '55': visit55,
+        'cincuenta y cinco': visit55,
+
+        '56': download56,
+        'cincuenta y seis': download56,
+
+        '57': section57,
+        'cincuenta y siete': section57,
+
+        '58': download58,
+        'cincuenta y ocho': download58,
+
+        '59': section59,
+        'cincuenta y nueve': section59,
+
+        '60': abrircerrarfaq60,
+        'sesenta': abrircerrarfaq60,
+
+        '61': abrircerrarfaq61,
+        'sesenta y uno': abrircerrarfaq61,
+
+        '62': abrircerrarfaq62,
+        'sesenta y dos': abrircerrarfaq62,
+
+        '63': section63,
+        'sesenta y tres': section63,
+
+        '64': section64,
+        'sesenta y cuatro': section64,
+
+        '65': click65,
+        'sesenta y cinco': click65,
+
+        '66': click66,
+        'sesenta y seis': click66,
+
+        '67': section67,
+        'sesenta y siete': section67,
+
+        '68': section68,
+        'sesenta y ocho': section68,
+
+        '69': download69,
+        'sesenta y nueve': download69,
+
+        '70': download70,
+        'setenta': download70,
+
+        '71': download71,
+        'setenta y uno': download71,
+
+        '72': download72,
+        'setenta y dos': download72,
+
+        '73': download73,
+        'setenta y tres': download73,
+
+        '74': download74,
+        'setenta y cuatro': download74,
+
+        '75': section75,
+        'setenta y cinco': section75,
+
+        '76': section76,
+        'setenta y seis': section76,
+
+        '77': download77,
+        'setenta y siete': download77,
+
+        '78': section78,
+        'setenta y ocho': section78,
+
+        '79': download79,
+        'setenta y nueve': download79,
+
+        '80': section80,
+        'ochenta': section80,
+
+        '81': abrircerrarfaq81,
+        'ochenta y uno': abrircerrarfaq81,
+
+        '82': abrircerrarfaq82,
+        'ochenta y dos': abrircerrarfaq82,
+
+        '83': abrircerrarfaq83,
+        'ochenta y tres': abrircerrarfaq83,
+
+        '84': section84,
+        'ochenta y cuatro': section84,
+
+        '85': playVideo85,
+        'ochenta y cinco': playVideo85,
+
+        '86': abrircerrarfaq86,
+        'ochenta y seis': abrircerrarfaq86,
+
+        '87': section87,
+        'ochenta y siete': section87,
+
+        '88': section88,
+        'ochenta y ocho': section88,
+
+        '89': download89,
+        'ochenta y nueve': download89,
+
+        '90': download90,
+        'noventa': download90,
+
+        '91': download91,
+        'noventa y uno': download91,
+
+        '92': download92,
+        'noventa y dos': download92,
+
+        '93': section93,
+        'ochenta y tres': section93,
+
+        '94': download94,
+        'noventa y cuatro': download94,
+
+        '95': section95,
+        'noventa y cinco': section95,
+
+        '96': download96,
+        'noventa y seis': download96,
+
+        '97': section97,
+        'noventa y cinco': section97,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
         'Recargar': refreshPage,
+
+
 
     };
 

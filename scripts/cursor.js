@@ -12,7 +12,9 @@ function CursorEstado() {
     let newRuta = "url('../images/cursor/cursoracces.png'), auto";
     let PrincipalRuta = "url('./images/cursor/cursoracces.png'), auto";
 
-    if (cursorActivo == "activado" && ubicacion == "/celulaode/pcsp-2024/modulo-1/actividad.html" || ubicacion == "/celulaode/pcsp-2024/modulo-2/modulo-2-actividad.html") {
+    if (cursorActivo == "activado" && ubicacion == "/celulaode/pcsp-2024/modulo-1/actividad.html"
+        || cursorActivo == "activado" && ubicacion == "/celulaode/pcsp-2024/modulo-2/modulo-2-actividad.html"
+    ) {
         document.body.style.cursor = newRuta;
     } else if (cursorActivo == "activado") {
         document.body.style.cursor = PrincipalRuta;
