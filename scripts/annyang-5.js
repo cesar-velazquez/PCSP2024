@@ -267,7 +267,6 @@ document.addEventListener("DOMContentLoaded", function () {
         'F5': refreshPage,
         'efe cinco': refreshPage,
         'Recargar': refreshPage,
-
     };
 
     annyang.addCommands(commands);
