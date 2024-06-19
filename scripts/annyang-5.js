@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia abajo la cantidad especificada
-        window.scrollBy(0, 500);
+        window.scrollBy(0, 350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia arriba la cantidad especificada
-        window.scrollBy(0, -500);
+        window.scrollBy(0, -350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -125,54 +125,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let section12 = function () {
-        let element = document.getElementById("sectionM212");
+        let element = document.getElementById("section12M2");
         PositionTop100(element);
     }
 
     let section13 = function () {
-        let element = document.getElementById("sectionM213");
+        let element = document.getElementById("section13M2");
         PositionTop100(element);
     }
 
     let section14 = function () {
-        let element = document.getElementById("sectionM214");
+        let element = document.getElementById("section14M2");
         PositionTop100(element);
     }
 
-    let section15 = function () {
-        let element = document.getElementById("sectionM215");
-        PositionTop100(element);
+    let download15 = function () {
+        let element = document.getElementById("btnLectura");
+        element.click();
     }
 
-    let section16 = function () {
-        let element = document.getElementById("sectionM216");
-        PositionTop100(element);
-    }
 
-    let section17 = function () {
-        let element = document.getElementById("sectionM217");
-        PositionTop100(element);
-    }
-
-    let section18 = function () {
-        let element = document.getElementById("sectionM218");
-        PositionTop100(element);
-    }
-
-    let section19 = function () {
-        let element = document.getElementById("sectionM219");
-        PositionTop100(element);
-    }
-
-    let section20 = function () {
-        let element = document.getElementById("sectionM220");
-        PositionTop100(element);
-    }
-
-    function download21() {
-        let btn = document.getElementById("btnLectura");
-        btn.click();
-    }
 
     let abrirAyuda = function () {
         let modal = document.getElementById("methods-help");
@@ -265,37 +237,13 @@ document.addEventListener("DOMContentLoaded", function () {
         'catorce': section14,
         'número catorce': section14,
 
-        '15': section15,
-        'quince': section15,
-        'número quince': section15,
+        '15': download15,
+        'quince': download15,
+        'número quince': download15,
 
-        '16': section16,
-        'dieciséis': section16,
-        'número dieciséis': section16,
-
-        '17': section17,
-        'diecisiete': section17,
-        'número diecisiete': section17,
-
-        '18': section18,
-        'dieciocho': section18,
-        'número dieciocho': section18,
-
-        '19': section19,
-        'diecinueve': section19,
-        'número diecinueve': section19,
-
-        '20': section20,
-        'veinte': section20,
-        'número veinte': section20,
-
-        '21': download21,
-        'veintiuno': download21,
-        'número veintiuno': download21,
-
-        '22': volverA,
-        'veintidos': volverA,
-        'número veintidos': volverA,
+        '16': volverA,
+        'dieciséis': volverA,
+        'número dieciséis': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
@@ -312,87 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         escribir();
     });
-
-    // annyang.setLanguage("es-MX");
 });
-
-// // INICIO
-// const btn_access = document.getElementById('btn-access');
-// let cerrar_help = document.getElementById("cerrar");
-// let cerrarAyudaM = document.getElementById("btnCerrarv2");
-
-// // Array con los elementos identificados por su ID
-// let numbers = [];
-// for (let i = 0; i <= 24; i++) {
-//     numbers.push(document.getElementById(`ident${i}`));
-// }
-
-// // Obtener el estado de activación desde localStorage
-// let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-// console.log(activoNumberIndex);
-
-// // Función para actualizar el estado visual y de reconocimiento de voz
-// function actualizarEstado(menuactivo) {
-//     if (menuactivo) {
-//         console.log("Inicio Reconocimiento de voz");
-//         annyang.start();
-//         annyang.setLanguage('es-MX');    
-//         cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[0].classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-//         numbers[1].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[2].style.display = "flex";
-//         numbers[3].style.display = "inline-flex";
-//         numbers[4].style.display = "inline-flex";
-//         numbers[5].style.display = "inline-flex";
-//         for (let i = 6; i <= 22; i++) {
-//             numbers[i].classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         }
-//         numbers[15].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[16].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[17].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[18].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[19].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[20].classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         numbers[21].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[22].classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         localStorage.setItem("NumberAnnyang_1", "activado");
-//     } else {
-//         console.log("Fin Reconocimiento de voz");
-//         annyang.abort();
-//         cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[0].classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-//         numbers[1].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         localStorage.setItem("NumberAnnyang_1", "desactivado");
-//         numbers[2].style.display = "none";
-//         numbers[3].style.display = "none";
-//         numbers[4].style.display = "none";
-//         numbers[5].style.display = "none";
-//         for (let i = 6; i <= 22; i++) {
-//             numbers[i].classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         }
-//         numbers[15].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[16].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[17].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[18].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[19].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[20].classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//         numbers[21].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//         numbers[22].classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     }
-// }
-
-// // Inicializar el estado basado en localStorage
-// let menuactivo = activoNumberIndex === "activado";
-// actualizarEstado(menuactivo);
-
-// // Evento click del botón
-// btn_access.addEventListener('click', function () {
-//     menuactivo = !menuactivo;
-//     actualizarEstado(menuactivo);
-// });
-// // FIN
 
 const btn_access = document.getElementById('btn-access');
 let cerrar_help = document.getElementById("cerrar");
@@ -416,14 +284,6 @@ let num13 = document.getElementById("ident13");
 let num14 = document.getElementById("ident14");
 let num15 = document.getElementById("ident15");
 let num16 = document.getElementById("ident16");
-let num17 = document.getElementById("ident17");
-let num18 = document.getElementById("ident18");
-let num19 = document.getElementById("ident19");
-let num20 = document.getElementById("ident20");
-let num21 = document.getElementById("ident21");
-let num22 = document.getElementById("ident22");
-let num23 = document.getElementById("ident23");
-let num24 = document.getElementById("ident24");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log(activoNumberIndex);
@@ -448,13 +308,7 @@ function numbersActives() {
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
 }
 
 function removeNumbers() {
@@ -477,45 +331,13 @@ function removeNumbers() {
     num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num20.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
 }
 
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     numbersActives();
-    // menuactivo = true;
-    // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num2.style.display = "flex";
-    // num3.style.display = "inline-flex";
-    // num4.style.display = "inline-flex";
-    // num5.style.display = "inline-flex";
-    // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
     annyang.setLanguage('es-MX');
     annyang.start();
 }
@@ -526,64 +348,12 @@ btn_access.addEventListener('click', function () {
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
         numbersActives();
-        // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num2.style.display = "flex";
-        // num3.style.display = "inline-flex";
-        // num4.style.display = "inline-flex";
-        // num5.style.display = "inline-flex";
-        // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');        
         localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
         removeNumbers();
-
-        // cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // localStorage.setItem("NumberAnnyang_1", "desactivado");
-        // num2.style.display = "none";
-        // num3.style.display = "none";
-        // num4.style.display = "none";
-        // num5.style.display = "none";
-        // num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     }
 });
 

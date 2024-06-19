@@ -24,13 +24,13 @@ class Ayuda extends HTMLElement {
                                 Comandos de voz
                             </p>
                         </div>
-                        <p>Para utilizar esta función:
+                        <p class="mb-0">Para utilizar esta función:
                             Presiona el botón <img src="./images/accesibilidad/comandosdeVozMayuda3.png"
                                 alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
                         <p class="text-azul mb-0">
                             Elementos en pantalla:
                         </p>
-                        <ol class="padding_left" style="list-style: lower-latin;">
+                        <ol class="padding_left mb-0" style="list-style: lower-latin;">
                             <li>
                                 En la parte inferior de la página, ubica el micrófono y la barra de voz.
                             </li>
@@ -53,13 +53,22 @@ class Ayuda extends HTMLElement {
                                     Ejemplo:
                                 </p>
                                 <p class="parrafo mb-0">
-                                    Uno (abrirá el menú).
+                                    Uno o número uno (abrirá el menú).
                                 </p>
                                 <p class="parrafo mb-0">
-                                    Dos (cerrará el menú).
+                                    Dos o número dos (cerrará el menú). 
                                 </p>
                             </li>
-
+                            <li>
+                            <p class="mb-0">
+                            Menciona “desplazar hacia arriba” para visualizar la información superior.
+                            </p>
+                            </li>
+                                                        <li>
+                            <p class="mb-0">
+                            Menciona “desplazar hacia abajo” para visualizar la información inferior.
+                            </p>
+                            </li>
                             <li>
                                 <p class="mb-0 parrafo">Para abrir nuevamente esta ventana menciona: cero.</p>
                                 <p class="mb-0 parrafo"> Para cerrarla menciona: cerrar.</p>

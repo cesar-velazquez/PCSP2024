@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia abajo la cantidad especificada
-        window.scrollBy(0, 500);
+        window.scrollBy(0, 350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var scrollTopActual = window.pageYOffset || document.documentElement.scrollTop;
 
         // Desplazar la ventana hacia arriba la cantidad especificada
-        window.scrollBy(0, -500);
+        window.scrollBy(0, -350);
 
         // Obtener la nueva posición de scroll vertical
         var scrollTopNuevo = window.pageYOffset || document.documentElement.scrollTop;
