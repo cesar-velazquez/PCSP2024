@@ -396,6 +396,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '0': abrirAyuda,
         'cero': abrirAyuda,
+        'número cero': abrirAyuda,
         'cerrar': cerrarAyuda,
 
         'Inicio': inicioPagina,
@@ -404,12 +405,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
+        'número uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
+        'número dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
@@ -446,70 +449,90 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '11': section11,
         'once': section11,
+        'número once': section11,
 
         '12': section12,
         'doce': section12,
+        'número doce': section12,
 
         '13': section13,
         'trece': section13,
+        'número trece': section13,
 
         '14': section14,
         'catorce': section14,
+        'número catorce': section14,
 
         '15': download15,
         'quince': download15,
+        'número quince': download15,
 
         '16': download16,
         'dieciséis': download16,
+        'número dieciséis': download16,
 
         '17': section17,
         'diecisiete': section17,
+        'número diecisiete': section17,
 
         '18': section18,
         'dieciocho': section18,
+        'número dieciocho': section18,
 
         '19': download19,
         'diecinueve': download19,
+        'número diecinueve': download19,
 
         '20': section20,
         'veinte': section20,
+        'número veinte': section20,
 
         '21': section21,
         'veintiuno': section21,
+        'número veintiuno': section21,
 
         "23": secondtab,
         "veintitrés": secondtab,
+        "número veintitrés": secondtab,
 
         "22": firstab,
         "veintidos": firstab,
+        "número veintidos": firstab,
 
         '24': section24,
         'veinticuatro': section24,
+        'número veinticuatro': section24,
 
         '25': abrirCerrarfaq1,
         'veinticinco': abrirCerrarfaq1,
+        'número veinticinco': abrirCerrarfaq1,
 
         '26': abrirCerrarfaq2,
         'veintiséis': abrirCerrarfaq2,
+        'número veintiséis': abrirCerrarfaq2,
 
         '27': abrirCerrarfaq3,
         'veintiséis': abrirCerrarfaq3,
+        'número veintiséis': abrirCerrarfaq3,
 
         '28': section28,
         'veintiocho': section28,
+        'número veintiocho': section28,
 
         '29': download29,
         'veintinueve': download29,
+        'número veintinueve': download29,
 
         '30': download30,
         'treinta': download30,
+        'número treinta': download30,
 
         '31': volverA,
         'treinta y uno': volverA,
+        'número treinta y uno': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
-
 
         'Abrir modal esquema': abrirModalEsquema,
         "Cerrar modal esquema": cerrarmodalEsquema,

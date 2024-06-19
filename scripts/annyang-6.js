@@ -1930,6 +1930,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
+        'número cero': abrirModalAyuda,
+        'número 0': abrirModalAyuda,
         'cerrar': cerrarAyuda,
 
         'Inicio': inicioPagina,
@@ -1938,389 +1940,603 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
+        'número uno': abrirMenuPrincipal,
+        'número 1': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
+        'número dos': cerrarMenuPrincipal,
+        'número 2': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
         'tres': getPageNext,
         'número tres': getPageNext,
+        'número 3': getPageNext,
 
         '4': getPageNext1,
         'cuatro': getPageNext1,
         'número cuatro': getPageNext1,
+        'número 4': getPageNext1,
 
         '5': getPageNext2,
         'cinco': getPageNext2,
         'número cinco': getPageNext2,
+        'número 5': getPageNext2,
 
         '6': getPageNext3,
         'seis': getPageNext3,
         'número seis': getPageNext3,
+        'número 6': getPageNext3,
 
         '7': getPageNext4,
         'siete': getPageNext4,
         'número siete': getPageNext4,
+        'número 7': getPageNext4,
 
         '8': getPageNext5,
         'ocho': getPageNext5,
         'número ocho': getPageNext5,
+        'número 8': getPageNext5,
 
         '9': getPageNext6,
         'nueve': getPageNext6,
         'número nueve': getPageNext6,
+        'número 9': getPageNext6,
 
         '10': getPageNext7,
         'diez': getPageNext7,
         'número diez': getPageNext7,
+        'número 10': getPageNext7,
 
         '11': section11,
         'once': section11,
         'número once': section11,
+        'número 11': section11,
 
         '12': section12,
         'doce': section12,
         'número doce': section12,
+        'número 12': section12,
 
         '13': playVideo3,
         'trece': playVideo3,
         'número trece': playVideo3,
+        'número 13': playVideo3,
         'Pausa': playVideo3,
 
         '14': abrircerrarfaqAyuda,
         'catorce': abrircerrarfaqAyuda,
         'número catorce': abrircerrarfaqAyuda,
+        'número 14': abrircerrarfaqAyuda,
 
         '15': section15,
         'quince': section15,
         'número quince': section15,
+        'número 15': section15,
 
         '16': abrirModalAct216,
         'dieciséis': abrirModalAct216,
         'número dieciséis': abrirModalAct216,
+        'número 16': abrirModalAct216,
 
         '17': cerrarModal16,
         'diecisiete': cerrarModal16,
         'número diecisiete': cerrarModal16,
+        'número 17': cerrarModal16,
 
         '18': abrirModalAct218,
         'dieciocho': abrirModalAct218,
         'número dieciocho': abrirModalAct218,
+        'número 18': abrirModalAct218,
 
         '19': cerrarModal18,
         'diecinueve': cerrarModal18,
         'número diecinueve': cerrarModal18,
+        'número 19': cerrarModal18,
 
         '20': abrirModalAct220,
         'veinte': abrirModalAct220,
         'número veinte': abrirModalAct220,
+        'número 20': abrirModalAct220,
 
         '21': cerrarModal20,
         'veintiuno': cerrarModal20,
         'número veintiuno': cerrarModal20,
+        'número 21': cerrarModal20,
 
         '22': abrirModalAct222,
         'veintidos': abrirModalAct222,
         'número veintidos': abrirModalAct222,
+        'número 22': abrirModalAct222,
 
         '23': cerrarModal22,
         'veintitres': cerrarModal22,
         'número veintitres': cerrarModal22,
+        'número 23': cerrarModal22,
 
         '24': section24,
         'veinticuatro': section24,
+        'número veinticuatro': section24,
+        'número 24': section24,
 
         '25': section25,
         'veinticinco': section25,
+        'número veinticinco': section25,
+        'número 25': section25,
 
         '26': download26,
         'veintiseis': download26,
+        'número veintiseis': download26,
+        'número 26': download26,
 
         '27': visit27,
         'veintisiete': visit27,
+        'número veintisiete': visit27,
+        'número 27': visit27,
 
         '28': section28,
         'veintiocho': section28,
+        'número veintiocho': section28,
+        'número 28': section28,
 
         '29': download29,
         'veintinueve': download29,
+        'número veintinueve': download29,
+        'número 29': download29,
 
         '30': download30,
         'treinta': download30,
+        'número treinta': download30,
+        'número 30': download30,
 
         '31': section31,
         'treinta y uno': section31,
+        'número treinta y uno': section31,
+        'número 31': section31,
 
         '32': download32,
         'treinta y dos': download32,
+        'número treinta y dos': download32,
+        'número 32': download32,
 
         '33': section33,
         'treinta y tres': section33,
+        'número treinta y tres': section33,
+        'número 33': section33,
 
         '34': abrircerrarfaq34,
         'treinta y cuatro': abrircerrarfaq34,
+        'número treinta y cuatro': abrircerrarfaq34,
+        'número 34': abrircerrarfaq34,
 
         '35': abrircerrarfaq35,
         'treinta y cinco': abrircerrarfaq35,
+        'número treinta y cinco': abrircerrarfaq35,
+        'número 35': abrircerrarfaq35,
 
         '36': abrircerrarfaq36,
         'treinta y seis': abrircerrarfaq36,
+        'número treinta y seis': abrircerrarfaq36,
+        'número 36': abrircerrarfaq36,
 
         '37': section37,
         'treinta y siete': section37,
+        'número treinta y siete': section37,
+        'número 37': section37,
 
         '38': abrirModalAct238,
         'treinta y ocho': abrirModalAct238,
+        'número treinta y ocho': abrirModalAct238,
+        'número 38': abrirModalAct238,
 
         '39': cerrarModal38,
         'treinta y nueve': cerrarModal38,
+        'número treinta y nueve': cerrarModal38,
+        'número 39': cerrarModal38,
 
         '40': abrirModalAct240,
         'cuarenta': abrirModalAct240,
+        'número cuarenta': abrirModalAct240,
+        'número 40': abrirModalAct240,
 
         '41': cerrarModal40,
         'cuarenta y uno': cerrarModal40,
+        'número cuarenta y uno': cerrarModal40,
+        'número 41': cerrarModal40,
 
         '42': abrirModalAct242,
         'cuarenta y dos': abrirModalAct242,
+        'número cuarenta y dos': abrirModalAct242,
+        'número 42': abrirModalAct242,
 
         '43': cerrarModal42,
         'cuarenta y tres': cerrarModal42,
+        'número cuarenta y tres': cerrarModal42,
+        'número 43': cerrarModal42,
 
         '44': section44,
         'cuarenta y cuatro': section44,
+        'número cuarenta y cuatro': section44,
+        'número 44': section44,
 
         '45': section45,
         'cuarenta y cinco': section45,
+        'número cuarenta y cinco': section45,
+        'número 45': section45,
 
         '46': download46,
         'cuarenta y seis': download46,
+        'número cuarenta y seis': download46,
+        'número 46': download46,
 
         '47': download47,
         'cuarenta y siete': download47,
+        'número cuarenta y siete': download47,
+        'número 47': download47,
 
         '48': section48,
         'cuarenta y ocho': section48,
+        'número cuarenta y ocho': section48,
+        'número 48': section48,
 
         '49': visit49,
         'cuarenta y nueve': visit49,
+        'número cuarenta y nueve': visit49,
+        'número 49': visit49,
 
         '50': visit50,
         'cincuenta': visit50,
+        'número cincuenta': visit50,
+        'número 50': visit50,
 
         '51': visit51,
         'cincuenta y uno': visit51,
+        'número cincuenta y uno': visit51,
+        'número 51': visit51,
 
         '52': visit52,
         'cincuenta y dos': visit52,
+        'número cincuenta y dos': visit52,
+        'número 52': visit52,
 
         '53': visit53,
         'cincuenta y tres': visit53,
+        'número cincuenta y tres': visit53,
+        'número 53': visit53,
 
         '54': visit54,
         'cincuenta y cuatro': visit54,
+        'número cincuenta y cuatro': visit54,
+        'número 54': visit54,
 
         '55': visit55,
         'cincuenta y cinco': visit55,
+        'número cincuenta y cinco': visit55,
+        'número 55': visit55,
 
         '56': download56,
         'cincuenta y seis': download56,
+        'número cincuenta y seis': download56,
+        'número 56': download56,
 
         '57': section57,
         'cincuenta y siete': section57,
+        'número cincuenta y siete': section57,
+        'número 57': section57,
 
         '58': download58,
         'cincuenta y ocho': download58,
+        'número cincuenta y ocho': download58,
+        'número 58': download58,
 
         '59': section59,
+        'número 59': section59,
         'cincuenta y nueve': section59,
+        'número cincuenta y nueve': section59,
 
         '60': abrircerrarfaq60,
+        'número 60': abrircerrarfaq60,
         'sesenta': abrircerrarfaq60,
+        'número sesenta': abrircerrarfaq60,
 
         '61': abrircerrarfaq61,
+        'número 61': abrircerrarfaq61,
         'sesenta y uno': abrircerrarfaq61,
+        'número sesenta y uno': abrircerrarfaq61,
 
         '62': abrircerrarfaq62,
+        'número 62': abrircerrarfaq62,
         'sesenta y dos': abrircerrarfaq62,
+        'número sesenta y dos': abrircerrarfaq62,
 
         '63': section63,
+        'número 63': section63,
         'sesenta y tres': section63,
+        'número sesenta y tres': section63,
 
         '64': section64,
+        'número 64': section64,
         'sesenta y cuatro': section64,
+        'número sesenta y cuatro': section64,
 
         '65': click65,
+        'número 65': click65,
         'sesenta y cinco': click65,
+        'número sesenta y cinco': click65,
 
         '66': click66,
+        'número 66': click66,
         'sesenta y seis': click66,
+        'número sesenta y seis': click66,
 
         '67': section67,
+        'número 67': section67,
         'sesenta y siete': section67,
+        'número sesenta y siete': section67,
 
         '68': section68,
+        'número 68': section68,
         'sesenta y ocho': section68,
+        'número sesenta y ocho': section68,
 
         '69': download69,
+        'número 69': download69,
         'sesenta y nueve': download69,
+        'número sesenta y nueve': download69,
 
         '70': download70,
+        'número 70': download70,
         'setenta': download70,
+        'número setenta': download70,
 
         '71': download71,
+        'número 71': download71,
         'setenta y uno': download71,
+        'número setenta y uno': download71,
 
         '72': download72,
+        'número 72': download72,
         'setenta y dos': download72,
+        'número setenta y dos': download72,
 
         '73': download73,
+        'número 73': download73,
         'setenta y tres': download73,
+        'número setenta y tres': download73,
 
         '74': download74,
+        'número 74': download74,
         'setenta y cuatro': download74,
+        'número setenta y cuatro': download74,
 
         '75': section75,
+        'número 75': section75,
         'setenta y cinco': section75,
+        'número setenta y cinco': section75,
 
         '76': section76,
+        'número 76': section76,
         'setenta y seis': section76,
+        'número setenta y seis': section76,
 
         '77': download77,
+        'número 77': download77,
         'setenta y siete': download77,
+        'número setenta y siete': download77,
 
         '78': section78,
+        'número 78': section78,
         'setenta y ocho': section78,
+        'número setenta y ocho': section78,
 
         '79': download79,
+        'número 79': download79,
         'setenta y nueve': download79,
+        'número setenta y nueve': download79,
 
         '80': section80,
+        'número 80': section80,
         'ochenta': section80,
+        'número ochenta': section80,
 
         '81': abrircerrarfaq81,
+        'número 81': abrircerrarfaq81,
         'ochenta y uno': abrircerrarfaq81,
+        'número ochenta y uno': abrircerrarfaq81,
 
         '82': abrircerrarfaq82,
+        'número 82': abrircerrarfaq82,
         'ochenta y dos': abrircerrarfaq82,
+        'número ochenta y dos': abrircerrarfaq82,
 
         '83': abrircerrarfaq83,
+        'número 83': abrircerrarfaq83,
         'ochenta y tres': abrircerrarfaq83,
+        'número ochenta y tres': abrircerrarfaq83,
 
         '84': section84,
+        'número 84': section84,
         'ochenta y cuatro': section84,
+        'número ochenta y cuatro': section84,
 
         '85': playVideo85,
+        'número 85': playVideo85,
         'ochenta y cinco': playVideo85,
+        'número ochenta y cinco': playVideo85,
 
         '86': abrircerrarfaq86,
+        'número 86': abrircerrarfaq86,
         'ochenta y seis': abrircerrarfaq86,
+        'número ochenta y seis': abrircerrarfaq86,
 
         '87': section87,
+        'número 87': section87,
         'ochenta y siete': section87,
+        'número ochenta y siete': section87,
 
         '88': section88,
+        'número 88': section88,
         'ochenta y ocho': section88,
+        'número ochenta y ocho': section88,
 
         '89': download89,
+        'número 89': download89,
         'ochenta y nueve': download89,
+        'número ochenta y nueve': download89,
 
         '90': download90,
+        'número 90': download90,
         'noventa': download90,
+        'número noventa': download90,
 
         '91': download91,
+        'número 91': download91,
         'noventa y uno': download91,
+        'número noventa y uno': download91,
 
         '92': download92,
+        'número 92': download92,
         'noventa y dos': download92,
+        'número noventa y dos': download92,
 
         '93': section93,
-        'ochenta y tres': section93,
+        'número 93': section93,
+        'noventa y tres': section93,
+        'número noventa y tres': section93,
 
         '94': download94,
+        'número 94': download94,
         'noventa y cuatro': download94,
+        'número noventa y cuatro': download94,
 
         '95': section95,
+        'número 95': section95,
         'noventa y cinco': section95,
+        'número noventa y cinco': section95,
 
         '96': download96,
+        'número 96': download96,
         'noventa y seis': download96,
+        'número noventa y seis': download96,
 
         '97': section97,
-        'noventa y cinco': section97,
+        'número 97': section97,
+        'noventa y siete': section97,
+        'número noventa y siete': section97,
 
         '98': abrircerrarfaq98,
+        'número 98': abrircerrarfaq98,
         'noventa y ocho': abrircerrarfaq98,
+        'número noventa y ocho': abrircerrarfaq98,
 
         '99': abrircerrarfaq99,
+        'número 99': abrircerrarfaq99,
         'noventa y nueve': abrircerrarfaq99,
+        'número noventa y nueve': abrircerrarfaq99,
 
         '100': abrircerrarfaq100,
+        'número 100': abrircerrarfaq100,
         'cien': abrircerrarfaq100,
+        'número cien': abrircerrarfaq100,
 
         '101': section101,
+        'número 101': section101,
         'ciento uno': section101,
+        'número ciento uno': section101,
 
         '102': section102,
+        'número 102': section102,
         'ciento dos': section102,
+        'número ciento dos': section102,
 
         '103': section103,
+        'número 103': section103,
         'ciento tres': section103,
+        'número ciento tres': section103,
 
         '104': download104,
+        'número 104': download104,
         'ciento cuatro': download104,
+        'número ciento cuatro': download104,
 
         '105': download105,
+        'número 105': download105,
         'ciento cinco': download105,
+        'número ciento cinco': download105,
 
         '106': download106,
+        'número 106': download106,
         'ciento seis': download106,
+        'número ciento seis': download106,
 
         '107': section107,
+        'número 107': section107,
         'ciento siete': section107,
+        'número ciento siete': section107,
 
         '108': download108,
+        'número 108': download108,
         'ciento ocho': download108,
+        'número ciento ocho': download108,
 
         '109': download109,
+        'número 109': download109,
         'ciento nueve': download109,
+        'número ciento nueve': download109,
 
         '110': section110,
+        'número 110': section110,
         'ciento diez': section110,
+        'número ciento diez': section110,
 
         '111': section111,
+        'número 111': section111,
         'ciento once': section111,
+        'número ciento once': section111,
 
         '112': download112,
+        'número 112': download112,
         'ciento doce': download112,
+        'número ciento doce': download112,
 
         '113': section113,
-        'ciento once': section113,
+        'número 113': section113,
+        'ciento trece': section113,
+        'número ciento trece': section113,
 
         '114': abrircerrarfaq114,
+        'número 114': abrircerrarfaq114,
         'ciento catorce': abrircerrarfaq114,
+        'número ciento catorce': abrircerrarfaq114,
 
         '115': abrircerrarfaq115,
+        'número 115': abrircerrarfaq115,
         'ciento quince': abrircerrarfaq115,
+        'número ciento quince': abrircerrarfaq115,
 
         '116': abrircerrarfaq116,
+        'número 116': abrircerrarfaq116,
         'ciento dieciséis': abrircerrarfaq116,
+        'número ciento dieciséis': abrircerrarfaq116,
 
         '117': section117,
+        'número 117': section117,
         'ciento diecisiete': section117,
+        'número ciento diecisiete': section117,
 
         '118': download118,
-        'ciento doce': download118,
+        'número 118': download118,
+        'ciento dieciocho': download118,
+        'número ciento dieciocho': download118,
 
         '119': download119,
+        'número 119': download119,
         'ciento diecinueve': download119,
-
-
-
+        'número ciento diecinueve': download119,
     };
 
     annyang.addCommands(commands);
@@ -2573,36 +2789,3 @@ btn_access.addEventListener('click', function () {
     }
 });
 
-
-
-
-// function numbersActives() {
-//     menuactivo = true;
-//     cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-//     num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num2.style.display = "flex";
-//     num3.style.display = "inline-flex";
-//     num4.style.display = "inline-flex";
-//     num5.style.display = "inline-flex";
-//     num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-//     num20.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num21.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num22.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num23.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-//     num24.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-// }

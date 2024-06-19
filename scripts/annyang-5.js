@@ -173,6 +173,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '0': abrirAyuda,
         'cero': abrirAyuda,
+        'número 0': abrirAyuda,
+        'número cero': abrirAyuda,
+
         'cerrar': cerrarAyuda,
 
         'Inicio': inicioPagina,
@@ -180,68 +183,84 @@ document.addEventListener("DOMContentLoaded", function () {
         'Desplazar hacia arriba': scrollTo,
 
         '1': abrirMenuPrincipal,
+        'número 1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
+        'número 2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
+        'número 3': getPageNext,
         'tres': getPageNext,
         'número tres': getPageNext,
 
         '4': getPageNext1,
+        'número 4': getPageNext1,
         'cuatro': getPageNext1,
         'número cuatro': getPageNext1,
 
         '5': getPageNext2,
+        'número 5': getPageNext2,
         'cinco': getPageNext2,
         'número cinco': getPageNext2,
 
         '6': getPageNext3,
+        'número 6': getPageNext3,
         'seis': getPageNext3,
         'número seis': getPageNext3,
 
         '7': getPageNext4,
+        'número 7': getPageNext4,
         'siete': getPageNext4,
         'número siete': getPageNext4,
 
         '8': getPageNext5,
+        'número 8': getPageNext5,
         'ocho': getPageNext5,
         'número ocho': getPageNext5,
 
         '9': getPageNext6,
+        'número 9': getPageNext6,
         'nueve': getPageNext6,
         'número nueve': getPageNext6,
 
         '10': getPageNext7,
+        'número 10': getPageNext7,
         'diez': getPageNext7,
         'número diez': getPageNext7,
 
         '11': section11,
+        'número 11': section11,
         'once': section11,
         'número once': section11,
 
         '12': section12,
+        'número 12': section12,
         'doce': section12,
         'número doce': section12,
 
         '13': section13,
+        'número 13': section13,
         'trece': section13,
         'número trece': section13,
 
         '14': section14,
+        'número 14': section14,
         'catorce': section14,
         'número catorce': section14,
 
         '15': download15,
+        'número 15': download15,
         'quince': download15,
         'número quince': download15,
 
         '16': volverA,
+        'número 16': volverA,
         'dieciséis': volverA,
         'número dieciséis': volverA,
 
@@ -308,7 +327,7 @@ function numbersActives() {
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
+    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 }
 
 function removeNumbers() {
@@ -331,7 +350,7 @@ function removeNumbers() {
     num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');    
+    num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 }
 
 
