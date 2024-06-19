@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext3 = function () {
-        location.href = '../pcsp-2024/modulo-1/actividad.html';
+        location.href = './actividad.html';
     }
 
     var getPageNext4 = function () {
         location.href = './modulo-2.html';
     }
     var getPageNext5 = function () {
-        location.href = '../pcsp-2024/modulo-2/modulo-2-actividad.html';
+        location.href = './modulo-2-actividad.html';
     }
     var getPageNext6 = function () {
         location.href = './modulo-3.html';
     }
     var getPageNext7 = function () {
-        location.href = '../pcsp-2024/modulo-3/modulo-3-actividad.html';
+        location.href = './modulo-3-actividad.html';
     }
 
     var abrirMenuPrincipal = function () {
@@ -131,12 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let videoOn = false;
     let VideoPlay = document.getElementById("video3");
-    let positionVid1 = document.getElementById("section13Act2");
+    let positionVid1 = document.getElementById("section12Act2");
     let playVideo = function () {
         videoOn = true;
         VideoPlay.play();
         PositionTop100(positionVid1);
-        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
     // let VideoOff = document.getElementById("video1");
@@ -151,9 +150,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let playVideo3 = function () {
         if (!videoOn) {
             playVideo();
+            let ocultar = document.getElementById("ident13");
+            let mostrar = document.getElementById("pausa13");
+            ocultar.classList.remove("ident_Universal");
+            mostrar.classList.add("ident_Universal");
         } else {
             videoOn = true;
             offVideo();
+            let mostrar = document.getElementById("ident13");
+            let ocultar = document.getElementById("pausa13");
+            mostrar.classList.add("ident_Universal");
+            ocultar.classList.remove("ident_Universal");
         }
     }
 
@@ -165,7 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
         videoOn2 = true;
         VideoPlay2.play();
         PositionTop100(positionVid2);
-        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
     // let VideoOff = document.getElementById("video1");
@@ -181,8 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!videoOn2) {
             let ocultar = document.getElementById("ident85");
             let mostrar = document.getElementById("pausa");
-            ocultar.classList.remove("ident_Universal");            
-            mostrar.classList.add("ident_Universal");            
+            ocultar.classList.remove("ident_Universal");
+            mostrar.classList.add("ident_Universal");
             playVideo2();
         } else {
             let mostrar = document.getElementById("ident85");

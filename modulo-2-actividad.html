@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/modulo1.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/modulo1.css" />
     <!-- Menu accesible .css -->
-    <link rel="stylesheet" href="../css/menuacces.css">
+    <link rel="stylesheet" href="css/menuacces.css">
     <!-- Libreria de Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Libreria para animar  los recursos-->
@@ -56,7 +56,7 @@
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
         <button onclick="handleMenu()" class="btnAccessUniversal">
-            <img src="../images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
+            <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
         </button>
 
         <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
@@ -66,7 +66,8 @@
         <span id="ident0" class="identificador2">0</span>
     </div>
     <div id="modal-backdrop"></div>
-    <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+
+    <!-- <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
 
@@ -89,7 +90,7 @@
                             </p>
                         </div>
                         <p>Para utilizar esta función:
-                            Presiona el botón <img src="../images/accesibilidad/comandosdeVozMayuda3.png"
+                            Presiona el botón <img src="./images/accesibilidad/comandosdeVozMayuda3.png"
                                 alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
                         <p class="text-azul mb-0">
                             Elementos en pantalla:
@@ -147,7 +148,9 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- Inicio modal ayuda -->
+    <modal-ayuda></modal-ayuda>
     <!-- fin modal ayuda -->
     <!-- Inicio Modal Lector Inmersivo -->
     <modal-lectorinmersivo></modal-lectorinmersivo>
@@ -160,10 +163,10 @@
             <div class="sectionAcces">
                 <div>
                     <button class="btn_accesible" id="font_size">
-                        <img id="icon_FontSize" src="../images/accesibilidad/MA-_m-tamanofuente-a.png"
+                        <img id="icon_FontSize" src="./images/accesibilidad/MA-_m-tamanofuente-a.png"
                             alt="Icon auxiliar font size">
                         <img id="icon_FontSize_Active" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
+                            src="./images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
                         Tamaño de fuente
                     </button>
                 </div>
@@ -172,10 +175,10 @@
             <div class="sectionAcces">
                 <div>
                     <button class="btn_accesible" id="link_resaltar">
-                        <img id="icon_Link" src="../images/accesibilidad/MA-_m-hiper-a.png"
+                        <img id="icon_Link" src="./images/accesibilidad/MA-_m-hiper-a.png"
                             alt="Icon auxiliar hipervinculos">
                         <img id="icon_Link_Active" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
+                            src="./images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
                         Hipervínculos
                     </button>
                 </div>
@@ -184,10 +187,10 @@
             <div class="sectionAcces">
                 <div>
                     <button id="cursorBig" class="btn_accesible">
-                        <img id="icon_Cursor" src="../images/accesibilidad/MA-_m-cursor-a.png"
+                        <img id="icon_Cursor" src="./images/accesibilidad/MA-_m-cursor-a.png"
                             alt="Icon auxiliar cursor">
                         <img id="icon_Cursor_Active" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
+                            src="./images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
                         Cursor
                     </button>
                 </div>
@@ -198,10 +201,10 @@
                     <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
                         title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
                         aria-hidden="true">
-                        <img id="icon_lector_inmersivo" src="../images/accesibilidad/MA-_m-lector-a.png"
+                        <img id="icon_lector_inmersivo" src="./images/accesibilidad/MA-_m-lector-a.png"
                             alt="Icon auxiliar Lector">
                         <img id="icon_lector_inmersivo_active" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
+                            src="./images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
                         Lector Inmersivo
                     </button>
                 </div>
@@ -210,10 +213,10 @@
             <div class="sectionAcces section_voice">
                 <div>
                     <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
-                        <img id="icon_comando_voz" src="../images/accesibilidad/MA-_m-comandos-a.png"
+                        <img id="icon_comando_voz" src="./images/accesibilidad/MA-_m-comandos-a.png"
                             alt="Icon auxiliar comandos de voz">
                         <img id="icon_comandovoz_activo" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
+                            src="./images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
                         Comandos de voz
                     </button>
                 </div>
@@ -223,7 +226,7 @@
                 <div>
                     <a tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
                         aria-label="Botón accesibilidad">
-                        <img src="../images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
                         Lectura fácil
                     </a>
                 </div>
@@ -233,10 +236,10 @@
                 <div>
                     <button onclick="showLine()" id="lineaLectura" class="btn_accesible"
                         aria-label="Botón accesibilidad">
-                        <img id="icon_Linea_Lectura" src="../images/accesibilidad/MA-_m-regla-a.png"
+                        <img id="icon_Linea_Lectura" src="./images/accesibilidad/MA-_m-regla-a.png"
                             alt="Icon auxiliar línea de lectura">
                         <img id="icon_Linea_Lectura_Active" class="icon_desactivado"
-                            src="../images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
+                            src="./images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
                         Línea de lectura
                     </button>
                 </div>
@@ -284,10 +287,10 @@
                 </div>
             </div>
 
-            <img class="escritorio" src="../images/PCSP24-_banner-paginasec-e.png" alt="Banner principal"
+            <img class="escritorio" src="./images/PCSP24-_banner-paginasec-e.png" alt="Banner principal"
                 aria-hidden="true" width="100%" height="auto" />
 
-            <img class="movil" src="../images/PCSP24-_banner-paginasec-r.png" alt="Banner principal" aria-hidden="true"
+            <img class="movil" src="./images/PCSP24-_banner-paginasec-r.png" alt="Banner principal" aria-hidden="true"
                 width="100%" height="auto" />
         </div>
 
@@ -346,11 +349,14 @@
                         <p class="instruccion"><b>Instrucción:</b> Presiona el botón de video para iniciar la
                             reproducción.</p>
 
+                        <span id="ident13" class="identificador2 identVideo ">13=Reproducir</span>
+                        <span id="pausa13" class="identificador2 identVideo pausar ">13=Pausar</span>
+
                         <div class="mb-2rem">
                             <div id="section13Act2" class="vid3 embed-responsive embed-responsive-16by9">
-                                <span id="ident13" class="play_video identificador2 ">13</span>
-                                <video id="video3" src="../videos/unit1/modulo2.mp4" type="video/mp4"
-                                    poster="../images/video/video1.png" controls></video>
+                                <!-- <span id="ident13" class="play_video identificador2 ">13</span> -->
+                                <video id="video3" src="./videos/unit1/modulo2.mp4" type="video/mp4"
+                                    poster="./images/video/video1.png" controls></video>
                             </div>
                         </div>
 
@@ -401,7 +407,7 @@
                             </p>
                             <div class="text-center">
                                 <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                    href="../descargas/modulo2/PCSP24-Guion-de-video-Que-es-el-pensamiento-critico.pdf">
+                                    href="./descargas/modulo2/PCSP24-Guion-de-video-Que-es-el-pensamiento-critico.pdf">
                                     Guion de video
                                     <span class="sr-only">archivo PDF</span>
                                 </a>
@@ -432,49 +438,48 @@
 
                     </div>
 
-                    <div class="escritorio caja pb-0 pt-0">
+                    <div class=" caja pb-0 pt-0">
                         <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.</p>
                     </div>
 
-                    <div class="contenedor-modales escritorio">
+                    <div class="contenedor-modales ocultar">
 
                         <button class="btn-image ml-0" data-toggle="modal" data-target="#habilidad-1">
-                            <img src="../images/modulo2/PCSP24-M2_act04-concepto01.png"
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto01.png"
                                 alt="imagen de apoyo - Problema como necesidad" aria-hidden="true">
 
                             <div class="btn-modales btn">
-                                Problema como necesidad
+                                a. Problema como necesidad
                                 <span id="ident16" class="identificador2 ">16</span>
                             </div>
                         </button>
 
                         <button id="modal18" class="btn-image " data-toggle="modal" data-target="#habilidad-3">
-                            <img src="../images/modulo2/PCSP24-M2_act04-concepto02.png"
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto02.png"
                                 alt="imagen de apoyo - Problema como carencia" aria-hidden="true">
                             <div class="btn-modales btn">
-                                Problema como carencia o exceso
-                                <span id="ident18" class="identificador2 ">18</span>
-                            </div>
-                        </button>
-
-                        <button id="modal20" class="btn-image ml-0" data-toggle="modal" data-target="#habilidad-2">
-                            <img src="../images/modulo2/PCSP24-M2_act04-concepto03.png"
-                                alt="imagen de apoyo - Problema como obstáculo" aria-hidden="true">
-
-                            <div class="btn-modales btn">
-                                Problema como obstáculo
+                                c. Problema como carencia o exceso
                                 <span id="ident20" class="identificador2 ">20</span>
                             </div>
                         </button>
 
+                        <button id="modal20" class="btn-image ml-0" data-toggle="modal" data-target="#habilidad-2">
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto03.png"
+                                alt="imagen de apoyo - Problema como obstáculo" aria-hidden="true">
 
+                            <div class="btn-modales btn">
+                                b. Problema como obstáculo
+                                <span id="ident18" class="identificador2 ">18</span>
+
+                            </div>
+                        </button>
 
                         <button class="btn-image" data-toggle="modal" data-target="#habilidad-4">
-                            <img src="../images/modulo2/PCSP24-M2_act04-concepto04.png"
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto04.png"
                                 alt="imagen de apoyo - Problema como contradicción" aria-hidden="true">
 
                             <div class="btn-modales btn">
-                                Problema como contradicción de funciones
+                                d. Problema como contradicción de funciones
                                 <span id="ident22" class="identificador2 ">22</span>
                             </div>
 
@@ -493,21 +498,13 @@
                             concebidos y nuestro desarrollo en el vientre y durante nuestra existencia se relaciona con
                             satisfacer necesidades, cuyo grado de dificultad y complejidad aumentan paulatinamente.</p>
 
-                        <p class="mb-0">Una necesidad implica una motivación y también una capacidad por
+                        <p>Una necesidad implica una motivación y también una capacidad por
                             desarrollar.
                             Cuando un nivel de necesidad no ha sido satisfecho, esas necesidades tienden a estar activas
                             y presentes en nuestra cotidianeidad y muchas veces esto sucede de forma inconsciente. Esto
                             ocasiona mucho ruido y confusión en nuestra realidad, ya que la persona cae en una continua
                             búsqueda de algo que no entiende, tratando de llenar algo en su experiencia sin saber qué es
                             (De León, 2003, pp. 153).</p>
-
-                        <p>Una necesidad implica una motivación y también una capacidad por desarrollar. Cuando un
-                            nivel de necesidad no ha sido satisfecho, esas necesidades tienden a estar activas y
-                            presentes en nuestra cotidianeidad y muchas veces esto sucede de forma inconsciente.
-                            Esto ocasiona mucho ruido y confusión en nuestra realidad, ya que la persona cae en una
-                            continua búsqueda de algo que no entiende, tratando de llenar algo en su experiencia sin
-                            saber qué es (De León, 2003, pp. 153).</p>
-
 
                         <p class="text-azul">b. Problema como obstáculo</p>
 
@@ -534,16 +531,6 @@
                             perciba problemático.</p>
 
                         <p class="text-azul">d. Problema como contradicción de funciones</p>
-
-                        <p>Se explica considerando que un sistema tiene una función primaria útil y el
-                            problema se
-                            presenta como un elemento que actúa como inhibidor de ésta, provocando que el sistema
-                            caiga
-                            en una función nociva o contradictoria. Cuando un elemento o evento interrumpe la
-                            función
-                            primaria y útil de un sistema, se presenta un problema conceptualizado del tipo de
-                            contradicción de funciones o también entendido como disfunción. La forma de solucionarlo
-                            involucra acciones para devolver su función ideal (Molares, 2016).</p>
 
                         <p class="mb-0">Se explica considerando que un sistema tiene una función primaria útil y
                             el problema se presenta como un elemento que actúa como inhibidor de ésta,
@@ -589,7 +576,7 @@
                             <li>
                                 Lee con detenimiento los conceptos de problema y solución, ubicados en
                                 <a id="glosario26" class="enlace-icono"
-                                    href="../descargas/modulo1/Glosario1-Programa2017.pdf" download="">
+                                    href="./descargas/modulo1/Glosario1-Programa2017.pdf" download="">
                                     Glosario 1. Programa 2017<i aria-hidden="true">.</i>
                                     <span id="ident26" class="identificador2 ">26</span>
                                     <span class="sr-only">Archivo PDF</span>
@@ -620,7 +607,7 @@
                             <li>
                                 Descarga y llena el formato
                                 <a id="otp29" class="enlace-icono"
-                                    href="../descargas/modulo2/Act04-Formato-Organizador-Terminologico-de-Problema.docx"
+                                    href="./descargas/modulo2/Act04-Formato-Organizador-Terminologico-de-Problema.docx"
                                     download>
                                     Organizador Terminológico de Problema (OTP)<i aria-hidden="true">.</i>
                                     <span id="ident29" class="identificador2 ">29</span>
@@ -630,7 +617,7 @@
                             <li>
                                 Descarga y llena el formato
                                 <a id="ots30" class="enlace-icono"
-                                    href="../descargas/modulo2/Act04-Formato-Organizador-Terminologico-de-Solucion.docx"
+                                    href="./descargas/modulo2/Act04-Formato-Organizador-Terminologico-de-Solucion.docx"
                                     download>
                                     Organizador Terminológico de Solución (OTS)<i aria-hidden="true">.</i>
                                     <span id="ident30" class="identificador2 ">30</span>
@@ -649,7 +636,7 @@
 
                         <div class="text-center">
                             <a id="rubrica32" class="btn-modales btn"
-                                href="../descargas/modulo2/PCSP24-Rubrica-ACT04.docx" download="">
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT04.docx" download="">
                                 Rúbrica de evaluación
                                 <span id="ident32" class="identificador2 ">32</span>
                                 <span class="sr-only">Documento de word</span>
@@ -788,7 +775,7 @@
                                 </p>
                                 <div class="text-center">
                                     <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                        href="../descargas/modulo2/PCSP24-FuentesInfo-ACT04.docx">
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT04.docx">
                                         Fuentes de información
                                         <span class="sr-only">Documento de word</span>
                                     </a>
@@ -829,7 +816,7 @@
 
                             <div class="contenedor-grafico">
 
-                                <img id="img-gr-1" class="imagen-gr" src="../images/modulo2/PCSP24-M2_act05-01.png"
+                                <img id="img-gr-1" class="imagen-gr" src="./images/modulo2/PCSP24-M2_act05-01.png"
                                     alt="imagen de apoyo - Modelo" aria-hidden="true">
 
                                 <button id="btn-gr-1" class="btn btn-modales btn-modales-gr " data-toggle="modal"
@@ -838,7 +825,7 @@
                                     <span id="ident38" class="identificador2 ">38</span>
                                 </button>
 
-                                <img id="img-gr-2" class="imagen-gr" src="../images/modulo2/PCSP24-M2_act05-02.png"
+                                <img id="img-gr-2" class="imagen-gr" src="./images/modulo2/PCSP24-M2_act05-02.png"
                                     alt="imagen de apoyo - Función" aria-hidden="true">
 
                                 <button id="btn-gr-2" class="btn btn-modales btn-modales-gr" data-toggle="modal"
@@ -847,7 +834,7 @@
                                     <span id="ident40" class="identificador2 ">40</span>
                                 </button>
 
-                                <img id="img-gr-3" class="imagen-gr" src="../images/modulo2/PCSP24-M2_act05-03.png"
+                                <img id="img-gr-3" class="imagen-gr" src="./images/modulo2/PCSP24-M2_act05-03.png"
                                     alt="imagen de apoyo - Tipos" aria-hidden="true">
 
                                 <button id="btn-gr-3" class="btn btn-modales btn-modales-gr" data-toggle="modal"
@@ -956,7 +943,7 @@
                             <li>
                                 Concepto de modelo ubicado en
                                 <a id="download46" class="enlace-icono"
-                                    href="../descargas/modulo1/Glosario1-Programa2017.pdf" download>
+                                    href="./descargas/modulo1/Glosario1-Programa2017.pdf" download>
                                     Glosario 1. Programa 2017<i aria-hidden="true">.</i>
                                     <span id="ident46" class="identificador2 ">46</span>
                                     <span class="sr-only">Archivo PDF</span>
@@ -965,7 +952,7 @@
                             <li>
                                 Modelos de problemas, ubicado en páginas 52 a 54, 71 a 72, 97 a 106, 166 a 169 en
                                 <a id="download47" class="enlace-icono"
-                                    href="../descargas/modulo2/Act05-Toma-de-decisiones-y-solucion-de-problemas.pdf"
+                                    href="./descargas/modulo2/Act05-Toma-de-decisiones-y-solucion-de-problemas.pdf"
                                     download>
                                     Toma de decisiones y solución de problemas<i aria-hidden="true">.</i>
                                     <span id="ident47" class="identificador2 ">47</span>
@@ -1046,7 +1033,7 @@
                             <li>
                                 Evalúa y corrige tu mapa. Utiliza la siguiente
                                 <a id="download56" class="enlace-icono"
-                                    href="../descargas/modulo2/Act05-ED07-lista_cotejo_mapa.docx" download>
+                                    href="./descargas/modulo2/Act05-ED07-lista_cotejo_mapa.docx" download>
                                     Lista de cotejo<i aria-hidden="true">.</i>
                                     <span id="ident56" class="identificador2 ">56</span>
                                     <span class="sr-only">documento de Word</span>
@@ -1064,7 +1051,7 @@
 
                         <div class="text-center">
                             <a id="download58" class="btn-modales btn"
-                                href="../descargas/modulo2/PCSP24-Rubrica-ACT05.docx" download>
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT05.docx" download>
                                 Rúbrica de evaluación
                                 <span id="ident58" class="identificador2 ">58</span>
                                 <span class="sr-only">Documento de word</span>
@@ -1209,7 +1196,7 @@
                                 </p>
                                 <div class="text-center">
                                     <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                        href="../descargas/modulo2/PCSP24-FuentesInfo-ACT05.docx">
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT05.docx">
                                         Fuentes de información
                                         <span class="sr-only">Documento de word</span>
                                     </a>
@@ -1235,13 +1222,8 @@
                             <span id="ident63" class="identificador2 ">63</span>
                         </h2>
 
-                        <p class="mb-0">En el tema anterior estudiaste los modelos: necesidades
-                            psicobiológicas de
-                            Carlos De León, de Campirán y de Saiz, ahora tendrás la oportunidad de aprender otros
-                            modelos para plantear y transferir problemas cotidianos y disciplinares.</p>
-
                         <div class="text-center escritorio">
-                            <img class="imagen-ac2" src="../images/modulo2/PCSP24-M2_act06.png" alt="imagen de apoyo"
+                            <img class="imagen-ac2" src="./images/modulo2/PCSP24-M2_act06.png" alt="imagen de apoyo"
                                 aria-hidden="true" />
                         </div>
 
@@ -1454,7 +1436,7 @@
 
                                 <li>
                                     <a id="download69" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Periodos-en-la-solucion-de-problemas.pdf"
+                                        href="./descargas/modulo2/Act06-Periodos-en-la-solucion-de-problemas.pdf"
                                         download>
                                         Periodos en la solución o resolución de problemas<i aria-hidden="true">.</i>
                                         <span id="ident69" class="identificador2 ">69</span>
@@ -1464,7 +1446,7 @@
 
                                 <li>
                                     <a id="download70" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Propuesta-de-un-modelo-de-Agronomia.pdf"
+                                        href="./descargas/modulo2/Act06-Propuesta-de-un-modelo-de-Agronomia.pdf"
                                         download>
                                         Propuesta de un modelo de agronomía para la solución o resolución de problemas,
                                         basado en la identificación de periodos<i aria-hidden="true">.</i>
@@ -1475,7 +1457,7 @@
 
                                 <li>
                                     <a id="download71" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Problema-La-descarga-de-aguas-residuales.pdf"
+                                        href="./descargas/modulo2/Act06-Problema-La-descarga-de-aguas-residuales.pdf"
                                         download>
                                         Problema ¿la descarga de aguas residuales está acelerando la eutrofización en la
                                         laguna de Tampamachoco?
@@ -1486,7 +1468,7 @@
 
                                 <li>
                                     <a id="download72" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Es-posible-explicar-la-fisiologia-de-la-temperatura-corporal.pdf"
+                                        href="./descargas/modulo2/Act06-Es-posible-explicar-la-fisiologia-de-la-temperatura-corporal.pdf"
                                         download>
                                         ¿Es posible explicar la fisiología de la temperatura corporal mediante el modelo
                                         de
@@ -1498,7 +1480,7 @@
 
                                 <li>
                                     <a id="download73" class="enlace-icono"
-                                        href="../descargas/modulo2/Proyecto-APE_Antologia.pdf" download>
+                                        href="./descargas/modulo2/Proyecto-APE_Antologia.pdf" download>
                                         Proyecto APE_Antología<i aria-hidden="true">.</i>
                                         <span id="ident73" class="identificador2 ">73</span>
                                         <span class="sr-only">Archivo PDF</span>
@@ -1507,7 +1489,7 @@
 
                                 <li>
                                     <a id="download74" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Organizador-DICOP.pdf" download>
+                                        href="./descargas/modulo2/Act06-Organizador-DICOP.pdf" download>
                                         Organizador DICOP (diagnóstico, contexto y problema) como modelo para el
                                         planteamiento de problemas<i aria-hidden="true">.</i><span id="ident74"
                                             class="identificador2 ">74</span>
@@ -1543,7 +1525,7 @@
                             <ol class="ml-4 mb-0">
                                 <li>Descarga el formato:
                                     <a id="download77" class="enlace-icono"
-                                        href="../descargas/modulo2/Act06-Plantilla-DICOP.docx" download>
+                                        href="./descargas/modulo2/Act06-Plantilla-DICOP.docx" download>
                                         Plantilla DICOP<i aria-hidden="true">.</i>
                                         <span id="ident77" class="identificador2 ">77</span>
                                         <span class="sr-only">Documento de word</span>
@@ -1562,7 +1544,7 @@
 
                             <div class="text-center">
                                 <a id="download79" class="btn-modales btn"
-                                    href="../descargas/modulo2/PCSP24-Rubrica-ACT06.docx" download>
+                                    href="./descargas/modulo2/PCSP24-Rubrica-ACT06.docx" download>
                                     Rúbrica de evaluación
                                     <span id="ident79" class="identificador2 ">79</span>
                                     <span class="sr-only">Documento de word</span>
@@ -1787,7 +1769,7 @@
                                     <div class="text-center">
                                         <a download=""
                                             class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                            href="../descargas/modulo2/PCSP24-FuentesInfo-ACT06.docx">
+                                            href="./descargas/modulo2/PCSP24-FuentesInfo-ACT06.docx">
                                             Fuentes de información
                                             <span class="sr-only">Documento de word</span>
                                         </a>
@@ -1821,8 +1803,8 @@
                         <div class="mb-2rem">
                             <div class="vid3 embed-responsive embed-responsive-16by9">
                                 <!-- <span id="ident85" class="play_video identificador2 ">85</span> -->
-                                <video id="video85" src="../videos/unit1/modulo2-2.mp4" type="video/mp4"
-                                    poster="../images/video/video1.png" controls></video>
+                                <video id="video85" src="./videos/unit1/modulo2-2.mp4" type="video/mp4"
+                                    poster="./images/video/video1.png" controls></video>
                             </div>
                         </div>
 
@@ -1885,7 +1867,7 @@
                             </p>
                             <div class="text-center">
                                 <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                    href="../descargas/modulo2/PCSP24-Guion-de-video-Las-habilidades-de-pensamiento.pdf">
+                                    href="./descargas/modulo2/PCSP24-Guion-de-video-Las-habilidades-de-pensamiento.pdf">
                                     Guion de video
                                     <span class="sr-only">archivo PDF</span>
                                 </a>
@@ -1933,7 +1915,7 @@
 
                             <li>
                                 <a id="download89" class="enlace-icono"
-                                    href="../descargas/modulo2/ACT07-Habilidades-de-pensamiento-critico-y-creativo.pdf"
+                                    href="./descargas/modulo2/ACT07-Habilidades-de-pensamiento-critico-y-creativo.pdf"
                                     download="">
                                     Habilidades de pensamiento crítico y creativo. Toma de decisiones y solución de
                                     problemas<i aria-hidden="true">.</i>
@@ -1943,8 +1925,8 @@
                             </li>
 
                             <li>
-                                <a id="download90" class="enlace-icono" href="../descargas/modulo2/ACT07-Filosofia-de-la-existencia.pdf"
-                                    download="">
+                                <a id="download90" class="enlace-icono"
+                                    href="./descargas/modulo2/ACT07-Filosofia-de-la-existencia.pdf" download="">
                                     Filosofía de la existencia<i aria-hidden="true">.</i>
                                     <span id="ident90" class="identificador2 ">90</span>
                                     <span class="sr-only">Archivo PDF</span>
@@ -1954,7 +1936,7 @@
 
                             <li>
                                 <a id="download91" class="enlace-icono"
-                                    href="../descargas/modulo2/ACT07-Filosofia-investigacion-y-enseñanza.pdf"
+                                    href="./descargas/modulo2/ACT07-Filosofia-investigacion-y-enseñanza.pdf"
                                     download="">
                                     Filosofía: investigación y enseñanza en el Noa del 2001<i aria-hidden="true">.</i>
                                     <span id="ident91" class="identificador2 ">91</span>
@@ -1965,7 +1947,7 @@
 
                             <li>
                                 <a id="download92" class="enlace-icono"
-                                    href="../descargas/modulo2/ACT07-La-tabla-de-Orden-de-Pensamiento.pdf" download="">
+                                    href="./descargas/modulo2/ACT07-La-tabla-de-Orden-de-Pensamiento.pdf" download="">
                                     La tabla de Orden de Pensamiento como Herramienta de Lectura de Texto
                                     Argumentativo<i aria-hidden="true">.</i>
                                     <span id="ident92" class="identificador2 ">92</span>
@@ -1989,7 +1971,8 @@
 
                             <li>
                                 Descarga el formato:
-                                <a id="download94" class="enlace-icono" href="../descargas/modulo2/Act07-Plantilla-OP.docx" download="">
+                                <a id="download94" class="enlace-icono"
+                                    href="./descargas/modulo2/Act07-Plantilla-OP.docx" download="">
                                     Plantilla OP<i aria-hidden="true">.</i>
                                     <span id="ident94" class="identificador2 ">94</span>
                                     <span class="sr-only">Documento de word</span>
@@ -2010,7 +1993,8 @@
                         </p>
 
                         <div class="text-center">
-                            <a id="donwload96" class="btn-modales btn" href="../descargas/modulo2/PCSP24-Rubrica-ACT07.docx" download>
+                            <a id="donwload96" class="btn-modales btn"
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT07.docx" download>
                                 Rúbrica de evaluación
                                 <span id="ident96" class="identificador2 ">96</span>
                                 <span class="sr-only">Documento de word</span>
@@ -2032,7 +2016,8 @@
                         </h3>
 
                         <div class="escritorio">
-                            <p id="sectionFaqs100s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
+                            <p id="sectionFaqs100s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
                             </p>
 
                             <details id="faq98Act2" class="collapsables-gi">
@@ -2172,7 +2157,7 @@
                                 </p>
                                 <div class="text-center">
                                     <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                        href="../descargas/modulo2/PCSP24-FuentesInfo-ACT07.docx">
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT07.docx">
                                         Fuentes de información
                                         <span class="sr-only">Documento de word</span>
                                     </a>
@@ -2206,7 +2191,7 @@
                             durante el módulo 2 (los modelos de problema y su aplicación).</p> -->
 
                         <div class="text-center escritorio">
-                            <img class="imagen-ac1" src="../images/modulo2/PCSP24-M2_act08.png" alt="imagen de apoyo"
+                            <img class="imagen-ac1" src="./images/modulo2/PCSP24-M2_act08.png" alt="imagen de apoyo"
                                 aria-hidden="true" />
                         </div>
                         <p class="mb-0">
@@ -2247,14 +2232,16 @@
 
                         <ol class="ml-4">
                             <li>
-                                <a id="download104" class="enlace-icono" href="../descargas/modulo2/Glosario-2.pdf" download>
+                                <a id="download104" class="enlace-icono" href="./descargas/modulo2/Glosario-2.pdf"
+                                    download>
                                     Glosario 2<i aria-hidden="true">.</i>
                                     <span id="ident104" class="identificador2 ">104</span>
                                     <span class="sr-only">Archivo PDF</span>
                                 </a>
                             </li>
                             <li>
-                                <a id="download105" class="enlace-icono" href="../descargas/modulo2/Act08-Las-Emociones.pdf" download>
+                                <a id="download105" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Las-Emociones.pdf" download>
                                     Las emociones<i aria-hidden="true">.</i>
                                     <span id="ident105" class="identificador2 ">105</span>
                                     <span class="sr-only">Archivo PDF</span>
@@ -2262,8 +2249,8 @@
                             </li>
                             <li>
                                 Del
-                                <a id="download106" class="enlace-icono" href="../descargas/modulo2/Act08-Modelo-COL-y-Bitacora-COL.pdf"
-                                    download>
+                                <a id="download106" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Modelo-COL-y-Bitacora-COL.pdf" download>
                                     Capítulo 2. Estrategias didácticas<i aria-hidden="true">,</i>
                                     <span class="sr-only">Archivo PDF</span>
                                 </a>
@@ -2286,8 +2273,7 @@
                             <li>
                                 Consulta el archivo para llenado
                                 <a id="download108" class="enlace-icono"
-                                    href="../descargas/modulo2/Act08-Consideraciones-Elaborar-Bitacora-COL.pdf"
-                                    download>
+                                    href="./descargas/modulo2/Act08-Consideraciones-Elaborar-Bitacora-COL.pdf" download>
                                     Consideraciones para elaborar la bitácora COL 3<i aria-hidden="true">.</i>
                                     <span id="ident108" class="identificador2 ">108</span>
                                     <span class="sr-only">Archivo PDF</span>
@@ -2296,7 +2282,7 @@
                             <li>
                                 Elabora tu
                                 <a id="download109" class="enlace-icono"
-                                    href="../descargas/modulo2/Act08-Formato-de-bitacora-COL-de-tercer-nivel.docx"
+                                    href="./descargas/modulo2/Act08-Formato-de-bitacora-COL-de-tercer-nivel.docx"
                                     download>
                                     formato de bitácora COL de tercer nivel<i aria-hidden="true">.</i>
                                     <span id="ident109" class="identificador2 ">109</span>
@@ -2330,7 +2316,8 @@
                         </p>
 
                         <div class="text-center">
-                            <a id="download112" class="btn-modales btn" href="../descargas/modulo2/PCSP24-Rubrica-ACT08.docx" download>
+                            <a id="download112" class="btn-modales btn"
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT08.docx" download>
                                 Rúbrica de evaluación
                                 <span id="ident112" class="identificador2 ">112</span>
                                 <span class="sr-only">Documento de word</span>
@@ -2352,7 +2339,8 @@
                         </h3>
 
                         <div class="escritorio">
-                            <p id="Faqs110s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.
+                            <p id="Faqs110s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la
+                                información.
                             </p>
 
                             <details id="faq114Act2" class="collapsables-gi">
@@ -2504,7 +2492,7 @@
                                 </p>
                                 <div class="text-center">
                                     <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
-                                        href="../descargas/modulo2/PCSP24-FuentesInfo-ACT08.docx">
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT08.docx">
                                         Fuentes de información
                                         <span class="sr-only">Documento de word</span>
                                     </a>
@@ -2528,7 +2516,7 @@
 
                 <div id="sectionLect" class="text-center">
 
-                    <a id="btnLectura" class="btn_lecturaF btn" accesskey="L" href="../descargas/modulo2/ksdjkjds"
+                    <a id="btnLectura" class="btn_lecturaF btn" accesskey="L" href="./descargas/modulo2/ksdjkjds"
                         target="_blank" download="">
                         Lectura fácil
                         <span id="ident118" class="identificador2 ">118</span>
@@ -2547,14 +2535,15 @@
 
     <footer class="footer">
 
-        <span id="volverArriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true" aria-label="Volver arriba">
+        <span id="volverArriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true"
+            aria-label="Volver arriba">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
             <span id="ident119" class="identificador2 ">119</span>
         </span>
 
-        <img class="tamaño__img escritorio" src="../images/PCSP24-_firmauv-r.png" loading="lazy" width="100%"
+        <img class="tamaño__img escritorio" src="./images/PCSP24-_firmauv-r.png" loading="lazy" width="100%"
             height="auto" alt="Logo de la Universidad Veracruzana">
-        <img class="movil" src="../images/PCSP24-_firmauv-e.png" alt="Banner Principal" aria-hidden="true" width="100%"
+        <img class="movil" src="./images/PCSP24-_firmauv-e.png" alt="Banner Principal" aria-hidden="true" width="100%"
             height="auto">
     </footer>
 
@@ -2625,7 +2614,7 @@
                     <div class="container">
                         <div class="text-center">
                             <p class="text-azul">
-                                c. Problema como obstáculo
+                                b. Problema como obstáculo
                             </p>
                         </div>
 
@@ -2664,7 +2653,7 @@
                     <div class="container">
                         <div class="text-center">
                             <p class="text-azul">
-                                b. Problema como carencia o exceso
+                                c. Problema como carencia o exceso
                             </p>
                         </div>
 
@@ -2887,22 +2876,23 @@
 
     <!-- Funcionalidad general -->
     <!-- ../scripts/home.js -->
-    <script src="../scripts/home.js"></script>
-    <script type="text/javascript" src="../scripts/menu-2.js"></script>
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu-2.js"></script>
     <!-- accesibilidad -->
-    <script src="../scripts/menuacces.js"></script>
-    <script src="../scripts/annyang-6.js"></script>
-    <script src="../scripts/change-fonts.js"></script>
-    <script src="../scripts/cursor.js"></script>
-    <script src="../scripts/links.js"></script>
-    <script src="../scripts/marcador.js"></script>
-    <script src="../scripts/annyang_Storage.js"></script>
-    <script src="../scripts/swipersAct2Modul2.js"></script>
-    <script src="../scripts/modalLectorInmersivo.js"></script>
+    <script src="scripts/menuacces.js"></script>
+    <script src="scripts/modalAyuda.js"></script>
+    <script src="scripts/annyang-6.js"></script>
+    <script src="scripts/change-fonts.js"></script>
+    <script src="scripts/cursor.js"></script>
+    <script src="scripts/links.js"></script>
+    <script src="scripts/marcador.js"></script>
+    <script src="scripts/annyang_Storage.js"></script>
+    <script src="scripts/swipersAct2Modul2.js"></script>
+    <script src="scripts/modalLectorInmersivo.js"></script>
 
     <!-- Funcionalidad para Progress-bar-scroll del inicio -->
     <!-- ../scripts/scroll-timeline.js -->
-    <script src="../scripts/scroll-timeline.js"></script>
+    <script src="scripts/scroll-timeline.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -2965,6 +2955,6 @@
         });
     </script>
 </body>
-<script src="../scripts/Pestañas.js"></script>
+<script src="scripts/Pestañas.js"></script>
 
 </html>

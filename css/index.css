@@ -741,7 +741,7 @@ ol {
 }
 
 .sangria-menu {
-    padding-left: 2rem;
+    text-indent: 5em;
 }
 
 .sidebar {
@@ -776,7 +776,7 @@ ol {
     }
 
     .sangria-menu {
-        padding-left: 1rem;
+        text-indent: 2em;
     }
 }
 
@@ -1095,14 +1095,15 @@ ol {
     border: .1rem solid #1E4566;
 }
 
-.btn_swipper{
+.btn_swipper {
     background-color: transparent;
     outline: none;
     border: none;
     color: white;
     font-weight: bold;
 }
-.btn_swipper .active{
+
+.btn_swipper .active {
     color: red;
 }
 

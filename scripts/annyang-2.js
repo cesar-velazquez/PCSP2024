@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext1 = function () {
-        location.href = './info-gral.html';
+        location.href = './informaciongeneral.html';
     }
 
     var getPageNext2 = function () {
@@ -21,19 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var getPageNext3 = function () {
-        location.href = '../pcsp-2024/modulo-1/actividad.html';
+        location.href = './actividad.html';
     }
     var getPageNext4 = function () {
         location.href = './modulo-2.html';
     }
     var getPageNext5 = function () {
-        location.href = '../pcsp-2024/modulo-2/modulo-2-actividad.html';
+        location.href = './modulo-2-actividad.html';
     }
     var getPageNext6 = function () {
         location.href = './modulo-3.html';
     }
     var getPageNext7 = function () {
-        location.href = '../pcsp-2024/modulo-3/modulo-3-actividad.html';
+        location.href = './modulo-3-actividad.html';
     }
 
 
