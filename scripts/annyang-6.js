@@ -179,8 +179,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let playVideo85 = function () {
         if (!videoOn2) {
+            let ocultar = document.getElementById("ident85");
+            let mostrar = document.getElementById("pausa");
+            ocultar.classList.remove("ident_Universal");            
+            mostrar.classList.add("ident_Universal");            
             playVideo2();
         } else {
+            let mostrar = document.getElementById("ident85");
+            let ocultar = document.getElementById("pausa");
+            mostrar.classList.add("ident_Universal");
+            ocultar.classList.remove("ident_Universal");
             videoOn2 = true;
             offVideo2();
         }
@@ -231,6 +239,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             PositionTop100(sectionLineamiento);
         } else {
             // Si el FAQ está abierto, ciérralo
@@ -782,12 +802,75 @@ document.addEventListener("DOMContentLoaded", function () {
         abrirfaqL1.setAttribute('aria-expanded', 'true');
         abrirfaqL1.setAttribute('open', '');
     }
-
     let CerrarFaq86 = function () {
         let cerrarfaqL1 = document.getElementById("faq86Act2");
         cerrarfaqL1.setAttribute('aria-expanded', 'false');
         cerrarfaqL1.removeAttribute('open', '');
     }
+
+    // 
+    let AbrirFaq98 = function () {
+        let abrirfaqL1 = document.getElementById("faq98Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq98 = function () {
+        let cerrarfaqL1 = document.getElementById("faq98Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq99 = function () {
+        let abrirfaqL1 = document.getElementById("faq99Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq99 = function () {
+        let cerrarfaqL1 = document.getElementById("faq99Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq100 = function () {
+        let abrirfaqL1 = document.getElementById("faq100Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq100 = function () {
+        let cerrarfaqL1 = document.getElementById("faq100Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+
+    let AbrirFaq114 = function () {
+        let abrirfaqL1 = document.getElementById("faq114Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq114 = function () {
+        let cerrarfaqL1 = document.getElementById("faq114Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq115 = function () {
+        let abrirfaqL1 = document.getElementById("faq115Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq115 = function () {
+        let cerrarfaqL1 = document.getElementById("faq115Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    let AbrirFaq116 = function () {
+        let abrirfaqL1 = document.getElementById("faq116Act2");
+        abrirfaqL1.setAttribute('aria-expanded', 'true');
+        abrirfaqL1.setAttribute('open', '');
+    }
+    let CerrarFaq116 = function () {
+        let cerrarfaqL1 = document.getElementById("faq116Act2");
+        cerrarfaqL1.setAttribute('aria-expanded', 'false');
+        cerrarfaqL1.removeAttribute('open', '');
+    }
+    // 
     let faqAbierto34 = false;
     let faqAbierto35 = false;
     let faqAbierto36 = false;
@@ -798,6 +881,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let faqAbierto82 = false;
     let faqAbierto83 = false;
     let faqAbierto86 = false;
+    let faqAbierto98 = false;
+    let faqAbierto99 = false;
+    let faqAbierto100 = false;
+    let faqAbierto114 = false;
+    let faqAbierto115 = false;
+    let faqAbierto116 = false;
 
 
     function abrircerrarfaq34() {
@@ -823,6 +912,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -857,6 +958,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -891,6 +1004,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -925,6 +1050,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -959,6 +1096,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -993,6 +1142,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -1027,6 +1188,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -1061,6 +1234,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto81 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -1095,6 +1280,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto81 = false;
             CerrarFaq82();
             faqAbierto82 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -1131,6 +1328,18 @@ document.addEventListener("DOMContentLoaded", function () {
             faqAbierto82 = false;
             CerrarFaq83();
             faqAbierto83 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
             cerrarfaqBasicP();
             faqAbierto = false;
             PositionTop100(sectionLineamiento);
@@ -1138,6 +1347,295 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si el FAQ está abierto, ciérralo
             CerrarFaq86();
             faqAbierto86 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+
+    function abrircerrarfaq98() {
+        let sectionLineamiento = document.getElementById("sectionFaqs100s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto98) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq98();
+            faqAbierto98 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq98();
+            faqAbierto98 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq99() {
+        let sectionLineamiento = document.getElementById("sectionFaqs100s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto99) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq99();
+            faqAbierto99 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq99();
+            faqAbierto99 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq100() {
+        let sectionLineamiento = document.getElementById("sectionFaqs100s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto100) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq100();
+            faqAbierto100 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq100();
+            faqAbierto100 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq114() {
+        let sectionLineamiento = document.getElementById("Faqs110s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto114) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq114();
+            faqAbierto114 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq114();
+            faqAbierto114 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq115() {
+        let sectionLineamiento = document.getElementById("Faqs110s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto115) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq115();
+            faqAbierto115 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq116();
+            faqAbierto116 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq115();
+            faqAbierto115 = false;
+            PositionTop100(sectionLineamiento);
+        }
+    }
+    function abrircerrarfaq116() {
+        let sectionLineamiento = document.getElementById("Faqs110s");
+        // Verifica si el FAQ está abierto o cerrado y actúa en consecuencia
+        if (!faqAbierto116) {
+            // Si el FAQ está cerrado, ábrelo            
+            AbrirFaq116();
+            faqAbierto116 = true;
+
+            CerrarFaq34();
+            faqAbierto34 = false;
+            CerrarFaq35();
+            faqAbierto35 = false;
+            CerrarFaq36();
+            faqAbierto36 = false;
+            CerrarFaq60();
+            faqAbierto60 = false;
+            CerrarFaq61();
+            faqAbierto61 = false;
+            CerrarFaq62();
+            faqAbierto62 = false;
+            CerrarFaq81();
+            faqAbierto81 = false;
+            CerrarFaq82();
+            faqAbierto82 = false;
+            CerrarFaq83();
+            faqAbierto83 = false;
+            CerrarFaq86();
+            faqAbierto86 = false;
+            CerrarFaq98();
+            faqAbierto98 = false;
+            CerrarFaq99();
+            faqAbierto99 = false;
+            CerrarFaq100();
+            faqAbierto100 = false;
+            CerrarFaq114();
+            faqAbierto114 = false;
+            CerrarFaq115();
+            faqAbierto115 = false;
+            cerrarfaqBasicP();
+            faqAbierto = false;
+            PositionTop100(sectionLineamiento);
+        } else {
+            // Si el FAQ está abierto, ciérralo
+            CerrarFaq116();
+            faqAbierto116 = false;
             PositionTop100(sectionLineamiento);
         }
     }
@@ -1314,14 +1812,115 @@ document.addEventListener("DOMContentLoaded", function () {
         let element = document.getElementById("section87Act2");
         PositionTop100(element)
     }
-
-
-    let volver_Arriba = document.getElementById("btnVolver_Arriba");
-    let volverA = function () {
-        volver_Arriba.click();
+    function section88() {
+        let element = document.getElementById("section88Act2");
+        PositionTop100(element)
+    }
+    function download89() {
+        let btn = document.getElementById("download89");
+        btn.click();
+    }
+    function download90() {
+        let btn = document.getElementById("download90");
+        btn.click();
+    }
+    function download91() {
+        let btn = document.getElementById("download91");
+        btn.click();
+    }
+    function download92() {
+        let btn = document.getElementById("download92");
+        btn.click();
+    }
+    function section93() {
+        let element = document.getElementById("section93Act2");
+        PositionTop100(element)
+    }
+    function download94() {
+        let btn = document.getElementById("download94");
+        btn.click();
+    }
+    function section95() {
+        let element = document.getElementById("section95Act2");
+        PositionTop100(element)
+    }
+    function download96() {
+        let btn = document.getElementById("donwload96");
+        btn.click();
+    }
+    function section97() {
+        let element = document.getElementById("section97Act2");
+        PositionTop100(element)
+    }
+    function section101() {
+        let element = document.getElementById("section101Act2");
+        PositionTop100(element)
+    }
+    function section102() {
+        let element = document.getElementById("section102Act2");
+        PositionTop100(element)
+    }
+    function section103() {
+        let element = document.getElementById("section103Act2");
+        PositionTop100(element)
+    }
+    function download104() {
+        let btn = document.getElementById("download104");
+        btn.click();
+    }
+    function download105() {
+        let btn = document.getElementById("download105");
+        btn.click();
+    }
+    function download106() {
+        let btn = document.getElementById("download106");
+        btn.click();
+    }
+    function section107() {
+        let element = document.getElementById("section107Act2");
+        PositionTop100(element)
+    }
+    function download108() {
+        let btn = document.getElementById("download108");
+        btn.click();
+    }
+    function download109() {
+        let btn = document.getElementById("download109");
+        btn.click();
+    }
+    function section110() {
+        let element = document.getElementById("section110Act2");
+        PositionTop100(element)
+    }
+    function section111() {
+        let element = document.getElementById("section111Act2");
+        PositionTop100(element)
+    }
+    function download112() {
+        let btn = document.getElementById("download112");
+        btn.click();
+    }
+    function section113() {
+        let element = document.getElementById("section113Act2");
+        PositionTop100(element)
+    }
+    function section117() {
+        let element = document.getElementById("section117Act2");
+        PositionTop100(element)
+    }
+    function download118() {
+        let btn = document.getElementById("btnLectura");
+        btn.click();
+    }
+    function download119() {
+        let btn = document.getElementById("volverArriba");
+        btn.click();
     }
 
     var commands = {
+        'F5': refreshPage,
+        'efe cinco': refreshPage,
+        'Recargar': refreshPage,
 
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
@@ -1648,9 +2247,71 @@ document.addEventListener("DOMContentLoaded", function () {
         '97': section97,
         'noventa y cinco': section97,
 
-        'F5': refreshPage,
-        'efe cinco': refreshPage,
-        'Recargar': refreshPage,
+        '98': abrircerrarfaq98,
+        'noventa y ocho': abrircerrarfaq98,
+
+        '99': abrircerrarfaq99,
+        'noventa y nueve': abrircerrarfaq99,
+
+        '100': abrircerrarfaq100,
+        'cien': abrircerrarfaq100,
+
+        '101': section101,
+        'ciento uno': section101,
+
+        '102': section102,
+        'ciento dos': section102,
+
+        '103': section103,
+        'ciento tres': section103,
+
+        '104': download104,
+        'ciento cuatro': download104,
+
+        '105': download105,
+        'ciento cinco': download105,
+
+        '106': download106,
+        'ciento seis': download106,
+
+        '107': section107,
+        'ciento siete': section107,
+
+        '108': download108,
+        'ciento ocho': download108,
+
+        '109': download109,
+        'ciento nueve': download109,
+
+        '110': section110,
+        'ciento diez': section110,
+
+        '111': section111,
+        'ciento once': section111,
+
+        '112': download112,
+        'ciento doce': download112,
+
+        '113': section113,
+        'ciento once': section113,
+
+        '114': abrircerrarfaq114,
+        'ciento catorce': abrircerrarfaq114,
+
+        '115': abrircerrarfaq115,
+        'ciento quince': abrircerrarfaq115,
+
+        '116': abrircerrarfaq116,
+        'ciento dieciséis': abrircerrarfaq116,
+
+        '117': section117,
+        'ciento diecisiete': section117,
+
+        '118': download118,
+        'ciento doce': download118,
+
+        '119': download119,
+        'ciento diecinueve': download119,
 
 
 

@@ -70,6 +70,10 @@
     margin-bottom: 1rem;
 }
 
+/* .pausar{
+    display: none;
+} */
+
 /* backDrop */
 #modal-backdrop {
     position: fixed;
