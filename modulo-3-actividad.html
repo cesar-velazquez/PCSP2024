@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo . Actividades de aprendizaje</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/modulo1.css" />
+    <!-- Menu accesible .css -->
+    <link rel="stylesheet" href="css/menuacces.css">
+    <!-- Libreria de Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Libreria para animar  los recursos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body onmousemove="detectarPosicionMouse(event);">
+    <div id="readline"></div>
+    <!-- Instrucción para información de ayuda -->
+    <div id="container_notes" class="contenedor_notas">
+    </div>
+
+    <div class="microfono">
+        <i id='micro' class="bx bxs-microphone-off bx-flip-horizontal" style='color:#ffffff'></i>
+    </div>
+    <!-- Instrucción para información de ayuda -->
+    <div>
+        <p class="sr-only">
+            Instrucción: Para acceder a la información de ayuda de esta Experiencia Educativa en <i
+                lang="en">Windows</i> presiona las teclas Alt + i, en MacOS presiona las teclas <i lang="en">Control</i>
+            + <i lang="en">Option</i>
+            + i
+            Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
+            en MacOS presiona la tecla Esc
+        </p>
+    </div>
+    <!-- Barra de progreso en la parte superior -->
+    <div id="progress"></div>
+
+
+    <!-- Implementacion del boton menu accesible: -->
+    <div class="ocultar">
+        <button onclick="handleMenu()" class="btnAccessUniversal">
+            <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
+        </button>
+
+        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+            waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
+            <i class='bx bxs-help-circle'></i>
+        </button>
+        <span id="ident0" class="identificador2">0</span>
+    </div>
+    <div id="modal-backdrop"></div>
+
+    <!--  modal ayuda -->
+    <modal-ayuda></modal-ayuda>
+    <!-- Modal Lector Inmersivo -->
+    <modal-lectorinmersivo></modal-lectorinmersivo>
+    <!-- menuaccesShow -->
+    <div class="menuacces ">
+        <div class="menuComponentAcces">
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="font_size">
+                        <img id="icon_FontSize" src="./images/accesibilidad/MA-_m-tamanofuente-a.png"
+                            alt="Icon auxiliar font size">
+                        <img id="icon_FontSize_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-tamanofuente-w.png" alt="Icon auxiliar font size">
+                        Tamaño de fuente
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button class="btn_accesible" id="link_resaltar">
+                        <img id="icon_Link" src="./images/accesibilidad/MA-_m-hiper-a.png"
+                            alt="Icon auxiliar hipervinculos">
+                        <img id="icon_Link_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-hiper-w.png" alt="Icon auxiliar hipervinculos">
+                        Hipervínculos
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="cursorBig" class="btn_accesible">
+                        <img id="icon_Cursor" src="./images/accesibilidad/MA-_m-cursor-a.png"
+                            alt="Icon auxiliar cursor">
+                        <img id="icon_Cursor_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-cursor-w.png" alt="Icon auxiliar cursor">
+                        Cursor
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
+                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
+                        aria-hidden="true">
+                        <img id="icon_lector_inmersivo" src="./images/accesibilidad/MA-_m-lector-a.png"
+                            alt="Icon auxiliar Lector">
+                        <img id="icon_lector_inmersivo_active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-lector-w.png" alt="Icon auxiliar Lector">
+                        Lector Inmersivo
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces section_voice">
+                <div>
+                    <button id="btn-access" class="btn_accesible" aria-label="Botón accesibilidad">
+                        <img id="icon_comando_voz" src="./images/accesibilidad/MA-_m-comandos-a.png"
+                            alt="Icon auxiliar comandos de voz">
+                        <img id="icon_comandovoz_activo" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-comandos-w.png" alt="Icon auxiliar comandos de voz">
+                        Comandos de voz
+                    </button>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <a tabindex="0" href="#sectionLect" id="enlaceaLecturaF" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img src="./images/accesibilidad/lecturaf-a.png" alt="Icon auxiliar lectura fácil">
+                        Lectura fácil
+                    </a>
+                </div>
+            </div>
+
+            <div class="sectionAcces">
+                <div>
+                    <button onclick="showLine()" id="lineaLectura" class="btn_accesible"
+                        aria-label="Botón accesibilidad">
+                        <img id="icon_Linea_Lectura" src="./images/accesibilidad/MA-_m-regla-a.png"
+                            alt="Icon auxiliar línea de lectura">
+                        <img id="icon_Linea_Lectura_Active" class="icon_desactivado"
+                            src="./images/accesibilidad/MA-_m-regla-w.png" alt="Icon auxiliar línea de lectura">
+                        Línea de lectura
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- fin menú accesible -->
+
+
+    <!-- SIDEBAR MENÚ -->
+    <navbar id="menu-item" class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+            <span id="ident2" class="identificador2 ">2</span>
+        </div>
+
+        <menu-component></menu-component>
+    </navbar>
+
+    <!-- PLECA Y TITULO -->
+    <header class="banner-1">
+        <div class="">
+            <div class="js-pleca pleca">
+                <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad Veracruzana</a>
+
+                <div class="dropdown">
+                    <button class="btn btn-menu js-sidebar__collapse" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="M">
+                        <span class="font-weight-bold">MENÚ</span>
+                        <i class="fas fa-bars"></i>
+                        <span id="ident1" class="identificador2">1</span>
+                    </button>
+                </div>
+
+                <div class="pleca__ee container ml-0" style="display: none">
+                    <span class="text-left">
+                        <p class="tam-font font-weight-bold mb-3 texto-tema-margen" aria-hidden="true">
+                            <b>Módulo 3. Actividades de aprendizaje</b>
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <img class="escritorio" src="./images/PCSP24-_banner-paginasec-e.png" alt="Banner principal"
+                aria-hidden="true" width="100%" height="auto" />
+
+            <img class="movil" src="./images/PCSP24-_banner-paginasec-r.png" alt="Banner principal" aria-hidden="true"
+                width="100%" height="auto" />
+        </div>
+
+        <div class="container">
+            <h1 class="titulo-principal-unit" aria-hidden="true">
+                Módulo 3
+                <span>Actividades de aprendizaje</span>
+            </h1>
+        </div>
+
+    </header>
+
+    <!-- Codigo principal -->
+    <main>
+        <!-- introduction -->
+        <div class="actividad-separador">
+            <section>
+                <hr class="inicio-act" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="" class="caja">
+                        <h2 class="text-azul subtitulo">Actividad 09. Clarifica los conceptos de problema y solución</h2>
+
+                        <p class="mb-0">Construir alternativas de solución, implica llevar a cabo un proceso de selección del modelo teórico o práctico congruente a las variables, componentes y sus relaciones del problema. Existe una gran gama de modelos, algunos de ellos se exponen en la antología del estudiante 2017, otros son propios de cada disciplina e incluso surgen a diario propuestas innovadoras de solución a problemas de la vida cotidiana. En esta actividad, se exponen tres modelos teóricos que proveen recursos y herramientas básicas para construir soluciones ideales de una manera argumentada y estructurada a situaciones problemáticas.</p>
+
+                    </div>
+
+                </div>
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    
+                    <div class="caja pb-0 pt-0">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la información.</p>
+                    </div>
+
+                    <div class="contenedor-modales ocultar">
+
+                        <button class="btn-image ml-0" data-toggle="modal" data-target="#modelo-1">
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto01.png"
+                                alt="imagen de apoyo - Problema como necesidad" aria-hidden="true">
+
+                            <div class="btn-modales btn">
+                                a. Modelo TRIZ
+                                <span id="ident16" class="identificador2 ">16</span>
+                            </div>
+                        </button>
+
+                        <button id="modal18" class="btn-image " data-toggle="modal" data-target="#modelo-3">
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto02.png"
+                                alt="imagen de apoyo - Problema como carencia" aria-hidden="true">
+                            <div class="btn-modales btn">
+                                b. Modelo ARDESOS DIAPROVE
+                                <span id="ident20" class="identificador2 ">20</span>
+                            </div>
+                        </button>
+
+                        <button id="modal20" class="btn-image ml-0" data-toggle="modal" data-target="#modelo-2">
+                            <img src="./images/modulo2/PCSP24-M2_act04-concepto03.png"
+                                alt="imagen de apoyo - Problema como obstáculo" aria-hidden="true">
+
+                            <div class="btn-modales btn">
+                                c. Diagrama ACRISPO
+                                <span id="ident18" class="identificador2 ">18</span>
+
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="movil fondo-movil mt-3">
+
+                        <p class="text-azul">Modelo TRIZ</p>
+
+                        <p>TRIZ es un método conocido como Teoría para Resolver Problemas de Inventiva.</p>
+
+                        <p>Este método nace de la observación directa de la metodología de las patentes definidas por una relación entre un conflicto determinado y una propuesta de resolución inmediata e ingeniosa. A partir de esta observación, nacen asociaciones de causa y efecto que están interconectadas.</p>
+
+                        <p>La creatividad es una de las cualidades que define el talento del ser humano. El pensamiento lógico racional es muy importante; sin embargo, no es la única fuente de conocimiento. La capacidad inventiva a la que apela este método es determinante en el ámbito de la resolución de problemas, gracias a un pensamiento crítico que invita a la persona a ir más allá de lo evidente, para cuestionarse ese problema desde distintos puntos de vista.</p>
+
+                        <p class="text-azul">Modelo ARDESOS - DIAPROVE</p>
+
+                        <p>Por sus siglas DIAgnóstico, PROnóstico y VErificación.</p>
+
+                        <p>Es un modelo desarrollado para alcanzar la mejor explicación para un hecho, fenómeno o problema, a fin de resolverlo eficazmente.</p>
+
+                        <p class="mb-0">El modelo DIAPROVE se basa en:</p>
+                        <ul class="ml-4">
+                            <li>Identificar las deficiencias y sesgos.</li>
+                            <li>Buscar una explicación única.</li>
+                            <li>Buscar explicarnos un hecho o problema de forma única, inequívoca.</li>
+                        </ul>
+
+                        <p class="mb-0">ARDESOS - DIAPROVE:</p>
+                        <ul class="ml-4">
+                            <li>Modelo de explicación, que desarrolla fundamentalmente la observación.</li>
+                            <li>Papel secundario de la argumentación.</li>
+                            <li>No se tratan por igual en la instrucción todas las habilidades de pensamiento.</li>
+                        </ul>
+
+                        <p class="text-azul">Diagrama ACRISPO</p>
+
+                        <p class="mb-0">El diagrama ACRISPO es una propuesta que se caracteriza por empujar al usuario a ir más allá de su propia actividad, es decir no sólo se limita a la aplicación, análisis y evaluación de argumentos contextualizados de la vida diaria, sino que también exhiben un uso práctico, tanto del argumento como de la argumentación.</p>
+
+                    </div>
+
+                </div>
+
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="" class="caja">
+
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident24" class="identificador2 ">24</span>
+                        </h3>
+
+                        <p>Mediante la elaboración de un organizador gráfico, identificas los elementos básicos de los modelos de solución: TRIZ, ARDESOS - DIAPROVE y el diagrama ACRISPRO.</p>
+
+                        <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+                        <div id="section25Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 1</p>
+                            </div>
+                            <p class="mb-0">Lee y analiza los materiales
+                                <span id="ident25" class="identificador2 ">25</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4">
+                            <li>
+                                <a id="glosario26" class="enlace-icono"
+                                    href="./descargas/modulo3/Act09-TRIZ-Resumen.pdf" download="">
+                                    TRIZ Resumen<i aria-hidden="true">.</i>
+                                    <span id="ident26" class="identificador2 ">26</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                            <li>
+                                Páginas 68 a 86 de  
+                                <a id="" class="enlace-icono" href="./descargas/modulo3/Act09-Capitulo-4-programa-ARDESOS-DIAPROVE.pdf" target="_blank">
+                                    Pensamiento crítico y cambio. Programa ARDESOS-DIAPROVE<i aria-hidden="true">.</i>
+                                    <span id="ident27" class="identificador2 ">27</span>
+                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="" class="enlace-icono" href="descargas/modulo3/Act09-De-la-instrumentacion-del-pensamiento-critico-ACRISPO.pdf" target="_blank">
+                                De la «instrumentación» del Pensamiento Crítico o Teoría de la Argumentación en la solución de problemas<i aria-hidden="true">.</i>
+                                    <span id="ident27" class="identificador2 ">27</span>
+                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                </a>
+                            </li>
+                        </ol>
+
+                        <div id="section28Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 2</p>
+                            </div>
+                            <p class="mb-0">Elabora un organizador gráfico de modelos de solución
+                                <span id="ident28" class="identificador2 ">28</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4 mb-0">
+                            <li>
+                                Para desarrollar el organizador gráfico, te sugerimos algunas herramientas:
+                            </li>
+
+                            <ul>
+                                <li>
+                                    <a class="enlace-iconoh" target="_blank" href="https://www.canva.com/es_mx/free/" >
+                                        Canva<i aria-hidden="true">.</i>
+                                        <span class="sr-only" >Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="enlace-iconoh" target="_blank" href="https://app.diagrams.net/" >
+                                        Diagrams<i aria-hidden="true">.</i>
+                                        <span class="sr-only" >Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="enlace-iconoh" target="_blank" href="https://infogram.com/" >
+                                        Infogram<i aria-hidden="true">.</i>
+                                        <span class="sr-only" >Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="enlace-iconoh" target="_blank" href="https://coggle.it/?lang=es" >
+                                        Coggle<i aria-hidden="true">.</i>
+                                        <span class="sr-only" >Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <li>Procede a estructurar la información para mostrar los elementos básicos de cada uno de los modelos de solución consultados.</li>
+                            <li>Incorpora la información en el organizador gráfico.</li>
+                            <li>Guarda el organizador gráfico que realizaste.</li>
+                            <li>Conserva el archivo en tu computadora, ya que te será de utilidad para el proyecto integrador.</li>
+                        </ol>
+
+                    </div>
+
+                    <div id="section31Act2" class="fondo-degradado">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                            <span id="ident31" class="identificador2 ">31</span>
+                        </p>
+
+                        <div class="text-center">
+                            <a id="rubrica32" class="btn-modales btn"
+                                href="./descargas/modulo3/PCSP24-Rubrica-ACT09.docx" download="">
+                                Rúbrica de evaluación
+                                <span id="ident32" class="identificador2 ">32</span>
+                                <span class="sr-only">Documento de word</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <hr class="separador-con" aria-hidden="true">
+
+
+                <div class="container">
+
+                    <div id="section33Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident33" class="identificador2 ">33</span>
+                            <!-- <span id="ident32" class="identificador2 ">32</span> -->
+                        </h3>
+
+                        <div class="escritorio">
+
+                            <p id="sectionFaqs30sAct2" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
+                            </p>
+
+                            <details id="faq34Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Lineamientos de entrega
+                                    <span id="ident34" class="identificador2 ">34</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <ul class="ml-4 mb-0">
+                                        <li>Nombra tu organizador gráfico de la siguiente manera: ED09_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.ext</li>
+                                        <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la plataforma Eminus.</li>
+                                        <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de Eminus.</li>
+                                    </ul>
+
+
+                                </div>
+                            </details>
+
+                            <details id="faq35Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Criterios de evaluación
+                                    <span id="ident35" class="identificador2 ">35</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <ul class="ml-4 mb-0">
+                                        <li>Presenta de manera estructurada y organizada los elementos básicos de modelos de solución.</li>
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Expresa claridad, orden de ideas y de planteamientos.</li>
+                                        <li>Utiliza lenguaje académico.</li>
+                                        <li>Respeta las reglas de ortografía.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <details id="faq36Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Fuentes de información
+                                    <span id="ident36" class="identificador2 ">36</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <div class="referencias">
+
+                                        <p>
+                                            Arias, J. (2017). De la instrumentación del Pensamiento Crítico o Teoría de la Argumentación en la solución de problemas (PC-TA/SP): ACRISPRO, una estrategia de enseñanza. Pp. 1-11. 
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Arias,%20J.%20(2017)%20De%20la%20instrumentacion%20del%20pensamiento%20critico%20ACRISPO_Antologia" target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/afbgcursos/<wbr>Antologia%20PC%202017/<wbr>Documentos/<wbr>Arias,%20J.%20(<wbr>2017)%20De<wbr>%20la%20<wbr>instrumentacion%2<wbr>0del%20<wbr>pensamiento%20<wbr>critico%20ACRISPO<wbr>_Antologia
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+                                        
+                                        <p>
+                                            Morales, M. (2016). Pensamiento crítico para la solución de problemas. 
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Morales,%20M.%20(2016)%20TRIZ%20%20Resumen" target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>Morales,%20M.<wbr>%20(2016)%20TRIZ<wbr>%20%20Resumen
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+                                        
+                                        <p class="mb-0">
+                                            Saiz, C. (2016). <i>Pensamiento crítico y cambio</i>. Capítulo 4: Programa ARDESOS-DIAPROVE. Pp. 68-86.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="movil mb-5">
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Lineamientos de entrega</p>
+
+                                <ul class="ml-4 mb-0">
+                                    <li>Nombra tu organizador gráfico de la siguiente manera: ED09_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.ext</li>
+                                    <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la plataforma Eminus.</li>
+                                    <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de Eminus.</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="fondo-lila">
+
+                                <p class="text-azul">Criterios de evaluación</p>
+                                <ul class="ml-4 mb-0">
+                                    <li>Presenta de manera estructurada y organizada los elementos básicos de modelos de solución.</li>
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Expresa claridad, orden de ideas y de planteamientos.</li>
+                                        <li>Utiliza lenguaje académico.</li>
+                                        <li>Respeta las reglas de ortografía.</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Fuentes de información</p>
+                                <p class="parrafo instruccion ">
+                                    <b>Instrucción:</b> Presiona el botón para descargar las fuentes de información.
+                                </p>
+                                <div class="text-center">
+                                    <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                        href="./descargas/modulo3/PCSP24-FuentesInfo-ACT09.docx">
+                                        Fuentes de información
+                                        <span class="sr-only">Documento de word</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+
+
+        <div class="actividad-separador">
+
+            <section>
+                <hr class="inicio-act" aria-hidden="true">
+                <div class="container">
+
+                    <div id="section37Act2" class="caja">
+
+                        <h2 class="text-azul subtitulo">Actividad 10. Transfiere modelos de solución de problemas
+                            <span id="ident37" class="identificador2 ">37</span>
+                        </h2>
+
+                        <p>En todas las ciencias y disciplinas se requiere estudiar, analizar o interpretar una diversidad de fenómenos a los que el individuo se enfrenta diariamente; la mayoría de las veces es necesaria la aplicación de modelos que permitan la comprensión de la realidad en la que se encuentra, principalmente cuando se trata de tomar decisiones para la solución de problemas.</p>
+
+                        <p>A partir de la identificación de los modelos de solución TRIZ, DIAPROVE y el diagrama ACRISPO, es posible aplicar los elementos y estrategias para construir alternativas de solución, en situaciones problemáticas de la vida cotidiana, disciplinares o transdisciplinares.</p>
+
+                        <p>Saiz (2016) afirma: “…la argumentación puede tener que ver con valores y con realidades, pero la explicación sólo con lo segundo. Podemos argumentar sobre creencias, sobre convicciones, sobre hechos, pero sólo podemos explicar realidades” (página 73).</p>
+
+                        <p>Las soluciones deben partir de los modelos (esto ya lo has visto en otras actividades) y es necesario reconocer que en situaciones problemáticas las argumentaciones son centrales y en otras no, todo depende de la propuesta del autor del modelo que esté retomando o bien, que implique una innovación en la solución del problema.</p>
+
+                        <p>Solución de problemas</p>
+                        <p>Modelo TRIZ</p>
+                        <p>Modelo ARDESOS - DIAPROVE</p>
+                        <p>Diagrama ACRISPO</p>
+
+                    </div>
+                </div>
+
+
+                <hr class="separador-con" aria-hidden="true">
+
+
+                <div class="container">
+
+                    <div id="section44Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident44" class="identificador2 ">44</span>
+                        </h3>
+
+                        <p>En esta actividad conoces y analizas modelos de problemas (modelo psicobiológico, modelo de
+                            Campirán y modelo de Saiz) mediante la realización de un mapa conceptual para identificar
+                            los elementos básicos de la construcción de un modelo.</p>
+
+                        <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+
+                        <div id="section45Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 1</p>
+                            </div>
+                            <p class="mb-0">Lee y analiza los materiales
+                                <span id="ident45" class="identificador2 ">45</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4">
+                            <li>
+                                Concepto de modelo ubicado en
+                                <a id="download46" class="enlace-icono"
+                                    href="./descargas/modulo1/Glosario1-Programa2017.pdf" download>
+                                    Glosario 1. Programa 2017<i aria-hidden="true">.</i>
+                                    <span id="ident46" class="identificador2 ">46</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                            <li>
+                                Modelos de problemas, ubicado en páginas 52 a 54, 71 a 72, 97 a 106, 166 a 169 en
+                                <a id="download47" class="enlace-icono"
+                                    href="./descargas/modulo2/Act05-Toma-de-decisiones-y-solucion-de-problemas.pdf"
+                                    download>
+                                    Toma de decisiones y solución de problemas<i aria-hidden="true">.</i>
+                                    <span id="ident47" class="identificador2 ">47</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                        </ol>
+
+                        <div id="section48Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 2</p>
+                            </div>
+                            <p class="mb-0">Elabora un mapa conceptual de los modelos de problemas
+                                <span id="ident48" class="identificador2 ">48</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4 mb-0">
+                            <li>Consulta los siguientes recursos digitales para la elaboración de mapas conceptuales
+                                <a id="visit49" class="enlace-iconoh"
+                                    href="https://urjconline.atavist.com/2017/10/09/mapas-conceptuales-elaboracion-y-aplicaciones-en-el-ambito-universitario/"
+                                    target="_blank">
+                                    Mapas Conceptuales: elaboración y aplicaciones en el ámbito universitario<i
+                                        aria-hidden="true">.</i>
+                                    <span id="ident49" class="identificador2 ">49</span>
+                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                </a>
+                            </li>
+
+                            <li>Para desarrollar el mapa conceptual, te sugerimos algunas herramientas:</li>
+                            <ul class="ml-4">
+                                <li>
+                                    <a id="visit50" class="enlace-iconoh" href="https://www.canva.com/" target="_blank">
+                                        Canva<i aria-hidden="true">.</i>
+                                        <span id="ident50" class="identificador2 ">50</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="visit51" class="enlace-iconoh" href="https://infogram.com/" target="_blank">
+                                        Infogram<i aria-hidden="true">.</i>
+                                        <span id="ident51" class="identificador2 ">51</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="visit52" class="enlace-iconoh" href="https://creately.com/" target="_blank">
+                                        Creately<i aria-hidden="true">.</i>
+                                        <span id="ident52" class="identificador2 ">52</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="visit53" class="enlace-iconoh" href="https://cmap.ihmc.us/" target="_blank">
+                                        CmapTools<i aria-hidden="true">.</i>
+                                        <span id="ident53" class="identificador2 ">53</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="visit54" class="enlace-iconoh" href="https://www.smartdraw.com/"
+                                        target="_blank">
+                                        Smartdraw<i aria-hidden="true">.</i>
+                                        <span id="ident54" class="identificador2 ">54</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="visit55" class="enlace-iconoh" href="https://xmind.app/" target="_blank">
+                                        Xmind<i aria-hidden="true">.</i>
+                                        <span id="ident55" class="identificador2 ">55</span>
+                                        <span class="sr-only">Se abre en nueva pestaña</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <li>
+                                Evalúa y corrige tu mapa. Utiliza la siguiente
+                                <a id="download56" class="enlace-icono"
+                                    href="./descargas/modulo2/Act05-ED07-lista_cotejo_mapa.docx" download>
+                                    Lista de cotejo<i aria-hidden="true">.</i>
+                                    <span id="ident56" class="identificador2 ">56</span>
+                                    <span class="sr-only">documento de Word</span>
+                                </a>
+                            </li>
+                            <li>Guarda tu archivo.</li>
+                        </ol>
+
+                    </div>
+
+                    <div id="section57Act2" class="fondo-degradado">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                            <span id="ident57" class="identificador2 ">57</span>
+                        </p>
+
+                        <div class="text-center">
+                            <a id="download58" class="btn-modales btn"
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT05.docx" download>
+                                Rúbrica de evaluación
+                                <span id="ident58" class="identificador2 ">58</span>
+                                <span class="sr-only">Documento de word</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <hr class="separador-con" aria-hidden="true">
+
+
+                <div class="container">
+
+                    <div id="section59Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident59" class="identificador2 ">59</span>
+                        </h3>
+
+                        <div class="escritorio">
+
+                            <p id="sectionFaqs60s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
+                            </p>
+
+                            <details id="faq60Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Lineamientos de entrega
+                                    <span id="ident60" class="identificador2 ">60</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <ul class="ml-4 mb-0">
+                                        <li>Nombra tu mapa conceptual de la siguiente manera:
+                                            ED05_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.ext</li>
+                                        <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                            plataforma Eminus.</li>
+                                        <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste
+                                            de Eminus.</li>
+                                    </ul>
+
+                                </div>
+                            </details>
+
+                            <details id="faq61Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Criterios de evaluación
+                                    <span id="ident61" class="identificador2 ">61</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+
+                                    <ul class="ml-4 mb-0">
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Presenta una correcta estructura en la elaboración del mapa conceptual:
+                                            conceptos clave y relación entre ellos.</li>
+                                        <li>Respeta reglas de ortografía.</li>
+                                    </ul>
+
+                                </div>
+                            </details>
+
+                            <details id="faq62Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Fuentes de información
+                                    <span id="ident62" class="identificador2 ">62</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <div class="referencias">
+
+                                        <p>Arias, J., Medrano, L., Castañeda, A., <span class="sr-only">y</span><span
+                                                aria-hidden="true">&</span> Campirán, A. (2017). <i>Glosario 1 para la
+                                                Experiencia Educativa Pensamiento crítico para la solución de
+                                                problemas y Experiencia Educativa Habilidades del pensamiento crítico y
+                                                creativo</i>. Universidad Veracruzana.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/GLOSARIO1-CEstatalA.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>GLOSARIO1<wbr>-CEstatalA.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p>Campirán, A. (2017). <i>Habilidades de pensamiento crítico y creativo. Toma
+                                                de decisiones y solución de problemas</i>. Lecturas y ejercicios para
+                                            el nivel universitario. Pp. 52-54, 71-72, 95, 96, 97-106 ,115, 116 y
+                                            166-169.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Campiran%20A%20(2017)%20Libro%20de%20Texto_SP_HP_Antologia.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps<wbr>/afbgcursos/<wbr>Antologia%<wbr>20PC%202017<wbr>/Documentos/<wbr>Campiran%20A%20<wbr>(2017)%20<wbr>Libro%20de%20<wbr>Texto_SP_HP<wbr>_Antologia.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="mb-0">Sesento, L. (2008). <i>Modelo sistémico basado en competencias
+                                                para instituciones educativas públicas</i> [Tesis doctoral, Centro de
+                                            investigación y Desarrollo del Estado de Michoacán]. Eumed.net Enciclopedia
+                                            Virtual.
+                                            <a href="https://www.eumed.net/tesis-doctorales/2012/lsg/indice.htm"
+                                                target="_blank">
+                                                https://<wbr>www.eumed.net/<wbr>tesis<wbr>-doctorales/<wbr>2012/<wbr>lsg/<wbr>indice.htm
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="movil mb-5">
+                            <div class="fondo-lila">
+                                <p class="text-azul">Lineamientos de entrega</p>
+
+                                <ul class="ml-4 mb-0">
+                                    <li>Nombra tu mapa conceptual de la siguiente manera:
+                                        ED05_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.ext</li>
+                                    <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                        plataforma Eminus.</li>
+                                    <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de
+                                        Eminus.</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="fondo-lila">
+
+                                <p class="text-azul">Criterios de evaluación</p>
+                                <ul class="ml-4 mb-0">
+                                    <li>Muestra autoría y originalidad.</li>
+                                    <li>Presenta una correcta estructura en la elaboración del mapa conceptual:
+                                        conceptos clave y relación entre ellos.</li>
+                                    <li>Respeta reglas de ortografía.</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Fuentes de información</p>
+                                <p class="parrafo instruccion ">
+                                    <b>Instrucción:</b> Presiona el botón para descargar las fuentes de información.
+                                </p>
+                                <div class="text-center">
+                                    <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT05.docx">
+                                        Fuentes de información
+                                        <span class="sr-only">Documento de word</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div class="actividad-separador">
+            <section>
+                <hr class="inicio-act" aria-hidden="true">
+                <div class="container">
+
+                    <div id="section63Act2" class="caja">
+
+                        <h2 class="text-azul subtitulo">Actividad 06. Transferir problemas a los modelos de problemas
+                            <span id="ident63" class="identificador2 ">63</span>
+                        </h2>
+
+                        <div class="text-center escritorio">
+                            <img class="imagen-ac2" src="./images/modulo2/PCSP24-M2_act06.png" alt="imagen de apoyo"
+                                aria-hidden="true" />
+                        </div>
+
+                        <div class="escritorio">
+
+                            <p>
+                                En el tema anterior estudiaste los modelos: necesidades psicobiológicas de Carlos De
+                                León, de Campirán y de Saiz, ahora tendrás la oportunidad de aprender otros modelos
+                                para plantear y transferir problemas cotidianos y disciplinares.
+                            </p>
+
+                            <div class="escritorio">
+
+                                <p id="section64Act2" class="instruccion" aria-hidden="true">
+                                    <b>Instrucción:</b> Haz clic en cada botón para leer la información.
+                                    <span id="ident64" class="identificador2 ">64</span>
+                                </p>
+
+                                <div id="altura_swipper" class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+
+                                        <div id="contenido_alturaSw1" class="contenido_altura swiper-slide">
+
+                                            <div class="swiper-content">
+
+                                                <p>En el transcurso de nuestra vida ya sea cotidiana y/o académica,
+                                                    nos
+                                                    enfrentamos a diversas situaciones que requieren de nuestra
+                                                    observación
+                                                    y análisis para entenderlas, describirlas y solucionarlas. Aquí
+                                                    la toma
+                                                    de decisiones juega un papel muy importante; sin embargo, no
+                                                    debemos
+                                                    dejar de lado el contexto en que se presenta dicha situación.
+                                                </p>
+
+                                                <p class="mb-0">Los datos que se puedan obtener a partir de la
+                                                    observación
+                                                    resultarán relevantes para identificar si existe o no algún
+                                                    problema,
+                                                    así como la forma adecuada de resolverlo.</p>
+
+                                                <p class="text-grey mb-0" aria-hidden="true">1 / 3</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div id="contenido_alturaSw2" class="contenido_altura swiper-slide">
+
+                                            <div class="swiper-content">
+
+                                                <p>No existe un método correcto para solucionar problemas, la
+                                                    solución de
+                                                    los problemas es siempre una prueba, no existe un sistema que
+                                                    siempre
+                                                    tenga éxito, son posibles muchas soluciones, algunas mejores que
+                                                    otras.
+                                                </p>
+
+                                                <p class="">Es importante estar conscientes de las variadas
+                                                    estrategias
+                                                    existentes para resolver problemas y no caer en pánico, analizar
+                                                    lo que
+                                                    ha estado haciendo y seleccionar conscientemente otra vía
+                                                    alternativa.
+                                                    La habilidad como solucionador de problemas depende del
+                                                    repertorio de
+                                                    herramientas que se posean, y del conocimiento sobre cómo
+                                                    usarlas.</p>
+
+                                                <p class="text-grey mb-0" aria-hidden="true">2 / 3</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div id="contenido_alturaSw3" class="contenido_altura swiper-slide">
+
+                                            <div class="swiper-content">
+
+                                                <p>Existen diversas definiciones de problema, por ejemplo,
+                                                    Altshuller lo
+                                                    define como la etapa más ardua al momento de innovar y que mayor
+                                                    tiempo
+                                                    ocupa, pero es la base de toda innovación, porque si se logra
+                                                    definir
+                                                    con precisión se puede encontrar la solución, seleccionar las
+                                                    herramientas adecuadas para generar las soluciones y finalmente
+                                                    evaluar.
+                                                </p>
+
+                                                <p class="">Sea cual sea la definición y el autor, todos coinciden
+                                                    en
+                                                    que se trata de situaciones fuera de equilibrio, situaciones
+                                                    caóticas
+                                                    que requieren de la observación y el estudio para encontrar una
+                                                    solución.</p>
+
+                                                <p class="text-grey mb-0" aria-hidden="true">3 / 3</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="contenedor-botones-sw" aria-hidden="true">
+                                        <button id="clic65" class="swiper-button-prev btn" aria-hidden="true">
+                                            Anterior
+                                            <span id="ident65" class="identificador2 ">65</span>
+                                        </button>
+                                        <button id="clic66" class="swiper-button-next btn">
+                                            Siguiente
+                                            <span id="ident66" class="identificador2 ">66</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="movil fondo-movil">
+
+                                <p>En el transcurso de nuestra vida ya sea cotidiana y/o académica, nos enfrentamos
+                                    a
+                                    diversas situaciones que requieren de nuestra observación y análisis para
+                                    entenderlas,
+                                    describirlas y solucionarlas. Aquí la toma de decisiones juega un papel muy
+                                    importante;
+                                    sin embargo, no debemos dejar de lado el contexto en que se presenta dicha
+                                    situación.
+                                </p>
+
+                                <p>Los datos que se puedan obtener a partir de la observación resultarán relevantes
+                                    para
+                                    identificar si existe o no algún problema, así como la forma adecuada de
+                                    resolverlo.</p>
+
+                                <p>No existe un método correcto para solucionar problemas, la solución de los
+                                    problemas es
+                                    siempre una prueba, no existe un sistema que siempre tenga éxito, son posibles
+                                    muchas
+                                    soluciones, algunas mejores que otras.</p>
+
+                                <p>Es importante estar conscientes de las variadas estrategias existentes para
+                                    resolver
+                                    problemas y no caer en pánico, analizar lo que ha estado haciendo y seleccionar
+                                    conscientemente otra vía alternativa. La habilidad como solucionador de
+                                    problemas
+                                    depende del repertorio de herramientas que se posean, y del conocimiento sobre
+                                    cómo
+                                    usarlas.</p>
+
+                                <p>Existen diversas definiciones de problema, por ejemplo, Altshuller lo define como
+                                    la
+                                    etapa más ardua al momento de innovar y que mayor tiempo ocupa, pero es la base
+                                    de toda
+                                    innovación, porque si se logra definir con precisión se puede encontrar la
+                                    solución,
+                                    seleccionar las herramientas adecuadas para generar las soluciones y finalmente
+                                    evaluar.
+                                </p>
+
+                                <p>Sea cual sea la definición y el autor, todos coinciden en que se trata de
+                                    situaciones
+                                    fuera de equilibrio, situaciones caóticas que requieren de la observación y el
+                                    estudio
+                                    para encontrar una solución.</p>
+
+                                <p class="mb-0">Sea cual sea la definición y el autor, todos
+                                    coinciden en que se trata de situaciones fuera de equilibrio, situaciones
+                                    caóticas que requieren de la observación y el estudio para encontrar una
+                                    solución.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr class="separador-con" aria-hidden="true">
+
+
+                    <div class="container">
+
+                        <div id="section67Act2" class="caja">
+
+                            <h3 class="text-azul subtitulo">Descripción de la actividad
+                                <span id="ident67" class="identificador2 ">67</span>
+                            </h3>
+
+                            <p>En esta actividad conoces los modelos para la identificación de problema: Modelo de
+                                Periodos
+                                (M_Psp) y Método Diagnóstico Contexto y Problema (DICOP), para explicar un problema
+                                disciplinar.</p>
+
+                            <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+
+                            <div id="section68Act2" class="actividad-enc">
+                                <div>
+                                    <p class="mb-0">Paso 1</p>
+                                </div>
+                                <p class="mb-0">Lee y analiza los materiales
+                                    <span id="ident68" class="identificador2 ">68</span>
+                                </p>
+                            </div>
+
+                            <ol class="ml-4">
+
+                                <li>
+                                    <a id="download69" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Periodos-en-la-solucion-de-problemas.pdf"
+                                        download>
+                                        Periodos en la solución o resolución de problemas<i aria-hidden="true">.</i>
+                                        <span id="ident69" class="identificador2 ">69</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a id="download70" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Propuesta-de-un-modelo-de-Agronomia.pdf"
+                                        download>
+                                        Propuesta de un modelo de agronomía para la solución o resolución de problemas,
+                                        basado en la identificación de periodos<i aria-hidden="true">.</i>
+                                        <span id="ident70" class="identificador2 ">70</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a id="download71" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Problema-La-descarga-de-aguas-residuales.pdf"
+                                        download>
+                                        Problema ¿la descarga de aguas residuales está acelerando la eutrofización en la
+                                        laguna de Tampamachoco?
+                                        <span id="ident71" class="identificador2 ">71</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a id="download72" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Es-posible-explicar-la-fisiologia-de-la-temperatura-corporal.pdf"
+                                        download>
+                                        ¿Es posible explicar la fisiología de la temperatura corporal mediante el modelo
+                                        de
+                                        M_PSP de Illescas?
+                                        <span id="ident72" class="identificador2 ">72</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a id="download73" class="enlace-icono"
+                                        href="./descargas/modulo2/Proyecto-APE_Antologia.pdf" download>
+                                        Proyecto APE_Antología<i aria-hidden="true">.</i>
+                                        <span id="ident73" class="identificador2 ">73</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a id="download74" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Organizador-DICOP.pdf" download>
+                                        Organizador DICOP (diagnóstico, contexto y problema) como modelo para el
+                                        planteamiento de problemas<i aria-hidden="true">.</i><span id="ident74"
+                                            class="identificador2 ">74</span>
+                                        <span class="sr-only">Archivo PDF</span>
+                                    </a>
+                                </li>
+
+                            </ol>
+
+                            <div id="section75Act2" class="actividad-enc">
+                                <div>
+                                    <p class="mb-0">Paso 2</p>
+                                </div>
+                                <p class="mb-0">Identifica y reflexiona sobre alguna situación problemática personal
+                                    <span id="ident75" class="identificador2 ">75</span>
+                                </p>
+                            </div>
+
+                            <ol class="ml-4">
+                                <li>Describe dicha situación con base en los periodos.</li>
+                                <li>Elabora una gráfica en donde se identifiquen los periodos de tu problema.</li>
+                            </ol>
+
+                            <div id="section76Act2" class="actividad-enc">
+                                <div>
+                                    <p class="mb-0">Paso 3</p>
+                                </div>
+                                <p class="mb-0">Identifica y reflexiona sobre alguna situación problemática disciplinar
+                                    <span id="ident76" class="identificador2 ">76</span>
+                                </p>
+                            </div>
+
+                            <ol class="ml-4 mb-0">
+                                <li>Descarga el formato:
+                                    <a id="download77" class="enlace-icono"
+                                        href="./descargas/modulo2/Act06-Plantilla-DICOP.docx" download>
+                                        Plantilla DICOP<i aria-hidden="true">.</i>
+                                        <span id="ident77" class="identificador2 ">77</span>
+                                        <span class="sr-only">Documento de word</span>
+                                    </a>
+                                </li>
+                                <li>Realiza el llenado con base en tu problemática disciplinar y de acuerdo con la guía.
+                                </li>
+                            </ol>
+
+                        </div>
+
+                        <div id="section78Act2" class="fondo-degradado">
+                            <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                                <span id="ident78" class="identificador2 ">78</span>
+                            </p>
+
+                            <div class="text-center">
+                                <a id="download79" class="btn-modales btn"
+                                    href="./descargas/modulo2/PCSP24-Rubrica-ACT06.docx" download>
+                                    Rúbrica de evaluación
+                                    <span id="ident79" class="identificador2 ">79</span>
+                                    <span class="sr-only">Documento de word</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="separador-con" aria-hidden="true">
+
+
+                    <div class="container">
+
+                        <div id="section80Act2" class="caja">
+
+                            <h3 class="text-azul subtitulo">Información para entrega
+                                <span id="ident80" class="identificador2 ">80</span>
+                            </h3>
+
+                            <div class="escritorio">
+                                <p id="sectionFaqs80s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                    conocer la
+                                    información.
+                                </p>
+
+                                <details id="faq81Act2" class="collapsables-gi">
+                                    <summary class="btn waves-effect waves-light">
+                                        Lineamientos de entrega
+                                        <span id="ident81" class="identificador2 ">81</span>
+                                    </summary>
+                                    <div class="collapsables-gi__content">
+                                        <ul class="ml-4 mb-0">
+                                            <li>En un solo archivo elabora y entrega la gráfica en donde se identifiquen
+                                                los
+                                                periodos de tu problema y la plantilla DICOP.</li>
+                                            <li>Nombra el archivo de la siguiente manera:
+                                                ED06_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                            <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de
+                                                la
+                                                plataforma Eminus.</li>
+                                            <li>Entrega en la fecha establecida en el Calendario de entregas que
+                                                descargaste
+                                                de Eminus.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details id="faq82Act2" class="collapsables-gi">
+                                    <summary class="btn waves-effect waves-light">
+                                        Criterios de evaluación
+                                        <span id="ident82" class="identificador2 ">82</span>
+                                    </summary>
+                                    <div class="collapsables-gi__content">
+
+                                        <ul class="ml-4 mb-0">
+                                            <li>Identifica los periodos propuestos por el autor.</li>
+                                            <li>Presenta en la gráfica los periodos del problema.</li>
+                                            <li>Llena la plantilla DICOP, como el autor propone.</li>
+                                            <li>Presenta congruencia en los conceptos y preguntas planteadas en la
+                                                plantilla
+                                                DICOP.</li>
+                                            <li>Muestra autoría y originalidad.</li>
+                                            <li>Muestra redacción clara y precisa, y respeta reglas de ortografía.</li>
+                                            <li>Presenta las referencias bibliográficas utilizadas en el desarrollo de
+                                                la
+                                                actividad, redactadas en formato APA.</li>
+                                        </ul>
+                                    </div>
+                                </details>
+
+                                <details id="faq83Act2" class="collapsables-gi">
+                                    <summary class="btn waves-effect waves-light">
+                                        Fuentes de información
+                                        <span id="ident83" class="identificador2 ">83</span>
+                                    </summary>
+                                    <div class="collapsables-gi__content">
+                                        <div class="referencias">
+
+                                            <p>
+                                                Antonio, H. (2017). <i>Organizador DICOP como modelo para el
+                                                    planteamiento
+                                                    de problema</i>. Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Antonio%20H.%20(2017)%20Organizador%20DICOP%20como%20modelo%20para%20el%20%20planteamiento%20de%20problemas.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>Antonio%20H.%20(<wbr>2017)%20Organizador<wbr>%20DICOP%20<wbr>como%20modelo%<wbr>20para%20el<wbr>%20%20planteamiento<wbr>%20de%20problemas.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                Arias, J., Medrano, L., Castañeda, A., <span
+                                                    class="sr-only">y</span><span aria-hidden="true">&</span> Campirán,
+                                                A. (2017). <i>Glosario 1 para la
+                                                    Experiencia Educativa Pensamiento crítico para la solución de
+                                                    problemas y Experiencia Educativa Habilidades del pensamiento
+                                                    crítico y
+                                                    creativo</i>. Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/GLOSARIO1-CEstatalA.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/afbgcursos/<wbr>Antologia%20PC%<wbr>202017/<wbr>Documentos/<wbr>GLOSARIO1<wbr>-CEstatalA.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                De la Paz, R. (2017). <i>Propuesta de un modelo en Agronomía para la
+                                                    solución o resolución de problemas, basado en la identificación
+                                                    de
+                                                    periodos</i>. Pp. 1-7. Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/De%20la%20Paz%20Mendo,%20R.%20(2017)%20Propuesta%20de%20un%20modelo_Antologia.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>De%20la%20Paz%20Mendo<wbr>,%20R.%20(2017)<wbr>%20Propuesta%<wbr>20de%20un%20<wbr>modelo_<wbr>Antologia.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                García, G., <span class="sr-only">y</span><span
+                                                    aria-hidden="true">&</span>
+                                                Zayas, E. (s.f.). <i>El proceso de solución de problemas</i>.
+                                                <a href="http://biblioteca.utec.edu.sv/siab/virtual/elibros_internet/55764.pdf"
+                                                    target="_blank">
+                                                    http://<wbr>biblioteca<wbr>.utec.edu.<wbr>sv/siab/<wbr>virtual/<wbr>elibros_internet<wbr>/55764.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                Gutiérrez Vivanco, J. (2017). <i>Problema: ¿La descarga de aguas
+                                                    residuales
+                                                    está acelerando la eutrofización en la laguna de Tempamachoco?</i>
+                                                (pp. 1-7). Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Gutierrez-Vivanco,%20J.%20(2017)%20Problema%20%C2%BFLa%20descarga_Antologia.pdf"
+                                                    target="_blank">
+                                                    https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Gutierrez-Vivanco,%20J.%20(2017)%20Problema%20%C2%BFLa%20descarga_Antologia.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                Illescas, C. (2017). <i>Periodos en la solución o resolución de
+                                                    problemas</i> (pp. 1-5). Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Illescas,%20C.%20(2017)_Periodos%20en%20la%20solucion%20de%20problemas_Antologia.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>Illescas,<wbr>%20C.%20(2017)_<wbr>Periodos%20en<wbr>%20la%20solucion<wbr>%20de%20problemas<wbr>_Antologia.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p>
+                                                Muñoz, V. (2017). <i>¿Es posible explicar la fisiología de la
+                                                    temperatura
+                                                    corporal mediante el modelo M_PSP de Illescas?</i> (pp. 1-6).
+                                                Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Munoz%20B%20(2017)%20Es%20posible%20explicar_Antologia.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20<wbr>PC%202017/<wbr>Documentos/<wbr>Munoz%20B%20(2017)<wbr>%20Es%20posible%<wbr>20explicar_<wbr>Antologia.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+                                            <p class="mb-0">
+                                                Ramírez, C. (2017). <i>Proyecto Afectaciones Presupuestales
+                                                    Electrónicas:
+                                                    su implementación en la Universidad Veracruzana</i> (pp. 1-8).
+                                                Universidad Veracruzana.
+                                                <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Ramirez,C_(2017),%20Proyecto%20APE_Antologia.pdf"
+                                                    target="_blank">
+                                                    https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%20PC%<wbr>202017/<wbr>Documentos/<wbr>Ramirez,C_<wbr>(2017),%20Proyecto<wbr>%20APE_<wbr>Antologia.pdf
+                                                    <span class="sr-only">Se abre en nueva pestaña</span>
+                                                </a>
+                                            </p>
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                </details>
+                            </div>
+
+                            <div class="movil mb-5">
+                                <div class="fondo-lila">
+                                    <p class="text-azul">Lineamientos de entrega</p>
+
+                                    <ul class="ml-4 mb-0">
+                                        <li>En un solo archivo elabora y entrega la gráfica en donde se identifiquen los
+                                            periodos de tu problema y la plantilla DICOP.</li>
+                                        <li>Nombra el archivo de la siguiente manera:
+                                            ED06_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                        <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                            plataforma Eminus.</li>
+                                        <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste
+                                            de
+                                            Eminus.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="fondo-lila">
+                                    <p class="text-azul">Criterios de evaluación</p>
+                                    <ul class="ml-4 mb-0">
+                                        <li>Identifica los periodos propuestos por el autor.</li>
+                                        <li>Presenta en la gráfica los periodos del problema.</li>
+                                        <li>Llena la plantilla DICOP, como el autor propone.</li>
+                                        <li>Presenta congruencia en los conceptos y preguntas planteadas en la plantilla
+                                            DICOP.</li>
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Muestra redacción clara y precisa, y respeta reglas de ortografía.</li>
+                                        <li>Presenta las referencias bibliográficas utilizadas en el desarrollo de la
+                                            actividad, redactadas en formato APA.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="fondo-lila">
+                                    <p class="text-azul">Fuentes de información</p>
+                                    <p class="parrafo instruccion ">
+                                        <b>Instrucción:</b> Presiona el botón para descargar las fuentes de información.
+                                    </p>
+                                    <div class="text-center">
+                                        <a download=""
+                                            class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                            href="./descargas/modulo2/PCSP24-FuentesInfo-ACT06.docx">
+                                            Fuentes de información
+                                            <span class="sr-only">Documento de word</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+        <div class="actividad-separador">
+            <section>
+                <hr class="inicio-act" aria-hidden="true">
+                <div class="container">
+
+                    <div id="section84Act2" class="caja">
+
+                        <h2 class="text-azul subtitulo">Actividad 07. Elaborar la bitácora Orden de Pensamiento (OP)
+                            <span id="ident84" class="identificador2 ">84</span>
+                        </h2>
+
+                        <p id="SectionVideo85" class="instruccion"><b>Instrucción:</b> Presiona el botón de video para
+                            iniciar la
+                            reproducción.</p>
+
+                        <span id="ident85" class="identificador2 identVideo ">85=Reproducir</span>
+                        <span id="pausa" class="identificador2 identVideo pausar ">85=Pausar</span>
+
+                        <div class="mb-2rem">
+                            <div class="vid3 embed-responsive embed-responsive-16by9">
+                                <!-- <span id="ident85" class="play_video identificador2 ">85</span> -->
+                                <video id="video85" src="./videos/unit1/modulo2-2.mp4" type="video/mp4"
+                                    poster="./images/video/video1.png" controls></video>
+                            </div>
+                        </div>
+
+                        <div class="escritorio">
+
+                            <details id="faq86Act2" class="collapsables-gi btn_guion" id="basic1">
+                                <summary class="btn waves-effect waves-light">
+                                    <strong>Guion de video</strong>
+                                    <span id="ident86" class="identificador2 ">86</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+
+                                    <p><b>Las habilidades de pensamiento</b></p>
+
+                                    <p>Las habilidades de pensamiento son procesos mentales que permiten al individuo
+                                        procesar la información que entra por sus sentidos.</p>
+
+                                    <p class="mb-0">Pensar analíticamente en el ámbito disciplinar, implica:</p>
+
+                                    <ul class="ml-4">
+                                        <li>Asumir una actitud de cuestionamiento y búsqueda de la verdad.</li>
+                                        <li>Analizar propuestas de solución de problemas.</li>
+                                        <li>Buscar alternativas.</li>
+                                        <li>Escuchar puntos de vista de otros.</li>
+                                        <li>Tener fluidez en la comunicación.</li>
+                                        <li>Considerar prioridades.</li>
+                                        <li>Tomar iniciativas.</li>
+                                        <li>Ser operativo.</li>
+                                        <li>Tomar mejores decisiones.</li>
+                                    </ul>
+
+                                    <p>Estas habilidades propias del pensamiento crítico, posibilitan modificar las
+                                        creencias y actitudes-valores que sostienen nuestras teorías, modelos y
+                                        acciones.</p>
+
+                                    <p>El pensamiento analítico y crítico nos permiten tomar decisiones. Algunas de
+                                        éstas pueden causar un efecto negativo o positivo y tener un fuerte impacto en
+                                        la vida del individuo.</p>
+
+                                    <p class="mb-0">En este momento, destacaremos las etapas del proceso para solucionar
+                                        un problema:</p>
+                                    <ol class="ml-4">
+                                        <li>El cual inicia con la observación,</li>
+                                        <li>Seguido de la pregunta problemática,</li>
+                                        <li>Concluyendo con el procesamiento de la información para resolver el problema
+                                            planteado.</li>
+                                    </ol>
+
+                                    <p class="mb-0">Existe una metodología para organizar, procesar y sintetizar
+                                        información para el análisis de la realidad, es un organizador gráfico llamado
+                                        bitácora Orden del Pensamiento (OP).</p>
+
+                                </div>
+                                </detail>
+                        </div>
+
+                        <div class="movil">
+                            <p class="parrafo instruccion ">
+                                <b>Instrucción:</b> Presiona el botón para descargar el guion.
+                            </p>
+                            <div class="text-center">
+                                <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                    href="./descargas/modulo2/PCSP24-Guion-de-video-Las-habilidades-de-pensamiento.pdf">
+                                    Guion de video
+                                    <span class="sr-only">archivo PDF</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caja pt-0">
+                        <p class="mb-0">
+                            En las actividades anteriores empleaste modelos para plantear problemas, en esta
+                            actividad estudiarás una metodología para organizar, procesar y sintetizar información para
+                            el análisis de la realidad, mediante el organizador gráfico de la bitácora Orden del
+                            Pensamiento.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="section87Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident87" class="identificador2 ">87</span>
+                        </h3>
+
+                        <p>En esta actividad construyes la bitácora OP mediante el organizador gráfico con temas
+                            disciplinares, para reconocerla como una estrategia de apoyo en la elaboración de trabajos
+                            de investigación.</p>
+
+                        <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+                        <div id="section88Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 1</p>
+                            </div>
+                            <p class="mb-0">Lee y analiza los materiales
+                                <span id="ident88" class="identificador2 ">88</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4">
+
+                            <li>
+                                <a id="download89" class="enlace-icono"
+                                    href="./descargas/modulo2/ACT07-Habilidades-de-pensamiento-critico-y-creativo.pdf"
+                                    download="">
+                                    Habilidades de pensamiento crítico y creativo. Toma de decisiones y solución de
+                                    problemas<i aria-hidden="true">.</i>
+                                    <span id="ident89" class="identificador2 ">89</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a> Página 99.
+                            </li>
+
+                            <li>
+                                <a id="download90" class="enlace-icono"
+                                    href="./descargas/modulo2/ACT07-Filosofia-de-la-existencia.pdf" download="">
+                                    Filosofía de la existencia<i aria-hidden="true">.</i>
+                                    <span id="ident90" class="identificador2 ">90</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                                Páginas 59 a 63.
+                            </li>
+
+                            <li>
+                                <a id="download91" class="enlace-icono"
+                                    href="./descargas/modulo2/ACT07-Filosofia-investigacion-y-enseñanza.pdf"
+                                    download="">
+                                    Filosofía: investigación y enseñanza en el Noa del 2001<i aria-hidden="true">.</i>
+                                    <span id="ident91" class="identificador2 ">91</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                                Páginas 29 a 34.
+                            </li>
+
+                            <li>
+                                <a id="download92" class="enlace-icono"
+                                    href="./descargas/modulo2/ACT07-La-tabla-de-Orden-de-Pensamiento.pdf" download="">
+                                    La tabla de Orden de Pensamiento como Herramienta de Lectura de Texto
+                                    Argumentativo<i aria-hidden="true">.</i>
+                                    <span id="ident92" class="identificador2 ">92</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                                Páginas 16 a 50.
+                            </li>
+                        </ol>
+
+                        <div id="section93Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 2</p>
+                            </div>
+                            <p class="mb-0">Reflexiona sobre alguna situación problemática disciplinar y elabora la
+                                bitácora OP
+                                <span id="ident93" class="identificador2 ">93</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4 mb-0">
+
+                            <li>
+                                Descarga el formato:
+                                <a id="download94" class="enlace-icono"
+                                    href="./descargas/modulo2/Act07-Plantilla-OP.docx" download="">
+                                    Plantilla OP<i aria-hidden="true">.</i>
+                                    <span id="ident94" class="identificador2 ">94</span>
+                                    <span class="sr-only">Documento de word</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                Reflexiona sobre alguna situación problemática disciplinar y elabora la bitácora OP,
+                                considerando los elementos proporcionados: tema, problema, hipótesis, trasfondo,
+                                argumento, ejemplo, contraejemplo.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="section95Act2" class="fondo-degradado">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                            <span id="ident95" class="identificador2 ">95</span>
+                        </p>
+
+                        <div class="text-center">
+                            <a id="donwload96" class="btn-modales btn"
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT07.docx" download>
+                                Rúbrica de evaluación
+                                <span id="ident96" class="identificador2 ">96</span>
+                                <span class="sr-only">Documento de word</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="section97Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident97" class="identificador2 ">97</span>
+                        </h3>
+
+                        <div class="escritorio">
+                            <p id="sectionFaqs100s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para
+                                conocer la información.
+                            </p>
+
+                            <details id="faq98Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Lineamientos de entrega
+                                    <span id="ident98" class="identificador2 ">98</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <ul class="ml-4 mb-0">
+                                        <li>Nombra tu documento del formato proporcionado de la siguiente manera:
+                                            ED07_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                        <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                            plataforma Eminus.</li>
+                                        <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste
+                                            de Eminus.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <details id="faq99Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Criterios de evaluación
+                                    <span id="ident99" class="identificador2 ">99</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+
+                                    <ul class="ml-4 mb-0">
+                                        <li>Responde las siete columnas que conforman la construcción de la bitácora OP.
+                                        </li>
+                                        <li>Refleja comprensión ordenada del lenguaje y una argumentación suficiente,
+                                            basada en premisas y conclusiones.</li>
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Muestra redacción clara y precisa, y aplica reglas de ortografía.</li>
+                                        <li>Presenta las referencias bibliográficas utilizadas en el desarrollo de la
+                                            actividad, redactadas en formato APA.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <details id="faq100Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Fuentes de información
+                                    <span id="ident100" class="identificador2 ">100</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <div class="referencias">
+
+                                        <p>
+                                            Campirán, A. (2001). Enseñar a pensar: estrategias didácticas para el
+                                            desarrollo de las habilidades de pensamiento. En: B. Guerci (comp.).
+                                            <i>Filosofía: investigación y enseñanza en el Noa del 2001</i> (pp.
+                                            29-34). Universidad Nacional de Jujuy.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/HPCYC/Documentos/431_Campiran_estrateg_didac_Jujuy.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>HPCYC/<wbr>Documentos/<wbr>431_Campiran<wbr>_estrateg<wbr>_didac_Jujuy.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p>
+                                            Campirán, A. (2001). <i>Filosofía de la existencia. La muerte, el sentido
+                                                de la vida y otros ensayos</i>. Pp. 59-63. Textos universitarios.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/HPCYC/Documentos/432_trasfondo_Campir%C3%A1n.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>HPCYC/<wbr>Documentos/<wbr>432_trasfondo<wbr>_Campir%C3%A1n.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p>
+                                            Campirán, A. (2017). <i>Habilidades de pensamiento crítico y creativo.
+                                                Toma de decisiones y solución de problemas. Lecturas y ejercicios para
+                                                el nivel universitario</i>. Pp. 52-54, 71-72, 95, 96, 97-106 ,115, 116 y
+                                            166-169.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Campiran%20A%20(2017)%20Libro%20de%20Texto_SP_HP_Antologia.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%<wbr>20PC%202017/<wbr>Documentos/<wbr>Campiran%20A%20(<wbr>2017)%20Libro%20<wbr>de%20Texto_SP<wbr>_HP_Antologia.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="mb-0">
+                                            Ramos, P. (2011). <i>La tabla de orden de pensamiento como herramienta de
+                                                lectura de texto argumentativo</i>. Pp. 16-50.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/HPCYC/Documentos/123_OP_PRamos.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos<wbr>/HPCYC/<wbr>Documentos/<wbr>123_OP_PRamos.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="movil mb-5">
+                            <div class="fondo-lila">
+                                <p class="text-azul">Lineamientos de entrega</p>
+
+                                <ul class="ml-4 mb-0">
+                                    <li>Nombra tu documento del formato proporcionado de la siguiente manera:
+                                        ED07_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                    <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                        plataforma Eminus.</li>
+                                    <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de
+                                        Eminus.</li>
+                                </ul>
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Criterios de evaluación</p>
+                                <ul class="ml-4">
+                                    <li>Responde las siete columnas que conforman la construcción de la bitácora OP.
+                                    </li>
+                                    <li>Refleja comprensión ordenada del lenguaje y una argumentación suficiente, basada
+                                        en premisas y conclusiones.</li>
+
+                                    <ul class="ml-4 mb-0">
+                                        <li>Responde las siete columnas que conforman la construcción de la bitácora OP.
+                                        </li>
+                                        <li>Refleja comprensión ordenada del lenguaje y una argumentación suficiente,
+                                            basada en premisas y conclusiones.</li>
+
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Muestra redacción clara y precisa, y aplica reglas de ortografía.</li>
+                                        <li>Presenta las referencias bibliográficas utilizadas en el desarrollo de la
+                                            actividad, redactadas en formato APA.</li>
+                                    </ul>
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Fuentes de información</p>
+                                <p class="parrafo instruccion ">
+                                    <b>Instrucción:</b> Presiona el botón para descargar las fuentes de información.
+                                </p>
+                                <div class="text-center">
+                                    <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT07.docx">
+                                        Fuentes de información
+                                        <span class="sr-only">Documento de word</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="actividad-separador">
+            <section>
+                <hr class="inicio-act" aria-hidden="true">
+                <div class="container">
+
+                    <div id="section101Act2" class="caja">
+
+                        <h2 class="text-azul subtitulo">Actividad 08. Elaborar la bitácora COL tercer nivel con
+                            metacognición. Foro 2
+                            <span id="ident101" class="identificador2 ">101</span>
+                        </h2>
+
+                        <!-- <p class="mb-0">Como recordarás en el módulo 1, actividad 03, revisaste lo relativo
+                            a la
+                            bitácora COL, la cual es una estrategia didáctica que se recoge a manera de diario de campo,
+                            observaste los elementos que la integran y pudiste realizar la metacognición del módulo. En
+                            esta actividad, retomarás el formato de la bitácora para plasmar en ella lo aprendido
+                            durante el módulo 2 (los modelos de problema y su aplicación).</p> -->
+
+                        <div class="text-center escritorio">
+                            <img class="imagen-ac1" src="./images/modulo2/PCSP24-M2_act08.png" alt="imagen de apoyo"
+                                aria-hidden="true" />
+                        </div>
+                        <p class="mb-0">
+                            Como recordarás en el módulo 1, actividad 03, revisaste lo relativo a la
+                            bitácora COL, la cual es una estrategia didáctica que se recoge a manera de diario de
+                            campo, observaste los elementos que la integran y pudiste realizar la metacognición del
+                            módulo. En esta actividad, retomarás el formato de la bitácora para plasmar en ella lo
+                            aprendido durante el módulo 2 (los modelos de problema y su aplicación).
+                        </p>
+
+                    </div>
+                </div>
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="section102Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Descripción de la actividad
+                            <span id="ident102" class="identificador2 ">102</span>
+                        </h3>
+
+                        <p>En esta actividad elaboras la bitácora COL (Comprensión Ordenada del Lenguaje) de tercer
+                            nivel, que consiste en un apunte que recoge a manera de diario de campo, información
+                            relativa a los conceptos, situaciones y experiencias revisados hasta este momento.</p>
+
+                        <p>Para desarrollar la actividad atiende los siguientes pasos:</p>
+
+                        <div id="section103Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 1</p>
+                            </div>
+                            <p class="mb-0">Retoma y analiza los materiales
+                                <span id="ident103" class="identificador2 ">103</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4">
+                            <li>
+                                <a id="download104" class="enlace-icono" href="./descargas/modulo2/Glosario-2.pdf"
+                                    download>
+                                    Glosario 2<i aria-hidden="true">.</i>
+                                    <span id="ident104" class="identificador2 ">104</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="download105" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Las-Emociones.pdf" download>
+                                    Las emociones<i aria-hidden="true">.</i>
+                                    <span id="ident105" class="identificador2 ">105</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                            <li>
+                                Del
+                                <a id="download106" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Modelo-COL-y-Bitacora-COL.pdf" download>
+                                    Capítulo 2. Estrategias didácticas<i aria-hidden="true">,</i>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                                revisa lo referente a Modelo COL y bitácora COL.
+                                <span id="ident106" class="identificador2 ">106</span>
+                            </li>
+                        </ol>
+
+                        <div id="section107Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 2</p>
+                            </div>
+                            <p class="mb-0">Elabora tu bitácora COL de tercer nivel
+                                <span id="ident107" class="identificador2 ">107</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4">
+
+                            <li>
+                                Consulta el archivo para llenado
+                                <a id="download108" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Consideraciones-Elaborar-Bitacora-COL.pdf" download>
+                                    Consideraciones para elaborar la bitácora COL 3<i aria-hidden="true">.</i>
+                                    <span id="ident108" class="identificador2 ">108</span>
+                                    <span class="sr-only">Archivo PDF</span>
+                                </a>
+                            </li>
+                            <li>
+                                Elabora tu
+                                <a id="download109" class="enlace-icono"
+                                    href="./descargas/modulo2/Act08-Formato-de-bitacora-COL-de-tercer-nivel.docx"
+                                    download>
+                                    formato de bitácora COL de tercer nivel<i aria-hidden="true">.</i>
+                                    <span id="ident109" class="identificador2 ">109</span>
+                                    <span class="sr-only">Documento de Word</span>
+                                </a>
+                            </li>
+                            <li>El tema que utilizarás para hacer la bitácora COL será la experiencia que has vivido
+                                durante las semanas dentro de este curso.</li>
+                            <li>Responde todas las preguntas listadas en la bitácora COL.</li>
+                        </ol>
+
+                        <div id="section110Act2" class="actividad-enc">
+                            <div>
+                                <p class="mb-0">Paso 3</p>
+                            </div>
+                            <p class="mb-0">Participa en el foro 2. Metacogniciones de bitácora COL 1 en Eminus
+                                <span id="ident110" class="identificador2 ">110</span>
+                            </p>
+                        </div>
+
+                        <ol class="ml-4 mb-0">
+                            <li>Adjunta en el foro, en el apartado correspondiente, tu bitácora COL 1.</li>
+                            <li>Analiza las bitácoras de dos de tus compañeros y retroaliméntalos, indicando semejanzas
+                                y diferencias entre tu metacognición y la de ellos.</li>
+                        </ol>
+                    </div>
+
+                    <div id="section111Act2" class="fondo-degradado">
+                        <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                            <span id="ident111" class="identificador2 ">111</span>
+                        </p>
+
+                        <div class="text-center">
+                            <a id="download112" class="btn-modales btn"
+                                href="./descargas/modulo2/PCSP24-Rubrica-ACT08.docx" download>
+                                Rúbrica de evaluación
+                                <span id="ident112" class="identificador2 ">112</span>
+                                <span class="sr-only">Documento de word</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr class="separador-con" aria-hidden="true">
+
+                <div class="container">
+
+                    <div id="section113Act2" class="caja">
+
+                        <h3 class="text-azul subtitulo">Información para entrega
+                            <span id="ident113" class="identificador2 ">113</span>
+                        </h3>
+
+                        <div class="escritorio">
+                            <p id="Faqs110s" class="instruccion"><b>Instrucción:</b> Presiona cada botón para conocer la
+                                información.
+                            </p>
+
+                            <details id="faq114Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Lineamientos de entrega
+                                    <span id="ident114" class="identificador2 ">114</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <ul class="ml-4 mb-0">
+                                        <li>Nombra tu documento del formato proporcionado de la siguiente manera:
+                                            ED08_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                        <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                            plataforma Eminus.</li>
+                                        <li>Realiza tu participación en el foro de acuerdo a lo solicitado.</li>
+                                        <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste
+                                            de Eminus.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <details id="faq115Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Criterios de evaluación
+                                    <span id="ident115" class="identificador2 ">115</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+
+                                    <p class="mb-0"><b>Para la bitácora COL</b></p>
+                                    <ul class="ml-4">
+                                        <li>Realiza el llenado del formato.</li>
+                                        <li>Presenta suficiencia y amplitud en la respuesta de cada pregunta.</li>
+                                        <li>Se observa pertinencia y congruencia en el contenido de sus respuestas.</li>
+                                        <li>Muestra autoría y originalidad.</li>
+                                        <li>Muestra redacción clara y precisa, y aplica reglas de ortografía.</li>
+                                    </ul>
+
+                                    <p class="mb-0"><b>Para la participación en el foro</b></p>
+                                    <ul class="ml-4 mb-0">
+                                        <li>Atiende los lineamientos de participación en el foro</li>
+                                        <li>En la retroalimentación, identifica semejanzas y diferencias entre las
+                                            metacogniciones de sus compañeros y las suyas.</li>
+                                        <li>Respeta reglas de ortografía y redacción.</li>
+                                    </ul>
+
+                                </div>
+                            </details>
+
+                            <details id="faq116Act2" class="collapsables-gi">
+                                <summary class="btn waves-effect waves-light">
+                                    Fuentes de información
+                                    <span id="ident116" class="identificador2 ">116</span>
+                                </summary>
+                                <div class="collapsables-gi__content">
+                                    <div class="referencias">
+                                        <p>
+                                            Arieta, F. (s. f.). Consideraciones para elaborar y evaluar la Bitácora
+                                            COL. Pp. 1-2.
+                                        </p>
+
+                                        <p>
+                                            Bigurra, R. (s.f.). <i>Las emociones. Taller de Habilidades del Pensamiento
+                                                Crítico y Creativo</i>.
+                                            <a href="https://eminusapi.uv.mx/eminusapi/drive/cur_17048/Contenido/elem_49447/recurso/Recurso/descargables/modulo-1/Act03-LasEmociones.pdf"
+                                                target="_blank">
+                                                https://<wbr>eminusapi.uv.mx/<wbr>eminusapi/<wbr>drive/<wbr>cur_17048/<wbr>Contenido/<wbr>elem_49447/<wbr>recurso/<wbr>Recurso/<wbr>descargables/<wbr>modulo-1/<wbr>Act03-Las<wbr>Emociones.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p>
+                                            Campirán, A. (2000). Estrategias Didácticas. En A. Campirán, G. Guevara &
+                                            L. Sánchez (comps.), Habilidades de pensamiento crítico y creativo (pp.
+                                            35-36). Universidad Veracruzana.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/HPCYC/Documentos/421_Campiran_estrateg_didac_Cap2.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>HPCYC/<wbr>Documentos/<wbr>421_Campiran<wbr>_estrateg_<wbr>didac_Cap2.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p>
+                                            Campirán, A. (2017). Habilidades de pensamiento crítico y creativo.
+                                            <i>Toma de decisiones y solución de problemas</i>. Lecturas y ejercicios
+                                            para el nivel universitario. Pp. 52-54, 71-72, 95, 96, 97-106 ,115, 116 y
+                                            166-169.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/Antologia%20PC%202017/Documentos/Campiran%20A%20(2017)%20Libro%20de%20Texto_SP_HP_Antologia.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx/<wbr>apps/<wbr>afbgcursos/<wbr>Antologia%<wbr>20PC%202017/<wbr>Documentos/<wbr>Campiran%20A%20(<wbr>2017)%20Libro<wbr>%20de%20Texto<wbr>_SP_HP_<wbr>Antologia.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                        <p class="mb-0">
+                                            Pensado, M., Flores, M., & Maury, L. (2013). <i>Glosario 2 para taller de
+                                                Habilidades del pensamiento crítico y creativo</i>. Universidad
+                                            Veracruzana.
+                                            <a href="https://www.uv.mx/apps/afbgcursos/HPCYC/Documentos/Glosario_HP_13_14.pdf"
+                                                target="_blank">
+                                                https://<wbr>www.uv.mx<wbr>/apps/<wbr>afbgcursos/<wbr>HPCYC/<wbr>Documentos/<wbr>Glosario<wbr>_HP_13_14.pdf
+                                                <span class="sr-only">Se abre en nueva pestaña</span>
+                                            </a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="movil mb-5">
+                            <div class="fondo-lila">
+                                <p class="text-azul">Lineamientos de entrega</p>
+
+                                <ul class="ml-4 mb-0">
+                                    <li>Nombra tu documento del formato proporcionado de la siguiente manera:
+                                        ED08_<wbr>Primer<wbr>Apellido<wbr>y<wbr>Primer<wbr>Nombre.docx</li>
+                                    <li>Envía tu archivo a tu facilitador a través del apartado Evaluaciones de la
+                                        plataforma Eminus.</li>
+                                    <li>Realiza tu participación en el foro de acuerdo a lo solicitado.</li>
+                                    <li>Entrega en la fecha establecida en el Calendario de entregas que descargaste de
+                                        Eminus.</li>
+                                </ul>
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Criterios de evaluación</p>
+                                <p class="mb-0"><b>Para la bitácora COL</b></p>
+                                <ul class="ml-4">
+                                    <li>Realiza el llenado del formato.</li>
+                                    <li>Presenta suficiencia y amplitud en la respuesta de cada pregunta.</li>
+                                    <li>Se observa pertinencia y congruencia en el contenido de sus respuestas.</li>
+                                    <li>Muestra autoría y originalidad.</li>
+                                    <li>Muestra redacción clara y precisa, y aplica reglas de ortografía.</li>
+                                </ul>
+
+                                <p class="mb-0"><b>Para la participación en el foro</b></p>
+                                <ul class="ml-4 mb-0">
+                                    <li>Atiende los lineamientos de participación en el foro</li>
+                                    <li>En la retroalimentación, identifica semejanzas y diferencias entre las
+                                        metacogniciones de sus compañeros y las suyas.</li>
+                                    <li>Respeta reglas de ortografía y redacción.</li>
+                                </ul>
+                            </div>
+
+                            <div class="fondo-lila">
+                                <p class="text-azul">Fuentes de información</p>
+                                <p class="parrafo instruccion ">
+                                    <b>Instrucción:</b> Presiona el botón para descargar las fuentes de información.
+                                </p>
+                                <div class="text-center">
+                                    <a download="" class="btn-actividad btn btn-azul-modals waves-effect waves-light "
+                                        href="./descargas/modulo2/PCSP24-FuentesInfo-ACT08.docx">
+                                        Fuentes de información
+                                        <span class="sr-only">Documento de word</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <hr class="separador" aria-hidden="true">
+
+        <div class="container">
+
+            <div id="section117Act2" class="fondo-degradado espacio-fin">
+                <p class="instruccion"><b>Instrucción:</b> Presiona el botón para descargar el archivo.
+                    <span id="ident117" class="identificador2 ">117</span>
+                </p>
+
+                <div id="sectionLect" class="text-center">
+
+                    <a id="btnLectura" class="btn_lecturaF btn" accesskey="L" href="./descargas/modulo2/ksdjkjds"
+                        target="_blank" download="">
+                        Lectura fácil
+                        <span id="ident118" class="identificador2 ">118</span>
+                        <span class="sr-only">Archivo PDF</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer class="footer">
+
+        <span id="volverArriba" type="button" class="btn-volver-arriba ir-arriba" aria-hidden="true"
+            aria-label="Volver arriba">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+            <span id="ident119" class="identificador2 ">119</span>
+        </span>
+
+        <img class="tamaño__img escritorio" src="./images/PCSP24-_firmauv-r.png" loading="lazy" width="100%"
+            height="auto" alt="Logo de la Universidad Veracruzana">
+        <img class="movil" src="./images/PCSP24-_firmauv-e.png" alt="Banner Principal" aria-hidden="true" width="100%"
+            height="auto">
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal fade" id="modelo-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                        <span id="ident39" class="identificador2 ">39</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                Modelo TRIZ
+                            </p>
+                        </div>
+
+                        <p>TRIZ es un método conocido como Teoría para Resolver Problemas de Inventiva.</p>
+
+                        <p>Este método nace de la observación directa de la metodología de las patentes definidas por una relación entre un conflicto determinado y una propuesta de resolución inmediata e ingeniosa. A partir de esta observación, nacen asociaciones de causa y efecto que están interconectadas.</p>
+
+                        <p class="mb-0">La creatividad es una de las cualidades que define el talento del ser humano. El pensamiento lógico racional es muy importante; sin embargo, no es la única fuente de conocimiento. La capacidad inventiva a la que apela este método es determinante en el ámbito de la resolución de problemas, gracias a un pensamiento crítico que invita a la persona a ir más allá de lo evidente, para cuestionarse ese problema desde distintos puntos de vista.</p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                        <span id="cerrar39" class="identificador2 ">39</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+                       
+                        
+
+                        
+
+                        
+
+    <div class="modal fade" id="modelo-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                        <span id="ident41" class="identificador2 ">41</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                Modelo ARDESOS - DIAPROVE
+                            </p>
+                        </div>
+
+                        <p>Por sus siglas DIAgnóstico, PROnóstico y VErificación.</p>
+
+                        <p>Es un modelo desarrollado para alcanzar la mejor explicación para un hecho, fenómeno o problema, a fin de resolverlo eficazmente.</p>
+
+                        <p class="mb-0">El modelo DIAPROVE se basa en:</p>
+                        <ul class="ml-4">
+                            <li>Identificar las deficiencias y sesgos.</li>
+                            <li>Buscar una explicación única.</li>
+                            <li>Buscar explicarnos un hecho o problema de forma única, inequívoca.</li>
+                        </ul>
+                        <p class="mb-0">ARDESOS - DIAPROVE:</p>
+                        <ul class="ml-4">
+                            <li>Modelo de explicación, que desarrolla fundamentalmente la observación.</li>
+                            <li>Papel secundario de la argumentación.</li>
+                            <li>No se tratan por igual en la instrucción todas las habilidades de pensamiento.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                        <span id="cerrar41" class="identificador2 ">41</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modelo-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">×</span>
+                        <span id="ident43" class="identificador2 ">43</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="text-center">
+                            <p class="text-azul">
+                                Diagrama ACRISPO
+                            </p>
+                        </div>
+
+                        <p class="mb-0">El diagrama ACRISPO es una propuesta que se caracteriza por empujar al usuario a ir más allá de su propia actividad, es decir no sólo se limita a la aplicación, análisis y evaluación de argumentos contextualizados de la vida diaria, sino que también exhiben un uso práctico, tanto del argumento como de la argumentación.</p>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cerrar-modal waves-effect waves-light" data-dismiss="modal">
+                        Cerrar
+                        <span id="cerrar43" class="identificador2 ">43</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <!-- Funcionalidad general -->
+    <!-- ../scripts/home.js -->
+    <script src="scripts/home.js"></script>
+    <script type="text/javascript" src="scripts/menu-2.js"></script>
+    <!-- accesibilidad -->
+    <script src="scripts/menuacces.js"></script>
+    <script src="scripts/modalAyuda.js"></script>
+    <script src="scripts/annyang-6.js"></script>
+    <script src="scripts/change-fonts.js"></script>
+    <script src="scripts/cursor.js"></script>
+    <script src="scripts/links.js"></script>
+    <script src="scripts/marcador.js"></script>
+    <script src="scripts/annyang_Storage.js"></script>
+    <script src="scripts/swipersAct2Modul2.js"></script>
+    <script src="scripts/modalLectorInmersivo.js"></script>
+
+    <!-- Funcionalidad para Progress-bar-scroll del inicio -->
+    <!-- ../scripts/scroll-timeline.js -->
+    <script src="scripts/scroll-timeline.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Create ScrollTimeline
+        const myScrollTimeline = new ScrollTimeline({
+            source: document.scrollingElement,
+            scrollSource: document.scrollingElement, // For legacy implementations
+            orientation: "block",
+            scrollOffsets: [
+                new CSSUnitValue(0, "percent"),
+                new CSSUnitValue(100, "percent"),
+            ],
+        });
+
+        // Animate Progress Bar on Scroll
+        new Animation(
+            new KeyframeEffect(
+                document.querySelector("#progress"),
+                {
+                    transform: ["scaleX(0)", "scaleX(1)"],
+                },
+                { duration: 1, fill: "forwards" }
+            ),
+            myScrollTimeline
+        ).play();
+    </script>
+    <!--  -->
+
+    <!-- IR ARRIBA -->
+    <script>
+        $(document).ready(function () {
+            $(".ir-arriba").click(function () {
+                $("body, html").animate(
+                    {
+                        scrollTop: "0px",
+                    },
+                    300
+                );
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $(".ir-arriba").slideDown(300);
+                } else {
+                    $(".ir-arriba").slideUp(300);
+                }
+            });
+        });
+
+        var swiper = new Swiper(".mySwiper", {
+            speed: 600,
+            parallax: true,
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+<script src="scripts/Pestañas.js"></script>
+
+</html>
