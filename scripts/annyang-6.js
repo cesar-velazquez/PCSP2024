@@ -2552,13 +2552,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // annyang.setLanguage("es-MX");
 });
 
-// INICIO
-// FIN
-
 const btn_access = document.getElementById('btn-access');
 let cerrar_help = document.getElementById("cerrar");
 let cerrarAyudaM = document.getElementById("btnCerrarv2");
-
 
 let num0 = document.getElementById("ident0");
 let num1 = document.getElementById("ident1");
@@ -2680,7 +2676,6 @@ let num116 = document.getElementById("ident116");
 let num117 = document.getElementById("ident117");
 let num118 = document.getElementById("ident118");
 let num119 = document.getElementById("ident119");
-
 // cerrar modales
 let cerrar17 = document.getElementById("cerrar17");
 let cerrar19 = document.getElementById("cerrar19");
@@ -2690,12 +2685,8 @@ let cerrar39 = document.getElementById("cerrar39");
 let cerrar41 = document.getElementById("cerrar41");
 let cerrar43 = document.getElementById("cerrar43");
 
-
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log("annyang6: " + activoNumberIndex);
-
-
-
 // inicio prueba
 function numbersActives() {
     menuactivo = true;
