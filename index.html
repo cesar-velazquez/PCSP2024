@@ -37,34 +37,53 @@
     <!-- Instrucción para información de ayuda -->
     <div>
         <p class="sr-only" style="font-size: 1.3rem;">
-            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            Instrucción: Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
             las teclas Alt + i, en MacOS presiona las teclas <i lang="en">Option</i> + i
             Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
             en MacOS presiona la tecla Esc
         </p>
+        <p class="sr-only">
+            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+        </p>
+        <p class="sr-only parrafo mb-0" lang="en"><b>Windows</b></p>
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal Alt + M</li>
+            <li>Cerrar menú principal Alt + C</li>
+            <li>Archivo de lectura fácil Alt + L</li>
+        </ul>
+
+        <p class="sr-only parrafo mb-0" lang="en"><b>MacOS</b></p>
+
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+            <li>Archivo de lectura fácil <i lang="en">Control</i> + <i lang="en">Option</i> + L</li>
+        </ul>
     </div>
 
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
-        <button onclick="handleMenu()" class="btnAccessUniversal">
+        <button aria-hidden="true" onclick="handleMenu()" class="btnAccessUniversal">
             <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
         </button>
 
-        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+        <button aria-hidden="true" class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
         waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
             <i class='bx bxs-help-circle'></i>
         </button>
         <span id="ident0" class="identificador2">0</span>
     </div>
-    <modal-ayuda></modal-ayuda>
+
     <!-- inicio modal ayuda -->
+    <modal-ayuda></modal-ayuda>
     <!-- fin modal ayuda -->
     <!-- Lector Inmersivo Inicio -->
     <modal-lectorinmersivo></modal-lectorinmersivo>
     <!-- Lector Inmersivo Fin -->
     <!-- menuaccesShow -->
 
-    <div class="menuacces ">
+    <div aria-hidden="true" class="menuacces ">
         <div class="menuComponentAcces">
 
             <div class="sectionAcces">
@@ -179,7 +198,7 @@
 
         <div class="js-pleca pleca">
 
-            <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
+            <a aria-hidden="true" id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank">Universidad Veracruzana</a>
 
             <div class="dropdown">
                 <!-- btn  -->
@@ -720,7 +739,8 @@
                 </div>
 
                 <div class="text-center movil">
-                    <a download="" class="btn_structure btn-actividad btn btn-azul-modals waves-effect waves-light btn-14"
+                    <a download=""
+                        class="btn_structure btn-actividad btn btn-azul-modals waves-effect waves-light btn-14"
                         href="./descargas/index/PCSP24-Expertos_en_contenido.pdf">
                         Síntesis curriculares
                         <span class="sr-only">archivo PDF</span>

@@ -2771,8 +2771,6 @@ function removeNumbers() {
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     numbersActives();
-    // annyang.setLanguage('es-MX');
-    // annyang.start();
 }
 
 

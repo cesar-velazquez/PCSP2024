@@ -19,28 +19,28 @@ class lectorInmersivo extends HTMLElement {
 
                         <div class="text-center mb-3">
 
-                            <p class="parrafo mt-4">
+                            <p aria-hidden="true" class="parrafo mt-4">
                                 <strong>Información de ayuda</strong>
                             </p>
 
                         </div>
 
-                        <p class="parrafo">
+                        <p aria-hidden="true" class="parrafo">
                             Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
                             como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
                         </p>
 
-                        <p class="parrafo mb-0"><b>Windows</b></p>
+                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b>Windows</b></p>
 
-                        <ul class="parrafo ml-4">
+                        <ul aria-hidden="true" class="parrafo ml-4">
                             <li>Abrir menú principal Alt + M</li>
                             <li>Cerrar menú principal Alt + C</li>
                             <li>Archivo de lectura fácil Alt + L</li>
                         </ul>
 
-                        <p class="parrafo mb-0"><b>MacOS</b></p>
+                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b>MacOS</b></p>
 
-                        <ul class="parrafo ml-4">
+                        <ul aria-hidden="true" class="parrafo ml-4">
                             <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
                             <li>Cerrar menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
                             <li>Archivo de lectura fácil <i lang="en">Control</i> + <i lang="en">Option</i> + L</li>
@@ -51,7 +51,7 @@ class lectorInmersivo extends HTMLElement {
                 </div>
 
                 <div class="modal-footer">
-                    <button id="cerrarLectorIn" type="button" class="btn btn-cerrar-modal waves-effect waves-light"
+                    <button aria-hidden="true" id="cerrarLectorIn" type="button" class="btn btn-cerrar-modal waves-effect waves-light"
                         style="border-radius: 7px;" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>

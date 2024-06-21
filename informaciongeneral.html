@@ -38,20 +38,38 @@
 
     <div>
         <p class="sr-only" style="font-size: 1.3rem;">
-            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            Instrucción: Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
             las teclas Alt + i, en MacOS presiona las teclas <i lang="en">Option</i> + i
             Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
             en MacOS presiona la tecla Esc
         </p>
+        <p class="sr-only">
+            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+        </p>
+        <p class="sr-only parrafo mb-0" lang="en"><b>Windows</b></p>
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal Alt + M</li>
+            <li>Cerrar menú principal Alt + C</li>
+            <li>Archivo de lectura fácil Alt + L</li>
+        </ul>
+
+        <p class="sr-only parrafo mb-0" lang="en"><b>MacOS</b></p>
+
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+            <li>Archivo de lectura fácil <i lang="en">Control</i> + <i lang="en">Option</i> + L</li>
+        </ul>
     </div>
 
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
-        <button onclick="handleMenu()" class="btnAccessUniversal">
+        <button aria-hidden="true" onclick="handleMenu()" class="btnAccessUniversal">
             <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
         </button>
 
-        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+        <button aria-hidden="true" class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
         waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
             <i class='bx bxs-help-circle'></i>
         </button>
@@ -66,7 +84,7 @@
 
     <!-- menuaccesShow -->
 
-    <div class="menuacces ">
+    <div aria-hidden="true" class="menuacces ">
         <div class="menuComponentAcces">
 
             <div class="sectionAcces">
@@ -177,7 +195,7 @@
     <header class="banner-1">
         <div class="">
             <div class="js-pleca pleca">
-                <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad
+                <a aria-hidden="true" id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad
                     Veracruzana</a>
 
                 <div class="dropdown">
@@ -294,12 +312,14 @@
                         los Programas Educativos. <span id="ident14" class="identificador2">14</span></p>
 
                     <div class="section_btns">
-                        <a id="programaEduc1" class="btn_structure btn_program btn btn-azul-modals waves-effect waves-light"
+                        <a id="programaEduc1"
+                            class="btn_structure btn_program btn btn-azul-modals waves-effect waves-light"
                             href="./descargas/InfoGeneral/BGRE80002.pdf" download="">Programa Educativo BGRE80002
                             <span class="parrafo sr-only">Archivo PDF</span>
                             <span id="ident15" class="identificador2">15</span></a>
 
-                        <a id="programaEduc2" class="btn_structure btn_program btn btn-azul-modals waves-effect waves-light"
+                        <a id="programaEduc2"
+                            class="btn_structure btn_program btn btn-azul-modals waves-effect waves-light"
                             href="./descargas/InfoGeneral/FBGR80002.pdf" download="">Programa Educativo FBGR80002
                             <span class="parrafo sr-only">Archivo PDF</span>
                             <span id="ident16" class="identificador2">16</span></a>
@@ -327,7 +347,7 @@
                             <div id="cuadroModul1" class="section_modul">
                                 <div class="section_line">
                                     <p class="parrafo text-center bold mb-4 section_line ">Módulo 1
-                                    </p>                                                                       
+                                    </p>
                                 </div>
                                 <p class="parrafo text-center bold mb-0">Pensamiento crítico para la solución de
                                     problemas
@@ -335,13 +355,13 @@
                             </div>
                             <div id="cuadroModul2" class="section_modul">
                                 <div class="section_line">
-                                    <p class="parrafo text-center bold mb-4 ">Módulo 2</p>                                   
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 2</p>
                                 </div>
                                 <p class="parrafo text-center bold mb-0">Pensamiento crítico para formular problemas</p>
                             </div>
                             <div id="cuadroModul3" class="section_modul">
                                 <div class="section_line">
-                                    <p class="parrafo text-center bold mb-4 ">Módulo 3</p>                                    
+                                    <p class="parrafo text-center bold mb-4 ">Módulo 3</p>
                                 </div>
                                 <p class="parrafo text-center bold mb-0">Pensamiento crítico para solucionar problemas
                                 </p>
@@ -367,14 +387,15 @@
                         <span id="ident18" class="identificador2">18</span>
                     </p>
 
-                    <a id="evaluacionActividades" class="btn_structure btn btn-azul-modals btn_center waves-effect waves-light mb-2em"
+                    <a id="evaluacionActividades"
+                        class="btn_structure btn btn-azul-modals btn_center waves-effect waves-light mb-2em"
                         href="./descargas/InfoGeneral/PCSP24-Evaluacion_de_actividades.pdf" download="">Evaluación de
                         actividades
                         <span class="parrafo sr-only">Archivo PDF</span>
                         <span id="ident19" class="identificador2">19</span>
                     </a>
                 </div>
-                
+
                 <div class="text-center mt-4 mb-4 mt-md-5 mb-md-5">
                     <img src="./images/separador-interior-ee.png" alt="Separador - Imagen de apoyo" aria-hidden="true"
                         width="80%" height="auto" class="escritorio">
@@ -808,7 +829,8 @@
                         <p class="instruccion-color-verde parrafo mt-2em "> <b>Instrucción:</b> Presiona el botón para
                             descargar el
                             archivo.</p>
-                        <a id="fuentesInf" class="btn_structure btn btn-azul-modals btn_center" href="./downaaa" download="">Fuentes
+                        <a id="fuentesInf" class="btn_structure btn btn-azul-modals btn_center" href="./downaaa"
+                            download="">Fuentes
                             de información
                             <span class="parrafo sr-only">Documento de Word</span> <span id="ident29"
                                 class="identificador2">29</span></a>

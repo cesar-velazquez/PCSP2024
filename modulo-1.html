@@ -46,15 +46,33 @@
             Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
             en MacOS presiona la tecla Esc
         </p>
+        <p class="sr-only">
+            Para navegar dentro de la experiencia y acceder de forma más rápida en algunos elementos
+            como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
+        </p>
+        <p class="sr-only parrafo mb-0" lang="en"><b>Windows</b></p>
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal Alt + M</li>
+            <li>Cerrar menú principal Alt + C</li>
+            <li>Archivo de lectura fácil Alt + L</li>
+        </ul>
+
+        <p class="sr-only parrafo mb-0" lang="en"><b>MacOS</b></p>
+
+        <ul class="sr-only parrafo ml-4">
+            <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+            <li>Archivo de lectura fácil <i lang="en">Control</i> + <i lang="en">Option</i> + L</li>
+        </ul>
     </div>
 
     <!-- Implementacion del boton menu accesible: -->
     <div class="ocultar">
-        <button onclick="handleMenu()" class="btnAccessUniversal">
+        <button aria-hidden="true" onclick="handleMenu()" class="btnAccessUniversal">
             <img src="./images/accesibilidad/MA-_menu-acc.png" alt="Logo boton accesible">
         </button>
 
-        <button class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
+        <button aria-hidden="true" class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
         waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
             <i class='bx bxs-help-circle'></i>
         </button>
@@ -68,7 +86,7 @@
     <modal-lectorinmersivo></modal-lectorinmersivo>
     <!-- Fin modal Lector Inmersivo -->
     <!-- menuaccesShow -->
-    <div class="menuacces ">
+    <div aria-hidden="true" class="menuacces ">
         <div class="menuComponentAcces">
 
             <div class="sectionAcces">
@@ -179,7 +197,8 @@
     <header class="banner-1">
         <div class="">
             <div class="js-pleca pleca">
-                <a id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank" lang="es">Universidad
+                <a aria-hidden="true" id="pleca_uv" class="pleca__uv" href="https://uv.mx/" target="__blank"
+                    lang="es">Universidad
                     Veracruzana</a>
 
                 <div class="dropdown">

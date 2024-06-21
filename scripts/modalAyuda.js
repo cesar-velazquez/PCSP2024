@@ -2,13 +2,13 @@ class Ayuda extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-        <div class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
+        <div aria-hidden="true" class="modal fade" id="methods-help" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div aria-hidden="true" class="modal-content">
 
                 <div class="modal-header">
 
-                    <button type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
+                    <button aria-hidden="true" type="button" role="dialog" class="btn-cerrar-modal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span id="closed" aria-hidden="true">×</span>
                         <span id="cerrar" class="identificador3">cerrar</span>
@@ -20,17 +20,17 @@ class Ayuda extends HTMLElement {
                     <div class="container">
 
                         <div class="text-center">
-                            <p class="parrafo text-azul">
+                            <p aria-hidden="true" class="parrafo text-azul">
                                 Comandos de voz
                             </p>
                         </div>
-                        <p class="mb-0">Para utilizar esta función:
+                        <p aria-hidden="true" class="mb-0">Para utilizar esta función:
                             Presiona el botón <img src="./images/accesibilidad/comandosdeVozMayuda3.png"
                                 alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
-                        <p class="text-azul mb-0">
+                        <p aria-hidden="true" class="text-azul mb-0">
                             Elementos en pantalla:
                         </p>
-                        <ol class="padding_left mb-0" style="list-style: lower-latin;">
+                        <ol aria-hidden="true" class="padding_left mb-0" style="list-style: lower-latin;">
                             <li>
                                 En la parte inferior de la página, ubica el micrófono y la barra de voz.
                             </li>
@@ -41,10 +41,10 @@ class Ayuda extends HTMLElement {
                                 La barra de voz escribirá la función que estás activando.
                             </li>
                         </ol>
-                        <p class="text-azul mb-0">
+                        <p aria-hidden="true" class="text-azul mb-0">
                             Para navegar:
                         </p>
-                        <ol class="padding_left" style="list-style: lower-latin;">
+                        <ol aria-hidden="true" class="padding_left" style="list-style: lower-latin;">
                             <li>
                                 <p class="parrafo mb-0">
                                     Menciona de manera clara el número de la sección a la cual te deseas dirigir.
