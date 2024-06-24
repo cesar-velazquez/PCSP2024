@@ -38,7 +38,7 @@ class lectorInmersivo extends HTMLElement {
                             <li>Archivo de lectura fácil Alt + L</li>
                         </ul>
 
-                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b>MacOS</b></p>
+                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b><i>MacOS</i></b></p>
 
                         <ul aria-hidden="true" class="parrafo ml-4">
                             <li>Abrir menú principal <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
