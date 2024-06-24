@@ -30,7 +30,7 @@ class lectorInmersivo extends HTMLElement {
                             como botones, enlaces, evaluaciones, puedes utilizar los siguientes atajos:
                         </p>
 
-                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b>Windows</b></p>
+                        <p aria-hidden="true" class="parrafo mb-0" lang="en"><b><i>Windows</i></b></p>
 
                         <ul aria-hidden="true" class="parrafo ml-4">
                             <li>Abrir menú principal Alt + M</li>
