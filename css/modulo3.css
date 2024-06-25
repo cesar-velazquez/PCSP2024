@@ -97,7 +97,7 @@
 .fondo-deg-104{ width:15rem; padding: 1rem 0; margin-bottom:3rem; }
 .fondo-deg-105{width: 13rem; display: inline-block; min-height: 5rem; vertical-align:top; margin-left:1rem; }
 .fondo-deg-105 p{display: flex; align-items: center; min-height: 5rem; justify-content: center;}
-
+.fondo-blanco-m{ background:#fff; padding:1rem; }
 
 @media screen and (max-width: 1199px) {
     .fondo-deg-105{ margin-bottom: 1rem; }
