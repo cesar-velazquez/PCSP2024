@@ -1,0 +1,102 @@
+.fondos-4movil div{
+    background: #FAEBDD;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faq-deg{
+    background: rgb(129, 100, 158);
+    background: linear-gradient(90deg, #FAEBDD 20%, #81649E 80%);
+    border:.1rem solid transparent;
+    border-left: .1rem solid #FAEBDD;
+    border-bottom: .15rem solid #1E4566;
+    color: #1E4566;
+}
+
+.faq-deg:after {color: #fff}
+.faq-deg:hover:after {color: #1E4566}
+.collapsables-gi[open] summary.faq-deg::after{ color:#1E4566 }
+
+.btn-image-2 {
+    background: transparent;
+    border: none;
+    width: 30%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.btn-image-2 img {
+    width: 52%;
+    margin-bottom: 1rem;
+}
+
+.btn-image-2 .btn-modales {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+    min-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-image-2:focus,
+.btn-image-2:focus-visible {
+    outline: none;
+}
+
+.contenedor-modales-2 {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fondo-deg-10{
+    background: linear-gradient(180deg, #FAEBDD 0%, #EDEDFC 70%);
+    padding: 2rem;
+}
+/*
+.fondo-deg-101{
+    background: url(../images/modulo3/PCSP24-M3_act10-03.png) no-repeat bottom left /10rem, url(../images/modulo3/PCSP24-M3_act10-05.png) no-repeat bottom right /10rem;
+    padding: 2rem;
+}*/
+
+.fondo-deg-102{
+    background: url(../images/modulo3/PCSP24-M3_act10-01.png) no-repeat center left /4.5rem, url(../images/modulo3/PCSP24-M3_act10-02.png) no-repeat center right /4.5rem;
+    padding: 0 5rem;
+    margin: 2rem 0;
+}
+
+.fondo-deg-103{
+    background: url(../images/modulo3/PCSP24-M3_act10-03.png) no-repeat center left /10rem, url(../images/modulo3/PCSP24-M3_act10-05.png) no-repeat center right /10rem, url(../images/modulo3/PCSP24-M3_act10-04.png) no-repeat  center 5rem /25rem;
+    
+}
+
+.fondo-deg-102 p{ padding: 2rem; background:#fff }
+
+.fondo-deg-1041{ text-align:center; }
+.fondo-deg-104, .fondo-deg-105{ background:#FFF; color:#1E4566; font-weight:bold; margin:0 auto; }
+.fondo-deg-104{ width:15rem; padding: 1rem 0; margin-bottom:3rem; }
+.fondo-deg-105{width: 13rem; display: inline-block; min-height: 5rem; vertical-align:top; margin-left:1rem }
+.fondo-deg-105 p{display: flex; align-items: center; min-height: 5rem; justify-content: center;}
+
+@media screen and (max-width: 991px) {
+    .btn-image-2 {
+    background: transparent;
+    border: none;
+    width: 47%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    }
+    .contenedor-modales-2 { justify-content:center; }
+}
