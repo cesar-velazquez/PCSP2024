@@ -74,7 +74,7 @@
 
         <button aria-hidden="true" class="help animate__animated animate__bounceIn animate-bounceIn animate__slower 
         waves-effect waves-light" data-toggle="modal" data-target="#methods-help">
-            <i class='bx bxs-help-circle'></i>            
+            <i class='bx bxs-help-circle'></i>
         </button>
         <span id="ident0" class="identificador2">0</span>
     </div>
@@ -131,7 +131,7 @@
             <div class="sectionAcces">
                 <div>
                     <button id="btn_lectorInmersivo" class="btn_accesible" aria-label="Información de ayuda"
-                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="i"
+                        title="Información de ayuda" data-toggle="modal" data-target="#information-1" accesskey="I"
                         aria-hidden="true">
                         <img id="icon_lector_inmersivo" src="./images/accesibilidad/MA-_m-lector-a.png"
                             alt="Icon auxiliar Lector">
@@ -185,16 +185,15 @@
     <div id="progress"></div>
 
     <!-- SIDEBAR MENÚ -->
-    <navbar id="menu-item" class="sidebar" style="overflow-y: scroll">
+    <!-- <navbar id="menu-item" class="sidebar" style="overflow-y: scroll">
         <div class="sidebar__encabezado">
             <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
                 <span>X</span>
             </button>
             <span id="ident2" class="identificador2 ">2</span>
         </div>
-
         <menu-component></menu-component>
-    </navbar>
+    </navbar> -->
 
     <!-- PLECA Y TITULO -->
     <header class="banner-1">
@@ -235,9 +234,17 @@
                 <span>Pensamiento crítico para formular problemas</span>
             </h1>
         </div>
-
     </header>
 
+    <navbar id="menu-item" class="sidebar" style="overflow-y: scroll">
+        <div class="sidebar__encabezado">
+            <button class="btn btn-link sidebar__dismiss" aria-label="Cerrar menú desplegado" accesskey="C">
+                <span>X</span>
+            </button>
+            <span id="ident2" class="identificador2 ">2</span>
+        </div>
+        <menu-component></menu-component>
+    </navbar>
     <!-- Codigo principal -->
     <main>
         <!-- introduction -->
@@ -414,10 +421,10 @@
 
                     <div id="sectionLect" class="text-center">
 
-                        <a accesskey="L" id="btnLectura" class="btn_lecturaF btn" href="" target="_blank" download="">
+                        <a id="btnLectura" class="btn_lecturaF btn" href="" target="_blank" download="" accesskey="L">
                             Lectura fácil
-                            <span id="ident15" class="identificador2">15</span>
-                            <span class="sr-only">Archivo PDF</span>
+                            <span id="ident15" class=" identificador2">15</span>
+                            <span class="sr-only">Documento de word</span>
 
                         </a>
                     </div>
