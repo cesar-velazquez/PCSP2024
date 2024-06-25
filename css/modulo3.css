@@ -1,3 +1,14 @@
+.imagen-ac5 {
+    width: 90%;
+    max-width: 57rem;
+    margin: 0 auto 2rem;
+}
+.imagen-ac6 {
+    width: 85%;
+    max-width: 55rem;
+    margin: 0 auto 2rem;
+}
+
 .fondos-4movil div{
     background: #FAEBDD;
     padding: 1rem;
@@ -58,7 +69,7 @@
 }
 
 .fondo-deg-10{
-    background: linear-gradient(180deg, #FAEBDD 0%, #EDEDFC 70%);
+    background: linear-gradient(180deg, #FAEBDD 60%, #EDEDFC 90%);
     padding: 2rem;
 }
 /*
@@ -74,18 +85,23 @@
 }
 
 .fondo-deg-103{
-    background: url(../images/modulo3/PCSP24-M3_act10-03.png) no-repeat center left /10rem, url(../images/modulo3/PCSP24-M3_act10-05.png) no-repeat center right /10rem, url(../images/modulo3/PCSP24-M3_act10-04.png) no-repeat  center 5rem /25rem;
+    background: url(../images/modulo3/PCSP24-M3_act10-03.png) no-repeat center left /7rem, url(../images/modulo3/PCSP24-M3_act10-05.png) no-repeat center right /7rem, url(../images/modulo3/PCSP24-M3_act10-04.png) no-repeat  center 5rem /25rem;
+    padding: 0 5rem;
     
 }
 
-.fondo-deg-102 p{ padding: 2rem; background:#fff }
+.fondo-deg-102 p{ padding: 2rem; background:#fff; border-radius:.5rem }
 
 .fondo-deg-1041{ text-align:center; }
-.fondo-deg-104, .fondo-deg-105{ background:#FFF; color:#1E4566; font-weight:bold; margin:0 auto; }
+.fondo-deg-104, .fondo-deg-105{ background:#FFF; color:#1E4566; font-weight:bold; margin:0 auto; border-radius:.5rem }
 .fondo-deg-104{ width:15rem; padding: 1rem 0; margin-bottom:3rem; }
-.fondo-deg-105{width: 13rem; display: inline-block; min-height: 5rem; vertical-align:top; margin-left:1rem }
+.fondo-deg-105{width: 13rem; display: inline-block; min-height: 5rem; vertical-align:top; margin-left:1rem; }
 .fondo-deg-105 p{display: flex; align-items: center; min-height: 5rem; justify-content: center;}
+.fondo-blanco-m{ background:#fff; padding:1rem; }
 
+@media screen and (max-width: 1199px) {
+    .fondo-deg-105{ margin-bottom: 1rem; }
+}
 @media screen and (max-width: 991px) {
     .btn-image-2 {
     background: transparent;
@@ -99,4 +115,33 @@
     margin-bottom: 2rem;
     }
     .contenedor-modales-2 { justify-content:center; }
+
+    .fondo-deg-103{
+    background: url(../images/modulo3/PCSP24-M3_act10-04.png) no-repeat  center 5rem /25rem;
+    padding: 0;
+    }
+    .imagen-ac6 {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .imagen-ac5 {
+        width: 100%;
+        margin: 0 auto 1rem;
+    }
+
+    .fondo-deg-10{ padding:1rem }
+    .fondo-deg-102 p{ padding:1rem; }
+    .fondo-deg-102{
+    background: transparent;
+    padding: 0;
+    margin: 1rem 0;
+    }
+    .imagen-ac6 {
+        margin: 0 auto 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .fondo-deg-105{margin-left: 0}
 }
