@@ -780,10 +780,8 @@ document.addEventListener("DOMContentLoaded", function () {
         videoOn = true;
         VideoPlay.play();
         PositionTop100(positionVid1);
-        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
-    // let VideoOff = document.getElementById("video1");
     let offVideo = function () {
         videoOn = false;
         if (videoOn == false) {
@@ -795,9 +793,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let playVideo1 = function () {
         if (!videoOn) {
             playVideo();
+            let ocultar = document.getElementById("ident12");
+            let mostrar = document.getElementById("pausa12");
+            ocultar.classList.remove("ident_Universal");
+            mostrar.classList.add("ident_Universal");
         } else {
             videoOn = true;
             offVideo();
+            let mostrar = document.getElementById("ident12");
+            let ocultar = document.getElementById("pausa12");
+            mostrar.classList.add("ident_Universal");
+            ocultar.classList.remove("ident_Universal");
         }
     }
 
@@ -828,17 +834,22 @@ document.addEventListener("DOMContentLoaded", function () {
         num13Screen.click();
     });
 
-    let btn19 = document.getElementById("ident42");
+    let btn19 = document.getElementById("ident41");
     let downloadbtnLectura = function () {
         btn19.click();
     }
 
-    let ident24 = document.getElementById("ident24");
+    let section40 = function () {
+        let element = document.getElementById("section40");
+        PositionTop100(element);
+    }
+
+    let ident24 = document.getElementById("ident22");
     let abrirEnlace = function () {
         ident24.click();
     }
 
-    let ident25 = document.getElementById("ident25");
+    let ident25 = document.getElementById("ident23");
     let abrirEnlace2 = function () {
         ident25.click();
     }
@@ -894,113 +905,147 @@ document.addEventListener("DOMContentLoaded", function () {
 
         '11': section11,
         'Once': section11,
+        'número Once': section11,
 
         '12': playVideo1,
+        'número 12': playVideo1,
         'Doce': playVideo1,
         'Play': playVideo1,
         'Pausa': playVideo1,
 
+        '13': abrirCerrarfaq,
+        'número 13': abrirCerrarfaq,
+        'trece': abrirCerrarfaq,
 
-        '13': fullScreenVideoToggle,
-        'Trece': fullScreenVideoToggle,
+        '14': section15,
+        'número 14': section15,
+        'Catorce': section15,
 
-        '14': abrirCerrarfaq,
-        'catorce': abrirCerrarfaq,
+        '15': section16,
+        'número 15': section16,
+        'Quince': section16,
 
-        '15': section15,
-        'Quince': section15,
-
-        '16': section16,
-        'Dieciséis': section16,
-
-        '17': section17,
-        'Diecisiete': section17,
+        // '17': section17,
+        // 'Diecisiete': section17,
 
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
+        'número cero': abrirModalAyuda,
 
         'cerrar': cerrarAyuda,
 
-        '18': abrirModal11,
-        'Dieciocho': abrirModal11,
+        '16': abrirModal11,
+        'número 16': abrirModal11,
+        'Dieciséis': abrirModal11,
 
-        '19': cerrarmodal1,
-        'Diecinueve': cerrarmodal1,
+        '17': cerrarmodal1,
+        'número 17': cerrarmodal1,
+        'Diecisiete': cerrarmodal1,
 
-        '20': abrirModal22,
-        'Veinte': abrirModal22,
+        '18': abrirModal22,
+        'número 18': abrirModal22,
+        'Dieciocho': abrirModal22,
 
-        '21': cerrarModal2,
-        'Veintiuno': cerrarModal2,
+        '19': cerrarModal2,
+        'número 19': cerrarModal2,
+        'Diecinueve': cerrarModal2,
 
-        '22': abrirModal33,
-        'Veintidós': abrirModal33,
+        '20': abrirModal33,
+        'número 20': abrirModal33,
+        'Veinte': abrirModal33,
 
-        '23': cerrarmodal3,
-        'Veintitrés': cerrarmodal3,
+        '21': cerrarmodal3,
+        'número 21': cerrarmodal3,
+        'Veintiuno': cerrarmodal3,
 
-        '24': abrirEnlace,
-        'veinticuatro': abrirEnlace,
+        '22': abrirEnlace,
+        'número 22': abrirEnlace,
+        'veintidos': abrirEnlace,
 
-        '25': abrirEnlace2,
-        'veinticinco': abrirEnlace2,
+        '23': abrirEnlace2,
+        'número 23': abrirEnlace2,
+        'veintitres': abrirEnlace2,
 
-        '26': section26,
-        'Veintiséis': section26,
+        '24': section26,
+        'número 24': section26,
+        'Veinticuatro': section26,
 
-        '27': section27,
-        'Veintisiete': section27,
+        '25': section27,
+        'número 25': section27,
+        'Veinticinco': section27,
 
-        '28': abrirModalGloria,
-        'Veintiocho': abrirModalGloria,
 
-        '29': cerrarModalGloria,
-        'Veintinueve': cerrarModalGloria,
+        '26': abrirModalGloria,
+        'número 26': abrirModalGloria,
+        'Veintiséis': abrirModalGloria,
 
-        '30': abrirModalClaudia,
-        'treinta': abrirModalClaudia,
+        '27': cerrarModalGloria,
+        'número 27': cerrarModalGloria,
+        'Veintisiete': cerrarModalGloria,
 
-        '31': cerrarModalclaudia,
-        'treinta y uno': cerrarModalclaudia,
+        '28': abrirModalClaudia,
+        'número 28': abrirModalClaudia,
+        'veintiocho': abrirModalClaudia,
 
-        '32': abrirModalEzzio,
-        'treinta y dos': abrirModalEzzio,
+        '29': cerrarModalclaudia,
+        'número 29': cerrarModalclaudia,
+        'veintinueve': cerrarModalclaudia,
 
-        '33': cerrarModalEzzio,
-        'treinta y tres': cerrarModalEzzio,
+        '30': abrirModalEzzio,
+        'número 30': abrirModalEzzio,
+        'treinta': abrirModalEzzio,
 
-        '34': abrirModalFati,
-        'treinta y cuatro': abrirModalFati,
+        '31': cerrarModalEzzio,
+        'número 31': cerrarModalEzzio,
+        'treinta y uno': cerrarModalEzzio,
 
-        '35': cerrarModalFati,
-        'treinta y cinco': cerrarModalFati,
+        '32': abrirModalFati,
+        'número 32': abrirModalFati,
+        'treinta y dos': abrirModalFati,
 
-        '36': abrirModalHilda,
-        'treinta y séis': abrirModalHilda,
+        '33': cerrarModalFati,
+        'número 33': cerrarModalFati,
+        'treinta y tres': cerrarModalFati,
 
-        '37': cerrarModalHilda,
-        'treinta y siete': cerrarModalHilda,
+        '34': abrirModalHilda,
+        'número 34': abrirModalHilda,
+        'treinta y cuatro': abrirModalHilda,
 
-        '38': abrirModalLaura,
-        'treinta y ocho': abrirModalLaura,
+        '35': cerrarModalHilda,
+        'número 35': cerrarModalHilda,
+        'treinta y cinco': cerrarModalHilda,
 
-        '39': cerrarModalLaura,
-        'treinta y nueve': cerrarModalLaura,
+        '36': abrirModalLaura,
+        'número 36': abrirModalLaura,
+        'treinta y seis': abrirModalLaura,
 
-        '40': abrirModalLourdes,
-        'Cuarenta': abrirModalLourdes,
+        '37': cerrarModalLaura,
+        'número 37': cerrarModalLaura,
+        'treinta y siete': cerrarModalLaura,
 
-        '41': cerrarModalLourdes,
-        'cuarenta y uno': cerrarModalLourdes,
+        '38': abrirModalLourdes,
+        'número 38': abrirModalLourdes,
+        'treinta y ocho': abrirModalLourdes,
 
-        '42': downloadbtnLectura,
-        'cuarenta y dos': downloadbtnLectura,
+        '39': cerrarModalLourdes,
+        'número 39': cerrarModalLourdes,
+        'treinta y nueve': cerrarModalLourdes,
 
-        '43': volverA,
-        'cuarenta y tres': volverA,
+        '40': section40,
+        'número 40': section40,
+        'cuarenta': section40,
+
+        '41': downloadbtnLectura,
+        'número 41': downloadbtnLectura,
+        'cuarenta y uno': downloadbtnLectura,
+
+        '42': volverA,
+        'número 42': volverA,
+        'cuarenta y dos': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
+        // 'Recargar': refreshPage,
     };
 
     annyang.addCommands(commands);
@@ -1033,14 +1078,13 @@ let num13 = document.getElementById("ident13");
 let num14 = document.getElementById("ident14");
 let num15 = document.getElementById("ident15");
 let num16 = document.getElementById("ident16");
-let num17 = document.getElementById("ident17");
 let num18 = document.getElementById("ident18");
 let num20 = document.getElementById("ident20");
 let num22 = document.getElementById("ident22");
+let num23 = document.getElementById("ident23");
 let num24 = document.getElementById("ident24");
 let num25 = document.getElementById("ident25");
 let num26 = document.getElementById("ident26");
-let num27 = document.getElementById("ident27");
 let num28 = document.getElementById("ident28");
 let num30 = document.getElementById("ident30");
 let num32 = document.getElementById("ident32");
@@ -1048,16 +1092,21 @@ let num34 = document.getElementById("ident34");
 let num36 = document.getElementById("ident36");
 let num38 = document.getElementById("ident38");
 let num40 = document.getElementById("ident40");
+let num41 = document.getElementById("ident41");
 let num42 = document.getElementById("ident42");
 let num43 = document.getElementById("ident43");
 
 // MODALES:
+let num17 = document.getElementById("ident17");
+let num17_1 = document.getElementById("ident17_1");
 let num19 = document.getElementById("ident19");
 let num19_1 = document.getElementById("ident19_1");
 let num21 = document.getElementById("ident21");
 let num21_1 = document.getElementById("ident21_1");
-let num23 = document.getElementById("ident23");
-let num23_1 = document.getElementById("ident23_1");
+
+// let num23_1 = document.getElementById("ident23_1");
+let num27 = document.getElementById("ident27");
+let num27_1 = document.getElementById("ident27_1");
 let num29 = document.getElementById("ident29");
 let num29_1 = document.getElementById("ident29_1");
 let num31 = document.getElementById("ident31");
@@ -1070,246 +1119,83 @@ let num37 = document.getElementById("ident37");
 let num37_1 = document.getElementById("ident37_1");
 let num39 = document.getElementById("ident39");
 let num39_1 = document.getElementById("ident39_1");
-let num41 = document.getElementById("ident41");
-let num41_1 = document.getElementById("ident41_1");
-
 let cerrar_help = document.getElementById("cerrar");
-
-// botones cerrar modal 0
 let num11_1 = document.getElementById("ident1_1");
-// botones cerrar modal 10
-// let num1_h = document.getElementById("ident1_h");
 let cerrarAyudaM = document.getElementById("btnCerrarv2");
-// botones cerrar modal 12
-let num13_1 = document.getElementById("ident1_2");
-// let num14 = document.getElementById("ident14");
-// botones cerrar modal 14
 
-let num15_3 = document.getElementById("ident15_3");
 
 let Numbers = localStorage.getItem("NumberAnnyang_1");
 
-if (Numbers === "activado") {
-    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num2.style.display = "flex";
-    num3.style.display = "inline-flex";
-    num4.style.display = "inline-flex";
-    num5.style.display = "inline-flex";
-    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num22.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num25.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num26.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num27.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num30.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num32.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num34.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
-    // modales:
-    cerrarAyudaM.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
-    num19.style.display = "inline-flex";
-    num19_1.style.display = "inline-flex";
-
-    num21.style.display = "inline-flex";
-    num21_1.style.display = "inline-flex";
-
-    num23.style.display = "inline-flex";
-    num23_1.style.display = "inline-flex";
-
-    num29.style.display = "inline-flex";
-    num29_1.style.display = "inline-flex";
-
-    num31.style.display = "inline-flex";
-    num31_1.style.display = "inline-flex";
-
-    num33.style.display = "inline-flex";
-    num33_1.style.display = "inline-flex";
-
-    num35.style.display = "inline-flex";
-    num35_1.style.display = "inline-flex";
-
-    num37.style.display = "inline-flex";
-    num37_1.style.display = "inline-flex";
-
-    num39.style.display = "inline-flex";
-    num39_1.style.display = "inline-flex";
-
-    num41.style.display = "inline-flex";
-    num41_1.style.display = "inline-flex";
+function numbersActives() {
+    menuactivo = true;
     annyang.setLanguage('es-MX');
     annyang.start();
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
 
+    const elementsToAnimateUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num14,
+        num15, num22, num23, num24, num25, num40,
+    ];
+
+    elementsToAnimateUniversal.forEach(element => {
+        element.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    const elementsToAnimateFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num13,
+        num16, num17, num17_1, num18, num19, num19_1, num20,
+        num21, num21_1, num26, num27, num27_1, num28, num29, num29_1, num30, num31, num31_1,
+        num32, num33, num33_1, num34, num35, num35_1, num36, num37, num37_1, num38, num39, num39_1,
+        num41, num42,
+    ]
+    elementsToAnimateFaqs.forEach(elementFaq => {
+        elementFaq.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    })
+    localStorage.setItem("NumberAnnyang_1", "activado");
+}
+
+function removeNumbers() {
+    num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+
+    // CODIGO PARA TEXTO PLANO
+    const elementToRemoveUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num14,
+        num15, num22, num23, num24, num25, num40,
+    ]
+
+    elementToRemoveUniversal.forEach(elementUniversal => {
+        elementUniversal.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // CÓDIGO PARA FAQS Y BOTONES    
+    const elementsToRemoveFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num13,
+        num16, num17, num17_1, num18, num19, num19_1, num20,
+        num21, num21_1, num26, num27, num27_1, num28, num29, num29_1, num30, num31, num31_1,
+        num32, num33, num33_1, num34, num35, num35_1, num36, num37, num37_1, num38, num39, num39_1,
+        num41, num42,
+    ]
+
+    elementsToRemoveFaqs.forEach(elementToRemove => {
+        elementToRemove.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat')
+    });
+    localStorage.setItem("NumberAnnyang_1", "desactivado");
 }
 
 let menuactivo = Numbers === "activado";
+if (Numbers === "activado") {
+    numbersActives();
+}
+
 btn_access.addEventListener('click', function () {
-    if (!menuactivo && screen.width > 1023) {
-        menuactivo = true;
-        annyang.setLanguage('es-MX');
+    if (!menuactivo && screen.width > 1023) {        
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-
-        num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num2.style.display = "flex";
-        num3.style.display = "inline-flex";
-        num4.style.display = "inline-flex";
-        num5.style.display = "inline-flex";
-        num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num22.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num25.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num26.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num27.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num30.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num32.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num34.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num36.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num38.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num40.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num42.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num43.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // modales:
-        // cerrarAyudaM.tyle.display = "inline-flex";
-        cerrar_help.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
-        num19.style.display = "inline-flex";
-        num19_1.style.display = "inline-flex";
-
-        num21.style.display = "inline-flex";
-        num21_1.style.display = "inline-flex";
-
-        num23.style.display = "inline-flex";
-        num23_1.style.display = "inline-flex";
-
-        num29.style.display = "inline-flex";
-        num29_1.style.display = "inline-flex";
-
-        num31.style.display = "inline-flex";
-        num31_1.style.display = "inline-flex";
-
-        num33.style.display = "inline-flex";
-        num33_1.style.display = "inline-flex";
-
-        num35.style.display = "inline-flex";
-        num35_1.style.display = "inline-flex";
-
-        num37.style.display = "inline-flex";
-        num37_1.style.display = "inline-flex";
-
-        num39.style.display = "inline-flex";
-        num39_1.style.display = "inline-flex";
-
-        num41.style.display = "inline-flex";
-        num41_1.style.display = "inline-flex";
-        localStorage.setItem("NumberAnnyang_1", "activado");
+        numbersActives();        
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
-        num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num2.style.display = "none";
-        num3.style.display = "none";
-        num4.style.display = "none";
-        num5.style.display = "none";
-        num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num18.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num20.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num22.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num24.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num25.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num26.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num27.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num28.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num30.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num32.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num34.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num36.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num38.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num40.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num42.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num43.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        // btones cerrar modales:
-        cerrarAyudaM.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        cerrar_help.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-
-        num19.style.display = "none";
-        num19_1.style.display = "none";
-
-        num21.style.display = "none";
-        num21_1.style.display = "none";
-
-        num23.style.display = "none";
-        num23_1.style.display = "none";
-
-        num29.style.display = "none";
-        num29_1.style.display = "none";
-
-        num31.style.display = "none";
-        num31_1.style.display = "none";
-
-        num33.style.display = "none";
-        num33_1.style.display = "none";
-
-        num35.style.display = "none";
-        num35_1.style.display = "none";
-
-        num37.style.display = "none";
-        num37_1.style.display = "none";
-
-        num39.style.display = "none";
-        num39_1.style.display = "none";
-
-        num41.style.display = "none";
-        num41_1.style.display = "none";
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
+        removeNumbers();        
     }
 });

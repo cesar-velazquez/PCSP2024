@@ -423,31 +423,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let modalAbierto40 = false;
     let modalAbierto42 = false;
 
-    // function abrirModalAyuda() {
-    //     if (modalAbierto16 == true || modalAbierto18 == true ||
-    //         modalAbierto20 == true || modalAbierto22 == true ||
-    //         modalAbierto38 == true || modalAbierto40 == true ||
-    //         modalAbierto42 == true
-    //     ) {
-    //         cerrarModal16();
-    //         modalAbierto16 = false;
-    //         cerrarModal18();
-    //         modalAbierto18 = false;
-    //         cerrarModal20();
-    //         modalAbierto20 = false;
-    //         cerrarModal22();
-    //         modalAbierto22 = false;
-    //         cerrarModal38();
-    //         modalAbierto38 = false;
-    //         cerrarModal40();
-    //         modalAbierto40 = false;
-    //         cerrarModal42();
-    //         modalAbierto42 = false;
-    //     }
-    //     abrirAyuda();
-    //     modalAyuda0 = true;
-    // }
-
     function abrirModalAyuda() {
         if (modalAbierto16 == true || modalAbierto18 == true ||
             modalAbierto20 == true || modalAbierto22 == true ||
@@ -2686,7 +2661,6 @@ let cerrar41 = document.getElementById("cerrar41");
 let cerrar43 = document.getElementById("cerrar43");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-console.log("annyang6: " + activoNumberIndex);
 // inicio prueba
 function numbersActives() {
     menuactivo = true;

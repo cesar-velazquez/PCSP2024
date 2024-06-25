@@ -171,10 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(element);
     }
 
-    let section13 = function () {
-        let element = document.getElementById("section13");
-        PositionTop100(element);
-    }
+    // let section13 = function () {
+    //     let element = document.getElementById("section14");
+    //     PositionTop100(element);
+    // }
 
     let section14 = function () {
         let element = document.getElementById("section14");
@@ -212,10 +212,15 @@ document.addEventListener("DOMContentLoaded", function () {
         PositionTop100(section);
     }
 
-    function section21() {
+    function section19() {
         let section = document.getElementById("section21");
         PositionTop100(section);
     }
+
+    // function section21() {
+    //     let section = document.getElementById("section21");
+    //     PositionTop100(section);
+    // }
 
     let secondtab = function () {
         let secondtab = document.getElementById("secondtab");
@@ -363,6 +368,11 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.click();
     }
 
+    function instruccion28() {
+        let section = document.getElementById("instruccion28");
+        PositionTop100(section);
+    }
+
     function download30() {
         let btn = document.getElementById("btnLectura");
         btn.click();
@@ -455,81 +465,82 @@ document.addEventListener("DOMContentLoaded", function () {
         'doce': section12,
         'número doce': section12,
 
-        '13': section13,
-        'trece': section13,
-        'número trece': section13,
+        '13': section14,
+        'trece': section14,
+        'número trece': section14,
 
-        '14': section14,
-        'catorce': section14,
-        'número catorce': section14,
+        '14': download15,
+        'catorce': download15,
+        'número catorce': download15,
 
-        '15': download15,
-        'quince': download15,
-        'número quince': download15,
+        '15': download16,
+        'quince': download16,
+        'número quince': download16,
 
-        '16': download16,
-        'dieciséis': download16,
-        'número dieciséis': download16,
+        '16': section17,
+        'dieciséis': section17,
+        'número dieciséis': section17,
 
-        '17': section17,
-        'diecisiete': section17,
-        'número diecisiete': section17,
+        // '17': section18,
+        // 'diecisiete': section18,
+        // 'número diecisiete': section18,
 
-        '18': section18,
-        'dieciocho': section18,
-        'número dieciocho': section18,
+        '17': download19,
+        'diecisiete': download19,
+        'número diecisiete': download19,
 
-        '19': download19,
-        'diecinueve': download19,
-        'número diecinueve': download19,
+        '18': section20,
+        'dieciocho': section20,
+        'número dieciocho': section20,
 
-        '20': section20,
-        'veinte': section20,
-        'número veinte': section20,
+        '19': section19,
+        'diecinueve': section19,
+        'número diecinueve': section19,
+        'número 19': section19,
 
-        '21': section21,
-        'veintiuno': section21,
-        'número veintiuno': section21,
+        '21': secondtab,
+        'veintiuno': secondtab,
+        'número veintiuno': secondtab,
 
-        "23": secondtab,
-        "veintitrés": secondtab,
-        "número veintitrés": secondtab,
+        "20": firstab,
+        "veinte": firstab,
+        "número veinte": firstab,
 
-        "22": firstab,
-        "veintidos": firstab,
-        "número veintidos": firstab,
+        '22': section24,
+        'veintidos': section24,
+        'número veintidos': section24,
 
-        '24': section24,
-        'veinticuatro': section24,
-        'número veinticuatro': section24,
+        '23': abrirCerrarfaq1,
+        'veintitres': abrirCerrarfaq1,
+        'número veintitres': abrirCerrarfaq1,
 
-        '25': abrirCerrarfaq1,
-        'veinticinco': abrirCerrarfaq1,
-        'número veinticinco': abrirCerrarfaq1,
+        '24': abrirCerrarfaq2,
+        'veinticuatro': abrirCerrarfaq2,
+        'número veinticuatro': abrirCerrarfaq2,
 
-        '26': abrirCerrarfaq2,
-        'veintiséis': abrirCerrarfaq2,
-        'número veintiséis': abrirCerrarfaq2,
+        '25': abrirCerrarfaq3,
+        'veinticinco': abrirCerrarfaq3,
+        'número veinticinco': abrirCerrarfaq3,
 
-        '27': abrirCerrarfaq3,
-        'veintiséis': abrirCerrarfaq3,
-        'número veintiséis': abrirCerrarfaq3,
+        '26': section28,
+        'veintiséis': section28,
+        'número veintiséis': section28,
 
-        '28': section28,
-        'veintiocho': section28,
-        'número veintiocho': section28,
+        '27': download29,
+        'veintisiete': download29,
+        'número veintisiete': download29,
 
-        '29': download29,
-        'veintinueve': download29,
-        'número veintinueve': download29,
+        '28': instruccion28,
+        'veintiocho': instruccion28,
+        'número veintiocho': instruccion28,
 
-        '30': download30,
-        'treinta': download30,
-        'número treinta': download30,
+        '29': download30,
+        'veintinueve': download30,
+        'número veintinueve': download30,
 
-        '31': volverA,
-        'treinta y uno': volverA,
-        'número treinta y uno': volverA,
+        '30': volverA,
+        'treinta': volverA,
+        'número treinta': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
@@ -588,129 +599,191 @@ let num30 = document.getElementById("ident30");
 let num31 = document.getElementById("ident31");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-// console.log(activoNumberIndex);
+
+// inicio
+function numbersActives() {
+    menuactivo = true;
+    annyang.setLanguage('es-MX');
+    annyang.start();
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+
+    // Código para texto plano
+    const elementsToAnimateUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13,
+        num16, num18, num19, num22, num26, num28,
+    ];
+
+    elementsToAnimateUniversal.forEach(element => {
+        element.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // Código para botones y faqs    
+    const elementsToAnimateFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num14, num15, num17, num20, num21, num23,
+        num24, num25, num27, num29, num30,
+
+    ]
+    elementsToAnimateFaqs.forEach(elementFaq => {
+        elementFaq.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    })
+    localStorage.setItem("NumberAnnyang_1", "activado");
+}
+
+// fin
+
+// INICIO 2
+function removeNumbers() {
+    num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+
+    // CODIGO PARA TEXTO PLANO
+    const elementToRemoveUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12, num13,
+        num16, num18, num19, num22, num26, num28,
+    ]
+
+    elementToRemoveUniversal.forEach(elementUniversal => {
+        elementUniversal.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // CÓDIGO PARA FAQS Y BOTONES    
+    const elementsToRemoveFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num14, num15, num17, num20, num21, num23,
+        num24, num25, num27, num29, num30,
+    ]
+
+    elementsToRemoveFaqs.forEach(elementToRemove => {
+        elementToRemove.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat')
+    });
+    localStorage.setItem("NumberAnnyang_1", "desactivado");
+}
+// fin2
+
+
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
-    menuactivo = true;
-    cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num2.style.display = "flex";
-    num3.style.display = "inline-flex";
-    num4.style.display = "inline-flex";
-    num5.style.display = "inline-flex";
-    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num25.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num26.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num27.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-    num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-    annyang.setLanguage('es-MX');
-    annyang.start();
+    numbersActives();
+    // menuactivo = true;
+    // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+    // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num2.style.display = "flex";
+    // num3.style.display = "inline-flex";
+    // num4.style.display = "inline-flex";
+    // num5.style.display = "inline-flex";
+    // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num25.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num26.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num27.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+    // num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+    // annyang.setLanguage('es-MX');
+    // annyang.start();
 }
 
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
-        menuactivo = true;
-        annyang.setLanguage('es-MX');
+        // menuactivo = true;
+        // annyang.setLanguage('es-MX');
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-        cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num2.style.display = "flex";
-        num3.style.display = "inline-flex";
-        num4.style.display = "inline-flex";
-        num5.style.display = "inline-flex";
-        num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num25.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num26.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num27.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "activado");
+        numbersActives();
+        // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num2.style.display = "flex";
+        // num3.style.display = "inline-flex";
+        // num4.style.display = "inline-flex";
+        // num5.style.display = "inline-flex";
+        // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num17.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num18.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num19.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num20.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num21.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num22.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num23.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num24.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num25.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num26.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num27.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num28.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num29.classList.add("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num30.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num31.classList.add("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
-        btn_access.style.transitionDuration = "1s";
-        cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num2.style.display = "none";
-        num3.style.display = "none";
-        num4.style.display = "none";
-        num5.style.display = "none";
-        num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num18.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num19.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num20.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num21.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num22.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num23.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num24.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num25.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num26.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num27.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num28.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num29.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
-        num30.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        num31.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
+        removeNumbers();
+        // btn_access.style.transitionDuration = "1s";
+        // cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        // num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num2.style.display = "none";
+        // num3.style.display = "none";
+        // num4.style.display = "none";
+        // num5.style.display = "none";
+        // num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num17.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num18.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num19.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num20.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num21.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num22.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num23.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num24.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num25.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num26.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num27.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num28.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num29.classList.remove("ident_Universal", 'animate__animated', 'animate__heartBeat');
+        // num30.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // num31.classList.remove("ident_Faqs", 'animate__animated', 'animate__heartBeat');
+        // localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });
