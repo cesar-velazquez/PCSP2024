@@ -14,7 +14,7 @@
     padding: 1rem;
     margin-bottom: 1rem;
 }
-
+.btn-actividad{ padding:1rem }
 .faq-deg{
     background: rgb(129, 100, 158);
     background: linear-gradient(90deg, #FAEBDD 20%, #81649E 80%);
@@ -38,6 +38,7 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
+    max-width: 18rem;
 }
 
 .btn-image-2 img {
@@ -99,8 +100,16 @@
 .fondo-deg-105 p{display: flex; align-items: center; min-height: 5rem; justify-content: center;}
 .fondo-blanco-m{ background:#fff; padding:1rem; }
 
+.tam-cuatro{ width:22%; min-width:8rem; }
+
+.tam-content{ min-height:28rem }
+.bg-tab-content{ margin-bottom:1rem; }
+
+.contenedor_pestañas{ margin-bottom:1rem }
+
 @media screen and (max-width: 1199px) {
     .fondo-deg-105{ margin-bottom: 1rem; }
+    .tam-content{ min-height:32rem }
 }
 @media screen and (max-width: 991px) {
     .btn-image-2 {
@@ -123,6 +132,8 @@
     .imagen-ac6 {
         width: 100%;
     }
+
+    .tam-content{ min-height:39rem }
 }
 @media screen and (max-width: 767px) {
     .imagen-ac5 {
