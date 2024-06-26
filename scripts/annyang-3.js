@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var commands = {
 
         '0': abrirAyuda,
+        'número 0': abrirAyuda,
         'cero': abrirAyuda,
         'cerrar': cerrarAyuda,
 
@@ -179,66 +180,91 @@ document.addEventListener("DOMContentLoaded", function () {
         'Desplazar hacia arriba': scrollTo,
 
         '1': abrirMenuPrincipal,
+        'número 1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
+        'número 2': cerrarMenuPrincipal,
+        'número dos': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
         'tres': getPageNext,
+        'número 3': getPageNext,
         'número tres': getPageNext,
 
         '4': getPageNext1,
         'cuatro': getPageNext1,
+        'número 4': getPageNext1,
         'número cuatro': getPageNext1,
 
         '5': getPageNext2,
         'cinco': getPageNext2,
+        'número 5': getPageNext2,
         'número cinco': getPageNext2,
 
         '6': getPageNext3,
         'seis': getPageNext3,
+        'número 6': getPageNext3,
         'número seis': getPageNext3,
 
         '7': getPageNext4,
+        'número 7': getPageNext4,
         'siete': getPageNext4,
         'número siete': getPageNext4,
 
         '8': getPageNext5,
         'ocho': getPageNext5,
         'número ocho': getPageNext5,
+        'número 8': getPageNext5,
 
         '9': getPageNext6,
+        'número 9': getPageNext6,
         'nueve': getPageNext6,
         'número nueve': getPageNext6,
 
         '10': getPageNext7,
+        'número 10': getPageNext7,
         'diez': getPageNext7,
         'número diez': getPageNext7,
 
         '11': section11,
+        'número 11': section11,
         'once': section11,
+        'número once': section11,
 
         '12': section12,
+        'número 12': section12,
         'doce': section12,
+        'número doce': section12,
 
         '13': section13,
+        'número 13': section13,
+        'número trece': section13,
         'trece': section13,
 
         '14': section14,
+        'número 14': section14,
+        'número catorce': section14,
         'catorce': section14,
 
         '15': section15,
+        'número 15': section15,
+        'número quince': section15,
         'quince': section15,
 
         '16': download16,
+        'número 16': download16,
         'dieciséis': download16,
+        'número dieciséis': download16,
 
         '17': volverA,
+        'número 17': volverA,
+        'número diecisiete': volverA,
         'diecisiete': volverA,
 
         'F5': refreshPage,
@@ -310,7 +336,7 @@ if (activoNumberIndex === "activado") {
     num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
     num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     annyang.setLanguage('es-MX');
@@ -341,7 +367,7 @@ btn_access.addEventListener('click', function () {
         num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num16.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         localStorage.setItem("NumberAnnyang_1", "activado");
@@ -368,7 +394,7 @@ btn_access.addEventListener('click', function () {
         num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num14.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num15.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
         num16.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
         num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
     }
