@@ -1715,6 +1715,10 @@ function removeNumbers() {
     // CODIGO PARA TEXTO PLANO
     const elementToRemoveUniversal = [
         num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12,
+        num14, num27, num28, num29, num30, num31, num32, num33, num35,
+        num39, num40, num41, num42, num43, num44, num45, num46, num47, num48,
+        num49, num50, num52, num56, num57, num58, num62, num63, num64, num65,
+        num66, num67, num68, num69, num70, num72, num76,
     ]
 
     elementToRemoveUniversal.forEach(elementUniversal => {
@@ -1724,6 +1728,11 @@ function removeNumbers() {
     // CÓDIGO PARA FAQS Y BOTONES    
     const elementsToRemoveFaqs = [
         cerrar_help, cerrarAyudaM, num1, num13,
+        num15, num16, num16_1, num17, num18, num18_1, num19,
+        num20, num20_1, num21, num22, num22_1, num23, num24,
+        num24_1, num25, num26, num26_1, num34, num36, num37, num38,
+        num51, num53, num54, num55, num59, num60, num61, num71, num73,
+        num74, num75, num77, num78,
     ]
 
     elementsToRemoveFaqs.forEach(elementToRemove => {
@@ -1737,330 +1746,18 @@ function removeNumbers() {
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
     numbersActives();
-    // menuactivo = true;
-    // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num2.style.display = "flex";
-    // num3.style.display = "inline-flex";
-    // num4.style.display = "inline-flex";
-    // num5.style.display = "inline-flex";
-    // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
-    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
-
-    // num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    // num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // // cerrar modales:
-    // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    // num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-    // annyang.setLanguage('es-MX');
-    // annyang.start();
 }
 
 
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
-        // menuactivo = true;
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
         numbersActives();
-        // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num2.style.display = "flex";
-        // num3.style.display = "inline-flex";
-        // num4.style.display = "inline-flex";
-        // num5.style.display = "inline-flex";
-        // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
-        // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
-        // num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // // modales btn cerrar
-        // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-
-        // localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
         removeNumbers();
-        // cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        // num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num2.style.display = "none";
-        // num3.style.display = "none";
-        // num4.style.display = "none";
-        // num5.style.display = "none";
-        // num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num23.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num25.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num27.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num29.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num30.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num31.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num32.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num33.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num34.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num35.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num36.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num37.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num38.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num39.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num40.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num41.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num42.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num43.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num44.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num45.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num46.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num47.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num48.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num49.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num50.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num51.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num52.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-
-        // num53.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num54.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num55.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num56.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num57.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num58.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num59.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num60.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num61.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num62.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num63.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num64.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num65.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num66.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num67.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num68.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num69.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num70.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num71.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num72.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num73.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num74.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num75.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num76.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num77.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num78.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num79.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        // num80.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num81.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // // btns cerra modal:
-        // num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num18_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num20.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num20_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num22_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num24.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num24_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num26.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num26_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        // num28.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // num28_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        // localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });

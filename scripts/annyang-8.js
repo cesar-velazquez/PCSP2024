@@ -2537,11 +2537,9 @@ let num9 = document.getElementById("ident9");
 let num10 = document.getElementById("ident10");
 let num11 = document.getElementById("ident11");
 let num12 = document.getElementById("ident12");
-let num13 = document.getElementById("ident13");
 let num14 = document.getElementById("ident14");
-let num15 = document.getElementById("ident15");
 let num16 = document.getElementById("ident16");
-let num17 = document.getElementById("ident17");
+
 let num18 = document.getElementById("ident18");
 let num19 = document.getElementById("ident19");
 let num20 = document.getElementById("ident20");
@@ -2645,13 +2643,13 @@ let num117 = document.getElementById("ident117");
 let num118 = document.getElementById("ident118");
 let num119 = document.getElementById("ident119");
 // cerrar modales
-let cerrar17 = document.getElementById("cerrar17");
-let cerrar19 = document.getElementById("cerrar19");
-let cerrar21 = document.getElementById("cerrar21");
-let cerrar23 = document.getElementById("cerrar23");
-let cerrar39 = document.getElementById("cerrar39");
-let cerrar41 = document.getElementById("cerrar41");
-let cerrar43 = document.getElementById("cerrar43");
+let num13 = document.getElementById("ident13");
+let num13_1 = document.getElementById("ident13_1");
+let num15 = document.getElementById("ident15");
+let num15_1 = document.getElementById("ident15_1");
+let num17 = document.getElementById("ident17");
+let num17_1 = document.getElementById("ident17_1");
+
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
 console.log("annyang6: " + activoNumberIndex);
@@ -2673,7 +2671,8 @@ function numbersActives() {
 
     // Código para botones y faqs    
     const elementsToAnimateFaqs = [
-        cerrar_help, cerrarAyudaM, num1, num12, num14, num16
+        cerrar_help, cerrarAyudaM, num1, num12, num13, num13_1, num14, num15, num15_1, num16, num17, num17_1,
+        
     ]
     elementsToAnimateFaqs.forEach(elementFaq => {
         elementFaq.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
