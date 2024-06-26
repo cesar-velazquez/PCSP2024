@@ -862,50 +862,61 @@ document.addEventListener("DOMContentLoaded", function () {
         'Inicio': inicioPagina,
 
         '1': abrirMenuPrincipal,
+        'número 1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
+        'número 2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
+        'número 3': getPageNext,
         'tres': getPageNext,
         'número tres': getPageNext,
 
         '4': getPageNext1,
+        'número 4': getPageNext1,
         'cuatro': getPageNext1,
         'número cuatro': getPageNext1,
 
         '5': getPageNext2,
+        'número 5': getPageNext2,
         'cinco': getPageNext2,
         'número cinco': getPageNext2,
 
         '6': getPageNext3,
+        'número 6': getPageNext3,
         'seis': getPageNext3,
         'número seis': getPageNext3,
 
         '7': getPageNext4,
+        'número 7': getPageNext4,
         'siete': getPageNext4,
         'número siete': getPageNext4,
 
         '8': getPageNext5,
+        'número 8': getPageNext5,
         'ocho': getPageNext5,
         'número ocho': getPageNext5,
 
         '9': getPageNext6,
+        'número 9': getPageNext6,
         'nueve': getPageNext6,
         'número nueve': getPageNext6,
 
         '10': getPageNext7,
+        'número 10': getPageNext7,
         'diez': getPageNext7,
         'número diez': getPageNext7,
 
         '11': section11,
         'Once': section11,
         'número Once': section11,
+        'número 11': section11,
 
         '12': playVideo1,
         'número 12': playVideo1,
@@ -931,6 +942,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '0': abrirModalAyuda,
         'cero': abrirModalAyuda,
         'número cero': abrirModalAyuda,
+        'número 0': abrirModalAyuda,
 
         'cerrar': cerrarAyuda,
 

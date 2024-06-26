@@ -135,8 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
         videoOn = true;
         VideoPlay.play();
         PositionTop100(positionV);
-        // VideoPlay.requestFullscreen();
-        num12.style.backgroundColor = "#f8c5fd3d";
     }
 
     // let VideoOff = document.getElementById("video1");
@@ -150,14 +148,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let playVideo1 = function () {
         if (!videoOn) {
-            // let position = document.getElementById("video2");
             playVideo();
-            // PositionTop100(position);
+            let ocultar = document.getElementById("ident12");
+            let mostrar = document.getElementById("pausa12");
+            ocultar.classList.remove("ident_Universal");
+            mostrar.classList.add("ident_Universal");
         } else {
-            let position = document.getElementById("video2");
             videoOn = true;
             offVideo();
-            // PositionTop100(position);
+            let mostrar = document.getElementById("ident12");
+            let ocultar = document.getElementById("pausa12");
+            mostrar.classList.add("ident_Universal");
+            ocultar.classList.remove("ident_Universal");
         }
     }
 
@@ -932,12 +934,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let section60 = function () {
-        let element = document.getElementById('ident60');
+        let element = document.getElementById('ident57');
         PositionTop100(element);
     }
 
     function section61() {
-        let element = document.getElementById("ident61");
+        let element = document.getElementById("ident58");
         PositionTop100(element);
     }
 
@@ -993,7 +995,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function section65() {
-        let element = document.getElementById("ident65");
+        let element = document.getElementById("ident62");
         PositionTop100(element);
     }
 
@@ -1214,6 +1216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var commands = {
 
         '0': abrirModalAyuda,
+        'número 0': abrirModalAyuda,
         'cero': abrirModalAyuda,
         'cerrar': cerrarAyuda,
 
@@ -1222,261 +1225,329 @@ document.addEventListener("DOMContentLoaded", function () {
         'Desplazar hacia arriba': scrollTo,
 
         '1': abrirMenuPrincipal,
+        'número 1': abrirMenuPrincipal,
         'uno': abrirMenuPrincipal,
         'uuno': abrirMenuPrincipal,
         'menú': abrirMenuPrincipal,
         'abrir menú': abrirMenuPrincipal,
 
         '2': cerrarMenuPrincipal,
+        'número 2': cerrarMenuPrincipal,
         'Dos': cerrarMenuPrincipal,
         'cerrar menú': cerrarMenuPrincipal,
 
         '3': getPageNext,
+        'número 3': getPageNext,
         'tres': getPageNext,
         'número tres': getPageNext,
 
         '4': getPageNext1,
+        'número 4': getPageNext1,
         'cuatro': getPageNext1,
         'número cuatro': getPageNext1,
 
         '5': getPageNext2,
+        'número 5': getPageNext2,
         'cinco': getPageNext2,
         'número cinco': getPageNext2,
 
         '6': getPageNext3,
+        'número 6': getPageNext3,
         'seis': getPageNext3,
         'número seis': getPageNext3,
 
         '7': getPageNext4,
+        'número 7': getPageNext4,
         'siete': getPageNext4,
         'número siete': getPageNext4,
 
         '8': getPageNext5,
+        'número 8': getPageNext5,
         'ocho': getPageNext5,
         'número ocho': getPageNext5,
 
         '9': getPageNext6,
+        'número 9': getPageNext6,
         'nueve': getPageNext6,
         'número nueve': getPageNext6,
 
         '10': getPageNext7,
+        'número 10': getPageNext7,
         'diez': getPageNext7,
         'número diez': getPageNext7,
 
         '11': section11,
+        'número 11': section11,
         'once': section11,
 
         '12': playVideo1,
+        'número 12': playVideo1,
         'Doce': playVideo1,
         'Pausa': playVideo1,
         'Play': playVideo1,
 
-        '13': screenFullVid,
-        'trece': screenFullVid,
+        // '13': screenFullVid,
+        // 'trece': screenFullVid,
 
-        '14': faqGuionVideo,
-        'catorce': faqGuionVideo,
+        '13': faqGuionVideo,
+        'número 13': faqGuionVideo,
+        'trece': faqGuionVideo,
 
-        '15': section15,
-        'quince': section15,
+        '14': section16,
+        'número 14': section16,
+        'catorce': section16,
 
-        '16': section16,
-        'dieciséis': section16,
+        '15': abrirModal_17,
+        'número 15': abrirModal_17,
+        'quince': abrirModal_17,
 
-        '17': abrirModal_17,
-        'diecisiete': abrirModal_17,
+        '16': cerrarModal17,
+        'número 16': cerrarModal17,
+        'dieciséis': cerrarModal17,
 
-        '18': cerrarModal17,
-        'dieciocho': cerrarModal17,
+        '17': abrirModal_19,
+        'número 17': abrirModal_19,
+        'diecisiete': abrirModal_19,
 
-        '19': abrirModal_19,
-        'diecinueve': abrirModal_19,
+        '18': cerrarModal19,
+        'número 18': cerrarModal19,
+        'dieciocho': cerrarModal19,
 
-        '20': cerrarModal19,
-        'veinte': cerrarModal19,
+        '19': abrirModal_21,
+        'número 19': abrirModal_21,
+        'diecinueve': abrirModal_21,
 
-        '21': abrirModal_21,
-        'veintiuno': abrirModal_21,
+        '20': cerrarModal21,
+        'número 20': cerrarModal21,
+        'veinte': cerrarModal21,
 
-        '22': cerrarModal21,
-        'veintidos': cerrarModal21,
+        '21': abrirModal_23,
+        'número 21': abrirModal_23,
+        'veintiuno': abrirModal_23,
 
-        '23': abrirModal_23,
-        'veintitres': abrirModal_23,
+        '22': cerrarModal23,
+        'número 22': cerrarModal23,
+        'veintidos': cerrarModal23,
 
-        '24': cerrarModal23,
-        'veinticuatro': cerrarModal23,
+        '23': abrirModal_25,
+        'número 23': abrirModal_25,
+        'veintitres': abrirModal_25,
 
-        '25': abrirModal_25,
-        'veinticinco': abrirModal_25,
+        '24': cerrarModal25,
+        'número 24': cerrarModal25,
+        'veinticuatro': cerrarModal25,
 
-        '26': cerrarModal25,
-        'veintiséis': cerrarModal25,
+        '25': abrirModal_27,
+        'número 25': abrirModal_27,
+        'veinticinco': abrirModal_27,
 
-        '27': abrirModal_27,
-        'veintisiete': abrirModal_27,
+        '26': cerrarModal27,
+        'número 26': cerrarModal27,
+        'veintiséis': cerrarModal27,
 
-        '28': cerrarModal27,
-        'veintiocho': cerrarModal27,
+        '27': section29,
+        'número 27': section29,
+        'veintisiete': section29,
 
-        '29': section29,
-        'veintinueve': section29,
+        '28': section30,
+        'número 28': section30,
 
-        '30': section30,
-        'treinta': section30,
-
-        '31': download31,
+        '29': download31,
+        'número 29': download31,
         'treinta y uno': download31,
 
-        '32': click32,
-        'treinta y dos': click32,
+        '30': click32,
+        'número 30': click32,
+        'treinta': click32,
 
-        '33': section33,
-        'treinta y tres': section33,
+        '31': section33,
+        'número 31': section33,
+        'treinta y uno': section33,
 
-        '34': click34,
-        'treinta y cuatro': click34,
+        '32': click34,
+        'número 32': click34,
+        'treinta y dos': click34,
 
-        '35': section35,
-        'treinta y cinco': section35,
+        '33': section35,
+        'número 33': section35,
+        'treinta y tres': section35,
 
-        '36': download36,
-        'treinta y seis': download36,
+        '34': download36,
+        'número 34': download36,
+        'treinta y cuatro': download36,
 
-        '37': section37,
-        'treinta y siete': section37,
+        '35': section37,
+        'número 35': section37,
+        'treinta y cinco': section37,
 
-        '38': abrirCerrarfaq38,
-        'treinta y ocho': abrirCerrarfaq38,
+        '36': abrirCerrarfaq38,
+        'número 36': abrirCerrarfaq38,
+        'treinta y seis': abrirCerrarfaq38,
 
-        '39': abrirCerrarfaq39,
-        'treinta y nueve': abrirCerrarfaq39,
+        '37': abrirCerrarfaq39,
+        'número 37': abrirCerrarfaq39,
+        'treinta y siete': abrirCerrarfaq39,
 
-        '40': abrirCerrarfaq40,
-        'Cuarenta': abrirCerrarfaq40,
+        '38': abrirCerrarfaq40,
+        'número 38': abrirCerrarfaq40,
+        'treinta y ocho': abrirCerrarfaq40,
 
-        '41': section41,
-        'cuarenta y uno': section41,
+        '39': section41,
+        'número 39': section41,
+        'treinta y nueve': section41,
 
-        '42': section42,
-        'cuarenta y dos': section42,
+        '40': section42,
+        'cuarenta': section42,
 
-        '43': section43,
-        'cuarenta y tres': section43,
 
-        '44': section44,
-        'cuarenta y cuatro': section44,
+        '41': section44,
+        'número 41': section44,
+        'cuarenta y uno': section44,
 
-        '45': download45,
-        'cuarenta y cinco': download45,
+        '42': download45,
+        'número 42': download45,
+        'cuarenta y dos': download45,
 
-        '46': download46,
-        'cuarenta y seis': download46,
+        '43': download46,
+        'número 43': download46,
+        'cuarenta y tres': download46,
 
-        '47': section47,
-        'cuarenta y siete': section47,
+        '44': section47,
+        'número 44': section47,
+        'cuarenta y cuatro': section47,
 
-        '48': click48,
-        'cuarenta y ocho': click48,
+        '45': click48,
+        'cuarenta y cinco': click48,
 
-        '49': click49,
-        'cuarenta y nueve': click49,
+        '46': click49,
+        'cuarenta y seis': click49,
 
-        '50': click50,
-        'cincuenta': click50,
+        '47': click50,
+        'número 47': click50,
+        'cuanrenta y siete': click50,
 
-        '51': click51,
-        'cincuenta y uno': click51,
+        '48': click51,
+        'número 48': click51,
+        'cuarenta y ocho': click51,
 
-        '52': section52,
-        'cincuenta y dos': section52,
+        '49': section52,
+        'número 49': section52,
+        'cuarenta y nueve': section52,
 
-        '53': section53,
-        'cincuenta y tres': section53,
+        '50': section53,
+        'número 50': section53,
+        'cincuenta': section53,
 
-        '54': download54,
-        'cincuenta y cuatro': download54,
+        '51': download54,
+        'número 51': download54,
+        'cincuenta y uno': download54,
 
-        '55': section55,
-        'cincuenta y cinco': section55,
+        '52': section55,
+        'número 52': section55,
+        'cincuenta y dos': section55,
 
-        '56': abrirCerrarfaq56,
-        'cincuenta y seis': abrirCerrarfaq56,
+        '53': abrirCerrarfaq56,
+        'número 53': abrirCerrarfaq56,
+        'cincuenta y tres': abrirCerrarfaq56,
 
-        '57': abrirCerrarfaq57,
-        'cincuenta y siete': abrirCerrarfaq57,
+        '54': abrirCerrarfaq57,
+        'número 54': abrirCerrarfaq57,
+        'cincuenta y cuatro': abrirCerrarfaq57,
 
-        '58': abrirCerrarfaq58,
-        'cincuenta y ocho': abrirCerrarfaq58,
+        '55': abrirCerrarfaq58,
+        'número 55': abrirCerrarfaq58,
+        'cincuenta y cinco': abrirCerrarfaq58,
 
-        '59': section59,
-        'cincuenta y nueve': section59,
+        '56': section59,
+        'número 56': section59,
+        'cincuenta y seis': section59,
 
-        '60': section60,
-        'sesenta': section60,
+        '57': section60,
+        'número 57': section60,
+        'cincuenta y siete': section60,
 
-        '61': section61,
-        'sesenta y uno': section61,
+        '58': section61,
+        'número 58': section61,
+        'cincuenta y ocho': section61,
 
-        '62': tab62,
-        'sesenta y dos': tab62,
+        '59': tab62,
+        'número 59': tab62,
+        'cincuenta y nueve': tab62,
 
-        '63': tab63,
-        'sesenta y tres': tab63,
+        '60': tab63,
+        'número 60': tab63,
+        'sesenta': tab63,
 
-        '64': tab64,
-        'sesenta y cuatro': tab64,
+        '61': tab64,
+        'número 61': tab64,
+        'sesenta y uno': tab64,
 
-        '65': section65,
-        'sesenta y cinco': section65,
+        '62': section65,
+        'número 62': section65,
+        'sesenta y dos': section65,
 
-        '66': section66,
-        'sesenta y seis': section66,
+        '63': section66,
+        'número 63': section66,
+        'sesenta y tres': section66,
 
-        '67': download67,
-        'sesenta y siete': download67,
+        '64': download67,
+        'número 64': download67,
+        'sesenta y cuatro': download67,
 
-        '68': download68,
-        'sesenta y ocho': download68,
+        '65': download68,
+        'número 65': download68,
+        'sesenta y cinco': download68,
 
-        '69': section69,
-        'sesenta y nueve': section69,
+        '66': section69,
+        'número 66': section69,
+        'sesenta y seis': section69,
 
-        '70': download70,
-        'setenta': download70,
+        '67': download70,
+        'número 67': download70,
+        'sesenta y siete': download70,
 
-        '71': download71,
-        'setenta y uno': download71,
+        '68': download71,
+        'sesenta y ocho': download71,
 
-        '72': section72,
-        'setenta y dos': section72,
+        '69': section72,
+        'número 69': section72,
+        'sesenta y nueve': section72,
 
-        '73': section73,
-        'setenta y tres': section73,
+        '70': section73,
+        'número 70': section73,
+        'setenta': section73,
 
-        '74': download74,
-        'setenta y cuatro': download74,
+        '71': download74,
+        'número 71': download74,
+        'setenta y uno': download74,
 
-        '75': section75,
-        'setenta y cinco': section75,
+        '72': section75,
+        'número 72': section75,
+        'setenta y dos': section75,
 
-        '76': abrirCerrarfaq76,
-        'setenta y seis': abrirCerrarfaq76,
+        '73': abrirCerrarfaq76,
+        'número 73': abrirCerrarfaq76,
+        'setenta y tres': abrirCerrarfaq76,
 
-        '77': abrirCerrarfaq77,
-        'setenta y siete': abrirCerrarfaq77,
+        '74': abrirCerrarfaq77,
+        'número 74': abrirCerrarfaq77,
+        'setenta y cuatro': abrirCerrarfaq77,
 
-        '78': abrirCerrarfaq78,
-        'setenta y ocho': abrirCerrarfaq78,
+        '75': abrirCerrarfaq78,
+        'número 75': abrirCerrarfaq78,
+        'setenta y cinco': abrirCerrarfaq78,
 
-        '79': section79,
-        'setenta y nueve': section79,
+        '76': section79,
+        'número 76': section79,
+        'setenta y seis': section79,
 
-        '80': download80,
-        'Ochenta': download80,
+        '77': download80,
+        'número 77': download80,
+        'setenta y siete': download80,
 
-        '81': volverA,
-        'Ochenta y Uno': volverA,
+        '78': volverA,
+        'número 78': volverA,
+        'setenta y ocho': volverA,
 
         'F5': refreshPage,
         'efe cinco': refreshPage,
@@ -1518,13 +1589,13 @@ let num12 = document.getElementById("ident12");
 let num13 = document.getElementById("ident13");
 let num14 = document.getElementById("ident14");
 let num15 = document.getElementById("ident15");
-let num16 = document.getElementById("ident16");
 let num17 = document.getElementById("ident17");
 let num19 = document.getElementById("ident19");
 let num21 = document.getElementById("ident21");
 let num23 = document.getElementById("ident23");
 let num25 = document.getElementById("ident25");
 let num27 = document.getElementById("ident27");
+let num28 = document.getElementById("ident28");
 let num29 = document.getElementById("ident29");
 let num30 = document.getElementById("ident30");
 let num31 = document.getElementById("ident31");
@@ -1580,6 +1651,9 @@ let num80 = document.getElementById("ident80");
 let num81 = document.getElementById("ident81");
 
 // BTNS PARA CERRAR MODALES
+let num16 = document.getElementById("ident16");
+let num16_1 = document.getElementById("ident16_1");
+
 let num18 = document.getElementById("ident18");
 let num18_1 = document.getElementById("ident18_1");
 
@@ -1595,339 +1669,398 @@ let num24_1 = document.getElementById("ident24_1");
 let num26 = document.getElementById("ident26");
 let num26_1 = document.getElementById("ident26_1");
 
-let num28 = document.getElementById("ident28");
-let num28_1 = document.getElementById("ident28_1");
-
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-console.log(activoNumberIndex);
+
+function numbersActives() {
+    menuactivo = true;
+    annyang.setLanguage('es-MX');
+    annyang.start();
+    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+
+    // Código para texto plano
+    const elementsToAnimateUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12,
+        num14, num27, num28, num29, num30, num31, num32, num33, num35,
+        num39, num40, num41, num42, num43, num44, num45, num46, num47, num48,
+        num49, num50, num52, num56, num57, num58, num62, num63, num64, num65,
+        num66, num67, num68, num69, num70, num72, num76,
+    ];
+
+    elementsToAnimateUniversal.forEach(element => {
+        element.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // Código para botones y faqs    
+    const elementsToAnimateFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num13,
+        num15, num16, num16_1, num17, num18, num18_1, num19,
+        num20, num20_1, num21, num22, num22_1, num23, num24,
+        num24_1, num25, num26, num26_1, num34, num36, num37, num38,
+        num51, num53, num54, num55, num59, num60, num61, num71, num73,
+        num74, num75, num77, num78,
 
 
+    ]
+    elementsToAnimateFaqs.forEach(elementFaq => {
+        elementFaq.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    })
+    localStorage.setItem("NumberAnnyang_1", "activado");
+}
+// fin función numbersActivos
+
+// inicio
+function removeNumbers() {
+    num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+
+    // CODIGO PARA TEXTO PLANO
+    const elementToRemoveUniversal = [
+        num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, num12,
+    ]
+
+    elementToRemoveUniversal.forEach(elementUniversal => {
+        elementUniversal.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    });
+
+    // CÓDIGO PARA FAQS Y BOTONES    
+    const elementsToRemoveFaqs = [
+        cerrar_help, cerrarAyudaM, num1, num13,
+    ]
+
+    elementsToRemoveFaqs.forEach(elementToRemove => {
+        elementToRemove.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat')
+    });
+    localStorage.setItem("NumberAnnyang_1", "desactivado");
+}
+
+// fin Numbers Remove
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
-    menuactivo = true;
-    cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    numbersActives();
+    // menuactivo = true;
+    // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-    num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num2.style.display = "flex";
-    num3.style.display = "inline-flex";
-    num4.style.display = "inline-flex";
-    num5.style.display = "inline-flex";
-    num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+    // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num2.style.display = "flex";
+    // num3.style.display = "inline-flex";
+    // num4.style.display = "inline-flex";
+    // num5.style.display = "inline-flex";
+    // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
-    num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
 
-    num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-    num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+    // num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    // cerrar modales:
-    num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // // cerrar modales:
+    // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-    num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+    // num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-    annyang.setLanguage('es-MX');
-    annyang.start();
+    // annyang.setLanguage('es-MX');
+    // annyang.start();
 }
 
 
 btn_access.addEventListener('click', function () {
     if (!menuactivo) {
-        menuactivo = true;
+        // menuactivo = true;
         annyang.start();
         console.log("Inicio Reconocimiento de voz");
-        cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        numbersActives();
+        // cerrar_help.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // cerrarAyudaM.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num2.style.display = "flex";
-        num3.style.display = "inline-flex";
-        num4.style.display = "inline-flex";
-        num5.style.display = "inline-flex";
-        num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num0.classList.add('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        // num1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num2.style.display = "flex";
+        // num3.style.display = "inline-flex";
+        // num4.style.display = "inline-flex";
+        // num5.style.display = "inline-flex";
+        // num6.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num7.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num8.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num9.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num10.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num11.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
-        num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num12.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num13.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num14.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num15.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num16.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num17.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num19.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num21.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num23.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num25.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num27.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num29.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num30.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num31.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num32.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num33.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num34.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num35.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num36.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num37.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num38.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num39.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num40.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num41.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num42.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num43.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num44.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num45.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num46.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num47.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num48.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num49.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num50.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num51.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num52.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
-        num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num53.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num54.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num55.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num56.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num57.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num58.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num59.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num60.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num61.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num62.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num63.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num64.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num65.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num66.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num67.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num68.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num69.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num70.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num71.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num72.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num73.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num74.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num75.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num76.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num77.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num78.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num79.classList.add('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num80.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num81.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        // modales btn cerrar
-        num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // // modales btn cerrar
+        // num18.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num18_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num20.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num20_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num22.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num22_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num24.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num24_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num26.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num26_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num28.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num28_1.classList.add('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
 
-        localStorage.setItem("NumberAnnyang_1", "activado");
+        // localStorage.setItem("NumberAnnyang_1", "activado");
     } else if (menuactivo) {
         menuactivo = false;
         annyang.abort();
         console.log("Fin Reconocimiento de voz");
+        removeNumbers();
+        // cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        cerrar_help.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        cerrarAyudaM.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
+        // num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num0.classList.remove('ident_Cero', 'animate__animated', 'animate__heartBeat');
-        num1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num2.style.display = "none";
+        // num3.style.display = "none";
+        // num4.style.display = "none";
+        // num5.style.display = "none";
+        // num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num23.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num25.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num27.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num29.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num30.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num31.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num32.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num33.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num34.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num35.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num36.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num37.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num38.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num39.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num40.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num41.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num42.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num43.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num44.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num45.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num46.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num47.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num48.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num49.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num50.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num51.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num52.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
 
-        num2.style.display = "none";
-        num3.style.display = "none";
-        num4.style.display = "none";
-        num5.style.display = "none";
-        num6.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num7.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num8.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num9.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num10.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num11.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num12.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num13.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num14.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num15.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num16.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num17.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num19.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num21.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num23.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num25.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num27.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num29.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num30.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num31.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num32.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num33.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num34.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num35.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num36.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num37.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num38.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num39.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num40.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num41.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num42.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num43.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num44.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num45.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num46.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num47.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num48.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num49.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num50.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num51.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num52.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num53.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num54.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num55.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num56.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num57.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num58.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num59.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num60.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num61.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num62.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num63.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num64.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num53.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num54.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num55.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num56.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num57.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num58.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num59.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num60.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num61.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num62.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num63.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num64.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num65.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num66.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num67.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num68.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num69.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num70.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num71.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num72.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num73.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num74.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num75.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num76.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num77.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num78.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num79.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
+        // num80.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num81.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num65.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num66.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num67.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num68.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num69.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num70.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num71.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num72.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num73.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num74.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num75.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num76.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num77.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num78.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num79.classList.remove('ident_Universal', 'animate__animated', 'animate__heartBeat');
-        num80.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num81.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // // btns cerra modal:
+        // num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num18_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        // btns cerra modal:
-        num18.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num18_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num20.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num20_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num20.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num20_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num22_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num22.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num22_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num24.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num24_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num24.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num24_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num26.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num26_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
 
-        num26.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num26_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-
-        num28.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        num28_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
-        localStorage.setItem("NumberAnnyang_1", "desactivado");
+        // num28.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // num28_1.classList.remove('ident_Faqs', 'animate__animated', 'animate__heartBeat');
+        // localStorage.setItem("NumberAnnyang_1", "desactivado");
     }
 });
