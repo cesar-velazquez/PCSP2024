@@ -24,13 +24,14 @@ class Ayuda extends HTMLElement {
                                 Comandos de voz
                             </p>
                         </div>
-                        <p aria-hidden="true" class="mb-0">Para utilizar esta función:
+                        <p aria-hidden="true" class="mb-0 text-azul" ><b>Para utilizar esta función:</b></p>
+                        <p aria-hidden="true" class="mb-2rem">
                             Presiona el botón <img src="./images/accesibilidad/comandosdeVozMayuda3.png"
                                 alt="Icono de ayuda"> para activar el micrófono y los comandos.</p>
                         <p aria-hidden="true" class="text-azul mb-0">
-                            Elementos en pantalla:
+                            <b>Elementos en pantalla:</b>
                         </p>
-                        <ol aria-hidden="true" class="padding_left mb-0" style="list-style: lower-latin;">
+                        <ol aria-hidden="true" class="padding_left mb-2rem" style="list-style: lower-latin;">
                             <li>
                                 En la parte inferior de la página, ubica el micrófono y la barra de voz.
                             </li>
@@ -42,16 +43,13 @@ class Ayuda extends HTMLElement {
                             </li>
                         </ol>
                         <p aria-hidden="true" class="text-azul mb-0">
-                            Para navegar:
+                            <b>Para navegar:</b>
                         </p>
                         <ol aria-hidden="true" class="padding_left" style="list-style: lower-latin;">
                             <li>
                                 <p class="parrafo mb-0">
-                                    Menciona de manera clara el número de la sección a la cual te deseas dirigir.
-                                </p>
-                                <p class="mb-0">
-                                    Ejemplo:
-                                </p>
+                                    Menciona de manera clara el número de la sección a la cual te deseas dirigir. Ejemplo:
+                                </p>                            
                                 <p class="parrafo mb-0">
                                     Uno o número uno (abrirá el menú).
                                 </p>
