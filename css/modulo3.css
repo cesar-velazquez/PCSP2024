@@ -17,14 +17,16 @@
 .btn-actividad{ padding:1rem }
 .faq-deg{
     background: rgb(129, 100, 158);
-    background: linear-gradient(90deg, #FAEBDD 20%, #81649E 80%);
+    background: linear-gradient(90deg, #FAEBDD 20%, #CBBFDD 80%);
     border:.1rem solid transparent;
     border-left: .1rem solid #FAEBDD;
+    border-right: .1rem solid #CBBFDD;
     border-bottom: .15rem solid #1E4566;
     color: #1E4566;
+    text-align: center !important;
 }
 
-.faq-deg:after {color: #fff}
+/*.faq-deg:after {color: #fff}*/
 .faq-deg:hover:after {color: #1E4566}
 .collapsables-gi[open] summary.faq-deg::after{ color:#1E4566 }
 
