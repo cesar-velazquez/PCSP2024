@@ -5240,7 +5240,7 @@ if (activoNumberIndex === "activado") {
 }
 
 
-btn_access.addEventListener('click', function () {
+btn_access.addEventListener('click', function () {    
     if (!menuactivo) {
         annyang.start();
         console.log("Inicio Reconocimiento de voz");

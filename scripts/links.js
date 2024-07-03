@@ -8,7 +8,7 @@ if (LinkAzul === "activado") {
     })
 }
 
-
+// almacenar el local storage
 let resaltar = LinkAzul === "activado";
 
 botonResaltar.addEventListener("click", function () {
