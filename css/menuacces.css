@@ -63,13 +63,14 @@
     right: 1rem;
 }
 
-.identVideo{    
+.identVideo {
     padding-left: .5rem;
     padding-right: .5rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
 }
-.ml-3rem{
+
+.ml-3rem {
     margin-left: 3rem;
 }
 
@@ -408,6 +409,10 @@
 @media screen and (max-width: 767px) {
     .menuComponentAcces {
         display: none;
+    }
+
+    #readline {
+        display: none !important;
     }
 }
 
