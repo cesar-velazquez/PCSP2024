@@ -5165,7 +5165,6 @@ let num17_1 = document.getElementById("ident17_1");
 
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-console.log("annyang6: " + activoNumberIndex);
 // inicio prueba
 function numbersActives() {
     menuactivo = true;

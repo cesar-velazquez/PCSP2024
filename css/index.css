@@ -64,6 +64,10 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
 .mb-0 {
     margin-bottom: 0;
 }
@@ -173,7 +177,7 @@ a:hover {
 
     .movil {
         display: block;
-        margin: auto;        
+        margin: auto;
     }
 
     .espacio {
@@ -1529,18 +1533,48 @@ li.nav-item.waves-effect.waves-light button:focus {
     margin: 3em auto !important;
 }
 
+.btn_structure {
+    border-radius: 8px;
+}
+
+.btn_Descargable {
+    width: 32%;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1199px) {
+    .btn_Descargable {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .btn_Descargable {
+        width: 55%;
+    }
+}
+
+
 @media screen and (max-width: 767px) {
+
     .btn_guionVideo {
         min-width: 14rem;
         min-height: 3.462rem;
-        border-radius: 8px;        
+        border-radius: 8px;
+    }
+
+    .btn_Descargable {
+        min-width: 15rem;
+        min-height: 3.462rem;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
     }
 
     .btn_structure {
         min-width: 14rem;
         min-height: 3.462rem;
         border-radius: 8px;
-        padding: 1rem 1.5rem;
+        padding: 1rem 0.5rem;
     }
 
     .m-separador {

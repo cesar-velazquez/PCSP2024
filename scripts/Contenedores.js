@@ -18,8 +18,7 @@ if (AlturaSegundoNivel === "activado") {
 }
 
 function ajustarAlturaContenedor() {
-    const contadorActual = localStorage.getItem("contador");
-    console.log("Actual: " + contadorActual);
+    const contadorActual = localStorage.getItem("contador");    
 
     if (window.matchMedia("(min-width: 1200px)").matches) {
         // console.log("mayor a 1200");

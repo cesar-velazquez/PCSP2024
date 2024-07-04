@@ -2,7 +2,6 @@
 let link_resaltar = document.getElementById('link_resaltar');
 let iconLink = document.getElementById("icon_Link");
 let iconLinkActive = document.getElementById("icon_Link_Active");
-
 let marcaLink = localStorage.getItem("MarcaLinks");
 
 if (marcaLink === "activado") {
@@ -11,7 +10,6 @@ if (marcaLink === "activado") {
     iconLinkActive.style.display = "inline-flex";
 }
 let linkactivo = marcaLink === "activado";
-
 // let linkactivo = false;
 link_resaltar.addEventListener('click', function () {
     if (!linkactivo) {
@@ -90,8 +88,7 @@ btn_FontSize.addEventListener('click', function () {
         localStorage.setItem("contador", cont.toString());        
     }
     else if (cont != 2 || cont != 3) {
-        cont = 1;
-        // console.log("es:" + cont)
+        cont = 1;        
         iconFontSize.style.display = "inline-flex";
         iconFontSizeActive.style.display = "none";
         btn_FontSize.classList.remove("HerramientaActivada");

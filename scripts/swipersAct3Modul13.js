@@ -18,8 +18,6 @@ if (AlturaSegundoNivelAct2 === "activado") {
 
 function ajustarAlturaContenedorAct2() {
     let contadorActualSw2 = localStorage.getItem("contador");
-    console.log("Actual Act1: " + contadorActualSw2);
-
     if (window.matchMedia("(min-width: 1200px)").matches) {
         // console.log("mayor a 1200");
         if (contadorActualSw2 == 2) {
@@ -47,8 +45,7 @@ function ajustarAlturaContenedorAct2() {
             // ActualContainerSw2.style.backgroundColor = "orange";
             localStorage.setItem("AlturaPrimerNivelAct2", "desactivado");
             localStorage.setItem("AlturaSegundoNivelAct2", "activado");
-        } else if (contadorActualSw2 == 1) {
-            console.log("contador Actual 1");
+        } else if (contadorActualSw2 == 1) {            
             ActualContainerSw2.style.height = "470px";
             // contenidoAlturasw1.style.backgroundColor = "yellow";
             // contenidoAlturasw2.style.backgroundColor = "yellow";

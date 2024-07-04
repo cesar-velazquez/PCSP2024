@@ -310,10 +310,6 @@ let num16 = document.getElementById("ident16");
 let num17 = document.getElementById("ident17");
 
 let activoNumberIndex = localStorage.getItem("NumberAnnyang_1");
-console.log(activoNumberIndex);
-
-
-
 
 let menuactivo = activoNumberIndex === "activado";
 if (activoNumberIndex === "activado") {
