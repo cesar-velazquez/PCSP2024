@@ -20,7 +20,9 @@ body {
 }
 
 a {
-    color: #3333FF
+    color: #3333FF;
+    position: relative;
+    z-index: 1 !important;
 }
 
 a:hover {
@@ -38,6 +40,7 @@ a:hover {
 .ul_z:hover {
     color: #17529C;
 }
+
 
 .color_fuenteLf {
     color: white;
